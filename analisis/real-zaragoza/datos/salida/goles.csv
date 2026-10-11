@@ -1,0 +1,19 @@
+﻿partido_id,sentido,jugador,minuto,anadido,parte,penalti,propia_puerta,asistencia,fuente_url,minuto_texto,tramo,rol_goleador,competicion,jornada,fecha,sede,rival
+1,Contra,Sinan Bakis,2,0,1,False,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-gimnastic/2byw33,2,01–15,,Primera Federación,1,2026-08-30,Fuera,Gimnàstic de Tarragona
+1,Contra,Carlos Segura,87,0,2,False,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-gimnastic/2byw33,87,76–90+,,Primera Federación,1,2026-08-30,Fuera,Gimnàstic de Tarragona
+2,Favor,Edu Espiau,90,1,2,False,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-antequera/6nntpao,90+1,76–90+,Suplente,Primera Federación,2,2026-09-05,Casa,Antequera CF
+3,Favor,Javi Cuenca,35,0,1,False,True,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7,35,31–45+,,Primera Federación,3,2026-09-13,Fuera,Juventud Torremolinos CF
+3,Favor,Diego González,38,0,1,False,False,Jaume Jardí,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7,38,31–45+,Titular,Primera Federación,3,2026-09-13,Fuera,Juventud Torremolinos CF
+3,Contra,Dioni Villalba,45,9,1,True,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7,45+9,31–45+,,Primera Federación,3,2026-09-13,Fuera,Juventud Torremolinos CF
+3,Favor,Jaume Jardí,65,0,2,False,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7,65,61–75,Titular,Primera Federación,3,2026-09-13,Fuera,Juventud Torremolinos CF
+3,Favor,Yussif Saidu,81,0,2,False,False,Jaume Jardí,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7,81,76–90+,Suplente,Primera Federación,3,2026-09-13,Fuera,Juventud Torremolinos CF
+3,Contra,Ivan Laća,86,0,2,False,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7,86,76–90+,,Primera Federación,3,2026-09-13,Fuera,Juventud Torremolinos CF
+3,Contra,Rodrigo Ajegun,88,0,2,False,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7,88,76–90+,,Primera Federación,3,2026-09-13,Fuera,Juventud Torremolinos CF
+4,Favor,Jaume Jardí,51,0,2,False,False,Óscar Ureña,https://www.fotmob.com/es/matches/real-zaragoza-vs-cartagena/2dikzw,51,46–60,Titular,Primera Federación,4,2026-09-20,Casa,FC Cartagena
+5,Favor,Óscar Ureña,59,0,2,False,False,Edu Espiau,https://www.fotmob.com/es/matches/real-zaragoza-vs-ud-ibiza/8628l3cc,59,46–60,Suplente,Primera Federación,5,2026-09-25,Fuera,UD Ibiza
+5,Favor,Óscar Ureña,62,0,2,False,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-ud-ibiza/8628l3cc,62,61–75,Suplente,Primera Federación,5,2026-09-25,Fuera,UD Ibiza
+6,Contra,Sergio Moreno,6,0,1,True,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x,6,01–15,,Primera Federación,6,2026-10-04,Casa,CD Teruel
+6,Favor,Óscar Ureña,45,7,1,False,False,,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x,45+7,31–45+,Titular,Primera Federación,6,2026-10-04,Casa,CD Teruel
+6,Favor,Edu Espiau,47,0,2,False,False,Diego González,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x,47,46–60,Titular,Primera Federación,6,2026-10-04,Casa,CD Teruel
+6,Favor,Pau Sans,77,0,2,False,False,Jaume Jardí,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x,77,76–90+,Suplente,Primera Federación,6,2026-10-04,Casa,CD Teruel
+6,Favor,Jaume Jardí,85,0,2,False,False,Hugo Pinilla,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x,85,76–90+,Titular,Primera Federación,6,2026-10-04,Casa,CD Teruel

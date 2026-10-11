@@ -1,9 +1,11 @@
 {
  "corte": "2026-10-04",
  "jornada": 6,
+ "clasificacion_tras": 6,
  "partidos": [
   {
    "partido_id": 1,
+   "jornada": 1,
    "fecha": "2026-08-30",
    "sede": "Fuera",
    "rival": "Gimnàstic de Tarragona",
@@ -12,14 +14,15 @@
    "resultado": "Derrota",
    "puntos": 0,
    "puntos_acumulados": 0,
-   "posicion_rival_j6": 14,
+   "posicion_rival": 14,
    "tiros_zaragoza": 33,
    "tiros_rival": 10,
    "posesion_pct": 75.0,
-   "tiros_completos": false
+   "completo": false
   },
   {
    "partido_id": 2,
+   "jornada": 2,
    "fecha": "2026-09-05",
    "sede": "Casa",
    "rival": "Antequera CF",
@@ -28,14 +31,15 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 3,
-   "posicion_rival_j6": 8,
+   "posicion_rival": 8,
    "tiros_zaragoza": 19,
    "tiros_rival": 10,
    "posesion_pct": 67.0,
-   "tiros_completos": true
+   "completo": true
   },
   {
    "partido_id": 3,
+   "jornada": 3,
    "fecha": "2026-09-13",
    "sede": "Fuera",
    "rival": "Juventud Torremolinos CF",
@@ -44,14 +48,15 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 6,
-   "posicion_rival_j6": 20,
+   "posicion_rival": 20,
    "tiros_zaragoza": 16,
    "tiros_rival": 6,
    "posesion_pct": null,
-   "tiros_completos": false
+   "completo": false
   },
   {
    "partido_id": 4,
+   "jornada": 4,
    "fecha": "2026-09-20",
    "sede": "Casa",
    "rival": "FC Cartagena",
@@ -60,14 +65,15 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 9,
-   "posicion_rival_j6": 5,
+   "posicion_rival": 5,
    "tiros_zaragoza": 17,
    "tiros_rival": 8,
    "posesion_pct": 62.0,
-   "tiros_completos": true
+   "completo": true
   },
   {
    "partido_id": 5,
+   "jornada": 5,
    "fecha": "2026-09-25",
    "sede": "Fuera",
    "rival": "UD Ibiza",
@@ -76,14 +82,15 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 12,
-   "posicion_rival_j6": 9,
+   "posicion_rival": 9,
    "tiros_zaragoza": 8,
    "tiros_rival": 8,
    "posesion_pct": 56.0,
-   "tiros_completos": true
+   "completo": true
   },
   {
    "partido_id": 6,
+   "jornada": 6,
    "fecha": "2026-10-04",
    "sede": "Casa",
    "rival": "CD Teruel",
@@ -92,11 +99,11 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 15,
-   "posicion_rival_j6": 19,
+   "posicion_rival": 19,
    "tiros_zaragoza": 17,
    "tiros_rival": 5,
    "posesion_pct": 64.0,
-   "tiros_completos": true
+   "completo": true
   }
  ],
  "goles": [
@@ -349,15 +356,15 @@
    "partidos": 5,
    "titularidades": 4,
    "minutos": 374,
-   "goles": 2,
-   "asistencias": 1
+   "goles": 3,
+   "asistencias": 3
   },
   {
    "jugador": "Diego González",
    "partidos": 4,
    "titularidades": 4,
    "minutos": 360,
-   "goles": 0,
+   "goles": 1,
    "asistencias": 1
   },
   {
@@ -509,7 +516,7 @@
    "partidos": 2,
    "titularidades": 0,
    "minutos": 74,
-   "goles": 0,
+   "goles": 1,
    "asistencias": 0
   },
   {
@@ -762,31 +769,36 @@
  "proximos": [
   {
    "jornada": 7,
+   "competicion": "Primera Federación",
    "fecha": "2026-10-11",
    "sede": "Fuera",
    "rival": "Atlético Madrileño",
-   "posicion_rival_j6": 11
+   "posicion_rival": 11
   },
   {
    "jornada": 8,
+   "competicion": "Primera Federación",
    "fecha": "2026-10-18",
    "sede": "Fuera",
    "rival": "Real Murcia",
-   "posicion_rival_j6": 4
+   "posicion_rival": 4
   },
   {
    "jornada": 9,
+   "competicion": "Primera Federación",
    "fecha": "2026-10-23",
    "sede": "Fuera",
    "rival": "CE Europa",
-   "posicion_rival_j6": 18
+   "posicion_rival": 18
   },
   {
    "jornada": 10,
+   "competicion": "Primera Federación",
    "fecha": "2026-10-31",
    "sede": "Casa",
    "rival": "Villarreal B",
-   "posicion_rival_j6": 2
+   "posicion_rival": 2
   }
- ]
+ ],
+ "copa": []
 }

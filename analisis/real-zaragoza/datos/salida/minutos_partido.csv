@@ -1,0 +1,81 @@
+﻿partido_id,jugador,rol,entra,sale,minutos
+1,Westerveld,Titular,0,90,90
+1,J. Gabilondo,Titular,0,90,90
+1,H. Barrachina,Titular,0,90,90
+1,Tachi,Titular,0,90,90
+1,Marcos Cuenca,Titular,0,55,55
+1,Ander Herrera,Titular,0,82,82
+1,Pau Sans,Titular,0,90,90
+1,Jaume Jardí,Titular,0,71,71
+1,Lucas Terrer,Titular,0,82,82
+1,S. Escudero,Titular,0,55,55
+1,Joaquín,Titular,0,90,90
+1,Iker Vadillo,Suplente,55,90,35
+1,Raúl Pereira,Suplente,55,90,35
+1,J. Tobajas,Suplente,71,90,19
+1,P. Ademo,Suplente,82,90,8
+1,Rubén Díez,Suplente,82,90,8
+2,Westerveld,Titular,0,90,90
+2,J. Gabilondo,Titular,0,46,46
+2,Marcos Cuenca,Titular,0,46,46
+2,Ander Herrera,Titular,0,90,90
+2,Pau Sans,Titular,0,81,81
+2,Rubo,Titular,0,90,90
+2,Lucas Terrer,Titular,0,90,90
+2,Iker Vadillo,Titular,0,73,73
+2,S. Escudero,Titular,0,46,46
+2,Joaquín,Titular,0,90,90
+2,Diego González,Titular,0,90,90
+2,Raúl Pereira,Suplente,46,90,44
+2,Marco Sangalli,Suplente,46,90,44
+2,Jaume Jardí,Suplente,46,90,44
+2,Óscar Ureña,Suplente,73,90,17
+2,Edu Espiau,Suplente,81,90,9
+4,Westerveld,Titular,0,90,90
+4,Raúl Pereira,Titular,0,58,58
+4,P. Ademo,Titular,0,90,90
+4,Jaume Jardí,Titular,0,83,83
+4,Rubo,Titular,0,90,90
+4,Lucas Terrer,Titular,0,90,90
+4,Iker Vadillo,Titular,0,83,83
+4,Rubén Díez,Titular,0,58,58
+4,Diego González,Titular,0,90,90
+4,Óscar Ureña,Titular,0,65,65
+4,Marco Sangalli,Titular,0,90,90
+4,S. Escudero,Suplente,58,90,32
+4,Joaquín,Suplente,58,90,32
+4,Pau Sans,Suplente,65,90,25
+4,J. Gabilondo,Suplente,83,90,7
+4,Marcos Cuenca,Suplente,83,90,7
+5,Westerveld,Titular,0,90,90
+5,Diego González,Titular,0,90,90
+5,Rubo,Titular,0,90,90
+5,S. Escudero,Titular,0,57,57
+5,Marco Sangalli,Titular,0,90,90
+5,P. Ademo,Titular,0,90,90
+5,Lucas Terrer,Titular,0,46,46
+5,Rubén Díez,Titular,0,71,71
+5,Jaume Jardí,Titular,0,86,86
+5,Raúl Pereira,Titular,0,90,90
+5,Iker Vadillo,Titular,0,57,57
+5,Yussif Saidu,Suplente,46,90,44
+5,Óscar Ureña,Suplente,57,90,33
+5,Edu Espiau,Suplente,57,90,33
+5,Diego Monzón,Suplente,71,90,19
+5,Marcos Cuenca,Suplente,86,90,4
+6,Anartz Peña,Titular,0,90,90
+6,P. Ademo,Titular,0,46,46
+6,Jaume Jardí,Titular,0,90,90
+6,Rubo,Titular,0,90,90
+6,Lucas Terrer,Titular,0,90,90
+6,S. Escudero,Titular,0,46,46
+6,Rubén Díez,Titular,0,79,79
+6,Diego González,Titular,0,90,90
+6,Edu Espiau,Titular,0,60,60
+6,Óscar Ureña,Titular,0,73,73
+6,Marco Sangalli,Titular,0,90,90
+6,Raúl Pereira,Suplente,46,90,44
+6,Joaquín,Suplente,46,90,44
+6,Yussif Saidu,Suplente,60,90,30
+6,Pau Sans,Suplente,73,90,17
+6,Hugo Pinilla,Suplente,79,90,11

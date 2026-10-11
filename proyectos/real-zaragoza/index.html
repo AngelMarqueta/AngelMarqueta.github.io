@@ -45,7 +45,7 @@
     <h2>Tres datos</h2>
     <ul class="hallazgos">
       <li><span class="cifra">5 de 11</span><span>goles de jugadores del Zaragoza los marcaron futbolistas que salieron desde el banquillo.</span></li>
-      <li><span class="cifra">110–47</span><span>en tiros en los seis partidos. Ojo: en las jornadas 1 y 3 la estadística no está completa, así que la cifra real puede ser algo mayor.</span></li>
+      <li><span class="cifra">110–47</span><span>en tiros en los seis partidos: el 70 % de todos los tiros. En las jornadas 1 y 3 el desglose de los tiros no cuadra, así que esos dos partidos hay que cogerlos con pinzas.</span></li>
       <li><span class="cifra">33–10</span><span>tiros en Tarragona, en la jornada 1, y aun así derrota por 0-2. Es la única de la temporada.</span></li>
     </ul>
   </section>
@@ -63,7 +63,7 @@
       <div class="tarjeta"><h3>Puntos acumulados</h3><p class="nota">Liga, jornada a jornada</p><div class="grafico" id="g-puntos"></div></div>
       <div class="tarjeta"><h3>Marcadores</h3><p class="nota">Goles a favor y en contra por partido</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div><div class="grafico" id="g-goles"></div></div>
       <div class="tarjeta"><h3>¿Cuándo llegan los goles?</h3><p class="nota">Por tramo de 15 minutos</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div><div class="grafico" id="g-tramos"></div></div>
-      <div class="tarjeta"><h3>Tiros</h3><p class="nota">Más claros: partidos con la estadística incompleta (J1 y J3)</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>Zaragoza</span><span><i style="background:var(--muted)"></i>Rival</span></div><div class="grafico" id="g-tiros"></div></div>
+      <div class="tarjeta"><h3>Tiros</h3><p class="nota">Más claros: partidos en los que el desglose de tiros no cuadra (J1 y J3)</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>Zaragoza</span><span><i style="background:var(--muted)"></i>Rival</span></div><div class="grafico" id="g-tiros"></div></div>
     </div>
   </section>
 
@@ -91,11 +91,11 @@
   <section class="seccion lectura">
     <p class="etiqueta">Más detalle</p>
     <h2>Informe completo</h2>
-    <p>El informe recoge todo el análisis: reconciliaciones entre fuentes, sustituciones, tarjetas, minutos por partido y el registro de discrepancias encontradas.</p>
+    <p>En el informe están las conclusiones con más detalle, todos los gráficos y tablas, y cada diferencia que he encontrado entre fuentes con el dato que me he quedado.</p>
     <p class="aviso">Límites: seis partidos son una muestra muy pequeña. Las estadísticas de tiros de las jornadas 1 y 3 son parciales y falta la alineación de la jornada 3.</p>
     <div class="enlaces">
       <a class="boton lleno" href="informe-completo.html">Ver el informe completo</a>
-      <a class="boton" href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">Código en GitHub</a>
+      <a class="boton" href="https://github.com/AngelMarqueta/AngelMarqueta.github.io/tree/main/analisis/real-zaragoza" rel="noopener" target="_blank">Código y datos en GitHub</a>
     </div>
   </section>
 </main>
@@ -158,7 +158,7 @@
       const b = goles.filter(g => g.tramo === t && g.sentido === 'Contra').length;
       return {et: t, a, b, tip: `${t}': ${a} a favor, ${b} en contra`};
     }), css('--cesped'), css('--senal'));
-    barrasPareadas('#g-tiros', ps.map(p => ({et: `J${p.partido_id}`, a: p.tiros_zaragoza, b: p.tiros_rival, parcial: !p.tiros_completos, tip: `J${p.partido_id} · ${p.rival}: ${p.tiros_zaragoza} a ${p.tiros_rival}${p.tiros_completos ? '' : ' (dato parcial)'}`})), css('--cesped'), css('--muted'));
+    barrasPareadas('#g-tiros', ps.map(p => ({et: `J${p.partido_id}`, a: p.tiros_zaragoza, b: p.tiros_rival, parcial: !p.completo, tip: `J${p.partido_id} · ${p.rival}: ${p.tiros_zaragoza} a ${p.tiros_rival}${p.completo ? '' : ' (dato parcial)'}`})), css('--cesped'), css('--muted'));
   }
 
   function marco(sel, alto) {
@@ -219,7 +219,7 @@
     document.querySelector('#t-clasif tbody').innerHTML = datos.clasificacion.map(c =>
       `<tr${c.equipo === 'Real Zaragoza' ? ' class="propio"' : ''}><td class="n">${c.posicion}</td><td>${c.equipo}</td><td class="n">${c.pj}</td><td class="n">${c.gf - c.gc > 0 ? '+' : ''}${c.gf - c.gc}</td><td class="n">${c.puntos}</td></tr>`).join('');
     document.querySelector('#t-proximos tbody').innerHTML = datos.proximos.map(p =>
-      `<tr><td>${p.jornada}</td><td>${fecha(p.fecha)}</td><td>${p.rival}</td><td>${p.sede}</td><td class="n">${p.posicion_rival_j6}.º</td></tr>`).join('');
+      `<tr><td>${p.jornada}</td><td>${fecha(p.fecha)}</td><td>${p.rival}</td><td>${p.sede}</td><td class="n">${p.posicion_rival ? p.posicion_rival + '.º' : '—'}</td></tr>`).join('');
   }
 })();
 </script>

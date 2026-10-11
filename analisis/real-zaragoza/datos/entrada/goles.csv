@@ -1,0 +1,19 @@
+partido_id,sentido,jugador,minuto,anadido,parte,penalti,propia_puerta,asistencia,fuente_url
+1,Contra,Sinan Bakis,2,0,1,no,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-gimnastic/2byw33
+1,Contra,Carlos Segura,87,0,2,no,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-gimnastic/2byw33
+2,Favor,Edu Espiau,90,1,2,no,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-antequera/6nntpao
+3,Favor,Javi Cuenca,35,0,1,no,si,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7
+3,Favor,Diego González,38,0,1,no,no,Jaume Jardí,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7
+3,Contra,Dioni Villalba,45,9,1,si,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7
+3,Favor,Jaume Jardí,65,0,2,no,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7
+3,Favor,Yussif Saidu,81,0,2,no,no,Jaume Jardí,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7
+3,Contra,Ivan Laća,86,0,2,no,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7
+3,Contra,Rodrigo Ajegun,88,0,2,no,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-juventud-torremolinos-cf/x6r0vf7
+4,Favor,Jaume Jardí,51,0,2,no,no,Óscar Ureña,https://www.fotmob.com/es/matches/real-zaragoza-vs-cartagena/2dikzw
+5,Favor,Óscar Ureña,59,0,2,no,no,Edu Espiau,https://www.fotmob.com/es/matches/real-zaragoza-vs-ud-ibiza/8628l3cc
+5,Favor,Óscar Ureña,62,0,2,no,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-ud-ibiza/8628l3cc
+6,Contra,Sergio Moreno,6,0,1,si,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x
+6,Favor,Óscar Ureña,45,7,1,no,no,,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x
+6,Favor,Edu Espiau,47,0,2,no,no,Diego González,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x
+6,Favor,Pau Sans,77,0,2,no,no,Jaume Jardí,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x
+6,Favor,Jaume Jardí,85,0,2,no,no,Hugo Pinilla,https://www.fotmob.com/es/matches/real-zaragoza-vs-cd-teruel/91rtz0x

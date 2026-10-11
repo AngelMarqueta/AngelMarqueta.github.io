@@ -107,6 +107,9 @@ h3{font-family:var(--f-display);font-weight:600;font-size:1.45rem;line-height:1.
 .graficos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1rem}
 .tarjeta{background:var(--panel);border:1px solid var(--linea);border-radius:var(--radio);padding:1rem 1.1rem;min-width:0;position:relative}
 .tarjeta h3{font-size:1.2rem;margin:0}
+.nota{font-size:.88rem;color:var(--tinta-suave);margin:.5rem 0 1rem}
+.fuentes{font-size:.85rem;overflow-wrap:anywhere;padding-left:1.1rem}
+.fuentes li{margin:.2rem 0}
 .tarjeta .nota{font-size:.82rem;color:var(--tinta-suave);margin:.2rem 0 .6rem}
 .grafico{min-height:230px}
 .grafico svg{display:block}

@@ -1,0 +1,24 @@
+jornada,campo,problema,decision
+0,Cobertura,"No hay datos públicos fiables de coordenadas, tracking, distancias, velocidades ni PPDA",No se estiman ni se rellenan
+0,Nombres,"Cada fuente escribe los nombres a su manera: iniciales, apodos («Jamelli» es Rubén Díez y «J. Delgado» es Joaquín)",Uso siempre el nombre de la web del club
+0,Asistencias,Solo futboltotal las recoge y faltan en las jornadas 1 y 2 y en algún gol suelto,"Las trato como un mínimo, no como el total real"
+0,Agregados FootyStats,Sus tablas y su texto no coinciden en tiros ni en xG,No los uso
+1,Minuto gol Carlos Segura,87 en FotMob; 86 en futboltotal y FootyStats,Dejo el 87; no cambia el tramo
+1,Tiros,"El club da 33 tiros, pero 9 a puerta y 16 fuera suman 25 y no publica los bloqueados",Uso el total con aviso y no calculo la precisión de tiro de ese partido
+1,Minutos de los cambios,Club 55/71/82; futboltotal 56/72/82-83,Uso los minutos del club
+2,Fecha,La URL de futboltotal dice 06/09 y la ficha dice 5/09 a las 21:00,Dejo el 5/09 (FotMob y la propia ficha)
+2,Pases,BeSoccer 510/256 y 452/181 completados; web del club 510/257 y 453/183,Cada cálculo sale de una sola fuente
+2,Paradas,Una parada con dos tiros a puerta del rival y ningún gol encajado,No uso las paradas
+2,Penalti fallado,El Antequera falla un penalti en el 71 (futboltotal),Lo anoto como contexto
+3,Alineación,No he encontrado la alineación de Torremolinos en ninguna fuente fiable,La jornada 3 no entra en los minutos
+3,Minuto gol en propia puerta,35 en FotMob y en el club; 36 en FootyStats,Dejo el 35
+3,Tiros,"El club da 16 tiros, pero 7 a puerta y 3 fuera no llegan al total",No deduzco los bloqueados
+4,Estadísticas avanzadas,"AupaZaragoza pone 1-0 al descanso con el gol en el 51, y no dice qué modelo de xG usa",Las guardo aparte y no saco conclusiones del xG
+4,Expulsión rival,49 en AupaZaragoza; 50 en FotMob,No relaciono la expulsión con el gol del 51
+5,Fecha,La URL de futboltotal dice 27/09 y la ficha dice 25/09,Dejo el 25/09 (FotMob y la propia ficha)
+5,Minuto primer gol,58 en futboltotal; 58 o 59 en BeSoccer; 59 en FotMob,Dejo el 59
+5,Alineación,"La web del club no publica la ficha; uso BeSoccer, que cuadra con los cambios de futboltotal",La doy por buena con dos fuentes coherentes
+6,Minuto gol Ureña,"La ficha del club pone 52; FotMob, futboltotal y el 1-1 al descanso dicen 45+7",Dejo el 45+7
+6,Tiros a puerta,BeSoccer 7 (cuadra: 7 + 9 fuera + 1 bloqueado = 17); club 9,Uso BeSoccer
+6,Paradas,1 y 5 no cuadran con los tiros a puerta (7 y 3) ni con el 4-1,No uso las paradas
+6,Minuto gol Pau Sans,77 en FotMob; 76 en la crónica de radio,Dejo el 77

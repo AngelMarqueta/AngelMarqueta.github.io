@@ -13,7 +13,8 @@ Web: https://angelmarqueta.github.io/
 
 - `index.html`: portada.
 - `proyectos/`: una carpeta por proyecto.
-- `datos/zaragoza.json`: datos que lee el panel del Zaragoza. Para actualizarlo basta con sustituir este archivo.
+- `datos/zaragoza.json`: datos que lee el panel del Zaragoza. Lo genera el script de `analisis/real-zaragoza`.
 - `assets/estilo.css`: estilos comunes.
+- `analisis/`: código y datos de cada análisis. Ver [analisis/real-zaragoza](analisis/real-zaragoza/README.md).
 
 Análisis personales hechos con datos públicos. Sin relación con ningún club ni competición.

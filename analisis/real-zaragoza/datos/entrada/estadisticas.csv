@@ -1,0 +1,75 @@
+partido_id,periodo,metrica,zaragoza,valor_rival,calidad,fuente_url
+2,Partido,posesion_pct,67,33,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,fueras_juego,2,0,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,corners,7,5,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,tiros,19,10,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,tiros_puerta,4,2,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,tiros_fuera,7,4,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,tiros_bloqueados,8,4,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,paradas_publicadas,1,3,dudosa,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,entradas,16,16,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,pases,510,256,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,pases_completados,452,181,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,faltas,14,16,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,amarillas,2,4,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+2,Partido,rojas,0,0,ok,https://www.besoccer.com/match/real-zaragoza/antequera/202724015
+5,Partido,posesion_pct,56,44,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,fueras_juego,2,3,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,corners,5,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,tiros,8,8,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,tiros_puerta,6,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,tiros_fuera,1,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,tiros_bloqueados,1,4,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,paradas_publicadas,2,4,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,entradas,23,21,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,pases,511,397,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,pases_completados,438,327,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,faltas,13,15,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,amarillas,6,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Partido,rojas,0,0,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+6,Partido,posesion_pct,64,36,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,fueras_juego,4,4,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,corners,5,2,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,tiros,17,5,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,tiros_puerta,7,3,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,tiros_fuera,9,2,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,tiros_bloqueados,1,0,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,paradas_publicadas,1,5,dudosa,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,entradas,10,16,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,pases,484,273,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,pases_completados,431,204,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,faltas,21,11,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,amarillas,3,3,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+6,Partido,rojas,0,0,ok,https://pt.besoccer.com/jogo/real-zaragoza/teruel/202724205
+5,Parte 1,posesion_pct,59,41,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,fueras_juego,1,1,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,corners,1,1,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,tiros,2,6,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,tiros_puerta,2,1,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,tiros_fuera,0,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,tiros_bloqueados,0,3,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,paradas_publicadas,1,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,entradas,10,11,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,pases,281,200,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,pases_completados,243,165,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,faltas,4,7,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,amarillas,2,1,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 1,rojas,0,0,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,posesion_pct,54,46,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,fueras_juego,1,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,corners,4,1,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,tiros,6,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,tiros_puerta,4,1,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,tiros_fuera,1,0,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,tiros_bloqueados,1,1,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,paradas_publicadas,1,2,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,entradas,13,10,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,pases,230,197,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,pases_completados,195,162,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,faltas,9,8,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,amarillas,4,1,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+5,Parte 2,rojas,0,0,ok,https://es.besoccer.com/partido/ibiza-eivissa/real-zaragoza/202724147
+3,Partido,tiros,16,6,parcial,https://www.realzaragoza.com/partidos/temporada-2026-2027-primera-federacion-3-juventud-torremolinos-cf-vs-real-zaragoza-3815
+3,Partido,tiros_puerta,7,5,parcial,https://www.realzaragoza.com/partidos/temporada-2026-2027-primera-federacion-3-juventud-torremolinos-cf-vs-real-zaragoza-3815
+3,Partido,tiros_fuera,3,1,parcial,https://www.realzaragoza.com/partidos/temporada-2026-2027-primera-federacion-3-juventud-torremolinos-cf-vs-real-zaragoza-3815
+3,Partido,pases,448,414,parcial,https://www.realzaragoza.com/partidos/temporada-2026-2027-primera-federacion-3-juventud-torremolinos-cf-vs-real-zaragoza-3815
