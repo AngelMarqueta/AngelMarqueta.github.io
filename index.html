@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Línea de pase</title>
-<meta name="description" content="Línea de pase: análisis de datos en fútbol. Proyectos de analítica deportiva con datos públicos.">
+<meta name="description" content="Línea de pase: análisis de datos en fútbol con datos públicos. Proyectos de Ángel G. Marqueta Alonso.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <link rel="stylesheet" href="assets/estilo.css">
 <link rel="icon" href="assets/icono.svg" type="image/svg+xml">
 </head>
@@ -15,7 +15,7 @@
 <header class="cabecera">
   <div class="envoltorio">
     <a class="marca" href="index.html" aria-label="Línea de pase, inicio">
-      <svg viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="lp-cesped" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6b45"/><stop offset="1" stop-color="#3f8f5c"/></linearGradient><clipPath id="lp-campo"><rect x="2" y="2" width="60" height="44" rx="8"/></clipPath></defs><rect x="2" y="2" width="60" height="44" rx="8" fill="url(#lp-cesped)"/><g clip-path="url(#lp-campo)" fill="#fff" fill-opacity=".08"><rect x="2" y="0" width="7.5" height="48"/><rect x="17" y="0" width="7.5" height="48"/><rect x="32" y="0" width="7.5" height="48"/><rect x="47" y="0" width="7.5" height="48"/></g><g fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.8"><rect x="6" y="6" width="52" height="36" rx="2"/><path d="M32 6v36"/><circle cx="32" cy="24" r="6"/><path d="M58 15h-8v18h8"/></g><path d="M13 34C23 20 35 18 47 23" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 5.6"/><circle cx="12" cy="35" r="3.8" fill="#14261d" stroke="#fff" stroke-width="1.4"/><circle cx="50" cy="24" r="4.6" fill="#ff7a2f" stroke="#fff" stroke-width="1.4"/></svg>
+      <svg viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="lp-cesped" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6b45"/><stop offset="1" stop-color="#3f8f5c"/></linearGradient><clipPath id="lp-campo"><rect x="2" y="2" width="60" height="44" rx="8"/></clipPath></defs><rect x="2" y="2" width="60" height="44" rx="8" fill="url(#lp-cesped)" stroke="#f4f7f1" stroke-opacity=".55" stroke-width="2"/><g clip-path="url(#lp-campo)" fill="#fff" fill-opacity=".08"><rect x="2" y="0" width="7.5" height="48"/><rect x="17" y="0" width="7.5" height="48"/><rect x="32" y="0" width="7.5" height="48"/><rect x="47" y="0" width="7.5" height="48"/></g><g fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.8"><rect x="6" y="6" width="52" height="36" rx="2"/><path d="M32 6v36"/><circle cx="32" cy="24" r="6"/><path d="M58 15h-8v18h8"/></g><path d="M13 34C23 20 35 18 47 23" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 5.6"/><circle cx="12" cy="35" r="3.8" fill="#14261d" stroke="#fff" stroke-width="1.4"/><circle cx="50" cy="24" r="4.6" fill="#ff7a2f" stroke="#fff" stroke-width="1.4"/></svg>
       Línea de pase
     </a>
     <nav class="nav" aria-label="Principal">
@@ -26,62 +26,64 @@
     </nav>
   </div>
 </header>
-
 <main>
-  <div class="envoltorio">
-    <section class="portada" aria-labelledby="titulo">
-      <div>
+  <section class="cesped portada-campo" aria-labelledby="titulo">
+    <svg class="lineas" viewBox="0 0 1200 640" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <path d="M760 0V640"/><circle cx="760" cy="320" r="120"/><circle cx="760" cy="320" r="4"/>
+      <path d="M1200 150H1060V490H1200"/><path d="M1200 245H1150V395H1200"/><path d="M1060 260A80 80 0 0 0 1060 380"/>
+    </svg>
+    <div class="envoltorio">
+      <div class="portada">
         <h1 id="titulo">Línea de pase</h1>
-        <p class="sub">Análisis de datos en fútbol</p>
-        <p>Análisis de fútbol hechos con datos públicos: cada uno parte de una pregunta concreta y enseña sus fuentes. Proyectos de analítica deportiva de Ángel G. Marqueta.</p>
+        <p class="sub">Análisis de datos en fútbol. Preguntas concretas, datos públicos y las fuentes siempre a la vista.</p>
         <div class="botones">
-          <a class="boton lleno" href="#proyectos">Ver proyectos</a>
-          <a class="boton" href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
+          <a class="boton lleno" href="#proyectos">Ver los proyectos</a>
+          <a class="boton" href="#sobre-mi">Quién hay detrás</a>
         </div>
       </div>
-      <svg class="pizarra" viewBox="0 0 320 210" role="img" aria-label="Pizarra táctica: un pase atraviesa la línea defensiva rival y llega a un compañero">
-        <g class="campo">
-          <rect x="8" y="8" width="304" height="194" rx="4"/>
-          <path d="M160 8V202"/>
-          <circle cx="160" cy="105" r="28"/>
-          <path d="M312 50H262V160H312"/>
-        </g>
-        <g class="rival">
-          <circle cx="176" cy="46" r="7"/><circle cx="204" cy="124" r="7"/><circle cx="186" cy="172" r="7"/>
-        </g>
-        <path class="tray" d="M78 136 L262 76" pathLength="300"/>
-        <circle class="jugador" cx="78" cy="136" r="8"/>
-        <circle class="jugador" cx="262" cy="76" r="8"/>
-        <circle class="balon" cx="252" cy="86" r="5"/>
-        <text x="96" y="118" transform="rotate(-18 96 118)">línea de pase</text>
-      </svg>
-    </section>
-  </div>
+      <figure class="minutos" id="minutos" aria-labelledby="t-minutos">
+        <h2 id="t-minutos">Real Zaragoza 2026/27, minuto a minuto</h2>
+        <p id="minutos-texto">Cada punto es un gol de los partidos de liga del Zaragoza, colocado en el minuto en que llegó.</p>
+        <svg id="minutos-svg" viewBox="0 0 1000 136" preserveAspectRatio="xMinYMid meet" role="img" aria-label="Goles a favor y en contra del Real Zaragoza por minuto"></svg>
+        <div class="leyenda-min"><span><i style="background:var(--cal)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div>
+      </figure>
+    </div>
+  </section>
 
   <section class="seccion" id="proyectos" aria-labelledby="t-proyectos">
     <div class="envoltorio">
-      <p class="etiqueta">Proyectos</p>
-      <h2 id="t-proyectos">Preguntas con datos</h2>
+      <h2 id="t-proyectos">Proyectos</h2>
       <div class="proyectos">
-        <a class="proyecto" href="proyectos/real-zaragoza/index.html">
-          <span class="meta"><span>Seguimiento semanal</span><span>Actualizado tras la jornada 6</span></span>
-          <h3>Real Zaragoza 2026/27: el líder, jornada a jornada</h3>
-          <p>Resultados, goles, tiros, minutos y clasificación del Zaragoza en Primera Federación, con un panel interactivo que se actualiza tras cada partido.</p>
-          <span class="dato">5 de 11<small>goles de jugadores llegan desde el banquillo</small></span>
-          <span class="ir">Ver el análisis →</span>
-        </a>
-        <a class="proyecto" href="proyectos/futbol-femenino/index.html">
-          <span class="meta"><span>Datos abiertos</span><span>CSD e INE</span></span>
-          <h3>Ampliar la base del fútbol femenino: por dónde empezar</h3>
-          <p>Cruzando licencias federativas y población para decidir en qué comunidades tendría más sentido un programa de iniciación.</p>
-          <span class="dato">1 de cada 10<small>licencias de fútbol en España son femeninas</small></span>
-          <span class="ir">Ver el análisis →</span>
-        </a>
-        <div class="proyecto proximamente">
-          <span class="meta"><span>Próximamente</span></span>
-          <h3>Más análisis en camino</h3>
-          <p>Los trabajos del Máster en Big Data Deportivo se irán publicando aquí cuando estén corregidos.</p>
-        </div>
+
+        <article class="proyecto-fila">
+          <div class="proyecto-texto">
+            <p class="cuando" id="zgz-cuando">Seguimiento semanal, actualizado tras la jornada 6</p>
+            <h3>Real Zaragoza 2026/27: el líder, jornada a jornada</h3>
+            <p>Resultados, goles, tiros, minutos y clasificación del Zaragoza en Primera Federación. Un panel interactivo, un informe completo y la previa de cada partido.</p>
+            <a class="boton lleno" href="proyectos/real-zaragoza/index.html">Abrir el panel</a>
+          </div>
+          <div class="marcador cesped" aria-label="Situación del Real Zaragoza">
+            <div><b id="zgz-pos">1.º</b><span>en la clasificación</span></div>
+            <div><b id="zgz-pts">15</b><span>puntos</span></div>
+            <div><b id="zgz-goles">12–6</b><span>goles</span></div>
+            <div class="destacado"><b id="zgz-banquillo">5 de 11</b><span>goles de sus jugadores salen del banquillo</span></div>
+          </div>
+        </article>
+
+        <article class="proyecto-fila invertida">
+          <div class="proyecto-texto">
+            <p class="cuando">Datos abiertos del CSD y del INE</p>
+            <h3>Fútbol femenino: dónde empezar a ampliar la base</h3>
+            <p>Licencias federativas y población por comunidad para decidir en qué dos comunidades tendría más sentido probar un programa de iniciación.</p>
+            <p class="dato-grande">1 de cada 10<small>licencias de fútbol en España son femeninas</small></p>
+            <p><a class="boton" href="proyectos/futbol-femenino/index.html">Leer el análisis</a></p>
+          </div>
+          <a class="miniatura" href="proyectos/futbol-femenino/index.html" aria-label="Ver el análisis de fútbol femenino">
+            <img src="proyectos/futbol-femenino/mapa.png" alt="Mapa de España con las licencias femeninas de fútbol por cada 1.000 mujeres en cada comunidad" width="1500" height="1200" loading="lazy">
+          </a>
+        </article>
+
+        <p class="proximamente">Los trabajos del Máster en Big Data Deportivo se irán publicando aquí cuando estén corregidos.</p>
       </div>
     </div>
   </section>
@@ -89,16 +91,15 @@
   <section class="seccion" id="sobre-mi" aria-labelledby="t-sobre">
     <div class="envoltorio sobre">
       <div class="lectura">
-        <p class="etiqueta">Sobre mí</p>
         <h2 id="t-sobre">Ángel G. Marqueta Alonso</h2>
         <p>Vengo de la electrónica: terminé el ciclo formativo de grado superior en Desarrollo de Productos Electrónicos, donde también programé. Ahora estoy cursando el Máster en Big Data Deportivo de Sports Data Campus para dedicarme al análisis de datos en el fútbol.</p>
         <p>En Línea de pase publico los análisis que voy haciendo: siempre con datos públicos, con las fuentes a la vista y avisando de lo que los datos no permiten afirmar.</p>
         <ul class="herramientas" aria-label="Herramientas">
-          <li>Python</li><li>R</li><li>Excel</li><li class="formacion">Power BI · en formación</li>
+          <li>Python</li><li>R</li><li>Excel</li><li class="formacion">Power BI, en formación</li>
         </ul>
       </div>
       <dl class="ficha">
-        <dt>Formación</dt><dd>Máster en Big Data Deportivo · Sports Data Campus (en curso)</dd>
+        <dt>Formación</dt><dd>Máster en Big Data Deportivo, Sports Data Campus (en curso)</dd>
         <dd>CFGS Desarrollo de Productos Electrónicos</dd>
         <dt>Contacto</dt><dd><a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a></dd>
         <dt>Código</dt><dd><a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a></dd>
@@ -106,6 +107,77 @@
     </div>
   </section>
 </main>
+
+<script>
+// Datos de la portada: la franja de minutos y el marcador del Zaragoza salen
+// del mismo JSON que el panel, así se actualizan solos cada jornada.
+(function () {
+  fetch('datos/zaragoza.json').then(r => r.json()).then(d => {
+    const zgz = d.clasificacion.find(c => c.equipo === 'Real Zaragoza');
+    if (zgz) {
+      document.getElementById('zgz-pos').textContent = zgz.posicion + '.º';
+      document.getElementById('zgz-pts').textContent = zgz.puntos;
+      document.getElementById('zgz-goles').textContent = zgz.gf + '–' + zgz.gc;
+    }
+    const deJugadores = d.goles.filter(g => g.rol_goleador);
+    const suplentes = deJugadores.filter(g => g.rol_goleador === 'Suplente').length;
+    document.getElementById('zgz-banquillo').textContent = suplentes + ' de ' + deJugadores.length;
+    document.getElementById('zgz-cuando').textContent = 'Seguimiento semanal, actualizado tras la jornada ' + d.jornada;
+    dibujarMinutos(d.goles, d.jornada);
+  }).catch(() => { document.getElementById('minutos').hidden = true; });
+
+  let ultimos = null;
+  function dibujarMinutos(goles, jornada) {
+    ultimos = [goles, jornada];
+    const svg = document.getElementById('minutos-svg');
+    svg.replaceChildren();
+    // Dibujo en píxeles reales del contenedor para que los textos no se encojan en el móvil
+    const ancho = Math.max(300, Math.round(svg.getBoundingClientRect().width));
+    svg.setAttribute('viewBox', `0 0 ${ancho} 136`);
+    const ns = 'http://www.w3.org/2000/svg';
+    const izq = 12, der = ancho - 12, eje = 70, paso = ancho < 600 ? 12 : 15, radio = ancho < 600 ? 5 : 7;
+    const x = m => izq + Math.min(m, 95) / 95 * (der - izq);
+    const el = (tag, attrs, texto) => {
+      const e = document.createElementNS(ns, tag);
+      for (const k in attrs) e.setAttribute(k, attrs[k]);
+      if (texto) e.textContent = texto;
+      svg.appendChild(e);
+      return e;
+    };
+    el('line', {x1: izq, x2: der, y1: eje, y2: eje, class: 'eje'});
+    const marcas = ancho < 600 ? [0, 45, 90] : [0, 15, 30, 45, 60, 75, 90];
+    marcas.forEach(m => {
+      el('line', {x1: x(m), x2: x(m), y1: eje - 6, y2: eje + 6, class: 'marca-min'});
+      el('text', {x: x(m), y: 128, 'text-anchor': m === 0 ? 'start' : 'middle', class: 'rotulo'}, m + "'");
+    });
+    // Los goles del mismo minuto (o casi) se apilan hacia arriba (a favor) o hacia abajo (en contra)
+    const ocupado = {};
+    let i = 0;
+    goles.slice().sort((a, b) => minuto(a) - minuto(b)).forEach(g => {
+      const m = minuto(g), lado = g.sentido === 'Favor' ? -1 : 1;
+      const clave = lado + ':' + Math.round(m / (ancho < 600 ? 3 : 2));
+      const n = ocupado[clave] = (ocupado[clave] || 0) + 1;
+      const c = el('circle', {cx: x(m), cy: eje + lado * (4 + n * paso - paso / 2), r: radio,
+        class: 'gol ' + (lado < 0 ? 'favor' : 'contra'), style: `--i:${i++};--desde:${-lado * 8}px`});
+      const t = document.createElementNS(ns, 'title');
+      t.textContent = `${g.minuto_texto}', ${g.jugador}${g.propia_puerta ? ' (en propia puerta)' : ''}, ${g.sede === 'Casa' ? 'ante el' : 'en campo del'} ${g.rival}`;
+      c.appendChild(t);
+    });
+    const favor = goles.filter(g => g.sentido === 'Favor').length;
+    document.getElementById('minutos-texto').textContent =
+      `Los ${goles.length} goles de los ${jornada} partidos de liga del Zaragoza, cada uno en el minuto en que llegó: ${favor} a favor y ${goles.length - favor} en contra.`;
+  }
+  let espera;
+  window.addEventListener('resize', () => {
+    clearTimeout(espera);
+    espera = setTimeout(() => { if (ultimos) dibujarMinutos(...ultimos); }, 200);
+  });
+  function minuto(g) {
+    const [base, extra] = String(g.minuto_texto).split('+').map(Number);
+    return base + (extra ? Math.min(extra, 9) / 2 : 0);
+  }
+})();
+</script>
 
 <footer class="pie">
   <div class="envoltorio">

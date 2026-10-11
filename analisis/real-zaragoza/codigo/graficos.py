@@ -13,12 +13,12 @@ from matplotlib.ticker import MaxNLocator
 from calculos import TRAMOS
 
 # Colores de la web
-VERDE = "#2f6b45"
+VERDE = "#1f6b3e"
 VERDE_CLARO = "#8db89b"
-NARANJA = "#d9480f"
+NARANJA = "#ff6a2b"
 GRIS = "#b7bfb6"
-TINTA = "#14261d"
-TINTA_SUAVE = "#55635b"
+TINTA = "#0f2418"
+TINTA_SUAVE = "#4d6356"
 
 plt.rcParams.update({
     "font.family": "DejaVu Sans",
