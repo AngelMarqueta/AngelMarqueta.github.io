@@ -16,7 +16,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
-from cargar_datos import CARPETA_SALIDA, CARPETA_TEXTOS
+from cargar_datos import CARPETA_SALIDA, CARPETA_TEXTOS, RAIZ_WEB
+
+LOGO = RAIZ_WEB / "assets" / "logo.png"
 
 # Colores de la web
 PAPEL = "#f5f6f2"
@@ -46,8 +48,12 @@ def dibujar(dato, ruta):
         y -= 0.035
 
     fig.add_artist(Line2D([0.08, 0.92], [0.12, 0.12], color=LINEA, lw=1.2))
-    fig.text(0.08, 0.08, "Línea de pase · angelmarqueta.github.io", fontsize=11.5, color=TINTA)
-    fig.text(0.08, 0.055, dato["fuentes"], fontsize=9.5, color=TINTA_SUAVE)
+    # Logo de la web abajo a la izquierda y, a su lado, el nombre y las fuentes
+    eje_logo = fig.add_axes([0.08, 0.042, 0.075, 0.056])
+    eje_logo.imshow(plt.imread(LOGO))
+    eje_logo.axis("off")
+    fig.text(0.175, 0.08, "Línea de pase · angelmarqueta.github.io", fontsize=11.5, color=TINTA)
+    fig.text(0.175, 0.055, dato["fuentes"], fontsize=9.5, color=TINTA_SUAVE)
 
     fig.savefig(ruta, dpi=150, facecolor=PAPEL)
     plt.close(fig)
