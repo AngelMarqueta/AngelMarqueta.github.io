@@ -195,3 +195,10 @@ tr.propio td{font-weight:700;color:var(--senal-texto)}
   .minutos .gol{animation:aparece .45s ease-out both;animation-delay:calc(var(--i) * 45ms + .2s)}
   @keyframes aparece{from{opacity:0;transform:translateY(var(--desde))}to{opacity:1;transform:none}}
 }
+
+/* Vídeos divulgativos */
+.video-explicacion{max-width:60rem}
+.video-explicacion video{display:block;width:100%;height:auto;aspect-ratio:910/512;background:#071b24;border-radius:var(--radio);margin:1.25rem 0}
+.video-resumen{border-block:1px solid var(--linea);padding:.8rem 0;margin:1rem 0}
+.video-resumen summary{font-weight:600;cursor:pointer}
+.video-resumen p{max-width:68ch}
