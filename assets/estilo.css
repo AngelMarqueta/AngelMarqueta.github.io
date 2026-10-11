@@ -108,6 +108,12 @@ h3{font-family:var(--f-display);font-weight:600;font-size:1.45rem;line-height:1.
 .tarjeta{background:var(--panel);border:1px solid var(--linea);border-radius:var(--radio);padding:1rem 1.1rem;min-width:0;position:relative}
 .tarjeta h3{font-size:1.2rem;margin:0}
 .nota{font-size:.88rem;color:var(--tinta-suave);margin:.5rem 0 1rem}
+.racha{display:flex;gap:.35rem;margin:.4rem 0 1rem}
+.ficha-resultado{display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:6px;font-family:var(--f-datos);font-weight:500;color:#fff}
+.ficha-resultado.victoria{background:var(--cesped)}
+.ficha-resultado.empate{background:var(--muted);color:var(--tinta)}
+.ficha-resultado.derrota{background:var(--senal)}
+.claves li{margin:.4rem 0}
 .fuentes{font-size:.85rem;overflow-wrap:anywhere;padding-left:1.1rem}
 .fuentes li{margin:.2rem 0}
 .tarjeta .nota{font-size:.82rem;color:var(--tinta-suave);margin:.2rem 0 .6rem}

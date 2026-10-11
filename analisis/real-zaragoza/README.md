@@ -16,9 +16,13 @@ real-zaragoza/
 │   ├── calculos.py        puntos, tramos, minutos, participación en goles…
 │   ├── graficos.py        gráficos del informe
 │   ├── informe.py         página del informe completo
+│   ├── previa.py          previa del próximo partido
+│   ├── tarjeta_dato.py    imagen de «El dato de la jornada» para LinkedIn
 │   └── comprobar.R        repite los cálculos en R y los compara
-└── textos/
-    └── conclusiones.html  conclusiones del informe, escritas a mano
+├── textos/
+│   ├── conclusiones.html  conclusiones del informe, escritas a mano
+│   └── dato_jornada.json  texto de la tarjeta de la semana
+└── TABLEAU.md             cómo montar el panel en Tableau Public
 ```
 
 El script escribe también en la web:
@@ -39,6 +43,7 @@ El script escribe también en la web:
 | `estadisticas.csv` | Estadísticas completas de los partidos que las tienen (incluso por partes) |
 | `clasificacion.csv` | Clasificación del grupo tras cada jornada apuntada |
 | `proximos.csv` | Próximos partidos |
+| `partidos_rivales.csv` | Resultados del próximo rival, para la previa |
 | `incidencias.csv` | Diferencias entre fuentes y qué dato me quedo |
 | `avanzadas_j4_provisional.csv` | xG y otras métricas de un solo partido, de una fuente poco fiable (no se usan) |
 
@@ -55,6 +60,7 @@ Fuentes, por este orden: web oficial del club, FotMob, futboltotal y BeSoccer. C
    ```
 3. Si alguna comprobación falla, el script para y no cambia nada de la web.
 4. Revisar `textos/conclusiones.html` y los textos de la página del proyecto.
+5. Previa del siguiente partido: añadir los resultados del rival a `partidos_rivales.csv` y ejecutar `python analisis/real-zaragoza/codigo/previa.py <jornada>`.
 
 Los partidos de copa van en los mismos archivos con su competición; no cuentan para los puntos ni para la clasificación.
 
