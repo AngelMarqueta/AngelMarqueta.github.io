@@ -52,7 +52,7 @@ def dibujar(dato, ruta):
     eje_logo = fig.add_axes([0.08, 0.042, 0.075, 0.056])
     eje_logo.imshow(plt.imread(LOGO))
     eje_logo.axis("off")
-    fig.text(0.175, 0.08, "Línea de pase · angelmarqueta.github.io", fontsize=11.5, color=TINTA)
+    fig.text(0.175, 0.08, "Línea de pase · lineadepase.github.io", fontsize=11.5, color=TINTA)
     fig.text(0.175, 0.055, dato["fuentes"], fontsize=9.5, color=TINTA_SUAVE)
 
     fig.savefig(ruta, dpi=150, facecolor=PAPEL)

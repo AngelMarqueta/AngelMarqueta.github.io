@@ -1,6 +1,6 @@
 # Fútbol femenino: ¿dónde empezar un programa de iniciación?
 
-Actividad colaborativa del módulo 1 del Máster en Big Data Deportivo. El resultado está en [Línea de pase](https://angelmarqueta.github.io/proyectos/futbol-femenino/).
+Actividad colaborativa del módulo 1 del Máster en Big Data Deportivo. El resultado está en [Línea de pase](https://lineadepase.github.io/proyectos/futbol-femenino/).
 
 ## La pregunta
 

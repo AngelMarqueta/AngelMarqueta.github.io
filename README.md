@@ -2,7 +2,7 @@
 
 Análisis de datos en fútbol. Web personal de proyectos de analítica deportiva de Ángel G. Marqueta Alonso.
 
-Web: https://angelmarqueta.github.io/
+Web: https://lineadepase.github.io/
 
 ## Proyectos
 
