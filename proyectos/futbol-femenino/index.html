@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fútbol femenino en datos · Segundo palo</title>
+<meta name="description" content="Licencias federativas y población del CSD y del INE para decidir dónde empezar a ampliar la base del fútbol femenino en España.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/estilo.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltorio">
+    <a class="marca" href="../../index.html" aria-label="Segundo palo, inicio">
+      <svg viewBox="0 0 30 22" aria-hidden="true"><path d="M3 21V3h24v18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="9" r="3" fill="var(--senal)"/></svg>
+      Segundo palo
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../../index.html#proyectos">Proyectos</a>
+      <a href="../../index.html#sobre-mi">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
+      <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="envoltorio">
+  <p class="migas"><a href="../../index.html#proyectos">Proyectos</a> / Datos abiertos</p>
+  <section class="cab-proyecto">
+    <p class="etiqueta">Datos abiertos · Fútbol femenino</p>
+    <h1>Ampliar la base del fútbol femenino: por dónde empezar</h1>
+    <p class="entradilla">El fútbol femenino crece en España, pero sigue siendo una de cada diez licencias. Con dos fuentes públicas busqué en qué comunidades tendría más sentido empezar un programa de iniciación.</p>
+    <dl class="ficha-tecnica">
+      <div><dt>Pregunta</dt><dd>¿Dónde hay más margen para sumar jugadoras nuevas?</dd></div>
+      <div><dt>Datos</dt><dd>Estadística de Deporte Federado 2023 y 2025 (CSD) · Población por sexo a 1 de enero de 2025 (INE)</dd></div>
+      <div><dt>Herramientas</dt><dd>Python (pandas, matplotlib)</dd></div>
+      <div><dt>Contexto</dt><dd>Actividad colaborativa del módulo 1 del Máster en Big Data Deportivo</dd></div>
+    </dl>
+  </section>
+
+  <section class="seccion">
+    <p class="etiqueta">Lo que encontré</p>
+    <h2>Tres datos</h2>
+    <ul class="hallazgos">
+      <li><span class="cifra">127.242</span><span>licencias femeninas de fútbol en 2025, un 18 % más que en 2023. Aun así, son solo el 9,96 % de todas las licencias de fútbol.</span></li>
+      <li><span class="cifra">×3,8</span><span>de diferencia entre comunidades: de 2,63 licencias por cada 1.000 mujeres en Castilla-La Mancha a 9,87 en el País Vasco.</span></li>
+      <li><span class="cifra">28,6 %</span><span>de las mujeres de España viven en Andalucía y la Comunidad Valenciana, que solo reúnen el 23,4 % de las licencias femeninas. Además, aportaron el 30,2 % del crecimiento entre 2023 y 2025.</span></li>
+    </ul>
+    <figure class="figura">
+      <img src="mapa.png" alt="Mapa de España por comunidades autónomas con las licencias femeninas de fútbol por cada 1.000 mujeres en 2025. Andalucía y la Comunidad Valenciana aparecen destacadas." width="1496" height="1193">
+      <figcaption>Licencias femeninas de fútbol por cada 1.000 mujeres, 2025. Elaboración propia con datos del CSD y del INE.</figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion lectura">
+    <p class="etiqueta">Cómo lo hice</p>
+    <h2>El criterio</h2>
+    <p>Calculé tres indicadores por comunidad: licencias femeninas por cada 1.000 mujeres, porcentaje de mujeres sobre el total de licencias de fútbol y crecimiento entre 2023 y 2025. Después busqué las comunidades que estuvieran por debajo de la media española en los dos primeros y que, además, ya estuvieran creciendo.</p>
+    <p>Cumplen ocho de las diecisiete. Entre ellas elegí las dos con más población femenina, Andalucía y la Comunidad Valenciana, porque es donde un programa puede llegar a más gente. Madrid se queda fuera por muy poco: su porcentaje femenino es del 10,02 %, apenas por encima del 9,96 % nacional.</p>
+    <p>La propuesta es una prueba piloto: un grupo de iniciación por comunidad, con metas medibles (inscritas, asistencia y cuántas sacan licencia la temporada siguiente) antes de ampliarlo a las otras seis comunidades que cumplen el criterio.</p>
+    <p class="aviso">Límites: una licencia no es una persona, las licencias no recogen el fútbol recreativo y la estadística no separa por edades.</p>
+    <div class="enlaces">
+      <a class="boton lleno" href="carrusel.pdf">Resumen en 7 diapositivas (PDF)</a>
+      <a class="boton" href="informe.pdf">Informe completo (PDF)</a>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltorio">
+    <p>Fuentes: CSD, Estadística de Deporte Federado 2025 (tablas 4, 4.1 y 4.2) y 2023 (tabla 8.4.2); INE, tabla 67988.</p>
+    <p>© 2026 Ángel G. Marqueta Alonso</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Real Zaragoza 2026/27 · Segundo palo</title>
+<meta name="description" content="Seguimiento con datos públicos del Real Zaragoza en Primera Federación 2026/27: resultados, goles, tiros, minutos y clasificación.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/estilo.css">
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltorio">
+    <a class="marca" href="../../index.html" aria-label="Segundo palo, inicio">
+      <svg viewBox="0 0 30 22" aria-hidden="true"><path d="M3 21V3h24v18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="9" r="3" fill="var(--senal)"/></svg>
+      Segundo palo
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../../index.html#proyectos">Proyectos</a>
+      <a href="../../index.html#sobre-mi">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
+      <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="envoltorio">
+  <p class="migas"><a href="../../index.html#proyectos">Proyectos</a> / Seguimiento semanal</p>
+  <section class="cab-proyecto">
+    <p class="etiqueta">Seguimiento semanal · Primera Federación, grupo 2</p>
+    <h1>Real Zaragoza 2026/27: el líder, jornada a jornada</h1>
+    <p class="entradilla">Un seguimiento del Zaragoza hecho solo con datos públicos. Se actualiza después de cada partido, también en jornadas intersemanales y en Copa.</p>
+    <dl class="ficha-tecnica">
+      <div><dt>Datos hasta</dt><dd id="corte">jornada 6</dd></div>
+      <div><dt>Fuentes</dt><dd>Fichas de partido de la web del club, contrastadas con futboltotal, FotMob y BeSoccer</dd></div>
+      <div><dt>Herramientas</dt><dd>Python (pandas, matplotlib), R y d3.js para este panel</dd></div>
+      <div><dt>Aviso</dt><dd>Análisis personal; sin relación con el club</dd></div>
+    </dl>
+  </section>
+
+  <section class="seccion">
+    <p class="etiqueta">Lo que dicen los datos</p>
+    <h2>Tres datos</h2>
+    <ul class="hallazgos">
+      <li><span class="cifra">5 de 11</span><span>goles de jugadores del Zaragoza los marcaron futbolistas que salieron desde el banquillo.</span></li>
+      <li><span class="cifra">110–47</span><span>en tiros en los seis partidos. Ojo: en las jornadas 1 y 3 la estadística no está completa, así que la cifra real puede ser algo mayor.</span></li>
+      <li><span class="cifra">33–10</span><span>tiros en Tarragona, en la jornada 1, y aun así derrota por 0-2. Es la única de la temporada.</span></li>
+    </ul>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-panel">
+    <p class="etiqueta">Panel</p>
+    <h2 id="t-panel">Partido a partido</h2>
+    <div class="filtro" role="group" aria-label="Filtrar por sede">
+      <button type="button" data-sede="Todos" aria-pressed="true">Todos</button>
+      <button type="button" data-sede="Casa" aria-pressed="false">En casa</button>
+      <button type="button" data-sede="Fuera" aria-pressed="false">Fuera</button>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="graficos">
+      <div class="tarjeta"><h3>Puntos acumulados</h3><p class="nota">Liga, jornada a jornada</p><div class="grafico" id="g-puntos"></div></div>
+      <div class="tarjeta"><h3>Marcadores</h3><p class="nota">Goles a favor y en contra por partido</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div><div class="grafico" id="g-goles"></div></div>
+      <div class="tarjeta"><h3>¿Cuándo llegan los goles?</h3><p class="nota">Por tramo de 15 minutos</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div><div class="grafico" id="g-tramos"></div></div>
+      <div class="tarjeta"><h3>Tiros</h3><p class="nota">Más claros: partidos con la estadística incompleta (J1 y J3)</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>Zaragoza</span><span><i style="background:var(--muted)"></i>Rival</span></div><div class="grafico" id="g-tiros"></div></div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-min">
+    <p class="etiqueta">Plantilla</p>
+    <h2 id="t-min">Minutos y participación en goles</h2>
+    <p class="nota">Toda la temporada de liga, sin filtro de sede. Falta la alineación de la jornada 3, así que los minutos de ese partido no están incluidos.</p>
+    <div class="tarjeta tabla"><table id="t-jugadores"><thead><tr><th>Jugador</th><th class="n">PJ</th><th class="n">Tit.</th><th>Minutos</th><th class="n">Goles</th><th class="n">Asist.</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="seccion graficos" aria-label="Clasificación y calendario">
+    <div>
+      <p class="etiqueta">Clasificación</p>
+      <h2>Grupo 2</h2>
+      <div class="tarjeta tabla"><table id="t-clasif"><thead><tr><th class="n">#</th><th>Equipo</th><th class="n">PJ</th><th class="n">DG</th><th class="n">Pts</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div>
+      <p class="etiqueta">Calendario</p>
+      <h2>Próximos partidos</h2>
+      <div class="tarjeta tabla"><table id="t-proximos"><thead><tr><th>J.</th><th>Fecha</th><th>Rival</th><th>Sede</th><th class="n">Pos. rival</th></tr></thead><tbody></tbody></table></div>
+      <p class="nota">Posición del rival al cierre de los datos.</p>
+    </div>
+  </section>
+
+  <section class="seccion lectura">
+    <p class="etiqueta">Más detalle</p>
+    <h2>Informe completo</h2>
+    <p>El informe recoge todo el análisis: reconciliaciones entre fuentes, sustituciones, tarjetas, minutos por partido y el registro de discrepancias encontradas.</p>
+    <p class="aviso">Límites: seis partidos son una muestra muy pequeña. Las estadísticas de tiros de las jornadas 1 y 3 son parciales y falta la alineación de la jornada 3.</p>
+    <div class="enlaces">
+      <a class="boton lleno" href="informe-completo.html">Ver el informe completo</a>
+      <a class="boton" href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">Código en GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltorio">
+    <p>Análisis personal con datos públicos. Segundo palo no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
+    <p>© 2026 Ángel G. Marqueta Alonso</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+(function () {
+  const fmt = n => n.toLocaleString('es-ES', {maximumFractionDigits: 2});
+  const fecha = s => { const [y, m, d] = s.split('-'); return `${+d}/${+m}`; };
+  const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  let datos, sede = 'Todos';
+
+  fetch('../../datos/zaragoza.json').then(r => r.json()).then(d => {
+    datos = d;
+    document.getElementById('corte').textContent = `jornada ${d.jornada} (${fecha(d.corte)}/${d.corte.slice(0, 4)})`;
+    tablas();
+    pintar();
+    document.querySelectorAll('.filtro button').forEach(b => b.addEventListener('click', () => {
+      sede = b.dataset.sede;
+      document.querySelectorAll('.filtro button').forEach(x => x.setAttribute('aria-pressed', x === b));
+      pintar();
+    }));
+    let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(pintar, 150); });
+  }).catch(() => {
+    document.getElementById('kpis').innerHTML = '<p class="aviso">No se han podido cargar los datos. Si abres la página como archivo local, usa un servidor (por ejemplo, <code>python -m http.server</code>).</p>';
+  });
+
+  function filtrados() {
+    return datos.partidos.filter(p => sede === 'Todos' || p.sede === sede);
+  }
+
+  function pintar() {
+    const ps = filtrados();
+    const ids = new Set(ps.map(p => p.partido_id));
+    const goles = datos.goles.filter(g => ids.has(g.partido_id));
+    const pts = d3.sum(ps, p => p.puntos), gf = d3.sum(ps, p => p.goles_favor), gc = d3.sum(ps, p => p.goles_contra);
+    const pos = datos.clasificacion.find(c => c.equipo === 'Real Zaragoza');
+    const kpis = [
+      ['Posición', sede === 'Todos' ? `${pos.posicion}.º` : '—'],
+      ['Puntos', `${pts}<small style="font-size:.9rem;font-weight:600"> en ${ps.length} PJ</small>`],
+      ['Puntos por partido', ps.length ? fmt(pts / ps.length) : '—'],
+      ['Goles a favor', gf],
+      ['Goles en contra', gc],
+      ['Porterías a cero', ps.filter(p => p.goles_contra === 0).length]
+    ];
+    document.getElementById('kpis').innerHTML = kpis.map(([k, v]) => `<div class="kpi"><span>${k}</span><b>${v}</b></div>`).join('');
+
+    lineaPuntos(ps);
+    barrasPareadas('#g-goles', ps.map(p => ({et: `J${p.partido_id}`, a: p.goles_favor, b: p.goles_contra, tip: `J${p.partido_id} · ${p.sede === 'Casa' ? 'vs' : 'en'} ${p.rival}: ${p.goles_favor}-${p.goles_contra}`})), css('--cesped'), css('--senal'));
+    const tramos = ['01–15', '16–30', '31–45+', '46–60', '61–75', '76–90+'];
+    barrasPareadas('#g-tramos', tramos.map(t => {
+      const a = goles.filter(g => g.tramo === t && g.sentido === 'Favor').length;
+      const b = goles.filter(g => g.tramo === t && g.sentido === 'Contra').length;
+      return {et: t, a, b, tip: `${t}': ${a} a favor, ${b} en contra`};
+    }), css('--cesped'), css('--senal'));
+    barrasPareadas('#g-tiros', ps.map(p => ({et: `J${p.partido_id}`, a: p.tiros_zaragoza, b: p.tiros_rival, parcial: !p.tiros_completos, tip: `J${p.partido_id} · ${p.rival}: ${p.tiros_zaragoza} a ${p.tiros_rival}${p.tiros_completos ? '' : ' (dato parcial)'}`})), css('--cesped'), css('--muted'));
+  }
+
+  function marco(sel, alto) {
+    const el = document.querySelector(sel);
+    el.innerHTML = '';
+    const ancho = Math.max(260, el.clientWidth);
+    const m = {t: 10, r: 10, b: 26, l: 30};
+    const svg = d3.select(el).append('svg').attr('width', ancho).attr('height', alto);
+    const g = svg.append('g').attr('transform', `translate(${m.l},${m.t})`);
+    let tip = el.parentNode.querySelector('.tip');
+    if (!tip) { tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true; el.parentNode.appendChild(tip); }
+    const mostrar = (ev, txt) => {
+      const r = el.parentNode.getBoundingClientRect();
+      tip.textContent = txt; tip.hidden = false;
+      const x = Math.min(ev.clientX - r.left + 10, r.width - tip.offsetWidth - 6);
+      tip.style.left = Math.max(6, x) + 'px'; tip.style.top = (ev.clientY - r.top - 34) + 'px';
+    };
+    return {el, g, w: ancho - m.l - m.r, h: alto - m.t - m.b, mostrar, ocultar: () => tip.hidden = true};
+  }
+
+  function ejes(f, x, y) {
+    f.g.append('g').attr('transform', `translate(0,${f.h})`).call(d3.axisBottom(x).tickSizeOuter(0)).call(s => s.select('.domain').attr('stroke', css('--linea')));
+    f.g.append('g').call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('d')).tickSize(-f.w)).call(s => { s.select('.domain').remove(); s.selectAll('line').attr('stroke', css('--linea')); });
+  }
+
+  function lineaPuntos(ps) {
+    const f = marco('#g-puntos', 230);
+    let acum = 0;
+    const serie = ps.map(p => ({j: `J${p.partido_id}`, v: (acum += p.puntos), p}));
+    const x = d3.scalePoint().domain(serie.map(d => d.j)).range([0, f.w]).padding(.4);
+    const y = d3.scaleLinear().domain([0, Math.max(3, d3.max(serie, d => d.v) || 0)]).nice().range([f.h, 0]);
+    ejes(f, x, y);
+    f.g.append('path').datum(serie).attr('fill', 'none').attr('stroke', css('--cesped')).attr('stroke-width', 2.5)
+      .attr('d', d3.line().x(d => x(d.j)).y(d => y(d.v)));
+    f.g.selectAll('circle').data(serie).join('circle').attr('cx', d => x(d.j)).attr('cy', d => y(d.v)).attr('r', 5)
+      .attr('fill', d => d.p.puntos ? css('--cesped') : css('--senal')).attr('stroke', css('--panel')).attr('stroke-width', 2)
+      .on('mousemove', (ev, d) => f.mostrar(ev, `${d.j} · ${d.p.rival} (${d.p.goles_favor}-${d.p.goles_contra}): ${d.v} pts`)).on('mouseleave', f.ocultar);
+  }
+
+  function barrasPareadas(sel, filas, cA, cB) {
+    const f = marco(sel, 230);
+    const x = d3.scaleBand().domain(filas.map(d => d.et)).range([0, f.w]).padding(.25);
+    const xi = d3.scaleBand().domain(['a', 'b']).range([0, x.bandwidth()]).padding(.08);
+    const y = d3.scaleLinear().domain([0, Math.max(1, d3.max(filas, d => Math.max(d.a, d.b)))]).nice().range([f.h, 0]);
+    ejes(f, x, y);
+    const grupo = f.g.selectAll('.gr').data(filas).join('g').attr('transform', d => `translate(${x(d.et)},0)`)
+      .attr('opacity', d => d.parcial ? .45 : 1);
+    grupo.selectAll('rect').data(d => [['a', d.a, cA, d], ['b', d.b, cB, d]]).join('rect')
+      .attr('x', d => xi(d[0])).attr('width', xi.bandwidth()).attr('y', d => y(d[1])).attr('height', d => f.h - y(d[1]))
+      .attr('rx', 2).attr('fill', d => d[2])
+      .on('mousemove', (ev, d) => f.mostrar(ev, d[3].tip)).on('mouseleave', f.ocultar);
+  }
+
+  function tablas() {
+    const max = d3.max(datos.jugadores, j => j.minutos);
+    document.querySelector('#t-jugadores tbody').innerHTML = datos.jugadores.slice().sort((a, b) => b.minutos - a.minutos).map(j =>
+      `<tr><td>${j.jugador}</td><td class="n">${j.partidos}</td><td class="n">${j.titularidades}</td><td><span class="barra" style="width:${Math.round(j.minutos / max * 90)}px;background:var(--cesped)"></span>${j.minutos}'</td><td class="n">${j.goles}</td><td class="n">${j.asistencias}</td></tr>`).join('');
+    document.querySelector('#t-clasif tbody').innerHTML = datos.clasificacion.map(c =>
+      `<tr${c.equipo === 'Real Zaragoza' ? ' class="propio"' : ''}><td class="n">${c.posicion}</td><td>${c.equipo}</td><td class="n">${c.pj}</td><td class="n">${c.gf - c.gc > 0 ? '+' : ''}${c.gf - c.gc}</td><td class="n">${c.puntos}</td></tr>`).join('');
+    document.querySelector('#t-proximos tbody').innerHTML = datos.proximos.map(p =>
+      `<tr><td>${p.jornada}</td><td>${fecha(p.fecha)}</td><td>${p.rival}</td><td>${p.sede}</td><td class="n">${p.posicion_rival_j6}.º</td></tr>`).join('');
+  }
+})();
+</script>
+</body>
+</html>
