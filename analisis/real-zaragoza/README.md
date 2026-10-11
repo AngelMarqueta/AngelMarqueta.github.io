@@ -1,6 +1,6 @@
 # Real Zaragoza 2026/27: seguimiento con datos públicos
 
-Código y datos del seguimiento del Real Zaragoza en Primera Federación (grupo 2). El resultado se publica en [Segundo palo](https://angelmarqueta.github.io/proyectos/real-zaragoza/).
+Código y datos del seguimiento del Real Zaragoza en Primera Federación (grupo 2). El resultado se publica en [Línea de pase](https://angelmarqueta.github.io/proyectos/real-zaragoza/).
 
 ## Cómo está organizado
 

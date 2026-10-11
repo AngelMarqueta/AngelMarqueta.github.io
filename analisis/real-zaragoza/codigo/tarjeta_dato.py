@@ -46,7 +46,7 @@ def dibujar(dato, ruta):
         y -= 0.035
 
     fig.add_artist(Line2D([0.08, 0.92], [0.12, 0.12], color=LINEA, lw=1.2))
-    fig.text(0.08, 0.08, "Segundo palo · angelmarqueta.github.io", fontsize=11.5, color=TINTA)
+    fig.text(0.08, 0.08, "Línea de pase · angelmarqueta.github.io", fontsize=11.5, color=TINTA)
     fig.text(0.08, 0.055, dato["fuentes"], fontsize=9.5, color=TINTA_SUAVE)
 
     fig.savefig(ruta, dpi=150, facecolor=PAPEL)

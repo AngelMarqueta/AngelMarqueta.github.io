@@ -40,7 +40,7 @@ Todos están en `datos/salida/` (UTF-8):
 
 - Filtro de `Sede` (Casa / Fuera) aplicado a las hojas 1 a 3.
 - Mismos colores que la web: verde `#2f6b45` (a favor) y naranja `#d9480f` (en contra).
-- Título: «Real Zaragoza 2026/27 · Segundo palo». Fuente al pie: «Datos públicos: web del club, FotMob, futboltotal y BeSoccer».
+- Título: «Real Zaragoza 2026/27 · Línea de pase». Fuente al pie: «Datos públicos: web del club, FotMob, futboltotal y BeSoccer».
 
 ## Publicar
 

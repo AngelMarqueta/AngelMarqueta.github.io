@@ -1,4 +1,4 @@
-/* Segundo palo · cuaderno de análisis: papel claro con tinta verde oscura, línea de cal y un acento naranja de señal.
+/* Línea de pase · cuaderno de análisis: papel claro con tinta verde oscura, línea de cal y un acento naranja de señal.
    Layout: columna de lectura de ~68ch con bloques anchos para gráficos y tablas. */
 :root{
   --papel:#f5f6f2; --panel:#ffffff; --tinta:#14261d; --tinta-suave:#55635b; --linea:#d9ddd4;
@@ -43,13 +43,13 @@ img{max-width:100%;height:auto}
 .boton.lleno{background:var(--tinta);color:var(--papel)}
 .boton:hover{border-color:var(--senal);color:var(--senal)}
 .boton.lleno:hover{background:var(--senal);color:#fff}
-.porteria{width:100%;max-width:26rem;justify-self:center}
-.porteria .poste{stroke:var(--tinta);stroke-width:5;stroke-linecap:round;fill:none}
-.porteria .red{stroke:var(--linea);stroke-width:1}
-.porteria .cal{stroke:var(--tinta-suave);stroke-width:2;stroke-dasharray:2 7;stroke-linecap:round;fill:none}
-.porteria .tray{stroke:var(--senal);stroke-width:2.5;stroke-dasharray:6 6;fill:none}
-.porteria .balon{fill:var(--senal)}
-.porteria text{fill:var(--tinta-suave);font-family:var(--f-datos);font-size:11px}
+.pizarra{width:100%;max-width:26rem;justify-self:center}
+.pizarra .campo{stroke:var(--linea);stroke-width:2;fill:none}
+.pizarra .rival circle{fill:var(--panel);stroke:var(--senal);stroke-width:2.5}
+.pizarra .jugador{fill:var(--tinta)}
+.pizarra .tray{stroke:var(--cesped);stroke-width:2.5;stroke-dasharray:6 6;fill:none}
+.pizarra .balon{fill:var(--senal)}
+.pizarra text{fill:var(--tinta-suave);font-family:var(--f-datos);font-size:11px}
 
 /* Secciones */
 .seccion{padding-block:clamp(2rem,5vw,3.5rem);border-top:1px solid var(--linea)}
@@ -139,12 +139,12 @@ tr.propio td{font-weight:700;color:var(--senal)}
 
 @media (max-width:760px){
   .portada,.sobre{grid-template-columns:1fr}
-  .porteria{max-width:20rem}
+  .pizarra{max-width:20rem}
   .hallazgos li{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:no-preference){
-  .porteria .tray{animation:trayectoria 1.6s ease-out both}
-  .porteria .balon{animation:aparece .3s 1.5s both}
+  .pizarra .tray{animation:trayectoria 1.6s ease-out both}
+  .pizarra .balon{animation:aparece .3s 1.5s both}
   @keyframes trayectoria{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
   @keyframes aparece{from{opacity:0}to{opacity:1}}
 }

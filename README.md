@@ -1,4 +1,4 @@
-# Segundo palo
+# Línea de pase
 
 Análisis de datos en fútbol. Web personal de proyectos de analítica deportiva de Ángel G. Marqueta Alonso.
 

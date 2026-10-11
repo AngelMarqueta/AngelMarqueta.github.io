@@ -126,7 +126,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Informe completo: Real Zaragoza 2026/27 · Segundo palo</title>
+<title>Informe completo: Real Zaragoza 2026/27 · Línea de pase</title>
 <meta name="description" content="Informe completo del seguimiento del Real Zaragoza 2026/27 con datos públicos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,9 +136,9 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 <body>
 <header class="cabecera">
   <div class="envoltorio">
-    <a class="marca" href="../../index.html" aria-label="Segundo palo, inicio">
-      <svg viewBox="0 0 30 22" aria-hidden="true"><path d="M3 21V3h24v18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="9" r="3" fill="var(--senal)"/></svg>
-      Segundo palo
+    <a class="marca" href="../../index.html" aria-label="Línea de pase, inicio">
+      <svg viewBox="0 0 30 22" aria-hidden="true"><path d="M6 17L24 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 3"/><circle cx="5" cy="17" r="3.5" fill="currentColor"/><circle cx="25" cy="5" r="3.5" fill="var(--senal)"/></svg>
+      Línea de pase
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="../../index.html#proyectos">Proyectos</a>
@@ -215,7 +215,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 
 <footer class="pie">
   <div class="envoltorio">
-    <p>Análisis personal con datos públicos. Segundo palo no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
+    <p>Análisis personal con datos públicos. Línea de pase no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
     <p>© {ultima_fecha.year} Ángel G. Marqueta Alonso</p>
   </div>
 </footer>

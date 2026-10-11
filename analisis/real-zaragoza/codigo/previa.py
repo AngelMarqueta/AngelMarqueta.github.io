@@ -142,7 +142,7 @@ def generar(jornada):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Previa: {escape(local)} – {escape(visitante)} · Segundo palo</title>
+<title>Previa: {escape(local)} – {escape(visitante)} · Línea de pase</title>
 <meta name="description" content="Previa con datos del {escape(local)} – {escape(visitante)}, jornada {jornada} de Primera Federación.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -152,9 +152,9 @@ def generar(jornada):
 <body>
 <header class="cabecera">
   <div class="envoltorio">
-    <a class="marca" href="../../index.html" aria-label="Segundo palo, inicio">
-      <svg viewBox="0 0 30 22" aria-hidden="true"><path d="M3 21V3h24v18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="9" r="3" fill="var(--senal)"/></svg>
-      Segundo palo
+    <a class="marca" href="../../index.html" aria-label="Línea de pase, inicio">
+      <svg viewBox="0 0 30 22" aria-hidden="true"><path d="M6 17L24 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 3"/><circle cx="5" cy="17" r="3.5" fill="currentColor"/><circle cx="25" cy="5" r="3.5" fill="var(--senal)"/></svg>
+      Línea de pase
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="../../index.html#proyectos">Proyectos</a>
@@ -212,7 +212,7 @@ def generar(jornada):
 
 <footer class="pie">
   <div class="envoltorio">
-    <p>Análisis personal con datos públicos. Segundo palo no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
+    <p>Análisis personal con datos públicos. Línea de pase no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
     <p>© {proximo['fecha'].year} Ángel G. Marqueta Alonso</p>
   </div>
 </footer>
