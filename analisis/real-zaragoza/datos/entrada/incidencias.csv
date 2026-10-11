@@ -10,7 +10,7 @@ jornada,campo,problema,decision
 2,Pases,BeSoccer 510/256 y 452/181 completados; web del club 510/257 y 453/183,Cada cálculo sale de una sola fuente
 2,Paradas,Una parada con dos tiros a puerta del rival y ningún gol encajado,No uso las paradas
 2,Penalti fallado,El Antequera falla un penalti en el 71 (futboltotal),Lo anoto como contexto
-3,Alineación,No he encontrado la alineación de Torremolinos en ninguna fuente fiable,La jornada 3 no entra en los minutos
+3,Alineación,La web del club no publica la ficha. Sport Aragón publica el once; sus cinco cambios coinciden con futboltotal y LaLiga. «Rubén Iranzo» es Rubo,La doy por buena con fuentes coherentes
 3,Minuto gol en propia puerta,35 en FotMob y en el club; 36 en FootyStats,Dejo el 35
 3,Tiros,"El club da 16 tiros, pero 7 a puerta y 3 fuera no llegan al total",No deduzco los bloqueados
 4,Estadísticas avanzadas,"AupaZaragoza pone 1-0 al descanso con el gol en el 51, y no dice qué modelo de xG usa",Las guardo aparte y no saco conclusiones del xG

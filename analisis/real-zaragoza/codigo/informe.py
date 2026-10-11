@@ -186,7 +186,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
     <p class="nota">«Suplente» quiere decir que el goleador había entrado desde el banquillo. Las asistencias son las que recoge futboltotal, que no las apunta todas.</p>
     <h2>Minutos de la plantilla</h2>
     {tabla_jugadores_html}
-    <p class="nota">Jugadores con 180 minutos o más. Los minutos no incluyen los partidos sin alineación publicada; los goles y asistencias son de toda la liga.</p>
+    <p class="nota">Jugadores con 180 minutos o más. Los minutos no cuentan el descuento: un titular que juega todo el partido suma 90.</p>
     <h2>Casa y fuera</h2>
     {tabla_sede_html}
     <h2>Clasificación tras la jornada {clasificacion['tras_jornada'].iloc[0]}</h2>

@@ -60,7 +60,7 @@ Los partidos de copa van en los mismos archivos con su competición; no cuentan 
 
 ## Límites
 
-- Los minutos solo se calculan en partidos con alineación publicada (falta la de la jornada 3).
+- Los minutos no cuentan el descuento: un titular que juega todo el partido suma 90.
 - Las asistencias salen de una sola fuente y no están todas.
 - No hay datos públicos fiables de eventos con coordenadas, tracking ni presión.
 

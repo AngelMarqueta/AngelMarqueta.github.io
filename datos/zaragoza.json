@@ -344,75 +344,91 @@
  ],
  "jugadores": [
   {
-   "jugador": "Lucas Terrer",
-   "partidos": 5,
-   "titularidades": 5,
-   "minutos": 398,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
    "jugador": "Jaume Jardí",
-   "partidos": 5,
-   "titularidades": 4,
-   "minutos": 374,
+   "partidos": 6,
+   "titularidades": 5,
+   "minutos": 464,
    "goles": 3,
    "asistencias": 3
   },
   {
+   "jugador": "Westerveld",
+   "partidos": 5,
+   "titularidades": 5,
+   "minutos": 450,
+   "goles": 0,
+   "asistencias": 0
+  },
+  {
+   "jugador": "Lucas Terrer",
+   "partidos": 6,
+   "titularidades": 5,
+   "minutos": 434,
+   "goles": 0,
+   "asistencias": 0
+  },
+  {
+   "jugador": "Rubo",
+   "partidos": 5,
+   "titularidades": 5,
+   "minutos": 432,
+   "goles": 0,
+   "asistencias": 0
+  },
+  {
    "jugador": "Diego González",
-   "partidos": 4,
-   "titularidades": 4,
-   "minutos": 360,
+   "partidos": 5,
+   "titularidades": 5,
+   "minutos": 421,
    "goles": 1,
    "asistencias": 1
   },
   {
-   "jugador": "Rubo",
-   "partidos": 4,
-   "titularidades": 4,
-   "minutos": 360,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
-   "jugador": "Westerveld",
-   "partidos": 4,
-   "titularidades": 4,
-   "minutos": 360,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
    "jugador": "Marco Sangalli",
-   "partidos": 4,
-   "titularidades": 3,
-   "minutos": 314,
+   "partidos": 5,
+   "titularidades": 4,
+   "minutos": 404,
    "goles": 0,
    "asistencias": 0
   },
   {
    "jugador": "Raúl Pereira",
-   "partidos": 5,
-   "titularidades": 2,
-   "minutos": 271,
+   "partidos": 6,
+   "titularidades": 3,
+   "minutos": 361,
    "goles": 0,
    "asistencias": 0
   },
   {
    "jugador": "Joaquín",
-   "partidos": 4,
-   "titularidades": 2,
-   "minutos": 256,
+   "partidos": 5,
+   "titularidades": 3,
+   "minutos": 346,
+   "goles": 0,
+   "asistencias": 0
+  },
+  {
+   "jugador": "P. Ademo",
+   "partidos": 5,
+   "titularidades": 4,
+   "minutos": 324,
    "goles": 0,
    "asistencias": 0
   },
   {
    "jugador": "Iker Vadillo",
-   "partidos": 4,
-   "titularidades": 3,
-   "minutos": 248,
+   "partidos": 5,
+   "titularidades": 4,
+   "minutos": 294,
    "goles": 0,
+   "asistencias": 0
+  },
+  {
+   "jugador": "Pau Sans",
+   "partidos": 5,
+   "titularidades": 3,
+   "minutos": 259,
+   "goles": 1,
    "asistencias": 0
   },
   {
@@ -424,10 +440,18 @@
    "asistencias": 0
   },
   {
-   "jugador": "P. Ademo",
-   "partidos": 4,
+   "jugador": "Óscar Ureña",
+   "partidos": 5,
+   "titularidades": 2,
+   "minutos": 232,
+   "goles": 3,
+   "asistencias": 1
+  },
+  {
+   "jugador": "Ander Herrera",
+   "partidos": 3,
    "titularidades": 3,
-   "minutos": 234,
+   "minutos": 226,
    "goles": 0,
    "asistencias": 0
   },
@@ -440,30 +464,6 @@
    "asistencias": 0
   },
   {
-   "jugador": "Pau Sans",
-   "partidos": 4,
-   "titularidades": 2,
-   "minutos": 213,
-   "goles": 1,
-   "asistencias": 0
-  },
-  {
-   "jugador": "Óscar Ureña",
-   "partidos": 4,
-   "titularidades": 2,
-   "minutos": 188,
-   "goles": 3,
-   "asistencias": 1
-  },
-  {
-   "jugador": "Ander Herrera",
-   "partidos": 2,
-   "titularidades": 2,
-   "minutos": 172,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
    "jugador": "J. Gabilondo",
    "partidos": 3,
    "titularidades": 2,
@@ -472,10 +472,34 @@
    "asistencias": 0
   },
   {
+   "jugador": "H. Barrachina",
+   "partidos": 2,
+   "titularidades": 1,
+   "minutos": 119,
+   "goles": 0,
+   "asistencias": 0
+  },
+  {
+   "jugador": "Yussif Saidu",
+   "partidos": 3,
+   "titularidades": 0,
+   "minutos": 118,
+   "goles": 1,
+   "asistencias": 0
+  },
+  {
    "jugador": "Marcos Cuenca",
    "partidos": 4,
    "titularidades": 2,
    "minutos": 112,
+   "goles": 0,
+   "asistencias": 0
+  },
+  {
+   "jugador": "Tachi",
+   "partidos": 2,
+   "titularidades": 1,
+   "minutos": 108,
    "goles": 0,
    "asistencias": 0
   },
@@ -493,30 +517,6 @@
    "titularidades": 1,
    "minutos": 90,
    "goles": 0,
-   "asistencias": 0
-  },
-  {
-   "jugador": "H. Barrachina",
-   "partidos": 1,
-   "titularidades": 1,
-   "minutos": 90,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
-   "jugador": "Tachi",
-   "partidos": 1,
-   "titularidades": 1,
-   "minutos": 90,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
-   "jugador": "Yussif Saidu",
-   "partidos": 2,
-   "titularidades": 0,
-   "minutos": 74,
-   "goles": 1,
    "asistencias": 0
   },
   {
