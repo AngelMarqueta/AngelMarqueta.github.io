@@ -28,7 +28,7 @@ img{max-width:100%;height:auto}
 .cabecera{border-bottom:1px solid var(--linea)}
 .cabecera .envoltorio{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1rem}
 .marca{font-family:var(--f-display);font-weight:700;font-size:1.5rem;letter-spacing:.02em;text-transform:uppercase;color:var(--tinta);text-decoration:none;display:flex;align-items:center;gap:.6rem}
-.marca svg{width:30px;height:22px}
+.marca svg{width:32px;height:32px;flex:none}
 .nav{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.95rem}
 .nav a{color:var(--tinta-suave);text-decoration:none}
 .nav a:hover{color:var(--senal)}

@@ -148,12 +148,13 @@ def generar(jornada):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
 <link rel="stylesheet" href="../../assets/estilo.css">
+<link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
 <body>
 <header class="cabecera">
   <div class="envoltorio">
     <a class="marca" href="../../index.html" aria-label="Línea de pase, inicio">
-      <svg viewBox="0 0 30 22" aria-hidden="true"><path d="M6 17L24 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 3"/><circle cx="5" cy="17" r="3.5" fill="currentColor"/><circle cx="25" cy="5" r="3.5" fill="var(--senal)"/></svg>
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="#14261d"/><g stroke-linecap="round"><path d="M17.5 5.5v5M17.5 21.5v5" stroke="#d9480f" stroke-width="2.8"/><path d="M8.5 23L23 9.5" stroke="#f5f6f2" stroke-width="2.2" stroke-dasharray="0.1 3.8"/></g><circle cx="8" cy="23.5" r="2.7" fill="#f5f6f2"/><circle cx="23.8" cy="8.8" r="2.7" fill="#8db89b"/></svg>
       Línea de pase
     </a>
     <nav class="nav" aria-label="Principal">
