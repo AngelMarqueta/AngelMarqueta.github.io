@@ -221,7 +221,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 <footer class="pie">
   <div class="envoltorio">
     <p>Análisis personal con datos públicos. Línea de pase no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
-    <p>© {ultima_fecha.year} Ángel G. Marqueta Alonso</p>
+    <p>© {ultima_fecha.year} Ángel Marqueta Alonso</p>
   </div>
 </footer>
 </body>
