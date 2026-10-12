@@ -1,6 +1,6 @@
 # Línea de pase
 
-Análisis de datos en fútbol. Web personal de proyectos de analítica deportiva de Ángel G. Marqueta Alonso.
+Análisis de datos en fútbol. Web personal de proyectos de analítica deportiva de Ángel Marqueta Alonso.
 
 Web: https://lineadepase.github.io/
 
