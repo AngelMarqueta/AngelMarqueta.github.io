@@ -202,3 +202,54 @@ tr.propio td{font-weight:700;color:var(--senal-texto)}
 .video-resumen{border-block:1px solid var(--linea);padding:.8rem 0;margin:1rem 0}
 .video-resumen summary{font-weight:600;cursor:pointer}
 .video-resumen p{max-width:68ch}
+
+/* Lectura, navegación y controles accesibles */
+.portada{padding-top:clamp(2rem,4vw,3rem)}
+.portada h1{font-size:clamp(3.4rem,10vw,8rem);line-height:.95}
+.portada .sub{max-width:54ch;font-size:clamp(1.05rem,1.8vw,1.25rem)}
+.minutos{margin-top:2rem}
+.nav{gap:.5rem 1rem;align-items:center}
+.nav a{padding:.45rem 0;opacity:1}
+.selector-tema{display:flex;align-items:center;gap:.4rem;color:var(--cal);font-size:.85rem}
+.selector-tema select{background:#0f3d25;color:#f4f7f1;border:1px solid #90b59c;border-radius:8px;padding:.4rem;font:inherit;min-height:44px}
+:focus-visible{outline:3px solid var(--senal);outline-offset:3px}
+.saltar{position:absolute;left:1rem;top:-10rem;z-index:20;padding:.7rem 1rem;background:var(--panel);color:var(--tinta);border-radius:8px}
+.saltar:focus{top:1rem}
+.indice{background:var(--panel);border:1px solid var(--linea);border-left:4px solid var(--cesped);border-radius:12px;padding:1rem 1.25rem;margin:1rem 0 2rem}
+.indice ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.5rem 1.5rem;padding-left:1.1rem;margin:.5rem 0}
+[id]{scroll-margin-top:1rem}
+.corte-visible{border-left:4px solid var(--senal);padding:.75rem 1rem;background:var(--panel);border-radius:0 8px 8px 0;font-weight:600;margin:1rem 0}
+.ficha-resultado{border:2px solid transparent;cursor:pointer;font:inherit;min-width:44px;min-height:44px}
+.ficha-resultado[aria-pressed="true"]{outline:3px solid var(--tinta);outline-offset:2px}
+.detalle-racha{font-size:.9rem;min-height:3rem;border-left:3px solid var(--cesped);padding:.5rem .75rem;background:var(--papel)}
+.grafico text{font-size:12px}
+.ampliar-grafico{display:inline-flex;align-items:center;min-height:44px;margin-top:.75rem;border:1px solid var(--cesped);border-radius:8px;color:var(--cesped);background:var(--panel);padding:.5rem .75rem;font:inherit;font-size:.85rem;cursor:pointer}
+.ampliacion{width:min(95vw,1300px);max-height:92dvh;padding:1rem;border:1px solid var(--linea);border-radius:16px;background:var(--panel);color:var(--tinta)}
+.ampliacion::backdrop{background:rgba(0,0,0,.75)}
+.barra-ampliacion{display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.barra-ampliacion h2{font-size:1.6rem;margin:.25rem 0;max-width:55ch}
+.controles-ampliacion{display:flex;align-items:center;gap:.5rem}
+.controles-ampliacion button{border:1px solid var(--linea);background:var(--papel);color:var(--tinta);border-radius:8px;min-width:44px;min-height:44px;font:inherit;cursor:pointer;padding:.3rem .7rem}
+.controles-ampliacion button:disabled{opacity:.4;cursor:default}
+.zona-ampliacion{overflow:auto;max-height:72dvh;margin-top:.75rem}
+.contenido-ampliacion img,.contenido-ampliacion svg{width:100%;height:auto;display:block}
+.contenido-ampliacion svg text{font-size:12px;fill:var(--tinta-suave)}
+.modal-abierto{overflow:hidden}
+@media(max-width:760px){
+ .cabecera .envoltorio{gap:.6rem;padding-block:.7rem}
+ .nav{font-size:.85rem;gap:.2rem .9rem;width:100%}
+ .selector-tema{margin-left:auto}
+ .portada h1{font-size:clamp(3.2rem,14vw,5.5rem)}
+ .seccion{padding-block:2rem}
+ .cab-proyecto h1{font-size:clamp(2.5rem,10vw,4rem)}
+ .ficha-tecnica{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .tarjeta{padding:.8rem}
+ .grafico{overflow-x:auto}
+ .tabla{overscroll-behavior:contain}
+ .barra-ampliacion h2{font-size:1.35rem}
+ .racha{flex-wrap:wrap}
+}
+@media(max-width:400px){.ficha-tecnica{grid-template-columns:1fr}.selector-tema{margin-left:0}}
+
+.cesped .boton.lleno:hover{color:#0f2418}
+.ficha-resultado.victoria{background:#1f6b3e;color:#fff}
