@@ -225,7 +225,7 @@ def dibujar_mapa(indicadores, elegidas, ruta):
              fontsize=19, fontweight="bold", color="#1f3a5a")
     fig.text(0.04, 0.915, "Comunidades autónomas, 2025", fontsize=12, color="#6b7783")
     fig.text(0.04, 0.03, "Fuente: CSD (Estadística de Deporte Federado 2025) e INE. "
-             "Elaboración propia: Ángel G. Marqueta Alonso.", fontsize=8.5, color="#6b7783")
+             "Elaboración propia: Ángel Marqueta Alonso.", fontsize=8.5, color="#6b7783")
 
     fig.savefig(ruta, dpi=150, facecolor="white")
     plt.close(fig)
