@@ -30,6 +30,8 @@ El script escribe también en la web:
 - `datos/zaragoza.json`: datos del panel interactivo.
 - `proyectos/real-zaragoza/informe-completo.html` y la carpeta `graficos/`.
 
+El marcador de la página del proyecto lee `datos/sofascore.json` (no lo genera el script) y las fichas de partido de `datos/zaragoza.json`. En `sofascore.json` están el último partido jugado y los siguientes, con su id de Sofascore y la hora de inicio en UTC. La página enseña el último resultado (goles, tarjetas y estadísticas al pulsar) hasta el martes a las 8:00 si hay partido entre semana o hasta el miércoles a las 8:00 si no lo hay; después, el siguiente partido, con el marcador en directo de Sofascore. En la previa y durante el partido sale también «Dónde verlo», con los canales apuntados en el campo `tv` de cada partido (si está vacío, las plataformas que dan todos los partidos).
+
 ## Datos de entrada
 
 | Archivo | Qué contiene |

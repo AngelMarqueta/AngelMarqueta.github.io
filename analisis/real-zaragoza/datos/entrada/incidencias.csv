@@ -23,3 +23,15 @@ jornada,campo,problema,decision
 6,Paradas,1 y 5 no cuadran con los tiros a puerta (7 y 3) ni con el 4-1,No uso las paradas
 6,Minuto gol Pau Sans,77 en FotMob; 76 en la crónica de radio,Dejo el 77
 0,Partidos del Real Murcia,"La jornada 5 (Cartagena-Murcia) se jugó el 7/10, después de la 6. Resultados iguales en futbolme y BeSoccer",Los ordeno por jornada
+7,Alineación,"La web del club no ha publicado la ficha. Sport Aragón, BeSoccer, AupaZaragoza y Aragón TV dan el mismo once",La doy por buena con fuentes coherentes
+7,Cambios del 70 y del 82,"futboltotal, AupaZaragoza y la ficha de Sport Aragón: Joaquín por Espiau, Pau Sans por Rubén Díez, Cuenca por Pereira y Saidu por Terrer. BeSoccer los empareja al revés","Uso futboltotal (tres fuentes coinciden); los minutos no cambian"
+7,Minuto gol Espiau,24 en FotMob; BeSoccer; futboltotal y AupaZaragoza; 23 en Sport Aragón,Dejo el 24
+7,Minuto primer gol de Rubo,68 en FotMob; futboltotal y AupaZaragoza; 67 en BeSoccer,Dejo el 68
+7,Asistencias,"BeSoccer, futboltotal y AupaZaragoza dan Rubén Díez (24), Espiau (68) y Jardí (90+9). Las crónicas describen el último gol como un cabezazo a balón parado, sin nombrar al lanzador",Las apunto
+7,Penalti fallado,Rubén Díez falla un penalti en el 66 (lo para Astralaga),Lo anoto como contexto
+7,Pases,BeSoccer 451/382 completados; AupaZaragoza 448/379,Cada cálculo sale de una sola fuente (BeSoccer)
+7,Tiros por partes,BeSoccer no separa bien los tiros a puerta y fuera por partes; los de AupaZaragoza suman sus totales,Uso AupaZaragoza para esas dos métricas por partes
+7,Posesión por partes,BeSoccer 61 % y 70 %; AupaZaragoza 61 % y 69 %,Uso BeSoccer
+7,Tarjetas,"AupaZaragoza y futboltotal cuentan una amarilla al entrenador (Ibai, 90+2); Sport Aragón da dos amarillas a Taufik (Atlético) y las demás fuentes una",Solo apunto las de jugadores del Zaragoza
+7,Clasificación,"El Hércules-Sant Andreu de la jornada 7 se juega el 12/10, después de cerrar estos datos. Tabla de BeSoccer; cuadra con la de la jornada 6 y los resultados de la jornada 7 que publica Sport Aragón",Hércules y Sant Andreu figuran con 6 partidos
+0,Partidos del Real Murcia,"La jornada 7 (Rayo Majadahonda 0-1 Real Murcia) aún no aparece en futbolme. BeSoccer y futboltotal dan el 0-1",Lo apunto con BeSoccer

@@ -94,7 +94,7 @@ def claves(nombre_rival, sede_zgz, zaragoza, rival, clasificacion):
 
     frases = [
         f"El Zaragoza es {fila_z.posicion}.º con {fila_z.puntos} puntos y el {escape(nombre_rival)} "
-        f"{fila_r.posicion}.º con {fila_r.puntos}: {abs(fila_z.puntos - fila_r.puntos)} puntos de diferencia.",
+        f"{fila_r.posicion}.º con {fila_r.puntos}: {abs(fila_z.puntos - fila_r.puntos)} punto{"" if abs(fila_z.puntos - fila_r.puntos) == 1 else "s"} de diferencia.",
         f"El {escape(nombre_rival)} juega {donde}, donde lleva {resumen_sede(rival, sede_rival)}.",
         f"El Zaragoza, {('fuera' if sede_zgz == 'Fuera' else 'en casa')}, lleva "
         f"{resumen_sede(zaragoza, sede_zgz)}.",
@@ -211,7 +211,7 @@ def generar(jornada):
 
   <section class="seccion lectura">
     <p class="etiqueta">Fuentes</p>
-    <p>Resultados del {escape(nombre_rival)}: {", ".join(f'<a href="{escape(u)}" rel="noopener" target="_blank">futbolme</a>' for u in fuentes)}, contrastados con BeSoccer. Datos del Zaragoza: los mismos del <a href="informe-completo.html">informe completo</a>.</p>
+    <p>Resultados del {escape(nombre_rival)}: {", ".join(f'<a href="{escape(u)}" rel="noopener" target="_blank">{"BeSoccer" if "besoccer" in u else "futbolme"}</a>' for u in fuentes)}, contrastados entre futbolme y BeSoccer. Datos del Zaragoza: los mismos del <a href="informe-completo.html">informe completo</a>.</p>
     <div class="enlaces"><a class="boton" href="index.html">Volver al panel</a></div>
   </section>
 </main>

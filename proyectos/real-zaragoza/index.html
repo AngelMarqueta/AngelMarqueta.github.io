@@ -38,21 +38,30 @@
     <h1>Real Zaragoza 2026/27: el líder, jornada a jornada</h1>
     <p class="entradilla">Un seguimiento del Zaragoza hecho solo con datos públicos. Se actualiza después de cada partido, también en jornadas intersemanales y en Copa.</p>
     <dl class="ficha-tecnica">
-      <div><dt>Datos hasta</dt><dd id="corte">jornada 6</dd></div>
+      <div><dt>Datos hasta</dt><dd id="corte">jornada 7</dd></div>
       <div><dt>Fuentes</dt><dd>Fichas de partido de la web del club, contrastadas con futboltotal, FotMob y BeSoccer</dd></div>
       <div><dt>Herramientas</dt><dd>Python (pandas, matplotlib), R y d3.js para este panel</dd></div>
       <div><dt>Aviso</dt><dd>Análisis personal; sin relación con el club</dd></div>
     </dl>
   </section>
 
-  <p class="corte-visible" data-corte>Datos del análisis hasta el 4/10/2026 · Jornada 6</p>
+  <p class="corte-visible" data-corte>Datos del análisis hasta el 11/10/2026 · Jornada 7</p>
+
+  <section class="seccion" aria-labelledby="t-directo" id="directo" hidden>
+    <p class="etiqueta" id="directo-etiqueta">Partido</p>
+    <h2 id="t-directo" class="visualmente-oculto">Marcador</h2>
+    <details class="marcador-partido" id="marcador">
+      <summary id="marcador-resumen"></summary>
+      <div class="mp-detalle" id="marcador-detalle"></div>
+    </details>
+  </section>
 
   <section class="seccion">
     <p class="etiqueta">Lo que dicen los datos</p>
     <h2>Tres datos</h2>
     <ul class="hallazgos">
-      <li><span class="cifra">5 de 11</span><span>goles de jugadores del Zaragoza los marcaron futbolistas que salieron desde el banquillo.</span></li>
-      <li><span class="cifra">110–47</span><span>en tiros en los seis partidos: el 70 % de todos los tiros. En las jornadas 1 y 3 el desglose de los tiros no cuadra, así que esos dos partidos hay que cogerlos con pinzas.</span></li>
+      <li><span class="cifra">5 de 15</span><span>goles de jugadores del Zaragoza los marcaron futbolistas que salieron desde el banquillo.</span></li>
+      <li><span class="cifra">126–62</span><span>en tiros en los siete partidos: el 67 % de todos los tiros. En las jornadas 1 y 3 el desglose de los tiros no cuadra, así que esos dos partidos hay que cogerlos con pinzas.</span></li>
       <li><span class="cifra">33–10</span><span>tiros en Tarragona, en la jornada 1, y aun así derrota por 0-2. Es la única de la temporada.</span></li>
     </ul>
   </section>
@@ -99,16 +108,16 @@
     <p class="etiqueta">Más detalle</p>
     <h2>Informe completo</h2>
     <p>En el informe están las conclusiones con más detalle, todos los gráficos y tablas, y cada diferencia que he encontrado entre fuentes con el dato que me he quedado.</p>
-    <p class="aviso">Límites: seis partidos son una muestra muy pequeña. En las jornadas 1 y 3 el desglose de los tiros no cuadra.</p>
+    <p class="aviso">Límites: siete partidos son una muestra muy pequeña. En las jornadas 1 y 3 el desglose de los tiros no cuadra.</p>
     <div class="enlaces">
       <a class="boton lleno" href="informe-completo.html">Ver el informe completo</a>
       <a class="boton" href="previa.html">Previa del próximo partido</a>
       <a class="boton" href="https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/real-zaragoza" rel="noopener" target="_blank">Código y datos en GitHub</a>
     </div>
   </section>
-  <section class="seccion" aria-labelledby="t-directo" id="directo">
+  <section class="seccion" aria-labelledby="t-proveedor" id="proveedor-resultados">
     <p class="etiqueta">Resultados</p>
-    <h2 id="t-directo">Sigue al Zaragoza</h2>
+    <h2 id="t-proveedor">Sigue al Zaragoza</h2>
     <p class="nota">El resultado en directo se consulta en el proveedor. Los análisis de esta web mantienen la fecha de corte indicada arriba.</p>
     <a class="boton lleno" href="https://www.sofascore.com/es/football/team/real-zaragoza/2815" target="_blank" rel="noopener">Abrir marcador en directo</a>
   </section>
@@ -244,6 +253,173 @@
     document.querySelector('#t-proximos tbody').innerHTML = proximos.map(p =>
       `<tr><td>${p.jornada}</td><td>${fecha(p.fecha)}</td><td>${p.rival}</td><td>${p.sede}</td><td class="n">${p.posicion_rival ? p.posicion_rival + '.º' : '—'}</td></tr>`).join('');
   }
+})();
+
+
+// Marcador del partido. Lee la lista de partidos de Sofascore (datos/sofascore.json) y las
+// fichas de los partidos ya apuntados (datos/zaragoza.json).
+// Qué partido se enseña: el último jugado se queda hasta el martes a las 8:00 si hay otro
+// partido antes del viernes, o hasta el miércoles a las 8:00 si no lo hay. Un partido jugado
+// entre semana se queda dos días. Después pasa al siguiente.
+(function () {
+  const HORA = 3600 * 1000, DIA = 24 * HORA;
+  const ZONA = 'Europe/Madrid';
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+
+  // Fecha y hora de Madrid a partir de un instante, y al revés
+  const partes = ms => {
+    const o = {};
+    new Intl.DateTimeFormat('en-GB', {timeZone: ZONA, year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23', weekday: 'short'})
+      .formatToParts(new Date(ms)).forEach(p => { o[p.type] = p.value; });
+    const dias = {Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6, Sun: 7};
+    return {y: +o.year, m: +o.month, d: +o.day, h: +o.hour, min: +o.minute, dia: dias[o.weekday]};
+  };
+  const madrid = (y, m, d, h) => {          // instante de las h:00 del día y-m-d en Madrid
+    const aprox = Date.UTC(y, m - 1, d, h);
+    const p = partes(aprox);
+    const desfase = Date.UTC(p.y, p.m - 1, p.d, p.h, p.min) - aprox;
+    return aprox - desfase;
+  };
+  const diaMadrid = ms => { const p = partes(ms); return `${p.y}-${String(p.m).padStart(2, '0')}-${String(p.d).padStart(2, '0')}`; };
+  const masDias = (p, n) => { const t = new Date(Date.UTC(p.y, p.m - 1, p.d + n)); return {y: t.getUTCFullYear(), m: t.getUTCMonth() + 1, d: t.getUTCDate()}; };
+
+  function hastaCuando(partido, siguiente) {
+    const inicio = Date.parse(partido.inicio);
+    const p = partes(inicio);
+    let fin;
+    if (p.dia >= 2 && p.dia <= 4) {                        // martes a jueves
+      const q = masDias(p, 2); fin = madrid(q.y, q.m, q.d, 8);
+    } else {                                                // viernes a lunes
+      const lunes = masDias(p, p.dia === 1 ? 0 : 8 - p.dia);
+      const mar = masDias(lunes, 1), mie = masDias(lunes, 2), vie = masDias(lunes, 4);
+      const entreSemana = siguiente && Date.parse(siguiente.inicio) < madrid(vie.y, vie.m, vie.d, 0);
+      fin = entreSemana ? madrid(mar.y, mar.m, mar.d, 8) : madrid(mie.y, mie.m, mie.d, 8);
+    }
+    if (siguiente) fin = Math.min(fin, Date.parse(siguiente.inicio) - 6 * HORA);
+    return Math.max(fin, inicio + 3 * HORA);
+  }
+
+  function elegir(lista, ahora) {
+    const ps = lista.slice().sort((a, b) => Date.parse(a.inicio) - Date.parse(b.inicio));
+    let elegido = null;
+    ps.forEach((p, i) => {
+      if (Date.parse(p.inicio) <= ahora && ahora < hastaCuando(p, ps[i + 1])) elegido = p;
+    });
+    return elegido || ps.find(p => Date.parse(p.inicio) > ahora) || null;
+  }
+
+  const SIGLAS_FUERA = new Set(['CD', 'CE', 'CF', 'FC', 'UD', 'AD', 'SD', 'UE', 'CDA', 'RC', 'B']);
+  const siglas = nombre => {
+    if (/zaragoza/i.test(nombre)) return 'RZ';
+    const w = nombre.split(/\s+/).filter(x => !SIGLAS_FUERA.has(x));
+    return (w.length > 1 ? w[0][0] + w[1][0] : (w[0] || nombre).slice(0, 2)).toUpperCase();
+  };
+  const equipo = n => `<span class="mp-equipo${/zaragoza/i.test(n) ? ' zgz' : ''}"><span class="mp-escudo" aria-hidden="true">${esc(siglas(n))}</span>${esc(n)}</span>`;
+
+  // Dónde ver el partido: lo apuntado en sofascore.json o, si no hay nada, las plataformas
+  // que emiten todos los partidos de Primera Federación.
+  function dondeVer(p) {
+    const tv = p.tv || [];
+    const lista = tv.length
+      ? tv.map(c => `<li${c.abierto ? ' class="abierto"' : ''}>${esc(c.canal)}${c.abierto ? ' <small>gratis</small>' : ''}</li>`).join('')
+      : '<li>Football Club</li><li>FanPlay TV</li>';
+    const nota = tv.length ? '' : '<span class="mp-tv-nota">Emiten todos los partidos. Aún no se sabe si irá en abierto.</span>';
+    return `<div class="mp-tv"><span class="mp-tv-titulo">Dónde verlo</span><ul>${lista}</ul>${nota}</div>`;
+  }
+
+  function pintar(p, ficha, ahora) {
+    const inicio = Date.parse(p.inicio);
+    const estado = ahora < inicio ? 'previa' : (ahora < inicio + 2.25 * HORA ? 'vivo' : 'final');
+    const fecha = new Date(inicio).toLocaleDateString('es-ES', {weekday: 'long', day: 'numeric', month: 'long', timeZone: ZONA});
+    const hora = new Date(inicio).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit', timeZone: ZONA});
+    const ronda = p.jornada ? `Primera Federación · Jornada ${p.jornada}` : esc(p.competicion);
+    const zgzLocal = /zaragoza/i.test(p.local);
+    const etiqueta = {previa: 'Próximo partido', vivo: 'En directo', final: 'Último partido'}[estado];
+    document.getElementById('directo-etiqueta').textContent = etiqueta;
+    document.getElementById('t-directo').textContent = `${p.local} – ${p.visitante}`;
+
+    let centro, sub, abrir;
+    if (estado === 'final' && ficha) {
+      const [l, v] = zgzLocal ? [ficha.goles_favor, ficha.goles_contra] : [ficha.goles_contra, ficha.goles_favor];
+      const [dl, dv] = zgzLocal ? [ficha.gf_descanso, ficha.gc_descanso] : [ficha.gc_descanso, ficha.gf_descanso];
+      centro = `<span class="mp-resultado">${l}<span class="sep">-</span>${v}</span>`;
+      sub = `Descanso: ${dl}-${dv}`;
+      abrir = 'Goles, tarjetas y estadísticas';
+    } else if (estado === 'previa') {
+      centro = `<span class="mp-hora">${hora}</span>`;
+      sub = 'Hora de España';
+      abrir = 'Marcador y alineaciones en directo';
+    } else {
+      centro = `<span class="mp-hora">${estado === 'vivo' ? 'En juego' : 'Final'}</span>`;
+      sub = estado === 'vivo' ? `Empezó a las ${hora}` : 'Resultado en Sofascore mientras se apunta la ficha';
+      abrir = estado === 'vivo' ? 'Marcador y alineaciones en directo' : 'Ver resultado y alineaciones';
+    }
+    const textoEstado = {previa: 'Previa', vivo: 'En directo', final: 'Final'}[estado];
+    document.getElementById('marcador-resumen').innerHTML = `
+      <div class="mp-cesped">
+        <div class="mp-cab"><span>${ronda} · ${esc(fecha)}</span><span class="mp-estado ${estado}">${textoEstado}</span></div>
+        <div class="mp-equipos">${equipo(p.local)}<div>${centro}<div class="mp-sub">${esc(sub)}</div></div>${equipo(p.visitante)}</div>
+        ${estado !== 'final' ? dondeVer(p) : ''}
+        <span class="mp-abrir">${abrir}</span>
+      </div>`;
+
+    const detalle = document.getElementById('marcador-detalle');
+    if (estado === 'final' && ficha) {
+      const lado = sentido => ((sentido === 'Favor') === zgzLocal) ? 'local' : 'visitante';
+      const goles = ficha.goles.map(g => {
+        const extra = g.penalti ? ' (pen.)' : (g.propia_puerta ? ' (p. p.)' : '');
+        const min = `<span class="mp-min">${esc(g.minuto)}'</span>`;
+        const nombre = `${esc(g.jugador)}${extra}`;
+        const asis = g.asistencia ? `<span class="mp-asist">Asistencia: ${esc(g.asistencia)}</span>` : '';
+        return lado(g.sentido) === 'local'
+          ? `<li class="local">${min}${nombre}${asis}</li>`
+          : `<li class="visitante">${nombre}${min}${asis}</li>`;
+      }).join('');
+      const tarjetas = ficha.tarjetas.length
+        ? `<ul class="mp-tarjetas">${ficha.tarjetas.map(t => `<li><span class="mp-tarjeta${t.tarjeta === 'Roja' ? ' roja' : ''}" aria-label="${esc(t.tarjeta)}"></span>${esc(t.jugador)}</li>`).join('')}</ul>`
+        : '<p class="nota">Sin tarjetas.</p>';
+      const stat = (nombre, z, r, pct) => {
+        if (z == null || r == null) return '';
+        const [a, b] = zgzLocal ? [z, r] : [r, z];
+        const fmt = x => pct ? `${Math.round(x)} %` : Math.round(x);
+        const total = a + b || 1;
+        return `<div class="mp-stat"><dt>${nombre}</dt><dd class="v">${fmt(a)}</dd>
+          <dd class="mp-barra"><span style="width:${100 * a / total}%"></span><span style="width:${100 * b / total}%"></span></dd>
+          <dd class="v">${fmt(b)}</dd></div>`;
+      };
+      const posR = ficha.posesion_pct == null ? null : 100 - ficha.posesion_pct;
+      const stats = stat('Posesión', ficha.posesion_pct, posR, true) + stat('Tiros', ficha.tiros_zaragoza, ficha.tiros_rival) +
+        stat('Tiros a puerta', ficha.a_puerta_zaragoza, ficha.a_puerta_rival);
+      detalle.innerHTML = `
+        <h3>Goles</h3>${ficha.goles.length ? `<ul class="mp-goles">${goles}</ul>` : '<p class="nota">Sin goles.</p>'}
+        <h3>Tarjetas del Real Zaragoza</h3>${tarjetas}
+        ${stats ? `<h3>Estadísticas</h3><dl class="mp-stats">${stats}</dl>` : ''}
+        <p class="mp-pie">Datos de la web del club, FotMob, futboltotal y BeSoccer. Más detalle en el <a href="informe-completo.html">informe completo</a>.</p>`;
+    } else {
+      detalle.innerHTML = `<iframe class="mp-widget" id="marcador-widget" scrolling="no" loading="lazy" title="Marcador y alineaciones (Sofascore)"></iframe>
+        <p class="mp-pie">Datos en directo de <a href="https://www.sofascore.com/es/football/team/real-zaragoza/2815" target="_blank" rel="noopener">Sofascore</a>.</p>`;
+      const cargar = () => {
+        const w = document.getElementById('marcador-widget');
+        if (w && !w.src) w.src = `https://widgets.sofascore.com/es-ES/embed/lineups?id=${p.id}&widgetTheme=light`;
+      };
+      const marcador = document.getElementById('marcador');
+      marcador.addEventListener('toggle', () => { if (marcador.open) cargar(); });
+      if (estado === 'vivo') { marcador.open = true; cargar(); }
+    }
+    document.getElementById('directo').hidden = false;
+  }
+
+  Promise.all([
+    fetch('../../datos/sofascore.json').then(r => r.json()),
+    fetch('../../datos/zaragoza.json').then(r => r.json())
+  ]).then(([sofa, zgz]) => {
+    const ahora = Date.now();
+    const p = elegir(sofa.partidos, ahora);
+    if (!p) return;
+    const ficha = (zgz.fichas || []).find(f => f.fecha === diaMadrid(Date.parse(p.inicio)));
+    pintar(p, ficha, ahora);
+  }).catch(() => {});
 })();
 </script>
 </body>

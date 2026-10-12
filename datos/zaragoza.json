@@ -1,7 +1,7 @@
 {
- "corte": "2026-10-04",
- "jornada": 6,
- "clasificacion_tras": 6,
+ "corte": "2026-10-11",
+ "jornada": 7,
+ "clasificacion_tras": 7,
  "partidos": [
   {
    "partido_id": 1,
@@ -31,7 +31,7 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 3,
-   "posicion_rival": 8,
+   "posicion_rival": 7,
    "tiros_zaragoza": 19,
    "tiros_rival": 10,
    "posesion_pct": 67.0,
@@ -99,10 +99,27 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 15,
-   "posicion_rival": 19,
+   "posicion_rival": 18,
    "tiros_zaragoza": 17,
    "tiros_rival": 5,
    "posesion_pct": 64.0,
+   "completo": true
+  },
+  {
+   "partido_id": 7,
+   "jornada": 7,
+   "fecha": "2026-10-11",
+   "sede": "Fuera",
+   "rival": "Atlético Madrileño",
+   "goles_favor": 4,
+   "goles_contra": 4,
+   "resultado": "Empate",
+   "puntos": 1,
+   "puntos_acumulados": 16,
+   "posicion_rival": 11,
+   "tiros_zaragoza": 16,
+   "tiros_rival": 15,
+   "posesion_pct": 65.0,
    "completo": true
   }
  ],
@@ -340,78 +357,182 @@
    "rol_goleador": "Titular",
    "penalti": false,
    "propia_puerta": false
+  },
+  {
+   "partido_id": 7,
+   "rival": "Atlético Madrileño",
+   "sede": "Fuera",
+   "sentido": "Contra",
+   "minuto_texto": "8",
+   "tramo": "01–15",
+   "jugador": "Issiaka Kamate",
+   "asistencia": "",
+   "rol_goleador": "",
+   "penalti": false,
+   "propia_puerta": false
+  },
+  {
+   "partido_id": 7,
+   "rival": "Atlético Madrileño",
+   "sede": "Fuera",
+   "sentido": "Favor",
+   "minuto_texto": "24",
+   "tramo": "16–30",
+   "jugador": "Edu Espiau",
+   "asistencia": "Rubén Díez",
+   "rol_goleador": "Titular",
+   "penalti": false,
+   "propia_puerta": false
+  },
+  {
+   "partido_id": 7,
+   "rival": "Atlético Madrileño",
+   "sede": "Fuera",
+   "sentido": "Contra",
+   "minuto_texto": "56",
+   "tramo": "46–60",
+   "jugador": "Marc Domenech",
+   "asistencia": "",
+   "rol_goleador": "",
+   "penalti": false,
+   "propia_puerta": false
+  },
+  {
+   "partido_id": 7,
+   "rival": "Atlético Madrileño",
+   "sede": "Fuera",
+   "sentido": "Favor",
+   "minuto_texto": "68",
+   "tramo": "61–75",
+   "jugador": "Rubo",
+   "asistencia": "Edu Espiau",
+   "rol_goleador": "Titular",
+   "penalti": false,
+   "propia_puerta": false
+  },
+  {
+   "partido_id": 7,
+   "rival": "Atlético Madrileño",
+   "sede": "Fuera",
+   "sentido": "Contra",
+   "minuto_texto": "76",
+   "tramo": "76–90+",
+   "jugador": "Miguel Gil",
+   "asistencia": "",
+   "rol_goleador": "",
+   "penalti": false,
+   "propia_puerta": false
+  },
+  {
+   "partido_id": 7,
+   "rival": "Atlético Madrileño",
+   "sede": "Fuera",
+   "sentido": "Contra",
+   "minuto_texto": "88",
+   "tramo": "76–90+",
+   "jugador": "David Muñoz",
+   "asistencia": "",
+   "rol_goleador": "",
+   "penalti": false,
+   "propia_puerta": false
+  },
+  {
+   "partido_id": 7,
+   "rival": "Atlético Madrileño",
+   "sede": "Fuera",
+   "sentido": "Favor",
+   "minuto_texto": "90+9",
+   "tramo": "76–90+",
+   "jugador": "Rubo",
+   "asistencia": "Jaume Jardí",
+   "rol_goleador": "Titular",
+   "penalti": false,
+   "propia_puerta": false
+  },
+  {
+   "partido_id": 7,
+   "rival": "Atlético Madrileño",
+   "sede": "Fuera",
+   "sentido": "Favor",
+   "minuto_texto": "90+12",
+   "tramo": "76–90+",
+   "jugador": "Jaume Jardí",
+   "asistencia": "",
+   "rol_goleador": "Titular",
+   "penalti": true,
+   "propia_puerta": false
   }
  ],
  "jugadores": [
   {
    "jugador": "Jaume Jardí",
-   "partidos": 6,
-   "titularidades": 5,
-   "minutos": 464,
-   "goles": 3,
-   "asistencias": 3
+   "partidos": 7,
+   "titularidades": 6,
+   "minutos": 554,
+   "goles": 4,
+   "asistencias": 4
   },
   {
    "jugador": "Westerveld",
-   "partidos": 5,
-   "titularidades": 5,
-   "minutos": 450,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
-   "jugador": "Lucas Terrer",
    "partidos": 6,
-   "titularidades": 5,
-   "minutos": 434,
+   "titularidades": 6,
+   "minutos": 540,
    "goles": 0,
    "asistencias": 0
   },
   {
    "jugador": "Rubo",
-   "partidos": 5,
-   "titularidades": 5,
-   "minutos": 432,
+   "partidos": 6,
+   "titularidades": 6,
+   "minutos": 522,
+   "goles": 2,
+   "asistencias": 0
+  },
+  {
+   "jugador": "Lucas Terrer",
+   "partidos": 7,
+   "titularidades": 6,
+   "minutos": 516,
    "goles": 0,
    "asistencias": 0
   },
   {
    "jugador": "Diego González",
-   "partidos": 5,
-   "titularidades": 5,
-   "minutos": 421,
+   "partidos": 6,
+   "titularidades": 6,
+   "minutos": 511,
    "goles": 1,
    "asistencias": 1
   },
   {
    "jugador": "Marco Sangalli",
-   "partidos": 5,
-   "titularidades": 4,
-   "minutos": 404,
+   "partidos": 6,
+   "titularidades": 5,
+   "minutos": 494,
    "goles": 0,
    "asistencias": 0
   },
   {
    "jugador": "Raúl Pereira",
-   "partidos": 6,
-   "titularidades": 3,
-   "minutos": 361,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
-   "jugador": "Joaquín",
-   "partidos": 5,
-   "titularidades": 3,
-   "minutos": 346,
+   "partidos": 7,
+   "titularidades": 4,
+   "minutos": 443,
    "goles": 0,
    "asistencias": 0
   },
   {
    "jugador": "P. Ademo",
-   "partidos": 5,
-   "titularidades": 4,
-   "minutos": 324,
+   "partidos": 6,
+   "titularidades": 5,
+   "minutos": 414,
+   "goles": 0,
+   "asistencias": 0
+  },
+  {
+   "jugador": "Joaquín",
+   "partidos": 6,
+   "titularidades": 3,
+   "minutos": 366,
    "goles": 0,
    "asistencias": 0
   },
@@ -424,12 +545,28 @@
    "asistencias": 0
   },
   {
-   "jugador": "Pau Sans",
+   "jugador": "Rubén Díez",
    "partidos": 5,
+   "titularidades": 4,
+   "minutos": 286,
+   "goles": 0,
+   "asistencias": 1
+  },
+  {
+   "jugador": "Pau Sans",
+   "partidos": 6,
    "titularidades": 3,
-   "minutos": 259,
+   "minutos": 279,
    "goles": 1,
    "asistencias": 0
+  },
+  {
+   "jugador": "Óscar Ureña",
+   "partidos": 6,
+   "titularidades": 3,
+   "minutos": 278,
+   "goles": 3,
+   "asistencias": 1
   },
   {
    "jugador": "S. Escudero",
@@ -440,14 +577,6 @@
    "asistencias": 0
   },
   {
-   "jugador": "Óscar Ureña",
-   "partidos": 5,
-   "titularidades": 2,
-   "minutos": 232,
-   "goles": 3,
-   "asistencias": 1
-  },
-  {
    "jugador": "Ander Herrera",
    "partidos": 3,
    "titularidades": 3,
@@ -456,10 +585,18 @@
    "asistencias": 0
   },
   {
-   "jugador": "Rubén Díez",
+   "jugador": "Edu Espiau",
    "partidos": 4,
-   "titularidades": 3,
-   "minutos": 216,
+   "titularidades": 2,
+   "minutos": 172,
+   "goles": 3,
+   "asistencias": 2
+  },
+  {
+   "jugador": "H. Barrachina",
+   "partidos": 3,
+   "titularidades": 1,
+   "minutos": 163,
    "goles": 0,
    "asistencias": 0
   },
@@ -472,26 +609,18 @@
    "asistencias": 0
   },
   {
-   "jugador": "H. Barrachina",
-   "partidos": 2,
-   "titularidades": 1,
-   "minutos": 119,
-   "goles": 0,
-   "asistencias": 0
-  },
-  {
    "jugador": "Yussif Saidu",
-   "partidos": 3,
+   "partidos": 4,
    "titularidades": 0,
-   "minutos": 118,
+   "minutos": 126,
    "goles": 1,
    "asistencias": 0
   },
   {
    "jugador": "Marcos Cuenca",
-   "partidos": 4,
+   "partidos": 5,
    "titularidades": 2,
-   "minutos": 112,
+   "minutos": 120,
    "goles": 0,
    "asistencias": 0
   },
@@ -502,14 +631,6 @@
    "minutos": 108,
    "goles": 0,
    "asistencias": 0
-  },
-  {
-   "jugador": "Edu Espiau",
-   "partidos": 3,
-   "titularidades": 1,
-   "minutos": 102,
-   "goles": 2,
-   "asistencias": 1
   },
   {
    "jugador": "Anartz Peña",
@@ -548,71 +669,104 @@
   {
    "posicion": 1,
    "equipo": "Real Zaragoza",
-   "pj": 6,
+   "pj": 7,
    "g": 5,
-   "e": 0,
+   "e": 1,
    "p": 1,
-   "gf": 12,
-   "gc": 6,
-   "puntos": 15
+   "gf": 16,
+   "gc": 10,
+   "puntos": 16
   },
   {
    "posicion": 2,
-   "equipo": "Villarreal B",
-   "pj": 6,
-   "g": 4,
-   "e": 1,
-   "p": 1,
-   "gf": 12,
-   "gc": 6,
-   "puntos": 13
+   "equipo": "Real Murcia",
+   "pj": 7,
+   "g": 5,
+   "e": 0,
+   "p": 2,
+   "gf": 11,
+   "gc": 7,
+   "puntos": 15
   },
   {
    "posicion": 3,
-   "equipo": "Alcorcón",
-   "pj": 6,
-   "g": 3,
-   "e": 3,
-   "p": 0,
-   "gf": 13,
-   "gc": 4,
-   "puntos": 12
+   "equipo": "Villarreal B",
+   "pj": 7,
+   "g": 4,
+   "e": 2,
+   "p": 1,
+   "gf": 15,
+   "gc": 9,
+   "puntos": 14
   },
   {
    "posicion": 4,
-   "equipo": "Real Murcia",
-   "pj": 6,
-   "g": 4,
-   "e": 0,
-   "p": 2,
-   "gf": 10,
-   "gc": 7,
+   "equipo": "Alcorcón",
+   "pj": 7,
+   "g": 3,
+   "e": 3,
+   "p": 1,
+   "gf": 13,
+   "gc": 5,
    "puntos": 12
   },
   {
    "posicion": 5,
    "equipo": "Cartagena",
-   "pj": 6,
+   "pj": 7,
    "g": 3,
-   "e": 2,
+   "e": 3,
    "p": 1,
-   "gf": 9,
-   "gc": 4,
-   "puntos": 11
+   "gf": 10,
+   "gc": 5,
+   "puntos": 12
   },
   {
    "posicion": 6,
    "equipo": "Real Jaén",
-   "pj": 6,
+   "pj": 7,
    "g": 3,
-   "e": 2,
+   "e": 3,
    "p": 1,
-   "gf": 8,
-   "gc": 5,
-   "puntos": 11
+   "gf": 11,
+   "gc": 8,
+   "puntos": 12
   },
   {
    "posicion": 7,
+   "equipo": "Antequera",
+   "pj": 7,
+   "g": 2,
+   "e": 4,
+   "p": 1,
+   "gf": 11,
+   "gc": 9,
+   "puntos": 10
+  },
+  {
+   "posicion": 8,
+   "equipo": "SD Huesca",
+   "pj": 7,
+   "g": 2,
+   "e": 4,
+   "p": 1,
+   "gf": 9,
+   "gc": 9,
+   "puntos": 10
+  },
+  {
+   "posicion": 9,
+   "equipo": "UD Ibiza",
+   "pj": 7,
+   "g": 3,
+   "e": 1,
+   "p": 3,
+   "gf": 9,
+   "gc": 9,
+   "puntos": 10
+  },
+  {
+   "posicion": 10,
    "equipo": "Hércules",
    "pj": 6,
    "g": 3,
@@ -623,59 +777,26 @@
    "puntos": 10
   },
   {
-   "posicion": 8,
-   "equipo": "Antequera",
-   "pj": 6,
-   "g": 2,
-   "e": 3,
-   "p": 1,
-   "gf": 10,
-   "gc": 8,
-   "puntos": 9
-  },
-  {
-   "posicion": 9,
-   "equipo": "UD Ibiza",
-   "pj": 6,
-   "g": 3,
-   "e": 0,
-   "p": 3,
-   "gf": 8,
-   "gc": 8,
-   "puntos": 9
-  },
-  {
-   "posicion": 10,
-   "equipo": "SD Huesca",
-   "pj": 6,
-   "g": 2,
-   "e": 3,
-   "p": 1,
-   "gf": 7,
-   "gc": 7,
-   "puntos": 9
-  },
-  {
    "posicion": 11,
    "equipo": "Atlético Madrileño",
-   "pj": 6,
+   "pj": 7,
    "g": 2,
-   "e": 2,
+   "e": 3,
    "p": 2,
-   "gf": 11,
-   "gc": 8,
-   "puntos": 8
+   "gf": 15,
+   "gc": 12,
+   "puntos": 9
   },
   {
    "posicion": 12,
    "equipo": "Real Madrid Castilla",
-   "pj": 6,
+   "pj": 7,
    "g": 2,
-   "e": 2,
+   "e": 3,
    "p": 2,
-   "gf": 7,
-   "gc": 6,
-   "puntos": 8
+   "gf": 8,
+   "gc": 7,
+   "puntos": 9
   },
   {
    "posicion": 13,
@@ -691,97 +812,89 @@
   {
    "posicion": 14,
    "equipo": "Gimnàstic",
-   "pj": 6,
+   "pj": 7,
    "g": 2,
-   "e": 1,
+   "e": 2,
    "p": 3,
-   "gf": 7,
-   "gc": 9,
-   "puntos": 7
+   "gf": 9,
+   "gc": 11,
+   "puntos": 8
   },
   {
    "posicion": 15,
    "equipo": "Algeciras",
-   "pj": 6,
+   "pj": 7,
    "g": 2,
    "e": 1,
-   "p": 3,
-   "gf": 8,
-   "gc": 11,
+   "p": 4,
+   "gf": 9,
+   "gc": 13,
    "puntos": 7
   },
   {
    "posicion": 16,
-   "equipo": "CDA Águilas FC",
-   "pj": 6,
-   "g": 1,
-   "e": 2,
-   "p": 3,
-   "gf": 5,
-   "gc": 10,
-   "puntos": 5
+   "equipo": "CE Europa",
+   "pj": 7,
+   "g": 2,
+   "e": 1,
+   "p": 4,
+   "gf": 6,
+   "gc": 11,
+   "puntos": 7
   },
   {
    "posicion": 17,
-   "equipo": "Rayo Majadahonda",
-   "pj": 6,
+   "equipo": "CDA Águilas FC",
+   "pj": 7,
    "g": 1,
-   "e": 1,
-   "p": 4,
-   "gf": 5,
-   "gc": 7,
-   "puntos": 4
+   "e": 3,
+   "p": 3,
+   "gf": 7,
+   "gc": 12,
+   "puntos": 6
   },
   {
    "posicion": 18,
-   "equipo": "CE Europa",
-   "pj": 6,
+   "equipo": "CD Teruel",
+   "pj": 7,
    "g": 1,
-   "e": 1,
+   "e": 2,
    "p": 4,
-   "gf": 4,
-   "gc": 10,
-   "puntos": 4
+   "gf": 3,
+   "gc": 12,
+   "puntos": 5
   },
   {
    "posicion": 19,
-   "equipo": "CD Teruel",
-   "pj": 6,
-   "g": 0,
-   "e": 2,
-   "p": 4,
-   "gf": 2,
-   "gc": 12,
-   "puntos": 2
+   "equipo": "Rayo Majadahonda",
+   "pj": 7,
+   "g": 1,
+   "e": 1,
+   "p": 5,
+   "gf": 5,
+   "gc": 8,
+   "puntos": 4
   },
   {
    "posicion": 20,
    "equipo": "Juventud Torremolinos CF",
-   "pj": 6,
+   "pj": 7,
    "g": 0,
-   "e": 1,
+   "e": 2,
    "p": 5,
-   "gf": 6,
-   "gc": 16,
-   "puntos": 1
+   "gf": 8,
+   "gc": 18,
+   "puntos": 2
   }
  ],
  "proximos": [
-  {
-   "jornada": 7,
-   "competicion": "Primera Federación",
-   "fecha": "2026-10-11",
-   "sede": "Fuera",
-   "rival": "Atlético Madrileño",
-   "posicion_rival": 11
-  },
   {
    "jornada": 8,
    "competicion": "Primera Federación",
    "fecha": "2026-10-18",
    "sede": "Fuera",
    "rival": "Real Murcia",
-   "posicion_rival": 4
+   "posicion_rival": 2
   },
   {
    "jornada": 9,
@@ -789,7 +902,7 @@
    "fecha": "2026-10-23",
    "sede": "Fuera",
    "rival": "CE Europa",
-   "posicion_rival": 18
+   "posicion_rival": 16
   },
   {
    "jornada": 10,
@@ -797,7 +910,464 @@
    "fecha": "2026-10-31",
    "sede": "Casa",
    "rival": "Villarreal B",
-   "posicion_rival": 2
+   "posicion_rival": 3
+  },
+  {
+   "jornada": 11,
+   "competicion": "Primera Federación",
+   "fecha": "2026-11-08",
+   "sede": "Casa",
+   "rival": "SD Huesca",
+   "posicion_rival": 8
+  }
+ ],
+ "fichas": [
+  {
+   "partido_id": 1,
+   "competicion": "Primera Federación",
+   "jornada": 1,
+   "fecha": "2026-08-30",
+   "sede": "Fuera",
+   "rival": "Gimnàstic de Tarragona",
+   "goles_favor": 0,
+   "goles_contra": 2,
+   "gf_descanso": 0,
+   "gc_descanso": 1,
+   "goles": [
+    {
+     "sentido": "Contra",
+     "minuto": "2",
+     "jugador": "Sinan Bakis",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Contra",
+     "minuto": "87",
+     "jugador": "Carlos Segura",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    }
+   ],
+   "tarjetas": [
+    {
+     "jugador": "Lucas Terrer",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "H. Barrachina",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "S. Escudero",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Pau Sans",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Ander Herrera",
+     "tarjeta": "Amarilla"
+    }
+   ],
+   "tiros_zaragoza": 33.0,
+   "tiros_rival": 10.0,
+   "a_puerta_zaragoza": 9.0,
+   "a_puerta_rival": 4.0,
+   "posesion_pct": 75.0
+  },
+  {
+   "partido_id": 2,
+   "competicion": "Primera Federación",
+   "jornada": 2,
+   "fecha": "2026-09-05",
+   "sede": "Casa",
+   "rival": "Antequera CF",
+   "goles_favor": 1,
+   "goles_contra": 0,
+   "gf_descanso": 0,
+   "gc_descanso": 0,
+   "goles": [
+    {
+     "sentido": "Favor",
+     "minuto": "90+1",
+     "jugador": "Edu Espiau",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    }
+   ],
+   "tarjetas": [
+    {
+     "jugador": "Rubo",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Marco Sangalli",
+     "tarjeta": "Amarilla"
+    }
+   ],
+   "tiros_zaragoza": 19.0,
+   "tiros_rival": 10.0,
+   "a_puerta_zaragoza": 4.0,
+   "a_puerta_rival": 2.0,
+   "posesion_pct": 67.0
+  },
+  {
+   "partido_id": 3,
+   "competicion": "Primera Federación",
+   "jornada": 3,
+   "fecha": "2026-09-13",
+   "sede": "Fuera",
+   "rival": "Juventud Torremolinos CF",
+   "goles_favor": 4,
+   "goles_contra": 3,
+   "gf_descanso": 2,
+   "gc_descanso": 1,
+   "goles": [
+    {
+     "sentido": "Favor",
+     "minuto": "35",
+     "jugador": "Javi Cuenca",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": true
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "38",
+     "jugador": "Diego González",
+     "asistencia": "Jaume Jardí",
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Contra",
+     "minuto": "45+9",
+     "jugador": "Dioni Villalba",
+     "asistencia": null,
+     "penalti": true,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "65",
+     "jugador": "Jaume Jardí",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "81",
+     "jugador": "Yussif Saidu",
+     "asistencia": "Jaume Jardí",
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Contra",
+     "minuto": "86",
+     "jugador": "Ivan Laća",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Contra",
+     "minuto": "88",
+     "jugador": "Rodrigo Ajegun",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    }
+   ],
+   "tarjetas": [
+    {
+     "jugador": "Pau Sans",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Diego González",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Joaquín",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Tachi",
+     "tarjeta": "Amarilla"
+    }
+   ],
+   "tiros_zaragoza": 16.0,
+   "tiros_rival": 6.0,
+   "a_puerta_zaragoza": 7.0,
+   "a_puerta_rival": 5.0,
+   "posesion_pct": null
+  },
+  {
+   "partido_id": 4,
+   "competicion": "Primera Federación",
+   "jornada": 4,
+   "fecha": "2026-09-20",
+   "sede": "Casa",
+   "rival": "FC Cartagena",
+   "goles_favor": 1,
+   "goles_contra": 0,
+   "gf_descanso": 0,
+   "gc_descanso": 0,
+   "goles": [
+    {
+     "sentido": "Favor",
+     "minuto": "51",
+     "jugador": "Jaume Jardí",
+     "asistencia": "Óscar Ureña",
+     "penalti": false,
+     "propia_puerta": false
+    }
+   ],
+   "tarjetas": [
+    {
+     "jugador": "Rubo",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Rubén Díez",
+     "tarjeta": "Amarilla"
+    }
+   ],
+   "tiros_zaragoza": 17.0,
+   "tiros_rival": 8.0,
+   "a_puerta_zaragoza": 7.0,
+   "a_puerta_rival": 2.0,
+   "posesion_pct": 62.0
+  },
+  {
+   "partido_id": 5,
+   "competicion": "Primera Federación",
+   "jornada": 5,
+   "fecha": "2026-09-25",
+   "sede": "Fuera",
+   "rival": "UD Ibiza",
+   "goles_favor": 2,
+   "goles_contra": 0,
+   "gf_descanso": 0,
+   "gc_descanso": 0,
+   "goles": [
+    {
+     "sentido": "Favor",
+     "minuto": "59",
+     "jugador": "Óscar Ureña",
+     "asistencia": "Edu Espiau",
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "62",
+     "jugador": "Óscar Ureña",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    }
+   ],
+   "tarjetas": [
+    {
+     "jugador": "Lucas Terrer",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Rubén Díez",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Jaume Jardí",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "P. Ademo",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Yussif Saidu",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Diego Monzón",
+     "tarjeta": "Amarilla"
+    }
+   ],
+   "tiros_zaragoza": 8.0,
+   "tiros_rival": 8.0,
+   "a_puerta_zaragoza": 6.0,
+   "a_puerta_rival": 2.0,
+   "posesion_pct": 56.0
+  },
+  {
+   "partido_id": 6,
+   "competicion": "Primera Federación",
+   "jornada": 6,
+   "fecha": "2026-10-04",
+   "sede": "Casa",
+   "rival": "CD Teruel",
+   "goles_favor": 4,
+   "goles_contra": 1,
+   "gf_descanso": 1,
+   "gc_descanso": 1,
+   "goles": [
+    {
+     "sentido": "Contra",
+     "minuto": "6",
+     "jugador": "Sergio Moreno",
+     "asistencia": null,
+     "penalti": true,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "45+7",
+     "jugador": "Óscar Ureña",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "47",
+     "jugador": "Edu Espiau",
+     "asistencia": "Diego González",
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "77",
+     "jugador": "Pau Sans",
+     "asistencia": "Jaume Jardí",
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "85",
+     "jugador": "Jaume Jardí",
+     "asistencia": "Hugo Pinilla",
+     "penalti": false,
+     "propia_puerta": false
+    }
+   ],
+   "tarjetas": [
+    {
+     "jugador": "P. Ademo",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Yussif Saidu",
+     "tarjeta": "Amarilla"
+    },
+    {
+     "jugador": "Marco Sangalli",
+     "tarjeta": "Amarilla"
+    }
+   ],
+   "tiros_zaragoza": 17.0,
+   "tiros_rival": 5.0,
+   "a_puerta_zaragoza": 7.0,
+   "a_puerta_rival": 3.0,
+   "posesion_pct": 64.0
+  },
+  {
+   "partido_id": 7,
+   "competicion": "Primera Federación",
+   "jornada": 7,
+   "fecha": "2026-10-11",
+   "sede": "Fuera",
+   "rival": "Atlético Madrileño",
+   "goles_favor": 4,
+   "goles_contra": 4,
+   "gf_descanso": 1,
+   "gc_descanso": 1,
+   "goles": [
+    {
+     "sentido": "Contra",
+     "minuto": "8",
+     "jugador": "Issiaka Kamate",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "24",
+     "jugador": "Edu Espiau",
+     "asistencia": "Rubén Díez",
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Contra",
+     "minuto": "56",
+     "jugador": "Marc Domenech",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "68",
+     "jugador": "Rubo",
+     "asistencia": "Edu Espiau",
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Contra",
+     "minuto": "76",
+     "jugador": "Miguel Gil",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Contra",
+     "minuto": "88",
+     "jugador": "David Muñoz",
+     "asistencia": null,
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "90+9",
+     "jugador": "Rubo",
+     "asistencia": "Jaume Jardí",
+     "penalti": false,
+     "propia_puerta": false
+    },
+    {
+     "sentido": "Favor",
+     "minuto": "90+12",
+     "jugador": "Jaume Jardí",
+     "asistencia": null,
+     "penalti": true,
+     "propia_puerta": false
+    }
+   ],
+   "tarjetas": [
+    {
+     "jugador": "Óscar Ureña",
+     "tarjeta": "Amarilla"
+    }
+   ],
+   "tiros_zaragoza": 16.0,
+   "tiros_rival": 15.0,
+   "a_puerta_zaragoza": 8.0,
+   "a_puerta_rival": 7.0,
+   "posesion_pct": 65.0
   }
  ],
  "copa": []

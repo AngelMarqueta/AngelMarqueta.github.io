@@ -42,6 +42,38 @@ def a_registros(df, columnas):
     return t.to_dict(orient="records")
 
 
+def fichas_partidos(partidos, goles, tarjetas, tiros):
+    """Una ficha por partido (liga y copa) para el marcador de la página del proyecto:
+    resultado, descanso, goles, tarjetas del Zaragoza, tiros y posesión."""
+    fichas = []
+    tiros = tiros.set_index("partido_id")
+    for p in partidos.sort_values("fecha").itertuples():
+        g = goles[goles["partido_id"] == p.partido_id].sort_values(["parte", "minuto", "anadido"])
+        t = tarjetas[tarjetas["partido_id"] == p.partido_id]
+        ficha = {
+            "partido_id": int(p.partido_id),
+            "competicion": p.competicion,
+            "jornada": None if pd.isna(p.jornada) else int(p.jornada),
+            "fecha": p.fecha.strftime("%Y-%m-%d"),
+            "sede": p.sede,
+            "rival": p.rival,
+            "goles_favor": int(p.goles_favor),
+            "goles_contra": int(p.goles_contra),
+            "gf_descanso": int(p.gf_descanso),
+            "gc_descanso": int(p.gc_descanso),
+            "goles": [{"sentido": x.sentido, "minuto": x.minuto_texto, "jugador": x.jugador,
+                       "asistencia": x.asistencia or None, "penalti": bool(x.penalti),
+                       "propia_puerta": bool(x.propia_puerta)} for x in g.itertuples()],
+            "tarjetas": [{"jugador": x.jugador, "tarjeta": x.tarjeta} for x in t.itertuples()],
+        }
+        if p.partido_id in tiros.index:
+            fila = tiros.loc[p.partido_id]
+            for campo in ("tiros_zaragoza", "tiros_rival", "a_puerta_zaragoza", "a_puerta_rival", "posesion_pct"):
+                ficha[campo] = None if pd.isna(fila[campo]) else float(fila[campo])
+        fichas.append(ficha)
+    return fichas
+
+
 def guardar_csv(df, nombre):
     # utf-8-sig para que Excel abra bien las tildes
     df.to_csv(CARPETA_SALIDA / nombre, index=False, encoding="utf-8-sig")
@@ -117,6 +149,7 @@ def main():
             "posicion", "equipo", "pj", "g", "e", "p", "gf", "gc", "puntos"]),
         "proximos": a_registros(proximos, [
             "jornada", "competicion", "fecha", "sede", "rival", "posicion_rival"]),
+        "fichas": fichas_partidos(partidos, goles, datos["tarjetas"], datos["tiros"]),
         "copa": a_registros(copa, [
             "partido_id", "competicion", "fecha", "sede", "rival", "goles_favor", "goles_contra", "resultado"]),
     }

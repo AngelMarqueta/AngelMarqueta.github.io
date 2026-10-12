@@ -1,0 +1,167 @@
+{
+ "_nota": "Partidos del Real Zaragoza en Sofascore para el marcador de la página del proyecto. El id sale de la ficha del partido en sofascore.com y la hora de inicio va en UTC. Se deja siempre el último partido jugado: la página lo sigue enseñando hasta el martes por la mañana si hay partido entre semana o hasta el miércoles por la mañana si no lo hay. El campo «tv» lista dónde se puede ver cada partido (nombre y si es en abierto); si está vacío, la página dice solo qué plataformas dan todos los partidos.",
+ "equipo_sofascore": 2815,
+ "actualizado": "2026-10-12",
+ "partidos": [
+  {
+   "id": 16599881,
+   "inicio": "2026-10-11T19:00:00Z",
+   "local": "Atlético Madrileño",
+   "visitante": "Real Zaragoza",
+   "competicion": "Primera Federación",
+   "jornada": 7,
+   "tv": []
+  },
+  {
+   "id": 16599931,
+   "inicio": "2026-10-18T16:15:00Z",
+   "local": "Real Murcia",
+   "visitante": "Real Zaragoza",
+   "competicion": "Primera Federación",
+   "jornada": 8,
+   "tv": [
+    {
+     "canal": "Aragón TV",
+     "abierto": true
+    },
+    {
+     "canal": "La 7 Murcia",
+     "abierto": true
+    },
+    {
+     "canal": "DAZN",
+     "abierto": false
+    },
+    {
+     "canal": "Canal Primera Federación (Movistar Plus+, Orange)",
+     "abierto": false
+    },
+    {
+     "canal": "Football Club",
+     "abierto": false
+    },
+    {
+     "canal": "FanPlay TV",
+     "abierto": false
+    }
+   ]
+  },
+  {
+   "id": 16599975,
+   "inicio": "2026-10-23T19:15:00Z",
+   "local": "CE Europa",
+   "visitante": "Real Zaragoza",
+   "competicion": "Primera Federación",
+   "jornada": 9,
+   "tv": []
+  },
+  {
+   "id": 17259831,
+   "inicio": "2026-10-27T19:00:00Z",
+   "local": "CD Tudelano",
+   "visitante": "Real Zaragoza",
+   "competicion": "Copa del Rey",
+   "jornada": null,
+   "tv": []
+  },
+  {
+   "id": 16600019,
+   "inicio": "2026-11-01T16:00:00Z",
+   "local": "Real Zaragoza",
+   "visitante": "Villarreal B",
+   "competicion": "Primera Federación",
+   "jornada": 10,
+   "tv": []
+  },
+  {
+   "id": 16599515,
+   "inicio": "2026-11-08T16:00:00Z",
+   "local": "Real Zaragoza",
+   "visitante": "SD Huesca",
+   "competicion": "Primera Federación",
+   "jornada": 11,
+   "tv": []
+  },
+  {
+   "id": 16599709,
+   "inicio": "2026-11-15T16:00:00Z",
+   "local": "Real Jaén",
+   "visitante": "Real Zaragoza",
+   "competicion": "Primera Federación",
+   "jornada": 12,
+   "tv": []
+  },
+  {
+   "id": 16599774,
+   "inicio": "2026-11-22T16:00:00Z",
+   "local": "Real Zaragoza",
+   "visitante": "Rayo Majadahonda",
+   "competicion": "Primera Federación",
+   "jornada": 13,
+   "tv": []
+  },
+  {
+   "id": 16599801,
+   "inicio": "2026-11-29T16:00:00Z",
+   "local": "AD Alcorcón",
+   "visitante": "Real Zaragoza",
+   "competicion": "Primera Federación",
+   "jornada": 14,
+   "tv": []
+  },
+  {
+   "id": 16599873,
+   "inicio": "2026-12-06T16:00:00Z",
+   "local": "Real Zaragoza",
+   "visitante": "CDA Águilas FC",
+   "competicion": "Primera Federación",
+   "jornada": 15,
+   "tv": []
+  },
+  {
+   "id": 16599841,
+   "inicio": "2026-12-13T16:00:00Z",
+   "local": "Real Madrid Castilla",
+   "visitante": "Real Zaragoza",
+   "competicion": "Primera Federación",
+   "jornada": 16,
+   "tv": []
+  },
+  {
+   "id": 16599909,
+   "inicio": "2026-12-20T16:00:00Z",
+   "local": "Real Zaragoza",
+   "visitante": "Hércules CF",
+   "competicion": "Primera Federación",
+   "jornada": 17,
+   "tv": []
+  },
+  {
+   "id": 16599927,
+   "inicio": "2027-01-03T16:00:00Z",
+   "local": "Algeciras CF",
+   "visitante": "Real Zaragoza",
+   "competicion": "Primera Federación",
+   "jornada": 18,
+   "tv": []
+  },
+  {
+   "id": 16599978,
+   "inicio": "2027-01-10T16:00:00Z",
+   "local": "Real Zaragoza",
+   "visitante": "UE Sant Andreu",
+   "competicion": "Primera Federación",
+   "jornada": 19,
+   "tv": []
+  },
+  {
+   "id": 16600008,
+   "inicio": "2027-01-17T16:00:00Z",
+   "local": "Real Zaragoza",
+   "visitante": "Real Murcia",
+   "competicion": "Primera Federación",
+   "jornada": 20,
+   "tv": []
+  }
+ ]
+}
