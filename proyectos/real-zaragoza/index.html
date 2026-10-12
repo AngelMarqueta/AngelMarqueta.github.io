@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="../../assets/tema.js"></script>
 <link rel="stylesheet" href="../../assets/estilo.css">
+<script src="../../assets/mejoras.js" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
 <body>
@@ -20,9 +22,11 @@
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="../../index.html#proyectos">Proyectos</a>
+      <a href="../../index.html#videos">Vídeos</a>
       <a href="../../index.html#sobre-mi">Sobre mí</a>
       <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
       <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
+      <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
     </nav>
   </div>
 </header>
@@ -40,6 +44,8 @@
       <div><dt>Aviso</dt><dd>Análisis personal; sin relación con el club</dd></div>
     </dl>
   </section>
+
+  <p class="corte-visible" data-corte>Datos del análisis hasta el 4/10/2026 · Jornada 6</p>
 
   <section class="seccion">
     <p class="etiqueta">Lo que dicen los datos</p>
@@ -85,7 +91,7 @@
       <p class="etiqueta">Calendario</p>
       <h2>Próximos partidos</h2>
       <div class="tarjeta tabla"><table id="t-proximos"><thead><tr><th>J.</th><th>Fecha</th><th>Rival</th><th>Sede</th><th class="n">Pos. rival</th></tr></thead><tbody></tbody></table></div>
-      <p class="nota">Posición del rival al cierre de los datos.</p>
+      <p class="nota" id="nota-calendario">Posición del rival al cierre de los datos. Las fechas pasadas se ocultan automáticamente.</p>
     </div>
   </section>
 
@@ -100,6 +106,13 @@
       <a class="boton" href="https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/real-zaragoza" rel="noopener" target="_blank">Código y datos en GitHub</a>
     </div>
   </section>
+  <section class="seccion" aria-labelledby="t-directo" id="directo">
+    <p class="etiqueta">Resultados</p>
+    <h2 id="t-directo">Sigue al Zaragoza</h2>
+    <p class="nota">El resultado en directo se consulta en el proveedor. Los análisis de esta web mantienen la fecha de corte indicada arriba.</p>
+    <a class="boton lleno" href="https://www.sofascore.com/es/football/team/real-zaragoza/2815" target="_blank" rel="noopener">Abrir marcador en directo</a>
+  </section>
+
 </main>
 
 <footer class="pie">
@@ -127,9 +140,10 @@
       document.querySelectorAll('.filtro button').forEach(x => x.setAttribute('aria-pressed', x === b));
       pintar();
     }));
+    document.addEventListener('tema-cambiado', pintar);
     let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(pintar, 150); });
   }).catch(() => {
-    document.getElementById('kpis').innerHTML = '<p class="aviso">No se han podido cargar los datos. Si abres la página como archivo local, usa un servidor (por ejemplo, <code>python -m http.server</code>).</p>';
+    document.getElementById('kpis').innerHTML = '<p class="aviso">No se han podido cargar los datos. Recarga la página o consulta el informe completo.</p>';
   });
 
   function filtrados() {
@@ -197,7 +211,9 @@
       .attr('d', d3.line().x(d => x(d.j)).y(d => y(d.v)));
     f.g.selectAll('circle').data(serie).join('circle').attr('cx', d => x(d.j)).attr('cy', d => y(d.v)).attr('r', 5)
       .attr('fill', d => d.p.puntos ? css('--cesped') : css('--senal')).attr('stroke', css('--panel')).attr('stroke-width', 2)
-      .on('mousemove', (ev, d) => f.mostrar(ev, `${d.j} · ${d.p.rival} (${d.p.goles_favor}-${d.p.goles_contra}): ${d.v} pts`)).on('mouseleave', f.ocultar);
+      .attr('tabindex', 0).attr('role', 'img').attr('aria-label', d => `${d.j} · ${d.p.rival}: ${d.v} puntos acumulados`)
+      .on('pointerdown mousemove', (ev, d) => f.mostrar(ev, `${d.j} · ${d.p.rival} (${d.p.goles_favor}-${d.p.goles_contra}): ${d.v} pts`)).on('mouseleave blur', f.ocultar)
+      .on('focus', (ev,d) => { const r=ev.target.getBoundingClientRect(); f.mostrar({clientX:r.x,clientY:r.y}, `${d.j} · ${d.p.rival}: ${d.v} pts`); });
   }
 
   function barrasPareadas(sel, filas, cA, cB) {
@@ -211,7 +227,9 @@
     grupo.selectAll('rect').data(d => [['a', d.a, cA, d], ['b', d.b, cB, d]]).join('rect')
       .attr('x', d => xi(d[0])).attr('width', xi.bandwidth()).attr('y', d => y(d[1])).attr('height', d => f.h - y(d[1]))
       .attr('rx', 2).attr('fill', d => d[2])
-      .on('mousemove', (ev, d) => f.mostrar(ev, d[3].tip)).on('mouseleave', f.ocultar);
+      .attr('tabindex', 0).attr('role','img').attr('aria-label', d=>d[3].tip)
+      .on('pointerdown mousemove', (ev, d) => f.mostrar(ev, d[3].tip)).on('mouseleave blur', f.ocultar)
+      .on('focus', (ev,d) => { const r=ev.target.getBoundingClientRect(); f.mostrar({clientX:r.x,clientY:r.y},d[3].tip); });
   }
 
   function tablas() {
@@ -220,7 +238,10 @@
       `<tr><td>${j.jugador}</td><td class="n">${j.partidos}</td><td class="n">${j.titularidades}</td><td><span class="barra" style="width:${Math.round(j.minutos / max * 90)}px;background:var(--cesped)"></span>${j.minutos}'</td><td class="n">${j.goles}</td><td class="n">${j.asistencias}</td></tr>`).join('');
     document.querySelector('#t-clasif tbody').innerHTML = datos.clasificacion.map(c =>
       `<tr${c.equipo === 'Real Zaragoza' ? ' class="propio"' : ''}><td class="n">${c.posicion}</td><td>${c.equipo}</td><td class="n">${c.pj}</td><td class="n">${c.gf - c.gc > 0 ? '+' : ''}${c.gf - c.gc}</td><td class="n">${c.puntos}</td></tr>`).join('');
-    document.querySelector('#t-proximos tbody').innerHTML = datos.proximos.map(p =>
+    const hoy = new Intl.DateTimeFormat('sv-SE', {timeZone:'Europe/Madrid'}).format(new Date());
+    const proximos = datos.proximos.filter(p => p.fecha >= hoy);
+    if (!proximos.length) document.getElementById('nota-calendario').textContent = 'No hay fechas futuras en el calendario publicado. Consulta el proveedor de resultados para las últimas novedades.';
+    document.querySelector('#t-proximos tbody').innerHTML = proximos.map(p =>
       `<tr><td>${p.jornada}</td><td>${fecha(p.fecha)}</td><td>${p.rival}</td><td>${p.sede}</td><td class="n">${p.posicion_rival ? p.posicion_rival + '.º' : '—'}</td></tr>`).join('');
   }
 })();
