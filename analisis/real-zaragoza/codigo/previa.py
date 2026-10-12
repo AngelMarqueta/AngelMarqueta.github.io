@@ -147,7 +147,9 @@ def generar(jornada):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="../../assets/tema.js"></script>
 <link rel="stylesheet" href="../../assets/estilo.css">
+<script src="../../assets/mejoras.js" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
 <body>
@@ -159,9 +161,11 @@ def generar(jornada):
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="../../index.html#proyectos">Proyectos</a>
+      <a href="../../index.html#videos">Vídeos</a>
       <a href="../../index.html#sobre-mi">Sobre mí</a>
       <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
       <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
+      <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
     </nav>
   </div>
 </header>
@@ -173,6 +177,7 @@ def generar(jornada):
     <h1>{escape(local)} – {escape(visitante)}</h1>
     <p class="entradilla">Lo que dicen los resultados de los dos equipos antes del partido. Son datos de pocas jornadas: sirven para situarse, no para adivinar el resultado.</p>
   </section>
+  <p class="corte-visible">Datos de la comparativa hasta la jornada {clasificacion['tras_jornada'].iloc[0]} · Consulta la fecha de corte del informe.</p>
 
   <section class="seccion lectura">
     <p class="etiqueta">Claves</p>
@@ -187,7 +192,7 @@ def generar(jornada):
       <div class="tarjeta">
         <h3>Real Zaragoza</h3>{racha(zaragoza)}
         <h3>{escape(nombre_rival)}</h3>{racha(rival)}
-        <p class="nota">Del más antiguo al más reciente. Pasa el ratón por encima para ver el resultado.</p>
+        <p class="nota">Del más antiguo al más reciente. Toca una casilla para ver el rival y el resultado.</p>
       </div>
     </div>
     <div>
