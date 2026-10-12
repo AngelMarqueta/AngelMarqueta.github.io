@@ -131,7 +131,9 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="../../assets/tema.js"></script>
 <link rel="stylesheet" href="../../assets/estilo.css">
+<script src="../../assets/mejoras.js" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
 <body>
@@ -143,19 +145,21 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="../../index.html#proyectos">Proyectos</a>
+      <a href="../../index.html#videos">Vídeos</a>
       <a href="../../index.html#sobre-mi">Sobre mí</a>
       <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
       <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
+      <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
     </nav>
   </div>
 </header>
 
-<main class="envoltorio">
+<main class="envoltorio" data-informe>
   <p class="migas"><a href="../../index.html#proyectos">Proyectos</a> / <a href="index.html">Real Zaragoza 2026/27</a> / Informe completo</p>
   <section class="cab-proyecto">
     <p class="etiqueta">Informe completo · Primera Federación, grupo 2</p>
     <h1>Real Zaragoza 2026/27 tras la jornada {jornada}</h1>
-    <p class="entradilla">Datos de los {len(partidos)} partidos de liga jugados hasta el {fecha_larga(ultima_fecha)}. Todo sale de fuentes públicas, contrastadas entre sí.</p>
+    <p class="entradilla corte-visible">Datos de los {len(partidos)} partidos de liga jugados hasta el {fecha_larga(ultima_fecha)}. Todo sale de fuentes públicas, contrastadas entre sí.</p>
   </section>
 
   <section class="seccion">
