@@ -47,10 +47,11 @@
 
   <p class="corte-visible" data-corte>Datos del análisis hasta el 11/10/2026 · Jornada 7</p>
 
-  <section class="seccion" aria-labelledby="t-directo" id="directo" hidden>
+  <section class="seccion" aria-labelledby="t-directo" id="directo">
     <p class="etiqueta" id="directo-etiqueta">Partido</p>
     <h2 id="t-directo" class="visualmente-oculto">Marcador</h2>
-    <details class="marcador-partido" id="marcador">
+    <p class="nota" id="estado-marcador">Consulta los resultados y el seguimiento del partido en <a href="https://www.sofascore.com/es/football/team/real-zaragoza/2815" target="_blank" rel="noopener">Sofascore</a>.</p>
+    <details class="marcador-partido" id="marcador" hidden>
       <summary id="marcador-resumen"></summary>
       <div class="mp-detalle" id="marcador-detalle"></div>
     </details>
@@ -257,12 +258,13 @@
 
 
 // Marcador del partido. Lee la lista de partidos de Sofascore (datos/sofascore.json) y las
-// fichas de los partidos ya apuntados (datos/zaragoza.json).
+// fichas de los partidos ya apuntados (datos/zaragoza.json). El estado en vivo se consulta
+// en el proveedor: el reloj local nunca confirma un inicio o un final.
 // Qué partido se enseña: el último jugado se queda hasta el martes a las 8:00 si hay otro
 // partido antes del viernes, o hasta el miércoles a las 8:00 si no lo hay. Un partido jugado
 // entre semana se queda dos días. Después pasa al siguiente.
 (function () {
-  const HORA = 3600 * 1000, DIA = 24 * HORA;
+  const HORA = 3600 * 1000;
   const ZONA = 'Europe/Madrid';
   const esc = t => String(t).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 
@@ -301,12 +303,12 @@
   }
 
   function elegir(lista, ahora) {
-    const ps = lista.slice().sort((a, b) => Date.parse(a.inicio) - Date.parse(b.inicio));
+    const ps = lista.filter(p => Number.isFinite(Date.parse(p.inicio))).sort((a, b) => Date.parse(a.inicio) - Date.parse(b.inicio));
     let elegido = null;
     ps.forEach((p, i) => {
       if (Date.parse(p.inicio) <= ahora && ahora < hastaCuando(p, ps[i + 1])) elegido = p;
     });
-    return elegido || ps.find(p => Date.parse(p.inicio) > ahora) || null;
+    return elegido || ps.find(p => Date.parse(p.inicio) > ahora) || ps[ps.length - 1] || null;
   }
 
   const SIGLAS_FUERA = new Set(['CD', 'CE', 'CF', 'FC', 'UD', 'AD', 'SD', 'UE', 'CDA', 'RC', 'B']);
@@ -317,25 +319,26 @@
   };
   const equipo = n => `<span class="mp-equipo${/zaragoza/i.test(n) ? ' zgz' : ''}"><span class="mp-escudo" aria-hidden="true">${esc(siglas(n))}</span>${esc(n)}</span>`;
 
-  // Dónde ver el partido: lo apuntado en sofascore.json o, si no hay nada, las plataformas
-  // que emiten todos los partidos de Primera Federación.
+  // Solo se muestran los canales facilitados en la ficha de cada encuentro.
   function dondeVer(p) {
     const tv = p.tv || [];
-    const lista = tv.length
-      ? tv.map(c => `<li${c.abierto ? ' class="abierto"' : ''}>${esc(c.canal)}${c.abierto ? ' <small>gratis</small>' : ''}</li>`).join('')
-      : '<li>Football Club</li><li>FanPlay TV</li>';
-    const nota = tv.length ? '' : '<span class="mp-tv-nota">Emiten todos los partidos. Aún no se sabe si irá en abierto.</span>';
-    return `<div class="mp-tv"><span class="mp-tv-titulo">Dónde verlo</span><ul>${lista}</ul>${nota}</div>`;
+    if (!tv.length) return '<p class="mp-tv mp-tv-nota">Emisión pendiente de confirmar.</p>';
+    const lista = tv.map(c => `<li${c.abierto ? ' class="abierto"' : ''}>${esc(c.canal)}${c.abierto ? ' <small>en abierto</small>' : ''}</li>`).join('');
+    return `<div class="mp-tv"><span class="mp-tv-titulo">Dónde verlo</span><ul>${lista}</ul><span class="mp-tv-nota">Horarios y emisiones sujetos a cambios.</span></div>`;
   }
+
+  // Una hora de inicio no confirma que el encuentro haya empezado o terminado.
+  // El resultado solo se muestra cuando existe una ficha revisada en el análisis.
+  const estadoPartido = (p, ficha, ahora) => ficha ? 'final' : (ahora < Date.parse(p.inicio) ? 'previa' : 'pendiente');
 
   function pintar(p, ficha, ahora) {
     const inicio = Date.parse(p.inicio);
-    const estado = ahora < inicio ? 'previa' : (ahora < inicio + 2.25 * HORA ? 'vivo' : 'final');
+    const estado = estadoPartido(p, ficha, ahora);
     const fecha = new Date(inicio).toLocaleDateString('es-ES', {weekday: 'long', day: 'numeric', month: 'long', timeZone: ZONA});
     const hora = new Date(inicio).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit', timeZone: ZONA});
     const ronda = p.jornada ? `Primera Federación · Jornada ${p.jornada}` : esc(p.competicion);
     const zgzLocal = /zaragoza/i.test(p.local);
-    const etiqueta = {previa: 'Próximo partido', vivo: 'En directo', final: 'Último partido'}[estado];
+    const etiqueta = {previa: 'Próximo partido', pendiente: 'Seguimiento del partido', final: 'Último partido'}[estado];
     document.getElementById('directo-etiqueta').textContent = etiqueta;
     document.getElementById('t-directo').textContent = `${p.local} – ${p.visitante}`;
 
@@ -348,14 +351,14 @@
       abrir = 'Goles, tarjetas y estadísticas';
     } else if (estado === 'previa') {
       centro = `<span class="mp-hora">${hora}</span>`;
-      sub = 'Hora de España';
-      abrir = 'Marcador y alineaciones en directo';
+      sub = 'Hora peninsular';
+      abrir = 'Ver el seguimiento del partido';
     } else {
-      centro = `<span class="mp-hora">${estado === 'vivo' ? 'En juego' : 'Final'}</span>`;
-      sub = estado === 'vivo' ? `Empezó a las ${hora}` : 'Resultado en Sofascore mientras se apunta la ficha';
-      abrir = estado === 'vivo' ? 'Marcador y alineaciones en directo' : 'Ver resultado y alineaciones';
+      centro = '<span class="mp-hora">—</span>';
+      sub = 'Estado pendiente de confirmar';
+      abrir = 'Consultar el resultado en Sofascore';
     }
-    const textoEstado = {previa: 'Previa', vivo: 'En directo', final: 'Final'}[estado];
+    const textoEstado = {previa: 'Programado', pendiente: 'Por confirmar', final: 'Final'}[estado];
     document.getElementById('marcador-resumen').innerHTML = `
       <div class="mp-cesped">
         <div class="mp-cab"><span>${ronda} · ${esc(fecha)}</span><span class="mp-estado ${estado}">${textoEstado}</span></div>
@@ -397,29 +400,45 @@
         ${stats ? `<h3>Estadísticas</h3><dl class="mp-stats">${stats}</dl>` : ''}
         <p class="mp-pie">Datos de la web del club, FotMob, futboltotal y BeSoccer. Más detalle en el <a href="informe-completo.html">informe completo</a>.</p>`;
     } else {
-      detalle.innerHTML = `<iframe class="mp-widget" id="marcador-widget" scrolling="no" loading="lazy" title="Marcador y alineaciones (Sofascore)"></iframe>
-        <p class="mp-pie">Datos en directo de <a href="https://www.sofascore.com/es/football/team/real-zaragoza/2815" target="_blank" rel="noopener">Sofascore</a>.</p>`;
-      const cargar = () => {
-        const w = document.getElementById('marcador-widget');
-        if (w && !w.src) w.src = `https://widgets.sofascore.com/es-ES/embed/lineups?id=${p.id}&widgetTheme=light`;
-      };
-      const marcador = document.getElementById('marcador');
-      marcador.addEventListener('toggle', () => { if (marcador.open) cargar(); });
-      if (estado === 'vivo') { marcador.open = true; cargar(); }
+      detalle.innerHTML = `<p class="nota">El estado y el resultado actualizado se consultan en Sofascore. Esta ficha no confirma el inicio ni el final del partido.</p>
+        <div class="enlaces"><a class="boton lleno" href="https://www.sofascore.com/es/football/team/real-zaragoza/2815" target="_blank" rel="noopener">Abrir seguimiento en Sofascore</a></div>`;
     }
+    document.getElementById('marcador').hidden = false;
+    document.getElementById('estado-marcador').hidden = true;
     document.getElementById('directo').hidden = false;
   }
 
-  Promise.all([
-    fetch('../../datos/sofascore.json').then(r => r.json()),
-    fetch('../../datos/zaragoza.json').then(r => r.json())
-  ]).then(([sofa, zgz]) => {
+  let calendario, analisis, vistaActual = '';
+  function actualizarVista() {
+    if (!calendario || !analisis) return;
     const ahora = Date.now();
-    const p = elegir(sofa.partidos, ahora);
+    const p = elegir(calendario.partidos, ahora);
     if (!p) return;
-    const ficha = (zgz.fichas || []).find(f => f.fecha === diaMadrid(Date.parse(p.inicio)));
+    const rival = /zaragoza/i.test(p.local) ? p.visitante : p.local;
+    const ficha = (analisis.fichas || []).find(f =>
+      f.fecha === diaMadrid(Date.parse(p.inicio)) && f.rival === rival && f.competicion === p.competicion);
+    const clave = JSON.stringify([p, ficha, estadoPartido(p, ficha, ahora)]);
+    if (clave === vistaActual) return;
     pintar(p, ficha, ahora);
-  }).catch(() => {});
+    vistaActual = clave;
+  }
+  function cargar() {
+    return Promise.all(['sofascore', 'zaragoza'].map(nombre =>
+      fetch(`../../datos/${nombre}.json`, {cache: 'no-cache'}).then(r => {
+        if (!r.ok) throw new Error('No se ha podido cargar la ficha');
+        return r.json();
+      })
+    )).then(([sofa, zgz]) => {
+      calendario = sofa; analisis = zgz; actualizarVista();
+    }).catch(() => {
+      if (!vistaActual) document.getElementById('estado-marcador').hidden = false;
+    });
+  }
+  cargar();
+  setInterval(() => { if (!document.hidden) actualizarVista(); }, 60000);
+  setInterval(() => { if (!document.hidden) cargar(); }, 300000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) cargar(); });
+
 })();
 </script>
 </body>

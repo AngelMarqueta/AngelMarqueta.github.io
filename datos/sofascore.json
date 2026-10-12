@@ -1,5 +1,5 @@
 {
- "_nota": "Partidos del Real Zaragoza en Sofascore para el marcador de la página del proyecto. El id sale de la ficha del partido en sofascore.com y la hora de inicio va en UTC. Se deja siempre el último partido jugado: la página lo sigue enseñando hasta el martes por la mañana si hay partido entre semana o hasta el miércoles por la mañana si no lo hay. El campo «tv» lista dónde se puede ver cada partido (nombre y si es en abierto); si está vacío, la página dice solo qué plataformas dan todos los partidos.",
+ "_nota": "Calendario facilitado para el seguimiento del Real Zaragoza. Las horas de inicio están en UTC y pueden cambiar. La web muestra el último resultado revisado hasta el martes por la mañana si hay partido entre semana o hasta el miércoles en caso contrario; después, el próximo partido. El estado en directo se consulta en Sofascore y nunca se deduce de la hora. El campo tv contiene únicamente los canales indicados para cada encuentro; si está vacío, la emisión está pendiente de confirmar.",
  "equipo_sofascore": 2815,
  "actualizado": "2026-10-12",
  "partidos": [

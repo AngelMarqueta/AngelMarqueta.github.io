@@ -306,3 +306,7 @@ tr.propio td{font-weight:700;color:var(--senal-texto)}
 .mp-tv li.abierto{background:var(--cal);color:var(--cesped-noche)}
 .mp-tv li small{font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--senal-texto);margin-left:.2rem}
 .mp-tv-nota{display:block;font-size:.78rem;opacity:.8;margin-top:.45rem}
+
+.mp-estado.pendiente{background:rgba(244,247,241,.14)}
+.mp-detalle .enlaces{margin-top:1rem}
+@media(max-width:400px){.mp-equipo{font-size:.85rem}.mp-escudo{width:2.6rem;height:2.6rem}.mp-goles{gap:.3rem .6rem;font-size:.85rem}}

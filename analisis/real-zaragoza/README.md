@@ -30,7 +30,11 @@ El script escribe también en la web:
 - `datos/zaragoza.json`: datos del panel interactivo.
 - `proyectos/real-zaragoza/informe-completo.html` y la carpeta `graficos/`.
 
-El marcador de la página del proyecto lee `datos/sofascore.json` (no lo genera el script) y las fichas de partido de `datos/zaragoza.json`. En `sofascore.json` están el último partido jugado y los siguientes, con su id de Sofascore y la hora de inicio en UTC. La página enseña el último resultado (goles, tarjetas y estadísticas al pulsar) hasta el martes a las 8:00 si hay partido entre semana o hasta el miércoles a las 8:00 si no lo hay; después, el siguiente partido, con el marcador en directo de Sofascore. En la previa y durante el partido sale también «Dónde verlo», con los canales apuntados en el campo `tv` de cada partido (si está vacío, las plataformas que dan todos los partidos).
+El marcador de la página del proyecto lee `datos/sofascore.json` (calendario mantenido a mano) y las fichas de `datos/zaragoza.json`. Muestra el último resultado revisado, con goles, tarjetas y estadísticas al pulsar, hasta el martes a las 8:00 si hay partido entre semana o hasta el miércoles a las 8:00 en caso contrario. Después muestra el siguiente encuentro. Los cambios de tarjeta siguen la hora de Madrid y se revisan mientras la página permanece abierta.
+
+La hora programada nunca se usa para afirmar que el partido ha empezado o terminado. El seguimiento en directo se abre en Sofascore. El 12 de octubre de 2026 el módulo incrustado devolvió un error, por lo que no se activa hasta verificar un proveedor operativo. Las fichas revisadas siguen funcionando sin ese módulo. «Dónde verlo» muestra solo los canales incluidos en `tv`; un campo vacío se presenta como emisión pendiente de confirmar.
+
+Las páginas y sus plantillas conservan el selector de tema, los gráficos ampliables, el índice del informe, los resultados táctiles y la firma **Ángel Marqueta Alonso**. Al actualizar otra jornada, se parte siempre de la versión actual del repositorio para no recuperar plantillas anteriores.
 
 ## Datos de entrada
 
