@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="assets/tema.js"></script>
 <link rel="stylesheet" href="assets/estilo.css">
+<script src="assets/mejoras.js" defer></script>
 <link rel="icon" href="assets/icono.svg" type="image/svg+xml">
 </head>
 <body>
@@ -24,6 +26,7 @@
       <a href="#sobre-mi">Sobre mí</a>
       <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
       <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
+      <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
     </nav>
   </div>
 </header>
@@ -36,7 +39,7 @@
     <div class="envoltorio">
       <div class="portada">
         <h1 id="titulo">Línea de pase</h1>
-        <p class="sub">Análisis de datos en fútbol. Preguntas concretas, datos públicos y las fuentes siempre a la vista.</p>
+        <p class="sub">Analítica de fútbol y visualización de datos por Ángel G. Marqueta Alonso. Me estoy formando para dedicarme al análisis deportivo: preguntas concretas, datos públicos y fuentes a la vista.</p>
         <div class="botones">
           <a class="boton lleno" href="#proyectos">Ver los proyectos</a>
           <a class="boton" href="#sobre-mi">Quién hay detrás</a>
@@ -126,6 +129,7 @@
       <dl class="ficha">
         <dt>Formación</dt><dd>Máster en Big Data Deportivo, Sports Data Campus (en curso)</dd>
         <dd>CFGS Desarrollo de Productos Electrónicos</dd>
+        <dt>Redes</dt><dd><a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook · Línea de pase</a></dd>
         <dt>Contacto</dt><dd><a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a></dd>
         <dt>Código</dt><dd><a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a></dd>
       </dl>
@@ -147,7 +151,7 @@
     const deJugadores = d.goles.filter(g => g.rol_goleador);
     const suplentes = deJugadores.filter(g => g.rol_goleador === 'Suplente').length;
     document.getElementById('zgz-banquillo').textContent = suplentes + ' de ' + deJugadores.length;
-    document.getElementById('zgz-cuando').textContent = 'Seguimiento semanal, actualizado tras la jornada ' + d.jornada;
+    document.getElementById('zgz-cuando').textContent = 'Datos hasta el ' + new Date(d.corte + 'T12:00:00').toLocaleDateString('es-ES') + ' · Jornada ' + d.jornada;
     dibujarMinutos(d.goles, d.jornada);
   }).catch(() => { document.getElementById('minutos').hidden = true; });
 
