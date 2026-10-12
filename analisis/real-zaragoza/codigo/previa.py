@@ -219,7 +219,7 @@ def generar(jornada):
 <footer class="pie">
   <div class="envoltorio">
     <p>Análisis personal con datos públicos. Línea de pase no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
-    <p>© {proximo['fecha'].year} Ángel G. Marqueta Alonso</p>
+    <p>© {proximo['fecha'].year} Ángel Marqueta Alonso</p>
   </div>
 </footer>
 </body>
