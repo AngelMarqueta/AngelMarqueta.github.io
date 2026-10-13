@@ -168,7 +168,6 @@ def generar(jornada):
       <a href="../index.html" aria-current="page">Proyectos</a>
       <a href="../../videos/index.html">Vídeos</a>
       <a href="../../sobre-mi/index.html">Sobre mí</a>
-      <a href="../../contacto/index.html">Contacto</a>
     </nav>
   </div>
 </header>
@@ -222,7 +221,7 @@ def generar(jornada):
 <footer class="pie">
   <div class="envoltorio">
     <p>Análisis personal con datos públicos. Línea de pase no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
-    <p>© {proximo['fecha'].year} Ángel Marqueta Alonso</p>
+    <p><a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a> · © {proximo['fecha'].year} Ángel Marqueta Alonso</p>
   </div>
 </footer>
 </body>
