@@ -101,7 +101,9 @@ h3{font-family:var(--f-display);font-weight:700;font-size:1.6rem;line-height:1.1
 .proyecto-fila.invertida .proyecto-texto{order:2}
 .proyecto-texto p{color:var(--tinta-suave);margin:.4rem 0 1.2rem;max-width:52ch}
 .proyecto-texto .cuando{font-size:.9rem;font-weight:600;color:var(--cesped);margin:0 0 .3rem}
-.proyecto-texto h3{font-size:clamp(1.9rem,3.6vw,2.5rem)}
+.proyecto-texto h2,.proyecto-texto h3{font-size:clamp(1.9rem,3.6vw,2.5rem)}
+.proyecto-texto h2,.video-explicacion h2{font-weight:700;line-height:1.1;margin:0 0 .5rem}
+.video-explicacion h2{font-size:1.6rem}
 /* Marcador del Zaragoza */
 .marcador{border-radius:var(--radio);padding:clamp(1.2rem,3vw,1.8rem);display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;box-shadow:inset 0 0 0 2px rgba(244,247,241,.18)}
 .marcador div{display:flex;flex-direction:column;gap:.15rem}
@@ -310,3 +312,14 @@ tr.propio td{font-weight:700;color:var(--senal-texto)}
 .mp-estado.pendiente{background:rgba(244,247,241,.14)}
 .mp-detalle .enlaces{margin-top:1rem}
 @media(max-width:400px){.mp-equipo{font-size:.85rem}.mp-escudo{width:2.6rem;height:2.6rem}.mp-goles{gap:.3rem .6rem;font-size:.85rem}}
+
+/* ---------- Páginas de sección (Proyectos, Vídeos, Sobre mí) ---------- */
+.nav a[aria-current="page"]{opacity:1;text-decoration:underline;text-decoration-color:var(--senal);text-decoration-thickness:2px;text-underline-offset:.4em}
+.cab-pagina{padding-block:clamp(2.2rem,6vw,4rem) 0}
+.cab-pagina h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.8rem,7vw,4.8rem);line-height:.95;margin:.2rem 0 1rem;text-wrap:balance}
+.cab-pagina + .seccion{padding-top:clamp(1.8rem,4vw,2.8rem)}
+/* El pie queda abajo aunque la página sea corta */
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+body>main{flex:1 0 auto}
+body>main:has(>.portada-campo){display:flex;flex-direction:column}
+.portada-campo{flex:1 0 auto}

@@ -144,9 +144,10 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
       Línea de pase
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="../../index.html#proyectos">Proyectos</a>
-      <a href="../../index.html#videos">Vídeos</a>
-      <a href="../../index.html#sobre-mi">Sobre mí</a>
+      <a href="../../index.html">Inicio</a>
+      <a href="../index.html" aria-current="page">Proyectos</a>
+      <a href="../../videos/index.html">Vídeos</a>
+      <a href="../../sobre-mi/index.html">Sobre mí</a>
       <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
       <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
       <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
@@ -155,7 +156,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 </header>
 
 <main class="envoltorio" data-informe>
-  <p class="migas"><a href="../../index.html#proyectos">Proyectos</a> / <a href="index.html">Real Zaragoza 2026/27</a> / Informe completo</p>
+  <p class="migas"><a href="../index.html">Proyectos</a> / <a href="index.html">Real Zaragoza 2026/27</a> / Informe completo</p>
   <section class="cab-proyecto">
     <p class="etiqueta">Informe completo · Primera Federación, grupo 2</p>
     <h1>Real Zaragoza 2026/27 tras la jornada {jornada}</h1>

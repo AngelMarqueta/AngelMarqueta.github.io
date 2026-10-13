@@ -21,9 +21,10 @@
       Línea de pase
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#proyectos">Proyectos</a>
-      <a href="#videos">Vídeos</a>
-      <a href="#sobre-mi">Sobre mí</a>
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="proyectos/index.html">Proyectos</a>
+      <a href="videos/index.html">Vídeos</a>
+      <a href="sobre-mi/index.html">Sobre mí</a>
       <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
       <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
       <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
@@ -31,7 +32,7 @@
   </div>
 </header>
 <main>
-  <section class="cesped portada-campo" aria-labelledby="titulo">
+<section class="cesped portada-campo" aria-labelledby="titulo">
     <svg class="lineas" viewBox="0 0 1200 640" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
       <path d="M760 0V640"/><circle cx="760" cy="320" r="120"/><circle cx="760" cy="320" r="4"/>
       <path d="M1200 150H1060V490H1200"/><path d="M1200 245H1150V395H1200"/><path d="M1060 260A80 80 0 0 0 1060 380"/>
@@ -41,8 +42,8 @@
         <h1 id="titulo">Línea de pase</h1>
         <p class="sub">Analítica de fútbol y visualización de datos por Ángel Marqueta Alonso. Me estoy formando para dedicarme al análisis deportivo: preguntas concretas, datos públicos y fuentes a la vista.</p>
         <div class="botones">
-          <a class="boton lleno" href="#proyectos">Ver los proyectos</a>
-          <a class="boton" href="#sobre-mi">Quién hay detrás</a>
+          <a class="boton lleno" href="proyectos/index.html">Ver los proyectos</a>
+          <a class="boton" href="sobre-mi/index.html">Quién hay detrás</a>
         </div>
       </div>
       <figure class="minutos" id="minutos" aria-labelledby="t-minutos">
@@ -53,105 +54,12 @@
       </figure>
     </div>
   </section>
-
-  <section class="seccion" id="proyectos" aria-labelledby="t-proyectos">
-    <div class="envoltorio">
-      <h2 id="t-proyectos">Proyectos</h2>
-      <div class="proyectos">
-
-        <article class="proyecto-fila">
-          <div class="proyecto-texto">
-            <p class="cuando" id="zgz-cuando">Seguimiento semanal, actualizado tras la jornada 7</p>
-            <h3>Real Zaragoza 2026/27: el líder, jornada a jornada</h3>
-            <p>Resultados, goles, tiros, minutos y clasificación del Zaragoza en Primera Federación. Un panel interactivo, un informe completo y la previa de cada partido.</p>
-            <a class="boton lleno" href="proyectos/real-zaragoza/index.html">Abrir el panel</a>
-          </div>
-          <div class="marcador cesped" aria-label="Situación del Real Zaragoza">
-            <div><b id="zgz-pos">1.º</b><span>en la clasificación</span></div>
-            <div><b id="zgz-pts">16</b><span>puntos</span></div>
-            <div><b id="zgz-goles">16–10</b><span>goles</span></div>
-            <div class="destacado"><b id="zgz-banquillo">5 de 15</b><span>goles de sus jugadores salen del banquillo</span></div>
-          </div>
-        </article>
-
-        <article class="proyecto-fila invertida">
-          <div class="proyecto-texto">
-            <p class="cuando">Datos abiertos del CSD y del INE</p>
-            <h3>Fútbol femenino: dónde empezar a ampliar la base</h3>
-            <p>Licencias federativas y población por comunidad para decidir en qué dos comunidades tendría más sentido probar un programa de iniciación.</p>
-            <p class="dato-grande">1 de cada 10<small>licencias de fútbol en España son femeninas</small></p>
-            <p><a class="boton" href="proyectos/futbol-femenino/index.html">Leer el análisis</a></p>
-          </div>
-          <a class="miniatura" href="proyectos/futbol-femenino/index.html" aria-label="Ver el análisis de fútbol femenino">
-            <img src="proyectos/futbol-femenino/mapa.png?v=20261012" alt="Mapa de España con las licencias femeninas de fútbol por cada 1.000 mujeres en cada comunidad" width="1500" height="1200" loading="lazy">
-          </a>
-        </article>
-
-        <p class="proximamente">Los trabajos del Máster en Big Data Deportivo se irán publicando aquí cuando estén corregidos.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="seccion" id="videos" aria-labelledby="t-videos">
-    <div class="envoltorio">
-      <h2 id="t-videos">Fútbol con datos, en un minuto</h2>
-      <article class="video-explicacion" aria-labelledby="t-xg">
-        <div class="lectura">
-          <p class="cuando">Vídeo · 1 min 14 s</p>
-          <h3 id="t-xg">xG, sin líos: ¿puedes crear más peligro y aun así perder?</h3>
-          <p>Qué son los goles esperados, cómo se suman y por qué no determinan el resultado de un partido. Una explicación con el PSG–Dortmund de la Champions de 2024.</p>
-        </div>
-        <video controls playsinline preload="none" poster="assets/xg-portada.jpg" width="910" height="512" aria-label="xG, sin líos: explicación de los goles esperados">
-          <source src="assets/xg-sin-lios.mp4?v=20261012" type="video/mp4">
-          Tu navegador no puede reproducir este vídeo. <a href="assets/xg-sin-lios.mp4?v=20261012">Descarga el vídeo</a>.
-        </video>
-        <details class="video-resumen">
-          <summary>Leer la explicación</summary>
-          <p>El marcador cuenta los goles; el xG estima la probabilidad de gol de cada tiro según factores como la distancia, el ángulo y el tipo de remate. Un tiro de 0,20 xG tiene una probabilidad estimada del 20 % de acabar en gol.</p>
-          <p>Después se suman los valores de los tiros. Por ejemplo, 0,20 + 0,30 + 0,50 = 1,00 xG. Es una estimación de la calidad acumulada de las ocasiones, no un gol garantizado.</p>
-          <p>El PSG perdió 0–1 ante el Dortmund el 7 de mayo de 2024, aunque el vídeo muestra 3,25 xG para el PSG y 0,74 para el Dortmund. Los valores pueden variar según el proveedor y su modelo. El xG describe los tiros; no decide el resultado.</p>
-        </details>
-        <p class="nota">Fuentes indicadas en el vídeo: Opta / FotMob y Hudl StatsBomb. Las animaciones del campo y los valores de los tres tiros son ejemplos didácticos.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="seccion" id="sobre-mi" aria-labelledby="t-sobre">
-    <div class="envoltorio sobre">
-      <div class="lectura">
-        <h2 id="t-sobre">Ángel Marqueta Alonso</h2>
-        <p>Soy Ángel Marqueta Alonso, estudiante del Máster en Big Data Deportivo de Sports Data Campus. Me estoy formando para dedicarme a la analítica deportiva, con especial interés en el fútbol y en convertir datos en explicaciones claras y visuales.</p>
-        <p>En Línea de pase publico los análisis que voy haciendo: siempre con datos públicos, con las fuentes a la vista y avisando de lo que los datos no permiten afirmar.</p>
-        <ul class="herramientas" aria-label="Herramientas">
-          <li>Python</li><li>R</li><li>Excel</li><li class="formacion">Power BI, en formación</li>
-        </ul>
-      </div>
-      <dl class="ficha">
-        <dt>Formación</dt><dd>Máster en Big Data Deportivo, Sports Data Campus (en curso)</dd>
-        <dd>CFGS Desarrollo de Productos Electrónicos</dd>
-        <dt>Redes</dt><dd><a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook · Línea de pase</a></dd>
-        <dt>Contacto</dt><dd><a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a></dd>
-        <dt>Código</dt><dd><a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a></dd>
-      </dl>
-    </div>
-  </section>
 </main>
-
 <script>
-// Datos de la portada: la franja de minutos y el marcador del Zaragoza salen
-// del mismo JSON que el panel, así se actualizan solos cada jornada.
+// Franja de minutos de la portada: sale del mismo JSON que el panel del Zaragoza,
+// así se actualiza sola cada jornada.
 (function () {
   fetch('datos/zaragoza.json').then(r => r.json()).then(d => {
-    const zgz = d.clasificacion.find(c => c.equipo === 'Real Zaragoza');
-    if (zgz) {
-      document.getElementById('zgz-pos').textContent = zgz.posicion + '.º';
-      document.getElementById('zgz-pts').textContent = zgz.puntos;
-      document.getElementById('zgz-goles').textContent = zgz.gf + '–' + zgz.gc;
-    }
-    const deJugadores = d.goles.filter(g => g.rol_goleador);
-    const suplentes = deJugadores.filter(g => g.rol_goleador === 'Suplente').length;
-    document.getElementById('zgz-banquillo').textContent = suplentes + ' de ' + deJugadores.length;
-    document.getElementById('zgz-cuando').textContent = 'Datos hasta el ' + new Date(d.corte + 'T12:00:00').toLocaleDateString('es-ES') + ' · Jornada ' + d.jornada;
     dibujarMinutos(d.goles, d.jornada);
   }).catch(() => { document.getElementById('minutos').hidden = true; });
 
@@ -207,7 +115,6 @@
   }
 })();
 </script>
-
 <footer class="pie">
   <div class="envoltorio">
     <p>Análisis personales hechos con datos públicos. Línea de pase no tiene relación con ningún club ni competición.</p>

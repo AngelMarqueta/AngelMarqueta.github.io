@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vídeos · Línea de pase</title>
+<meta name="description" content="Vídeos cortos de Línea de pase: conceptos de analítica de fútbol explicados con partidos reales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="../assets/tema.js"></script>
+<link rel="stylesheet" href="../assets/estilo.css">
+<script src="../assets/mejoras.js" defer></script>
+<link rel="icon" href="../assets/icono.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltorio">
+    <a class="marca" href="../index.html" aria-label="Línea de pase, inicio">
+      <svg viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="lp-cesped" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6b45"/><stop offset="1" stop-color="#3f8f5c"/></linearGradient><clipPath id="lp-campo"><rect x="2" y="2" width="60" height="44" rx="8"/></clipPath></defs><rect x="2" y="2" width="60" height="44" rx="8" fill="url(#lp-cesped)" stroke="#f4f7f1" stroke-opacity=".55" stroke-width="2"/><g clip-path="url(#lp-campo)" fill="#fff" fill-opacity=".08"><rect x="2" y="0" width="7.5" height="48"/><rect x="17" y="0" width="7.5" height="48"/><rect x="32" y="0" width="7.5" height="48"/><rect x="47" y="0" width="7.5" height="48"/></g><g fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.8"><rect x="6" y="6" width="52" height="36" rx="2"/><path d="M32 6v36"/><circle cx="32" cy="24" r="6"/><path d="M58 15h-8v18h8"/></g><path d="M13 34C23 20 35 18 47 23" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 5.6"/><circle cx="12" cy="35" r="3.8" fill="#14261d" stroke="#fff" stroke-width="1.4"/><circle cx="50" cy="24" r="4.6" fill="#ff7a2f" stroke="#fff" stroke-width="1.4"/></svg>
+      Línea de pase
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../proyectos/index.html">Proyectos</a>
+      <a href="../videos/index.html" aria-current="page">Vídeos</a>
+      <a href="../sobre-mi/index.html">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
+      <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
+      <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
+    </nav>
+  </div>
+</header>
+<main>
+<header class="cab-pagina">
+    <div class="envoltorio">
+      <p class="etiqueta">Vídeos</p>
+      <h1>Fútbol con datos, en un minuto</h1>
+      <p class="entradilla">Conceptos de analítica explicados con partidos reales, sin fórmulas y con las fuentes a la vista.</p>
+    </div>
+  </header>
+  <section class="seccion" aria-label="Lista de vídeos">
+    <div class="envoltorio">
+      <article class="video-explicacion" aria-labelledby="t-xg">
+        <div class="lectura">
+          <p class="cuando">Vídeo · 1 min 14 s</p>
+          <h2 id="t-xg">xG, sin líos: ¿puedes crear más peligro y aun así perder?</h2>
+          <p>Qué son los goles esperados, cómo se suman y por qué no determinan el resultado de un partido. Una explicación con el PSG–Dortmund de la Champions de 2024.</p>
+        </div>
+        <video controls playsinline preload="none" poster="../assets/xg-portada.jpg" width="910" height="512" aria-label="xG, sin líos: explicación de los goles esperados">
+          <source src="../assets/xg-sin-lios.mp4?v=20261012" type="video/mp4">
+          Tu navegador no puede reproducir este vídeo. <a href="../assets/xg-sin-lios.mp4?v=20261012">Descarga el vídeo</a>.
+        </video>
+        <details class="video-resumen">
+          <summary>Leer la explicación</summary>
+          <p>El marcador cuenta los goles; el xG estima la probabilidad de gol de cada tiro según factores como la distancia, el ángulo y el tipo de remate. Un tiro de 0,20 xG tiene una probabilidad estimada del 20 % de acabar en gol.</p>
+          <p>Después se suman los valores de los tiros. Por ejemplo, 0,20 + 0,30 + 0,50 = 1,00 xG. Es una estimación de la calidad acumulada de las ocasiones, no un gol garantizado.</p>
+          <p>El PSG perdió 0–1 ante el Dortmund el 7 de mayo de 2024, aunque el vídeo muestra 3,25 xG para el PSG y 0,74 para el Dortmund. Los valores pueden variar según el proveedor y su modelo. El xG describe los tiros; no decide el resultado.</p>
+        </details>
+        <p class="nota">Fuentes indicadas en el vídeo: Opta / FotMob y Hudl StatsBomb. Las animaciones del campo y los valores de los tres tiros son ejemplos didácticos.</p>
+      </article>
+    </div>
+  </section>
+</main>
+<footer class="pie">
+  <div class="envoltorio">
+    <p>Análisis personales hechos con datos públicos. Línea de pase no tiene relación con ningún club ni competición.</p>
+    <p>© 2026 Ángel Marqueta Alonso</p>
+  </div>
+</footer>
+</body>
+</html>

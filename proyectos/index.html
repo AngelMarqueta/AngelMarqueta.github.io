@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Proyectos · Línea de pase</title>
+<meta name="description" content="Proyectos de analítica de fútbol con datos públicos: seguimiento del Real Zaragoza 2026/27 y fútbol femenino en España.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="../assets/tema.js"></script>
+<link rel="stylesheet" href="../assets/estilo.css">
+<script src="../assets/mejoras.js" defer></script>
+<link rel="icon" href="../assets/icono.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltorio">
+    <a class="marca" href="../index.html" aria-label="Línea de pase, inicio">
+      <svg viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="lp-cesped" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6b45"/><stop offset="1" stop-color="#3f8f5c"/></linearGradient><clipPath id="lp-campo"><rect x="2" y="2" width="60" height="44" rx="8"/></clipPath></defs><rect x="2" y="2" width="60" height="44" rx="8" fill="url(#lp-cesped)" stroke="#f4f7f1" stroke-opacity=".55" stroke-width="2"/><g clip-path="url(#lp-campo)" fill="#fff" fill-opacity=".08"><rect x="2" y="0" width="7.5" height="48"/><rect x="17" y="0" width="7.5" height="48"/><rect x="32" y="0" width="7.5" height="48"/><rect x="47" y="0" width="7.5" height="48"/></g><g fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.8"><rect x="6" y="6" width="52" height="36" rx="2"/><path d="M32 6v36"/><circle cx="32" cy="24" r="6"/><path d="M58 15h-8v18h8"/></g><path d="M13 34C23 20 35 18 47 23" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 5.6"/><circle cx="12" cy="35" r="3.8" fill="#14261d" stroke="#fff" stroke-width="1.4"/><circle cx="50" cy="24" r="4.6" fill="#ff7a2f" stroke="#fff" stroke-width="1.4"/></svg>
+      Línea de pase
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../proyectos/index.html" aria-current="page">Proyectos</a>
+      <a href="../videos/index.html">Vídeos</a>
+      <a href="../sobre-mi/index.html">Sobre mí</a>
+      <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
+      <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
+      <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
+    </nav>
+  </div>
+</header>
+<main>
+<header class="cab-pagina">
+    <div class="envoltorio">
+      <p class="etiqueta">Proyectos</p>
+      <h1>Análisis con datos públicos</h1>
+      <p class="entradilla">Cada proyecto parte de una pregunta concreta y enseña sus fuentes, su código y lo que los datos no permiten afirmar.</p>
+    </div>
+  </header>
+  <section class="seccion" aria-label="Lista de proyectos">
+    <div class="envoltorio">
+      <div class="proyectos">
+
+        <article class="proyecto-fila">
+          <div class="proyecto-texto">
+            <p class="cuando" id="zgz-cuando">Seguimiento semanal, actualizado tras la jornada 7</p>
+            <h2>Real Zaragoza 2026/27: el líder, jornada a jornada</h2>
+            <p>Resultados, goles, tiros, minutos y clasificación del Zaragoza en Primera Federación. Un panel interactivo, un informe completo y la previa de cada partido.</p>
+            <a class="boton lleno" href="real-zaragoza/index.html">Abrir el panel</a>
+          </div>
+          <div class="marcador cesped" aria-label="Situación del Real Zaragoza">
+            <div><b id="zgz-pos">1.º</b><span>en la clasificación</span></div>
+            <div><b id="zgz-pts">16</b><span>puntos</span></div>
+            <div><b id="zgz-goles">16–10</b><span>goles</span></div>
+            <div class="destacado"><b id="zgz-banquillo">5 de 15</b><span>goles de sus jugadores salen del banquillo</span></div>
+          </div>
+        </article>
+
+        <article class="proyecto-fila invertida">
+          <div class="proyecto-texto">
+            <p class="cuando">Datos abiertos del CSD y del INE</p>
+            <h2>Fútbol femenino: dónde empezar a ampliar la base</h2>
+            <p>Licencias federativas y población por comunidad para decidir en qué dos comunidades tendría más sentido probar un programa de iniciación.</p>
+            <p class="dato-grande">1 de cada 10<small>licencias de fútbol en España son femeninas</small></p>
+            <p><a class="boton" href="futbol-femenino/index.html">Leer el análisis</a></p>
+          </div>
+          <a class="miniatura" href="futbol-femenino/index.html" aria-label="Ver el análisis de fútbol femenino">
+            <img src="futbol-femenino/mapa.png?v=20261012" alt="Mapa de España con las licencias femeninas de fútbol por cada 1.000 mujeres en cada comunidad" width="1500" height="1200" loading="lazy">
+          </a>
+        </article>
+
+        <p class="proximamente">Los trabajos del Máster en Big Data Deportivo se irán publicando aquí cuando estén corregidos.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+// Marcador del Zaragoza: sale del mismo JSON que el panel, así se actualiza solo cada jornada.
+(function () {
+  fetch('../datos/zaragoza.json').then(r => r.json()).then(d => {
+    const zgz = d.clasificacion.find(c => c.equipo === 'Real Zaragoza');
+    if (zgz) {
+      document.getElementById('zgz-pos').textContent = zgz.posicion + '.º';
+      document.getElementById('zgz-pts').textContent = zgz.puntos;
+      document.getElementById('zgz-goles').textContent = zgz.gf + '–' + zgz.gc;
+    }
+    const deJugadores = d.goles.filter(g => g.rol_goleador);
+    const suplentes = deJugadores.filter(g => g.rol_goleador === 'Suplente').length;
+    document.getElementById('zgz-banquillo').textContent = suplentes + ' de ' + deJugadores.length;
+    document.getElementById('zgz-cuando').textContent = 'Datos hasta el ' + new Date(d.corte + 'T12:00:00').toLocaleDateString('es-ES') + ' · Jornada ' + d.jornada;
+  }).catch(() => {});
+})();
+</script>
+<footer class="pie">
+  <div class="envoltorio">
+    <p>Análisis personales hechos con datos públicos. Línea de pase no tiene relación con ningún club ni competición.</p>
+    <p>© 2026 Ángel Marqueta Alonso</p>
+  </div>
+</footer>
+</body>
+</html>
