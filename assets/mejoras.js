@@ -5,10 +5,11 @@
   const oscuro = () => root.dataset.theme ? root.dataset.theme === 'dark' : sistema.matches;
   const nav = document.querySelector('.nav');
   if (nav) {
-    const label = document.createElement('label'); label.className = 'selector-tema'; label.textContent = 'Tema ';
+    const label = document.createElement('label'); label.className = 'selector-tema';
+    const texto = document.createElement('span'); texto.className = 'selector-texto'; texto.textContent = 'Tema'; label.append(texto);
     const select = document.createElement('select'); select.setAttribute('aria-label','Tema de la web');
     [['auto','Sistema'],['light','Claro'],['dark','Oscuro']].forEach(([value,text]) => select.add(new Option(text,value)));
-    select.value = root.dataset.theme || 'auto'; label.append(select); nav.append(label);
+    select.value = root.dataset.theme || 'auto'; label.append(select); nav.after(label);
     select.addEventListener('change', () => {
       if (select.value === 'auto') delete root.dataset.theme; else root.dataset.theme=select.value;
       try { if (select.value==='auto') localStorage.removeItem('lineadepase-tema'); else localStorage.setItem('lineadepase-tema',select.value); } catch (_) {}
