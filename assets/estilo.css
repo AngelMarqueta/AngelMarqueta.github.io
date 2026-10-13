@@ -200,7 +200,9 @@ tr.propio td{font-weight:700;color:var(--senal-texto)}
 
 /* Vídeos divulgativos */
 .video-explicacion{max-width:60rem}
-.video-explicacion video{display:block;width:100%;height:auto;aspect-ratio:910/512;background:#071b24;border-radius:var(--radio);margin:1.25rem 0}
+.video-explicacion+.video-explicacion{margin-top:clamp(2.5rem,6vw,4rem);padding-top:clamp(2rem,5vw,3rem);border-top:1px solid var(--linea)}
+.video-explicacion iframe{border:0}
+.video-explicacion video,.video-explicacion iframe{display:block;width:100%;height:auto;aspect-ratio:910/512;background:#071b24;border-radius:var(--radio);margin:1.25rem 0}
 .video-resumen{border-block:1px solid var(--linea);padding:.8rem 0;margin:1rem 0}
 .video-resumen summary{font-weight:600;cursor:pointer}
 .video-resumen p{max-width:68ch}
