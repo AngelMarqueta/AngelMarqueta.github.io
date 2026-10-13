@@ -355,3 +355,44 @@ body>main:has(>.portada-campo){display:flex;flex-direction:column}
 .contacto span:last-child{color:var(--tinta-suave);font-size:.95rem}
 .contacto:hover{color:var(--tinta);border-color:var(--senal);border-left-color:var(--senal)}
 .mini-titulo small{display:block;font-size:.8rem;font-weight:400;opacity:.85}
+
+/* ---------- Catálogo de proyectos ---------- */
+.cab-pagina.compacta{padding-top:clamp(1.6rem,4vw,2.6rem)}
+.cab-pagina.compacta h1{font-size:clamp(2.6rem,6vw,3.8rem);margin-bottom:.4rem}
+.cab-pagina.compacta .entradilla{font-size:1.05rem}
+.catalogo{padding-block:1.4rem clamp(2.5rem,6vw,4rem)}
+.filtros{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.filtros[hidden]{display:none}
+.filtros button{font:inherit;font-size:.9rem;font-weight:600;padding:.4rem .95rem;border-radius:999px;border:1.5px solid var(--linea);background:var(--panel);color:var(--tinta);cursor:pointer}
+.filtros button:hover{border-color:var(--cesped)}
+.filtros button span{color:var(--tinta-suave);font-weight:500;margin-left:.15rem}
+.filtros button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+.filtros button[aria-pressed="true"] span{color:inherit;opacity:.75}
+ul.tarjetas-proyecto{list-style:none;margin:0;padding:0;grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr));gap:1.2rem}
+.tarjetas-proyecto>li{display:flex}
+.tarjetas-proyecto>li[hidden]{display:none}
+.tarjetas-proyecto .tarjeta-proyecto{width:100%}
+.mini-marco{position:relative}
+.tarjetas-proyecto .mini{aspect-ratio:16/9}
+.tipo-proyecto{position:absolute;top:.6rem;right:.6rem;font-size:.75rem;font-weight:600;line-height:1.3;padding:.2rem .6rem;border-radius:999px;background:var(--papel);color:var(--tinta);box-shadow:0 0 0 1px var(--linea)}
+.tipo-texto{display:none}
+.tarjeta-texto h2{font-family:var(--f-display);font-weight:700;font-size:1.45rem;line-height:1.1;margin:0 0 .45rem;text-wrap:balance}
+.tarjeta-texto p:not(.etiqueta):not(.tipo-texto){display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nota-catalogo{color:var(--tinta-suave);font-size:.9rem;margin:1.4rem 0 0}
+@media (max-width:600px){
+  .filtros{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * clamp(16px,4vw,40px));padding-inline:clamp(16px,4vw,40px)}
+  .filtros button{flex:0 0 auto}
+  .tarjetas-proyecto .tarjeta-proyecto{flex-direction:row}
+  .tarjetas-proyecto .mini-marco{flex:0 0 7rem}
+  .tarjetas-proyecto .mini{aspect-ratio:auto;height:100%;min-height:7.5rem}
+  .tarjetas-proyecto .mini-imagen{padding:.3rem;border-bottom:0;border-right:1px solid var(--linea)}
+  .tarjetas-proyecto .mini-marcador{padding:.7rem}
+  .tarjetas-proyecto .mini-cifras span:not(:first-child),.tarjetas-proyecto .mini-titulo small{display:none}
+  .tarjetas-proyecto .mini-cifras b{font-size:2.2rem}
+  .tipo-proyecto,.tarjetas-proyecto .ver{display:none}
+  .tarjeta-texto .tipo-texto{display:block;font-size:.75rem;font-weight:600;color:var(--tinta-suave);margin:0}
+  .tarjetas-proyecto .tarjeta-texto{padding:.75rem .9rem}
+  .tarjetas-proyecto .etiqueta{font-size:.8rem;margin-bottom:.2rem}
+  .tarjeta-texto h2{font-size:1.2rem}
+  .tarjeta-texto p:not(.etiqueta):not(.tipo-texto){-webkit-line-clamp:2;font-size:.88rem;margin:0}
+}

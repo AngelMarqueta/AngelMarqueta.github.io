@@ -29,59 +29,78 @@
   </div>
 </header>
 <main>
-<header class="cab-pagina">
+<header class="cab-pagina compacta">
     <div class="envoltorio">
-      <p class="etiqueta">Proyectos</p>
-      <h1>Análisis con datos públicos</h1>
-      <p class="entradilla">Ordenados por tipo. Cada proyecto parte de una pregunta concreta y enseña sus fuentes, su código y lo que los datos no permiten afirmar.</p>
+      <h1>Proyectos</h1>
+      <p class="entradilla">Análisis de fútbol con datos públicos, con las fuentes y el código a la vista.</p>
     </div>
   </header>
-  <section class="seccion grupo" aria-labelledby="g-temporada">
+  <section class="catalogo" aria-label="Catálogo de proyectos">
     <div class="envoltorio">
-      <h2 id="g-temporada">Seguimiento de temporada</h2>
-      <p class="grupo-intro">Un equipo durante toda la temporada, actualizado después de cada partido.</p>
-      <div class="tarjetas-proyecto">
-        <a class="tarjeta-proyecto" href="real-zaragoza/index.html">
-          <div class="mini cesped mini-marcador" aria-hidden="true">
-            <span class="mini-titulo">Real Zaragoza<small>Primera Federación · 2026/27</small></span>
-            <div class="mini-cifras">
-              <span><b id="zgz-pos">1.º</b>puesto</span>
-              <span><b id="zgz-pts">16</b>puntos</span>
-              <span><b id="zgz-goles">16–10</b>goles</span>
+      <div class="filtros" role="group" aria-label="Filtrar por tipo de proyecto" hidden>
+        <button type="button" data-filtro="todos" aria-pressed="true">Todos <span>2</span></button>
+        <button type="button" data-filtro="temporada" aria-pressed="false">Seguimiento de temporada <span>1</span></button>
+        <button type="button" data-filtro="master" aria-pressed="false">Trabajos del máster <span>1</span></button>
+      </div>
+      <ul class="tarjetas-proyecto" id="catalogo">
+        <li data-tipo="temporada">
+          <a class="tarjeta-proyecto" href="real-zaragoza/index.html">
+            <div class="mini-marco">
+              <div class="mini cesped mini-marcador" aria-hidden="true">
+              <span class="mini-titulo">Real Zaragoza<small>Primera Federación · 2026/27</small></span>
+              <div class="mini-cifras">
+                <span><b id="zgz-pos">1.º</b>puesto</span>
+                <span><b id="zgz-pts">16</b>puntos</span>
+                <span><b id="zgz-goles">16–10</b>goles</span>
+              </div>
             </div>
-          </div>
-          <div class="tarjeta-texto">
-            <p class="etiqueta" id="zgz-cuando">Actualizado tras la jornada 7</p>
-            <h3>Real Zaragoza 2026/27, jornada a jornada</h3>
-            <p>Resultados, goles, tiros, minutos y clasificación en Primera Federación, con un panel interactivo, un informe completo y la previa de cada partido.</p>
-            <span class="ver">Abrir el panel</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="seccion grupo" aria-labelledby="g-master">
-    <div class="envoltorio">
-      <h2 id="g-master">Trabajos del máster</h2>
-      <p class="grupo-intro">Actividades del Máster en Big Data Deportivo de Sports Data Campus. Se publican cuando están corregidas.</p>
-      <div class="tarjetas-proyecto">
-        <a class="tarjeta-proyecto" href="futbol-femenino/index.html">
-          <div class="mini mini-imagen">
-            <img src="futbol-femenino/mapa.png?v=20261012" alt="" width="1500" height="1200" loading="lazy">
-          </div>
-          <div class="tarjeta-texto">
-            <p class="etiqueta">Módulo 1 · Datos del CSD y del INE</p>
-            <h3>Fútbol femenino: dónde empezar a ampliar la base</h3>
-            <p>Licencias federativas y población por comunidad para elegir las dos comunidades donde más sentido tendría un programa de iniciación.</p>
-            <span class="ver">Leer el análisis</span>
-          </div>
-        </a>
-      </div>
+              <span class="tipo-proyecto">Seguimiento de temporada</span>
+            </div>
+            <div class="tarjeta-texto">
+              <p class="tipo-texto">Seguimiento de temporada</p>
+              <p class="etiqueta"><span id="zgz-cuando">Actualizado tras la jornada 7</span></p>
+              <h2>Real Zaragoza 2026/27, jornada a jornada</h2>
+              <p>Resultados, goles, tiros, minutos y clasificación en Primera Federación, con panel interactivo, informe y previa de cada partido.</p>
+              <span class="ver">Abrir el panel</span>
+            </div>
+          </a>
+        </li>
+        <li data-tipo="master">
+          <a class="tarjeta-proyecto" href="futbol-femenino/index.html">
+            <div class="mini-marco">
+              <div class="mini mini-imagen">
+              <img src="futbol-femenino/mapa.png?v=20261012" alt="" width="1500" height="1200" loading="lazy">
+            </div>
+              <span class="tipo-proyecto">Trabajos del máster</span>
+            </div>
+            <div class="tarjeta-texto">
+              <p class="tipo-texto">Trabajos del máster</p>
+              <p class="etiqueta">Módulo 1 · Datos del CSD y del INE</p>
+              <h2>Fútbol femenino: dónde empezar a ampliar la base</h2>
+              <p>Licencias federativas y población por comunidad para elegir dónde tendría más sentido un programa de iniciación.</p>
+              <span class="ver">Leer el análisis</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <p class="nota-catalogo">Los trabajos del Máster en Big Data Deportivo se publican cuando están corregidos.</p>
     </div>
   </section>
 </main>
 <script>
+// Filtros del catálogo: sin JavaScript se ven todos los proyectos.
+(function () {
+  const filtros = document.querySelector('.filtros');
+  const tarjetas = document.querySelectorAll('#catalogo > li');
+  filtros.hidden = false;
+  filtros.addEventListener('click', e => {
+    const boton = e.target.closest('button');
+    if (!boton) return;
+    const tipo = boton.dataset.filtro;
+    filtros.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === boton)));
+    tarjetas.forEach(li => { li.hidden = tipo !== 'todos' && li.dataset.tipo !== tipo; });
+  });
+})();
 // Miniatura del Zaragoza: sale del mismo JSON que el panel, así se actualiza sola cada jornada.
 (function () {
   fetch('../datos/zaragoza.json').then(r => r.json()).then(d => {
