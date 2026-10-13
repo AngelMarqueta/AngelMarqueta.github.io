@@ -323,3 +323,35 @@ body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 body>main{flex:1 0 auto}
 body>main:has(>.portada-campo){display:flex;flex-direction:column}
 .portada-campo{flex:1 0 auto}
+
+/* ---------- Proyectos agrupados por tipo ---------- */
+.grupo h2{margin-bottom:.3rem}
+.grupo-intro{color:var(--tinta-suave);margin:0 0 1.4rem;max-width:60ch}
+.tarjetas-proyecto{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:1.4rem}
+.tarjeta-proyecto{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden;color:var(--tinta);text-decoration:none;transition:border-color .2s,transform .2s}
+.tarjeta-proyecto:hover{color:var(--tinta);border-color:var(--cesped);transform:translateY(-2px)}
+.tarjeta-proyecto:focus-visible{outline:3px solid var(--senal);outline-offset:3px}
+.mini{aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:space-between}
+.mini-marcador{padding:1rem 1.2rem 1.2rem}
+.mini-titulo{font-size:.85rem;font-weight:600;opacity:.85}
+.mini-cifras{display:flex;justify-content:space-between;gap:.8rem}
+.mini-cifras span{display:flex;flex-direction:column;font-size:.8rem;opacity:.85}
+.mini-cifras b{font-family:var(--f-display);font-weight:800;font-size:clamp(2rem,4vw,2.6rem);line-height:1;color:var(--cal);white-space:nowrap}
+.mini-imagen{background:#fff;padding:.6rem;border-bottom:1px solid var(--linea)}
+.mini-imagen img{width:100%;height:100%;object-fit:contain}
+.tarjeta-texto{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;flex:1}
+.tarjeta-texto .etiqueta{margin-bottom:.35rem}
+.tarjeta-texto h3{font-size:1.5rem;margin:0 0 .5rem}
+.tarjeta-texto p{color:var(--tinta-suave);font-size:.95rem;margin:0 0 1rem}
+.tarjeta-texto .ver{margin-top:auto;font-weight:600;font-size:.95rem;color:var(--cesped)}
+.tarjeta-texto .ver::after{content:" →"}
+.tarjeta-proyecto:hover .ver{color:var(--senal-texto)}
+@media (prefers-reduced-motion:reduce){.tarjeta-proyecto{transition:none}.tarjeta-proyecto:hover{transform:none}}
+
+/* ---------- Contacto ---------- */
+.contactos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:1rem;max-width:56rem}
+.contacto{display:flex;flex-direction:column;gap:.15rem;padding:1.2rem 1.3rem;background:var(--panel);border:1px solid var(--linea);border-left:4px solid var(--cesped);border-radius:var(--radio);color:var(--tinta);text-decoration:none}
+.contacto b{font-family:var(--f-display);font-weight:800;font-size:2rem;line-height:1.05}
+.contacto span:last-child{color:var(--tinta-suave);font-size:.95rem}
+.contacto:hover{color:var(--tinta);border-color:var(--senal);border-left-color:var(--senal)}
+.mini-titulo small{display:block;font-size:.8rem;font-weight:400;opacity:.85}

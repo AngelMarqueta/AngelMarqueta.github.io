@@ -25,9 +25,7 @@
       <a href="../proyectos/index.html" aria-current="page">Proyectos</a>
       <a href="../videos/index.html">Vídeos</a>
       <a href="../sobre-mi/index.html">Sobre mí</a>
-      <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
-      <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
-      <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
+      <a href="../contacto/index.html">Contacto</a>
     </nav>
   </div>
 </header>
@@ -36,48 +34,56 @@
     <div class="envoltorio">
       <p class="etiqueta">Proyectos</p>
       <h1>Análisis con datos públicos</h1>
-      <p class="entradilla">Cada proyecto parte de una pregunta concreta y enseña sus fuentes, su código y lo que los datos no permiten afirmar.</p>
+      <p class="entradilla">Ordenados por tipo. Cada proyecto parte de una pregunta concreta y enseña sus fuentes, su código y lo que los datos no permiten afirmar.</p>
     </div>
   </header>
-  <section class="seccion" aria-label="Lista de proyectos">
+  <section class="seccion grupo" aria-labelledby="g-temporada">
     <div class="envoltorio">
-      <div class="proyectos">
-
-        <article class="proyecto-fila">
-          <div class="proyecto-texto">
-            <p class="cuando" id="zgz-cuando">Seguimiento semanal, actualizado tras la jornada 7</p>
-            <h2>Real Zaragoza 2026/27: el líder, jornada a jornada</h2>
-            <p>Resultados, goles, tiros, minutos y clasificación del Zaragoza en Primera Federación. Un panel interactivo, un informe completo y la previa de cada partido.</p>
-            <a class="boton lleno" href="real-zaragoza/index.html">Abrir el panel</a>
+      <h2 id="g-temporada">Seguimiento de temporada</h2>
+      <p class="grupo-intro">Un equipo durante toda la temporada, actualizado después de cada partido.</p>
+      <div class="tarjetas-proyecto">
+        <a class="tarjeta-proyecto" href="real-zaragoza/index.html">
+          <div class="mini cesped mini-marcador" aria-hidden="true">
+            <span class="mini-titulo">Real Zaragoza<small>Primera Federación · 2026/27</small></span>
+            <div class="mini-cifras">
+              <span><b id="zgz-pos">1.º</b>puesto</span>
+              <span><b id="zgz-pts">16</b>puntos</span>
+              <span><b id="zgz-goles">16–10</b>goles</span>
+            </div>
           </div>
-          <div class="marcador cesped" aria-label="Situación del Real Zaragoza">
-            <div><b id="zgz-pos">1.º</b><span>en la clasificación</span></div>
-            <div><b id="zgz-pts">16</b><span>puntos</span></div>
-            <div><b id="zgz-goles">16–10</b><span>goles</span></div>
-            <div class="destacado"><b id="zgz-banquillo">5 de 15</b><span>goles de sus jugadores salen del banquillo</span></div>
+          <div class="tarjeta-texto">
+            <p class="etiqueta" id="zgz-cuando">Actualizado tras la jornada 7</p>
+            <h3>Real Zaragoza 2026/27, jornada a jornada</h3>
+            <p>Resultados, goles, tiros, minutos y clasificación en Primera Federación, con un panel interactivo, un informe completo y la previa de cada partido.</p>
+            <span class="ver">Abrir el panel</span>
           </div>
-        </article>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <article class="proyecto-fila invertida">
-          <div class="proyecto-texto">
-            <p class="cuando">Datos abiertos del CSD y del INE</p>
-            <h2>Fútbol femenino: dónde empezar a ampliar la base</h2>
-            <p>Licencias federativas y población por comunidad para decidir en qué dos comunidades tendría más sentido probar un programa de iniciación.</p>
-            <p class="dato-grande">1 de cada 10<small>licencias de fútbol en España son femeninas</small></p>
-            <p><a class="boton" href="futbol-femenino/index.html">Leer el análisis</a></p>
+  <section class="seccion grupo" aria-labelledby="g-master">
+    <div class="envoltorio">
+      <h2 id="g-master">Trabajos del máster</h2>
+      <p class="grupo-intro">Actividades del Máster en Big Data Deportivo de Sports Data Campus. Se publican cuando están corregidas.</p>
+      <div class="tarjetas-proyecto">
+        <a class="tarjeta-proyecto" href="futbol-femenino/index.html">
+          <div class="mini mini-imagen">
+            <img src="futbol-femenino/mapa.png?v=20261012" alt="" width="1500" height="1200" loading="lazy">
           </div>
-          <a class="miniatura" href="futbol-femenino/index.html" aria-label="Ver el análisis de fútbol femenino">
-            <img src="futbol-femenino/mapa.png?v=20261012" alt="Mapa de España con las licencias femeninas de fútbol por cada 1.000 mujeres en cada comunidad" width="1500" height="1200" loading="lazy">
-          </a>
-        </article>
-
-        <p class="proximamente">Los trabajos del Máster en Big Data Deportivo se irán publicando aquí cuando estén corregidos.</p>
+          <div class="tarjeta-texto">
+            <p class="etiqueta">Módulo 1 · Datos del CSD y del INE</p>
+            <h3>Fútbol femenino: dónde empezar a ampliar la base</h3>
+            <p>Licencias federativas y población por comunidad para elegir las dos comunidades donde más sentido tendría un programa de iniciación.</p>
+            <span class="ver">Leer el análisis</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 </main>
 <script>
-// Marcador del Zaragoza: sale del mismo JSON que el panel, así se actualiza solo cada jornada.
+// Miniatura del Zaragoza: sale del mismo JSON que el panel, así se actualiza sola cada jornada.
 (function () {
   fetch('../datos/zaragoza.json').then(r => r.json()).then(d => {
     const zgz = d.clasificacion.find(c => c.equipo === 'Real Zaragoza');
@@ -86,10 +92,7 @@
       document.getElementById('zgz-pts').textContent = zgz.puntos;
       document.getElementById('zgz-goles').textContent = zgz.gf + '–' + zgz.gc;
     }
-    const deJugadores = d.goles.filter(g => g.rol_goleador);
-    const suplentes = deJugadores.filter(g => g.rol_goleador === 'Suplente').length;
-    document.getElementById('zgz-banquillo').textContent = suplentes + ' de ' + deJugadores.length;
-    document.getElementById('zgz-cuando').textContent = 'Datos hasta el ' + new Date(d.corte + 'T12:00:00').toLocaleDateString('es-ES') + ' · Jornada ' + d.jornada;
+    document.getElementById('zgz-cuando').textContent = 'Actualizado tras la jornada ' + d.jornada;
   }).catch(() => {});
 })();
 </script>

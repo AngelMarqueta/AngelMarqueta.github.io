@@ -168,9 +168,7 @@ def generar(jornada):
       <a href="../index.html" aria-current="page">Proyectos</a>
       <a href="../../videos/index.html">Vídeos</a>
       <a href="../../sobre-mi/index.html">Sobre mí</a>
-      <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a>
-      <a href="https://github.com/AngelMarqueta" rel="noopener" target="_blank">GitHub</a>
-      <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a>
+      <a href="../../contacto/index.html">Contacto</a>
     </nav>
   </div>
 </header>
