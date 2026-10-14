@@ -1,7 +1,7 @@
 """
 Previa del próximo partido del Real Zaragoza.
 
-Compara al Zaragoza con su próximo rival a partir de los resultados de los
+Compara al Real Zaragoza con su próximo rival a partir de los resultados de los
 dos equipos: clasificación, últimos partidos, rendimiento en casa y fuera y
 rivales comunes. Los resultados del rival están en
 datos/entrada/partidos_rivales.csv (los copio de futbolme y BeSoccer).
@@ -41,7 +41,7 @@ def partidos_del_rival(rival):
     p["rival"] = p["visitante"].where(en_casa, p["local"])
     p["goles_favor"] = p["goles_local"].where(en_casa, p["goles_visitante"])
     p["goles_contra"] = p["goles_visitante"].where(en_casa, p["goles_local"])
-    # Reutilizo la misma función que para el Zaragoza (puntos, resultado...)
+    # Reutilizo la misma función que para el Real Zaragoza (puntos, resultado...)
     p["competicion"] = "Primera Federación"
     p["partido_id"] = p["jornada"]
     return calculos.preparar_partidos(p.sort_values("jornada"))
@@ -93,10 +93,10 @@ def claves(nombre_rival, sede_zgz, zaragoza, rival, clasificacion):
     donde = "en casa" if sede_rival == "Casa" else "fuera"
 
     frases = [
-        f"El Zaragoza es {fila_z.posicion}.º con {fila_z.puntos} puntos y el {escape(nombre_rival)} "
+        f"El Real Zaragoza es {fila_z.posicion}.º con {fila_z.puntos} puntos y el {escape(nombre_rival)} "
         f"{fila_r.posicion}.º con {fila_r.puntos}: {abs(fila_z.puntos - fila_r.puntos)} punto{'' if abs(fila_z.puntos - fila_r.puntos) == 1 else 's'} de diferencia.",
         f"El {escape(nombre_rival)} juega {donde}, donde lleva {resumen_sede(rival, sede_rival)}.",
-        f"El Zaragoza, {('fuera' if sede_zgz == 'Fuera' else 'en casa')}, lleva "
+        f"El Real Zaragoza, {('fuera' if sede_zgz == 'Fuera' else 'en casa')}, lleva "
         f"{resumen_sede(zaragoza, sede_zgz)}.",
     ]
     goleada = rival.loc[(rival["goles_contra"] - rival["goles_favor"]).idxmax()]
@@ -142,7 +142,7 @@ def generar(jornada):
         for u in fuentes)
 
     html = f"""<!doctype html>
-<html lang="es">
+<html lang="es" class="tema-real-zaragoza">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -153,6 +153,7 @@ def generar(jornada):
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../../assets/tema.js"></script>
 <link rel="stylesheet" href="../../assets/estilo.css">
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261014e">
 <script src="../../assets/mejoras.js" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
@@ -175,6 +176,7 @@ def generar(jornada):
 <main class="envoltorio">
   <p class="migas"><a href="../index.html">Proyectos</a> / <a href="index.html">Real Zaragoza 2026/27</a> / Previa</p>
   <section class="cab-proyecto">
+    <img class="escudo-seccion" src="../../assets/real-zaragoza-escudo.png" alt="Escudo del Real Zaragoza" width="52" height="52">
     <p class="etiqueta">Previa · Jornada {jornada} · {fecha_larga(proximo['fecha'])}</p>
     <h1>{escape(local)} – {escape(visitante)}</h1>
     <p class="entradilla">Lo que dicen los resultados de los dos equipos antes del partido. Son datos de pocas jornadas: sirven para situarse, no para adivinar el resultado.</p>
@@ -213,7 +215,7 @@ def generar(jornada):
 
   <section class="seccion lectura">
     <p class="etiqueta">Fuentes</p>
-    <p>Resultados del {escape(nombre_rival)}: {fuentes_html}, contrastados entre futbolme y BeSoccer. Datos del Zaragoza: los mismos del <a href="informe-completo.html">informe completo</a>.</p>
+    <p>Resultados del {escape(nombre_rival)}: {fuentes_html}, contrastados entre futbolme y BeSoccer. Datos del Real Zaragoza: los mismos del <a href="informe-completo.html">informe completo</a>.</p>
     <div class="enlaces"><a class="boton" href="index.html">Volver al panel</a></div>
   </section>
 </main>

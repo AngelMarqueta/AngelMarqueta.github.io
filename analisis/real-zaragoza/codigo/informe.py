@@ -122,7 +122,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
         f'<li><a href="{escape(u)}" rel="noopener" target="_blank">{escape(u)}</a></li>' for u in fuentes)
 
     html = f"""<!doctype html>
-<html lang="es">
+<html lang="es" class="tema-real-zaragoza">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -133,6 +133,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../../assets/tema.js"></script>
 <link rel="stylesheet" href="../../assets/estilo.css">
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261014e">
 <script src="../../assets/mejoras.js" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
@@ -155,6 +156,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 <main class="envoltorio" data-informe>
   <p class="migas"><a href="../index.html">Proyectos</a> / <a href="index.html">Real Zaragoza 2026/27</a> / Informe completo</p>
   <section class="cab-proyecto">
+    <img class="escudo-seccion" src="../../assets/real-zaragoza-escudo.png" alt="Escudo del Real Zaragoza" width="52" height="52">
     <p class="etiqueta">Informe completo · Primera Federación, grupo 2</p>
     <h1>Real Zaragoza 2026/27 tras la jornada {jornada}</h1>
     <p class="entradilla corte-visible">Datos de los {len(partidos)} partidos de liga jugados hasta el {fecha_larga(ultima_fecha)}. Todo sale de fuentes públicas, contrastadas entre sí.</p>
@@ -175,7 +177,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
     <h2>Resultados y goles</h2>
     {figura("resumen.png", "Marcadores, puntos acumulados, goles por tramo y participación en goles por jugador", "Marcadores, puntos acumulados, goles por tramo de 15 minutos y goles y asistencias por jugador.")}
     <h2>Tiros</h2>
-    {figura("tiros.png", "Tiros del Zaragoza y de sus rivales en cada partido", "Tiros por partido. Más claros, los partidos en los que el desglose de tiros no cuadra.")}
+    {figura("tiros.png", "Tiros del Real Zaragoza y de sus rivales en cada partido", "Tiros por partido. Más claros, los partidos en los que el desglose de tiros no cuadra.")}
     <h2>Clasificación y banquillo</h2>
     {figura("contexto.png", "Clasificación por puntos y goles de titulares frente a suplentes", "Clasificación actual y goles marcados por titulares y por jugadores que salieron desde el banquillo.")}
     <h2>El grupo y la plantilla</h2>

@@ -1,0 +1,25 @@
+/* Identidad del proyecto Real Zaragoza: azul y blanco, sin alterar el resto de Línea de pase. */
+:root.tema-real-zaragoza{
+ --papel:#f5f8fd;--panel:#fff;--tinta:#11264a;--tinta-suave:#4b607e;--linea:#d6e0f0;
+ --cesped:#213e96;--cesped-noche:#142e7c;--cesped-franja:#1b3788;--cal:#fff;
+ --senal:#8fa9ce;--senal-texto:#35577f;--senal-suave:#e6eaf7;--muted:#b1bfd2;
+}
+@media(prefers-color-scheme:dark){:root.tema-real-zaragoza:not([data-theme="light"]){
+ --papel:#0c172b;--panel:#14233c;--tinta:#f1f5fc;--tinta-suave:#b1c1da;--linea:#304567;
+ --cesped:#8fb7ff;--senal:#a7bad7;--senal-texto:#b6ccef;--senal-suave:#243858;--muted:#617b9e;
+}}
+:root.tema-real-zaragoza[data-theme="dark"]{
+ --papel:#0c172b;--panel:#14233c;--tinta:#f1f5fc;--tinta-suave:#b1c1da;--linea:#304567;
+ --cesped:#8fb7ff;--senal:#a7bad7;--senal-texto:#b6ccef;--senal-suave:#243858;--muted:#617b9e;
+}
+.tema-real-zaragoza .cabecera,.tema-real-zaragoza .pie{background:#142e7c;background-image:none}
+.tema-real-zaragoza .cabecera{border-bottom:3px solid #fff}
+.tema-real-zaragoza .selector-tema select{background:#142e7c;border-color:#a8bce9}
+.tema-real-zaragoza .cab-proyecto{border-top:4px solid var(--cesped);padding-top:1.2rem}
+.escudo-seccion{display:block;object-fit:contain;width:52px;height:52px;margin-bottom:.8rem;background:#fff;border-radius:8px;padding:3px}
+.tema-real-zaragoza .mp-cesped{background:#213e96;background-image:none;border-bottom:4px solid #fff}
+.tema-real-zaragoza .mp-equipo.zgz .mp-escudo{background:#fff}
+.tema-real-zaragoza .mp-escudo img{width:42px;height:42px;object-fit:contain}
+.tema-real-zaragoza .ficha-resultado.victoria{background:#213e96}
+.tema-real-zaragoza :focus-visible{outline-color:var(--cesped)}
+.tema-real-zaragoza .cabecera :focus-visible{outline-color:#fff}

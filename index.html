@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="assets/tema.js"></script>
-<link rel="stylesheet" href="assets/estilo.css?v=20261014d">
+<link rel="stylesheet" href="assets/estilo.css?v=20261014e">
 <script src="assets/mejoras.js?v=20261014c" defer></script>
 <link rel="icon" href="assets/icono.svg" type="image/svg+xml">
 </head>
@@ -46,7 +46,7 @@
       </div>
       <figure class="minutos" id="minutos" aria-labelledby="t-minutos">
         <h2 id="t-minutos">Real Zaragoza 2026/27, minuto a minuto</h2>
-        <p id="minutos-texto">Cada punto es un gol de los partidos de liga del Zaragoza, colocado en el minuto en que llegó.</p>
+        <p id="minutos-texto">Cada punto es un gol de los partidos de liga del Real Zaragoza, colocado en el minuto en que llegó.</p>
         <svg id="minutos-svg" viewBox="0 0 1000 136" preserveAspectRatio="xMinYMid meet" role="img" aria-label="Goles a favor y en contra del Real Zaragoza por minuto"></svg>
         <div class="leyenda-min"><span><i style="background:var(--cal)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div>
       </figure>
@@ -59,8 +59,8 @@
     <p class="grupo-intro">Sigue una temporada, explora una pregunta con datos abiertos o aprende un concepto en poco más de un minuto.</p>
     <div class="destacados">
       <a class="tarjeta-proyecto" href="proyectos/real-zaragoza/index.html">
-        <div class="mini cesped mini-marcador" aria-hidden="true"><span class="mini-titulo">Real Zaragoza · 2026/27</span><strong class="mini-palabra">Jornada a jornada</strong><span>Resultados · Goles · Minutos</span></div>
-        <div class="tarjeta-texto"><p class="etiqueta">Seguimiento de temporada</p><h3>¿Qué cuenta el juego del Zaragoza?</h3><p>Resultados, evolución y participación de la plantilla en un panel interactivo.</p><p class="fecha-datos" data-fecha-zaragoza>Datos hasta el 11/10/2026 · J7</p><span class="ver">Explorar el Zaragoza</span></div>
+        <div class="mini mini-real-zaragoza mini-marcador" aria-hidden="true"><span class="mini-titulo"><img class="escudo-mini" src="assets/real-zaragoza-escudo.png" alt="" width="32" height="32">Real Zaragoza · 2026/27</span><strong class="mini-palabra">Jornada a jornada</strong><span>Resultados · Goles · Minutos</span></div>
+        <div class="tarjeta-texto"><p class="etiqueta">Seguimiento de temporada</p><h3>¿Qué cuenta el juego del Real Zaragoza?</h3><p>Resultados, evolución y participación de la plantilla en un panel interactivo.</p><p class="fecha-datos" data-fecha-zaragoza>Datos hasta el 11/10/2026 · J7</p><span class="ver">Explorar el Real Zaragoza</span></div>
       </a>
       <a class="tarjeta-proyecto" href="proyectos/futbol-femenino/index.html">
         <div class="mini mini-imagen"><img src="proyectos/futbol-femenino/mapa.png?v=20261012" alt="" width="1500" height="1200" loading="lazy"></div>
@@ -89,7 +89,7 @@
 </section>
 </main>
 <script>
-// Franja de minutos de la portada: sale del mismo JSON que el panel del Zaragoza,
+// Franja de minutos de la portada: sale del mismo JSON que el panel del Real Zaragoza,
 // así se actualiza sola cada jornada.
 (function () {
   fetch('datos/zaragoza.json').then(r => r.json()).then(d => {
@@ -138,7 +138,7 @@
     });
     const favor = goles.filter(g => g.sentido === 'Favor').length;
     document.getElementById('minutos-texto').textContent =
-      `Los ${goles.length} goles de los ${jornada} partidos de liga del Zaragoza, cada uno en el minuto en que llegó: ${favor} a favor y ${goles.length - favor} en contra.`;
+      `Los ${goles.length} goles de los ${jornada} partidos de liga del Real Zaragoza, cada uno en el minuto en que llegó: ${favor} a favor y ${goles.length - favor} en contra.`;
   }
   let espera;
   window.addEventListener('resize', () => {

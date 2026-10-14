@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Proyectos · Línea de pase</title>
-<meta name="description" content="Proyectos de analítica de fútbol con datos públicos: seguimiento del Real Zaragoza 2026/27 fútbol femenino en España y goles esperados (xG).">
+<meta name="description" content="Proyectos de analítica de fútbol con datos públicos: seguimiento del Real Zaragoza 2026/27, fútbol femenino en España y goles esperados (xG).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../assets/tema.js"></script>
-<link rel="stylesheet" href="../assets/estilo.css?v=20261014d">
+<link rel="stylesheet" href="../assets/estilo.css?v=20261014e">
 <script src="../assets/mejoras.js?v=20261014c" defer></script>
 <link rel="icon" href="../assets/icono.svg" type="image/svg+xml">
 </head>
@@ -47,8 +47,8 @@
         <li data-tipo="temporada">
           <a class="tarjeta-proyecto" href="real-zaragoza/index.html">
             <div class="mini-marco">
-              <div class="mini cesped mini-marcador" aria-hidden="true">
-              <span class="mini-titulo">Real Zaragoza<small>Primera Federación · 2026/27</small></span>
+              <div class="mini mini-real-zaragoza mini-marcador" aria-hidden="true">
+              <span class="mini-titulo"><img class="escudo-mini" src="../assets/real-zaragoza-escudo.png" alt="" width="32" height="32">Real Zaragoza<small>Primera Federación · 2026/27</small></span>
               <div class="mini-cifras">
                 <span><b id="zgz-pos">1.º</b>puesto</span>
                 <span><b id="zgz-pts">16</b>puntos</span>
@@ -108,7 +108,7 @@
     tarjetas.forEach(li => { li.hidden = tipo !== 'todos' && li.dataset.tipo !== tipo; });
   });
 })();
-// Miniatura del Zaragoza: sale del mismo JSON que el panel, así se actualiza sola cada jornada.
+// Miniatura del Real Zaragoza: sale del mismo JSON que el panel, así se actualiza sola cada jornada.
 (function () {
   fetch('../datos/zaragoza.json').then(r => r.json()).then(d => {
     const zgz = d.clasificacion.find(c => c.equipo === 'Real Zaragoza');

@@ -462,3 +462,19 @@ main.envoltorio{width:100%;min-width:0}
 .invitacion .boton{flex-shrink:1;max-width:100%;overflow-wrap:anywhere}
 .invitacion>div{min-width:0;max-width:100%}
 .invitacion h2{font-size:clamp(1.8rem,5vw,2.3rem);overflow-wrap:anywhere}
+
+/* Firma al final de la presentación: retrato discreto y circular. */
+.perfil{display:block}
+.perfil-texto{max-width:68ch}
+.retrato-firma{display:flex;align-items:center;gap:1rem;width:auto;margin:2rem 0 0;padding-top:1.25rem;border-top:1px solid var(--linea)}
+.retrato-firma img{width:88px;height:88px;flex:0 0 88px;border-radius:50%;object-fit:cover;border:2px solid var(--linea)}
+.retrato-firma figcaption{margin:0}
+@media(max-width:760px){.retrato-firma img{width:72px;height:72px;flex-basis:72px}}
+/* Identificación blanquiazul del proyecto dentro del catálogo general. */
+.mini-real-zaragoza{background:linear-gradient(135deg,#fff 0 58%,#e7effb 58% 100%);color:#213e96;border-bottom:5px solid #213e96}
+.mini-real-zaragoza .mini-titulo{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;opacity:1}
+.mini-real-zaragoza .mini-titulo small{width:100%}
+.mini-real-zaragoza .mini-cifras b{color:#213e96}
+.mini-real-zaragoza .escudo-mini{width:32px;height:32px;flex:0 0 32px;object-fit:contain}
+.mini-real-zaragoza .mini-palabra{font-size:clamp(1.8rem,3vw,2.6rem)}
+@media(max-width:600px){.tarjetas-proyecto .mini-real-zaragoza .mini-titulo{font-size:.7rem;gap:.25rem}.tarjetas-proyecto .mini-real-zaragoza .escudo-mini{width:26px;height:26px;flex-basis:26px}}

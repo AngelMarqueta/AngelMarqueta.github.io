@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="tema-real-zaragoza">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../../assets/tema.js"></script>
-<link rel="stylesheet" href="../../assets/estilo.css?v=20261014d">
+<link rel="stylesheet" href="../../assets/estilo.css?v=20261014e">
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261014e">
 <script src="../../assets/mejoras.js?v=20261014c" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
@@ -32,9 +33,10 @@
 <main class="envoltorio">
   <p class="migas"><a href="../index.html">Proyectos</a> / Seguimiento semanal</p>
   <section class="cab-proyecto">
+    <img class="escudo-seccion" src="../../assets/real-zaragoza-escudo.png" alt="Escudo del Real Zaragoza" width="52" height="52">
     <p class="etiqueta">Seguimiento semanal · Primera Federación, grupo 2</p>
     <h1>Real Zaragoza 2026/27: jornada a jornada</h1>
-    <p class="entradilla">Un seguimiento del Zaragoza hecho solo con datos públicos. Se actualiza después de cada partido, también en jornadas intersemanales y en Copa.</p>
+    <p class="entradilla">Un seguimiento del Real Zaragoza hecho solo con datos públicos. Se actualiza después de cada partido, también en jornadas intersemanales y en Copa.</p>
     <dl class="ficha-tecnica">
       <div><dt>Pregunta</dt><dd>¿Cómo evoluciona el equipo y quién participa en sus resultados?</dd></div>
       <div><dt>Datos hasta</dt><dd id="corte">jornada 7</dd></div>
@@ -44,14 +46,14 @@
     </dl>
   </section>
 
-  <nav class="accesos-seccion" aria-label="Explorar el seguimiento del Zaragoza"><a href="#claves">Conclusiones</a><a href="#t-panel">Evolución</a><a href="#jornadas">Jornadas</a><a href="#t-min">Plantilla</a><a href="#fuentes-metodo">Fuentes y método</a><a href="informe-completo.html">Informe completo</a><a href="previa.html">Previa</a></nav>
+  <nav class="accesos-seccion" aria-label="Explorar el seguimiento del Real Zaragoza"><a href="#claves">Conclusiones</a><a href="#t-panel">Evolución</a><a href="#jornadas">Jornadas</a><a href="#t-min">Plantilla</a><a href="#fuentes-metodo">Fuentes y método</a><a href="informe-completo.html">Informe completo</a><a href="previa.html">Previa</a></nav>
   <p class="corte-visible" data-corte>Datos del análisis hasta el 11/10/2026 · Jornada 7</p>
 
   <section class="seccion" id="claves" aria-labelledby="t-claves">
     <p class="etiqueta">Lo que dicen los datos</p>
     <h2 id="t-claves">Las claves antes de los gráficos</h2>
     <ul class="hallazgos">
-      <li><span class="cifra">5 de 15</span><span>goles de jugadores del Zaragoza los marcaron futbolistas que salieron desde el banquillo.</span></li>
+      <li><span class="cifra">5 de 15</span><span>goles de jugadores del Real Zaragoza los marcaron futbolistas que salieron desde el banquillo.</span></li>
       <li><span class="cifra">126–62</span><span>en tiros en los siete partidos: el 67 % de todos los tiros. En las jornadas 1 y 3 el desglose de los tiros no cuadra, así que esos dos partidos hay que cogerlos con pinzas.</span></li>
       <li><span class="cifra">33–10</span><span>tiros en Tarragona, en la jornada 1, y aun así derrota por 0-2. Es la única de la temporada.</span></li>
     </ul>
@@ -81,13 +83,13 @@
       <div class="tarjeta"><h3>Puntos acumulados</h3><p class="nota">Liga, jornada a jornada</p><div class="grafico" id="g-puntos"></div></div>
       <div class="tarjeta"><h3>Marcadores</h3><p class="nota">Goles a favor y en contra por partido</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div><div class="grafico" id="g-goles"></div></div>
       <div class="tarjeta"><h3>¿Cuándo llegan los goles?</h3><p class="nota">Por tramo de 15 minutos</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div><div class="grafico" id="g-tramos"></div></div>
-      <div class="tarjeta"><h3>Tiros</h3><p class="nota">Más claros: partidos en los que el desglose de tiros no cuadra (J1 y J3)</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>Zaragoza</span><span><i style="background:var(--muted)"></i>Rival</span></div><div class="grafico" id="g-tiros"></div></div>
+      <div class="tarjeta"><h3>Tiros</h3><p class="nota">Más claros: partidos en los que el desglose de tiros no cuadra (J1 y J3)</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>Real Zaragoza</span><span><i style="background:var(--muted)"></i>Rival</span></div><div class="grafico" id="g-tiros"></div></div>
     </div>
   </section>
 
   <section class="seccion" id="jornadas" aria-labelledby="t-jornadas">
     <p class="etiqueta">Archivo de temporada</p><h2 id="t-jornadas">Todas las jornadas de liga</h2>
-    <p class="nota">Marcador desde el punto de vista del Zaragoza: goles a favor–goles en contra. Los puntos son acumulados.</p>
+    <p class="nota">Marcador desde el punto de vista del Real Zaragoza: goles a favor–goles en contra. Los puntos son acumulados.</p>
     <div class="tarjeta tabla" tabindex="0" role="region" aria-label="Resultados por jornada, tabla desplazable"><table><caption class="visualmente-oculto">Resultados del Real Zaragoza por jornada de liga</caption><thead><tr><th scope="col">Jornada</th><th scope="col">Fecha</th><th scope="col">Rival</th><th scope="col">Sede</th><th scope="col">Marcador</th><th scope="col">Puntos</th></tr></thead><tbody id="historial-jornadas"><tr><th scope="row">J7</th><td>11/10/2026</td><td>Atlético Madrileño</td><td>Fuera</td><td>4–4</td><td>16</td></tr><tr><th scope="row">J6</th><td>04/10/2026</td><td>CD Teruel</td><td>Casa</td><td>4–1</td><td>15</td></tr><tr><th scope="row">J5</th><td>25/09/2026</td><td>UD Ibiza</td><td>Fuera</td><td>2–0</td><td>12</td></tr><tr><th scope="row">J4</th><td>20/09/2026</td><td>FC Cartagena</td><td>Casa</td><td>1–0</td><td>9</td></tr><tr><th scope="row">J3</th><td>13/09/2026</td><td>Juventud Torremolinos CF</td><td>Fuera</td><td>4–3</td><td>6</td></tr><tr><th scope="row">J2</th><td>05/09/2026</td><td>Antequera CF</td><td>Casa</td><td>1–0</td><td>3</td></tr><tr><th scope="row">J1</th><td>30/08/2026</td><td>Gimnàstic de Tarragona</td><td>Fuera</td><td>0–2</td><td>0</td></tr></tbody></table></div>
     <p class="nota">El panel, el archivo de jornadas y la clasificación utilizan el mismo conjunto de datos. <a href="../../analisis/real-zaragoza/datos/salida/partidos_liga.csv" download>Descargar los partidos de liga (CSV)</a>.</p>
   </section>
@@ -126,7 +128,7 @@
   </section>
   <section class="seccion" aria-labelledby="t-proveedor" id="proveedor-resultados">
     <p class="etiqueta">Resultados</p>
-    <h2 id="t-proveedor">Sigue al Zaragoza</h2>
+    <h2 id="t-proveedor">Sigue al Real Zaragoza</h2>
     <p class="nota">El resultado en directo se consulta en el proveedor. Los análisis de esta web mantienen la fecha de corte indicada arriba.</p>
     <a class="boton lleno" href="https://www.sofascore.com/es/football/team/real-zaragoza/2815" target="_blank" rel="noopener">Abrir marcador en directo</a>
   </section>
@@ -342,7 +344,7 @@
     const w = nombre.split(/\s+/).filter(x => !SIGLAS_FUERA.has(x));
     return (w.length > 1 ? w[0][0] + w[1][0] : (w[0] || nombre).slice(0, 2)).toUpperCase();
   };
-  const equipo = n => `<span class="mp-equipo${/zaragoza/i.test(n) ? ' zgz' : ''}"><span class="mp-escudo" aria-hidden="true">${esc(siglas(n))}</span>${esc(n)}</span>`;
+  const equipo = n => `<span class="mp-equipo${/zaragoza/i.test(n) ? ' zgz' : ''}"><span class="mp-escudo" aria-hidden="true">${/zaragoza/i.test(n) ? '<img src="../../assets/real-zaragoza-escudo.png" alt="" width="42" height="42">' : esc(siglas(n))}</span>${esc(n)}</span>`;
 
   // Solo se muestran los canales facilitados en la ficha de cada encuentro.
   function dondeVer(p) {
