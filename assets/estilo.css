@@ -478,3 +478,35 @@ main.envoltorio{width:100%;min-width:0}
 .mini-real-zaragoza .escudo-mini{width:32px;height:32px;flex:0 0 32px;object-fit:contain}
 .mini-real-zaragoza .mini-palabra{font-size:clamp(1.8rem,3vw,2.6rem)}
 @media(max-width:600px){.tarjetas-proyecto .mini-real-zaragoza .mini-titulo{font-size:.7rem;gap:.25rem}.tarjetas-proyecto .mini-real-zaragoza .escudo-mini{width:26px;height:26px;flex-basis:26px}}
+
+/* Portada móvil: tarjetas horizontales y menos espacio vertical. */
+@media(max-width:760px){
+ .inicio .portada{padding-top:1.5rem}
+ .inicio .portada .sub{margin:.9rem 0 1rem}
+ .inicio .autor-portada{margin:0 0 1rem}
+ .inicio .minutos{margin-top:1.5rem}
+ .inicio .seccion{padding-block:1.5rem}
+ .inicio .grupo-intro{margin-bottom:1rem}
+ .inicio .destacados{gap:.85rem}
+ .inicio .destacados .tarjeta-proyecto{flex-direction:row;align-items:stretch}
+ .inicio .destacados .mini{flex:0 0 6rem;width:6rem;aspect-ratio:auto;min-height:0;max-height:none}
+ .inicio .destacados .mini-marcador{padding:.65rem .45rem;justify-content:center;border-bottom:0;border-right:3px solid #213e96}
+ .inicio .destacados .mini-titulo{justify-content:center;text-align:center;font-size:.75rem;line-height:1.4}
+ .inicio .destacados .mini-palabra,.inicio .destacados .mini-marcador>span:last-child{display:none}
+ .inicio .destacados .mini-imagen{padding:.3rem;border-bottom:0;border-right:1px solid var(--linea);justify-content:center}
+ .inicio .destacados .mini-imagen img{height:auto;object-fit:contain}
+ .inicio .destacados .mini-video{justify-content:center}
+ .inicio .destacados .mini-video img{height:auto;object-fit:contain}
+ .inicio .destacados .duracion{display:none}
+ .inicio .destacados .tarjeta-texto{padding:.8rem;min-width:0}
+ .inicio .destacados .tarjeta-texto h3{font-size:1.2rem;line-height:1.15}
+ .inicio .destacados .tarjeta-texto p{display:block;-webkit-line-clamp:unset;overflow:visible;font-size:.9rem;line-height:1.45;margin-bottom:.5rem}
+ .inicio .destacados .tarjeta-texto .etiqueta,.inicio .destacados .tarjeta-texto .fecha-datos{font-size:.75rem}
+ .inicio .destacados .tarjeta-texto .ver{font-size:.85rem;line-height:1.4}
+ .inicio .pasos{gap:.8rem;margin-top:1rem}
+ .inicio .pasos>div{display:grid;grid-template-columns:2rem minmax(0,1fr);column-gap:.75rem;padding-top:.8rem}
+ .inicio .paso-numero{grid-row:1/3;font-size:1.5rem;margin:0}
+ .inicio .pasos h3{font-size:1.3rem;margin-bottom:.3rem}
+ .inicio .pasos p{font-size:.95rem}
+ .inicio .invitacion{gap:1rem}
+}
