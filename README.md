@@ -9,6 +9,8 @@ Web: https://lineadepase.github.io/
 - **Real Zaragoza 2026/27**: seguimiento semanal con datos públicos (resultados, goles, tiros, minutos y clasificación) y panel interactivo.
 - **Fútbol femenino en datos**: licencias federativas (CSD) y población (INE) para decidir dónde empezar un programa de iniciación.
 
+- **xG, sin líos**: vídeo subtitulado, explicación escrita y límites de los goles esperados.
+
 ## Estructura
 
 - `index.html`: portada.

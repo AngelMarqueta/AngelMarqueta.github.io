@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../../assets/tema.js"></script>
-<link rel="stylesheet" href="../../assets/estilo.css?v=20261014c">
+<link rel="stylesheet" href="../../assets/estilo.css?v=20261014d">
 <script src="../../assets/mejoras.js?v=20261014c" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
@@ -43,9 +43,11 @@
     </dl>
   </section>
 
-  <section class="seccion">
+  <nav class="accesos-seccion" aria-label="Explorar el análisis de fútbol femenino"><a href="#hallazgos">Conclusiones</a><a href="#criterio">Método y propuesta</a><a href="#fuentes">Fuentes y descargas</a></nav>
+  <section class="seccion" id="hallazgos">
     <p class="etiqueta">Lo que encontré</p>
-    <h2>Tres datos</h2>
+    <h2>Por dónde empezaría</h2>
+    <p class="lectura">La propuesta es probar en <strong>Andalucía y la Comunidad Valenciana</strong>: reúnen mucha población femenina, tasas de licencias por debajo de la media y crecimiento reciente. Es un criterio para elegir un piloto; no demuestra por sí solo que exista demanda.</p>
     <ul class="hallazgos">
       <li><span class="cifra">127.242</span><span>licencias femeninas de fútbol en 2025, un 18 % más que en 2023. Aun así, son solo el 9,96 % de todas las licencias de fútbol.</span></li>
       <li><span class="cifra">×3,7</span><span>de diferencia entre comunidades: de 2,63 licencias por cada 1.000 mujeres en Castilla-La Mancha a 9,87 en el País Vasco.</span></li>
@@ -57,7 +59,7 @@
     </figure>
   </section>
 
-  <section class="seccion lectura">
+  <section class="seccion lectura" id="criterio">
     <p class="etiqueta">Cómo lo hice</p>
     <h2>El criterio</h2>
     <p>Calculé tres indicadores por comunidad: licencias femeninas por cada 1.000 mujeres, porcentaje de mujeres sobre el total de licencias de fútbol y crecimiento entre 2023 y 2025. Después busqué las comunidades que estuvieran por debajo de la media española en los dos primeros y que, además, ya estuvieran creciendo.</p>
@@ -69,12 +71,19 @@
       <a class="boton" href="informe.pdf?v=20261012">Informe completo (PDF)</a>
     </div>
   </section>
+  <section class="seccion lectura" id="fuentes" aria-labelledby="t-fuentes">
+    <p class="etiqueta">Datos abiertos</p><h2 id="t-fuentes">Fuentes y materiales</h2>
+    <p>Comparación de licencias de 2023 y 2025. La población de referencia corresponde al 1 de enero de 2025.</p>
+    <ul class="fuentes"><li>CSD, Estadística de Deporte Federado: edición 2025 (tablas 4, 4.1 y 4.2) y edición 2023 (tabla 8.4.2). <a href="../../analisis/futbol-femenino/datos/entrada/licencias_futbol_csd.csv">Consultar los datos de licencias utilizados (CSV)</a>.</li><li>INE, tabla 67988: población femenina por comunidad autónoma. <a href="../../analisis/futbol-femenino/datos/entrada/poblacion_mujeres_ine_2025.csv">Consultar la población utilizada (CSV)</a>.</li><li>Geometría del mapa: proyecto click_that_hood, de Code for Germany.</li></ul>
+    <p>El código comprueba los totales nacionales y calcula tasas comparables por territorio. Los resultados sirven para orientar una propuesta que tendría que contrastarse con clubes, municipios y posibles participantes.</p>
+    <div class="enlaces"><a class="boton lleno" href="../../analisis/futbol-femenino/datos/salida/indicadores.csv" download>Descargar indicadores (CSV)</a><a class="boton" href="https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/futbol-femenino" target="_blank" rel="noopener">Código y metodología</a></div>
+  </section>
 </main>
 
 <footer class="pie">
   <div class="envoltorio">
     <p>Fuentes: CSD, Estadística de Deporte Federado 2025 (tablas 4, 4.1 y 4.2) y 2023 (tabla 8.4.2); INE, tabla 67988.</p>
-    <p><a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a> · © 2026 Ángel Marqueta Alonso</p>
+    <p><a href="../../sobre-mi/index.html#contacto">Contacto</a> · <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a> · © 2026 Ángel Marqueta Alonso</p>
   </div>
 </footer>
 </body>

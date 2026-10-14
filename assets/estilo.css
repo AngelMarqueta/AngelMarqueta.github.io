@@ -403,3 +403,62 @@ ul.tarjetas-proyecto{list-style:none;margin:0;padding:0;grid-template-columns:re
   .tarjeta-texto h2{font-size:1.2rem}
   .tarjeta-texto p:not(.etiqueta):not(.tipo-texto){-webkit-line-clamp:2;font-size:.88rem;margin:0}
 }
+
+/* Portfolio: la misma identidad de césped, cal y naranja. */
+body>main:has(>.portada-campo){display:block}
+.portada-campo{padding-bottom:2rem}
+.autor-portada{color:var(--cal);font-size:.9rem;max-width:54ch;margin:-.6rem 0 1.5rem;opacity:.85}
+.destacados{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.destacados .mini{aspect-ratio:16/9;min-height:0;overflow:hidden}
+.destacados .mini-imagen img{height:100%;min-height:0;object-fit:contain}
+.mini-palabra{font-family:var(--f-display);font-size:clamp(1.9rem,3vw,2.9rem);line-height:1.1;font-weight:800;max-width:10ch}
+.mini-video{position:relative;overflow:hidden;background:var(--cesped-noche)}
+.mini-video img{width:100%;height:100%;object-fit:cover;display:block}
+.duracion{position:absolute;right:.6rem;bottom:.6rem;padding:.15rem .5rem;background:#0f2418;color:#f4f7f1;font-size:.75rem;border-radius:6px}
+.tarjeta-texto .fecha-datos{font-size:.8rem;line-height:1.5;margin-top:auto;margin-bottom:1rem}
+.destacados .tarjeta-texto h3{font-size:1.65rem}
+.pasos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin-top:1.5rem}
+.pasos>div{border-top:2px solid var(--linea);padding-top:1rem}
+.pasos p{color:var(--tinta-suave);font-size:1rem;margin:0;max-width:45ch}
+.paso-numero{display:block;color:var(--senal-texto);font-family:var(--f-display);font-size:1.8rem;font-weight:700;margin-bottom:.5rem}
+.invitacion{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;background:var(--panel);border:1px solid var(--linea);border-left:4px solid var(--cesped);padding:clamp(1.2rem,3vw,2rem);border-radius:var(--radio)}
+.invitacion h2{font-size:2.3rem;margin-bottom:.6rem}
+.invitacion p{max-width:54ch;color:var(--tinta-suave);margin:0}
+.invitacion .boton{flex-shrink:0}
+.perfil{display:grid;grid-template-columns:minmax(0,18rem) minmax(0,1fr);gap:clamp(1.5rem,5vw,3.5rem);align-items:start}
+.retrato{margin:0}
+.retrato img{display:block;width:100%;height:auto;border-radius:var(--radio);border:1px solid var(--linea)}
+.retrato figcaption{margin-top:.8rem;font-weight:600;font-size:.9rem;line-height:1.6}
+.retrato figcaption span{color:var(--tinta-suave);font-weight:400;font-size:.85rem}
+.perfil-texto{min-width:0}
+.perfil-texto .ficha{margin-top:1.5rem}
+.accesos-seccion{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 1.5rem}
+.accesos-seccion a{display:inline-flex;align-items:center;padding:.5rem .85rem;border:1px solid var(--linea);border-radius:999px;background:var(--panel);font-size:.9rem;font-weight:600;text-decoration:none;min-height:44px}
+.accesos-seccion a:hover{border-color:var(--senal-texto)}
+.tabla th[scope="row"]{position:static;white-space:nowrap;border-bottom:1px solid var(--linea);color:var(--tinta)}
+.boton,.filtros button{min-height:44px}
+.video-resumen summary{min-height:44px;align-content:center}
+[id]{scroll-margin-top:6.5rem}
+@media(max-width:900px){.destacados{gap:1rem}.destacados .tarjeta-texto{padding:1rem}.invitacion{align-items:flex-start;flex-direction:column}}
+@media(max-width:760px){
+ .destacados,.pasos{grid-template-columns:1fr}
+ .destacados{gap:1.4rem}
+ .destacados .mini{max-height:15rem}
+ .destacados .mini-marcador{min-height:11rem}
+ .destacados .mini-video img{object-fit:contain}
+ .mini-palabra{font-size:2.8rem}
+ .perfil{grid-template-columns:1fr}
+ .retrato{width:min(100%,16rem)}
+ .pasos{gap:1rem}
+ .accesos-seccion{gap:.4rem}
+ .accesos-seccion a{font-size:.85rem}
+ [id]{scroll-margin-top:8rem}
+}
+
+/* Contenedores fluidos: las tablas se desplazan dentro del panel. */
+main.envoltorio{width:100%;min-width:0}
+.graficos>div{min-width:0}
+.tabla{min-width:0;width:100%}
+.invitacion .boton{flex-shrink:1;max-width:100%;overflow-wrap:anywhere}
+.invitacion>div{min-width:0;max-width:100%}
+.invitacion h2{font-size:clamp(1.8rem,5vw,2.3rem);overflow-wrap:anywhere}
