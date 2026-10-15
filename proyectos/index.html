@@ -89,9 +89,11 @@
 </main>
 <script>
 // Filtros del catálogo: sin JavaScript se ven todos los proyectos.
+// Con menos de cuatro proyectos no hacen falta y se quedan ocultos.
 (function () {
   const filtros = document.querySelector('.filtros');
   const tarjetas = document.querySelectorAll('#catalogo > li');
+  if (tarjetas.length < 4) return;
   filtros.hidden = false;
   filtros.addEventListener('click', e => {
     const boton = e.target.closest('button');
@@ -117,7 +119,7 @@
 <footer class="pie">
   <div class="envoltorio">
     <p>Análisis personales hechos con datos públicos. Línea de pase no tiene relación con ningún club ni competición.</p>
-    <p><a href="../sobre-mi/index.html#contacto">Contacto</a> · <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a> · © 2026 Ángel Marqueta Alonso</p>
+    <p><a href="../sobre-mi/index.html#contacto">Contacto</a> · <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a> · <a href="https://www.youtube.com/@lineadepasefutbol" rel="noopener" target="_blank">YouTube</a> · <a href="https://www.instagram.com/lineadepasefutbol/" rel="noopener" target="_blank">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a> · © 2026 Ángel Marqueta Alonso</p>
   </div>
 </footer>
 </body>
