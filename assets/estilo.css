@@ -510,3 +510,6 @@ main.envoltorio{width:100%;min-width:0}
  .inicio .pasos p{font-size:.95rem}
  .inicio .invitacion{gap:1rem}
 }
+/* Portada: bloque de proyectos a dos columnas (los vídeos van en su propio bloque) */
+.destacados.dos{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:760px){.destacados.dos{grid-template-columns:1fr}}
