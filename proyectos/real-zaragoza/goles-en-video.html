@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es" class="tema-real-zaragoza">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Los goles del Real Zaragoza, vistos uno a uno · Línea de pase</title>
+<meta name="description" content="Análisis de los 26 goles de liga del Real Zaragoza 2026/27 a partir de los resúmenes en vídeo: cómo nacen, por dónde llegan, último pase, zona de remate y xG de Sofascore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="../../assets/tema.js"></script>
+<link rel="stylesheet" href="../../assets/estilo.css?v=20261015a">
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261014e">
+<script src="../../assets/mejoras.js?v=20261014c" defer></script>
+<link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltorio">
+    <a class="marca" href="../../index.html" aria-label="Línea de pase, inicio">
+      <svg viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="lp-cesped" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6b45"/><stop offset="1" stop-color="#3f8f5c"/></linearGradient><clipPath id="lp-campo"><rect x="2" y="2" width="60" height="44" rx="8"/></clipPath></defs><rect x="2" y="2" width="60" height="44" rx="8" fill="url(#lp-cesped)" stroke="#f4f7f1" stroke-opacity=".55" stroke-width="2"/><g clip-path="url(#lp-campo)" fill="#fff" fill-opacity=".08"><rect x="2" y="0" width="7.5" height="48"/><rect x="17" y="0" width="7.5" height="48"/><rect x="32" y="0" width="7.5" height="48"/><rect x="47" y="0" width="7.5" height="48"/></g><g fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.8"><rect x="6" y="6" width="52" height="36" rx="2"/><path d="M32 6v36"/><circle cx="32" cy="24" r="6"/><path d="M58 15h-8v18h8"/></g><path d="M13 34C23 20 35 18 47 23" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 5.6"/><circle cx="12" cy="35" r="3.8" fill="#14261d" stroke="#fff" stroke-width="1.4"/><circle cx="50" cy="24" r="4.6" fill="#ff7a2f" stroke="#fff" stroke-width="1.4"/></svg>
+      Línea de pase
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../../index.html">Inicio</a>
+      <a href="../index.html" aria-current="page">Proyectos</a>
+      <a href="../../videos/index.html">Vídeos</a>
+      <a href="../../sobre-mi/index.html">Sobre mí</a>
+    </nav>
+  </div>
+</header>
+
+<main class="envoltorio">
+  <p class="migas"><a href="../index.html">Proyectos</a> / <a href="index.html">Real Zaragoza 2026/27</a> / Goles en vídeo</p>
+  <section class="cab-proyecto">
+    <img class="escudo-seccion" src="../../assets/real-zaragoza-escudo.png" alt="Escudo del Real Zaragoza" width="52" height="52">
+    <p class="etiqueta">Análisis a partir de vídeo · Jornadas 1 a 7</p>
+    <h1>Los 26 goles del Real Zaragoza, vistos uno a uno</h1>
+    <p class="entradilla">En Primera Federación no hay datos públicos de eventos con coordenadas. Así que me he puesto a ver los resúmenes de YouTube de cada jornada y he apuntado a mano cómo nace cada gol, por dónde llega, cómo es el último pase y desde dónde se remata. Lo completo con las estadísticas de Sofascore, que sí dan goles esperados (xG).</p>
+    <dl class="ficha-tecnica">
+      <div><dt>Pregunta</dt><dd>¿Cómo marca el Zaragoza y cómo le marcan?</dd></div>
+      <div><dt>Datos hasta</dt><dd>jornada 7 (11/10/2026)</dd></div>
+      <div><dt>Fuentes</dt><dd>Resúmenes de la RFEF en YouTube (y CayoTV para la J3) y estadísticas de partido de Sofascore</dd></div>
+      <div><dt>Herramientas</dt><dd>Python (pandas y matplotlib)</dd></div>
+      <div><dt>Aviso</dt><dd>Datos apuntados a ojo; cada gol lleva su nivel de confianza</dd></div>
+    </dl>
+  </section>
+
+  <section class="seccion" aria-labelledby="t-claves-video">
+    <p class="etiqueta">Lo que he sacado en claro</p>
+    <h2 id="t-claves-video">Cinco ideas antes de los gráficos</h2>
+    <ul class="hallazgos">
+      <li><span class="cifra">9 de 14</span><span>goles del Zaragoza en los que se ve el carril llegan por la derecha. Es, con diferencia, su lado fuerte.</span></li>
+      <li><span class="cifra">4 de 10</span><span>goles en contra llegan después del minuto 85. Tres de ellos, en jugadas rápidas con el equipo desordenado o volcado.</span></li>
+      <li><span class="cifra">8 de 16</span><span>goles a favor pasan por Jaume Jardí: marca cuatro y da el último pase en otros cuatro, la mitad de ellos a balón parado.</span></li>
+      <li><span class="cifra">0</span><span>goles encajados desde fuera del área. Todos los que se ven bien se rematan dentro, y cinco de ellos en el área pequeña o de penalti.</span></li>
+      <li><span class="cifra">16,1–9,4</span><span>en goles esperados (xG) según Sofascore, frente a 16–10 en goles. El Zaragoza marca lo que genera; atrás encaja algo más de lo esperado.</span></li>
+    </ul>
+  </section>
+
+  <section class="seccion lectura" aria-labelledby="t-como">
+    <p class="etiqueta">1 · Cómo nacen</p>
+    <h2 id="t-como">Más ataque elaborado a favor, más jugadas rápidas en contra</h2>
+    <figure class="figura"><img src="graficos/video/inicio.png" alt="Goles a favor y en contra según cómo empieza la jugada: ataque posicional, transición rápida, balón parado y penalti" loading="lazy"><figcaption>Tipo de jugada de cada gol. A la derecha, los goles del Zaragoza; a la izquierda, los que encaja.</figcaption></figure>
+    <p>Siete de los dieciséis goles del Zaragoza llegan con el balón controlado en campo rival: combinaciones por dentro, llegadas a línea de fondo o centros. Otros cinco salen de transiciones, casi siempre tras robar en el centro del campo con el rival ya abierto. El balón parado suma tres más (un córner, una falta directa y una falta lateral) y hay un penalti.</p>
+    <p>Lo que encaja tiene otro perfil. Solo dos goles en contra nacen de un ataque posicional. El resto son transiciones (tres), balón parado (dos), penaltis (dos) y uno que no se ve en el resumen. Dicho de otra forma: al Zaragoza le cuesta poco tener el balón, pero cuando lo pierde o concede una falta cerca del área es cuando sufre.</p>
+    <figure class="figura"><img src="graficos/video/tipo_por_sentido.png" alt="Porcentaje de goles a favor y en contra de cada tipo de jugada" loading="lazy"><figcaption>El mismo dato en porcentaje, para comparar las dos barras aunque el total sea distinto (16 a favor y 10 en contra).</figcaption></figure>
+  </section>
+
+  <section class="seccion lectura" aria-labelledby="t-donde">
+    <p class="etiqueta">2 · Por dónde llegan</p>
+    <h2 id="t-donde">El Zaragoza ataca por la derecha y sufre por su derecha</h2>
+    <figure class="figura"><img src="graficos/video/carriles.png" alt="Campo dividido en tres carriles con el número de goles a favor y en contra que llegan por cada uno" loading="lazy"><figcaption>El carril siempre es el del equipo que ataca. Por eso, en los goles en contra, la izquierda del rival es la derecha de la defensa del Zaragoza.</figcaption></figure>
+    <p>De los catorce goles a favor en los que se distingue el carril, nueve llegan por la derecha. Ahí están el pase atrás desde la línea de fondo que acaba en el gol de Ureña contra el Teruel, los centros que acaban en los goles de Espiau ante el Antequera y de Rubo en Madrid, y el penalti del 4-4, que nace de un regate en la esquina derecha del área.</p>
+    <p>En contra pasa lo contrario. Cuatro de los ocho goles con carril claro llegan por la izquierda del rival, que es el costado derecho de la defensa del Zaragoza. Uno de ellos es el penalti del Teruel, que nace de un uno contra uno perdido en esa banda. Con tan pocos goles no se puede hablar de un patrón cerrado, pero es lo primero que miraría en el próximo partido: cuánto se descuelga el lateral derecho cuando el equipo ataca por su lado.</p>
+  </section>
+
+  <section class="seccion lectura" aria-labelledby="t-remate">
+    <p class="etiqueta">3 · Último pase y remate</p>
+    <h2 id="t-remate">Casi todo se decide dentro del área</h2>
+    <figure class="figura"><img src="graficos/video/mapa_remates.png" alt="Mapa del campo con el punto aproximado de remate de cada gol y una flecha desde el último pase" loading="lazy"><figcaption>Posiciones estimadas a ojo sobre el vídeo, con un error de varios metros. Círculo, remate con el pie; cuadrado, de cabeza. Solo aparecen los goles que se ven bien.</figcaption></figure>
+    <p>El mapa deja una imagen clara: los goles del Zaragoza se rematan entre el punto de penalti y el área pequeña, y solo uno llega desde fuera, la falta directa de Jardí en Torremolinos. En contra pasa lo mismo, sin ningún gol desde lejos.</p>
+    <figure class="figura"><img src="graficos/video/ultimo_pase.png" alt="Tipo de último pase en los goles a favor y en contra" loading="lazy"><figcaption>Cómo le llega el balón al goleador.</figcaption></figure>
+    <p>El pase que más se repite en los goles a favor es el raso por dentro (cuatro), por delante del centro lateral (tres). Es interesante porque el Zaragoza centra mucho: según Sofascore, 128 centros en siete partidos y solo 45 buenos. El centro le da volumen, pero los goles le llegan más por abajo.</p>
+    <p>En contra, el dato que más me preocupa son los rechaces y los balones parados laterales. En el 4-3 de Torremolinos el portero para el primer tiro y el rechace entra con tres defensores alrededor. En Tarragona y en Madrid, dos faltas laterales acaban en gol con siete jugadores del Zaragoza dentro del área: no es falta de gente, es falta de marca.</p>
+    <figure class="figura"><img src="graficos/video/zona_remate.png" alt="Zona del campo desde la que se remata cada gol, a favor y en contra" loading="lazy"><figcaption>Zona del último toque antes del gol.</figcaption></figure>
+  </section>
+
+  <section class="seccion lectura" aria-labelledby="t-cuando">
+    <p class="etiqueta">4 · Cuándo</p>
+    <h2 id="t-cuando">Los finales de partido</h2>
+    <figure class="figura"><img src="graficos/video/cronologia.png" alt="Línea de tiempo de cada jornada con los goles a favor y en contra en su minuto y coloreados por tipo de jugada" loading="lazy"><figcaption>Cada fila es un partido. Círculo, gol a favor; aspa, gol en contra. El color indica cómo nace la jugada.</figcaption></figure>
+    <p>Cuatro de los diez goles en contra llegan a partir del minuto 85. En Tarragona y en Madrid, con el Zaragoza volcado buscando el gol, el rival sale a la contra y marca. En Torremolinos, con 4-1, el equipo concede dos goles en tres minutos. Es el tramo en el que más se nota que el equipo se parte.</p>
+    <p>Lo bueno es que también responde tarde: el 1-0 al Antequera llega en el 91 y en Madrid marca dos goles en el descuento para empatar 4-4, los dos nacidos de jugadas a balón parado o de una acción individual en el área.</p>
+  </section>
+
+  <section class="seccion lectura" aria-labelledby="t-quien">
+    <p class="etiqueta">5 · Quién</p>
+    <h2 id="t-quien">Jardí, en la mitad de los goles</h2>
+    <figure class="figura"><img src="graficos/video/participacion.png" alt="Goles y últimos pases de cada jugador del Zaragoza" loading="lazy"><figcaption>Goles y último pase en los goles a favor de liga. Sin contar el gol en propia puerta.</figcaption></figure>
+    <p>Jaume Jardí participa en ocho de los dieciséis goles. Marca cuatro (uno de falta directa y otro de penalti) y da el último pase en otros cuatro, dos de ellos a balón parado. Detrás aparecen Espiau, con tres goles y dos pases de gol, y Ureña, con tres goles y un pase de gol. Que tanto dependa de un jugador que además lanza las faltas es una fortaleza, pero también un riesgo si un día no está.</p>
+  </section>
+
+  <section class="seccion lectura" aria-labelledby="t-sofascore">
+    <p class="etiqueta">6 · Con los números de Sofascore</p>
+    <h2 id="t-sofascore">Goles esperados y calidad de los tiros</h2>
+    <figure class="figura"><img src="graficos/video/xg.png" alt="xG y goles del Zaragoza y de sus rivales en cada partido y acumulados" loading="lazy"><figcaption>Barras: goles esperados (xG) de cada equipo. Puntos: goles reales. A la derecha, los totales acumulados.</figcaption></figure>
+    <p>En el total, el Zaragoza lleva 16,1 goles esperados a favor y 9,4 en contra, y en el marcador 16 y 10. Marca lo que genera. Lo que cambia es el reparto: en Tarragona (2,3 de xG y ninguno) y contra el Antequera (2,4 y uno) se quedó corto, y en Torremolinos e Ibiza marcó bastante más de lo esperado. Contra el Teruel fue el partido más dominante, con 3,5 de xG frente a 1,2.</p>
+    <figure class="figura"><img src="graficos/video/xg_por_tiro.png" alt="xG medio por tiro del Zaragoza y de sus rivales en cada jornada" loading="lazy"><figcaption>xG dividido entre tiros: cuanto más alto, mejores ocasiones de media.</figcaption></figure>
+    <p>Este gráfico me parece el más interesante. Durante las cinco primeras jornadas el Zaragoza tiraba mucho, pero con una calidad media baja (entre 0,08 y 0,14 de xG por tiro). En las dos últimas sube a 0,20–0,22: tira menos desde lejos y llega más dentro del área. En contra, los rivales tiran poco, pero en Torremolinos y ante el Teruel sus disparos fueron de mucha calidad, lo que cuadra con los penaltis y los goles desde el área pequeña.</p>
+    <figure class="figura"><img src="graficos/video/tiros_area.png" alt="Tiros dentro y fuera del área de cada equipo por partido" loading="lazy"><figcaption>Tiros desde dentro del área (color fuerte) y desde fuera (color claro).</figcaption></figure>
+    <figure class="figura"><img src="graficos/video/juego.png" alt="Posesión, centros, duelos ganados y entradas en el último tercio del Zaragoza por partido" loading="lazy"><figcaption>Cómo juega cada partido. Las entradas en el último tercio solo las da Sofascore desde la jornada 6.</figcaption></figure>
+    <p>El resto de indicadores confirma el estilo: posesión por encima del 55 % en seis de siete partidos (la excepción es Torremolinos, con un 49 %) y más duelos ganados que perdidos en todos. El Atlético Madrileño es el único rival que le tiró casi tanto como recibió: 15 tiros y 3,0 de xG, el peor partido defensivo de la temporada.</p>
+  </section>
+
+  <section class="seccion lectura" id="metodo-video" aria-labelledby="t-metodo-video">
+    <p class="etiqueta">Cómo está hecho</p>
+    <h2 id="t-metodo-video">Método y límites</h2>
+    <ul>
+      <li>He visto los resúmenes oficiales de la RFEF en YouTube de las siete jornadas, fotograma a fotograma en las jugadas de gol. En la J3 he contrastado con el resumen de CayoTV. Los enlaces están en <a href="../../analisis/real-zaragoza/datos/entrada/video/resumenes_youtube.csv">resumenes_youtube.csv</a>.</li>
+      <li>Por cada gol apunto el tipo de jugada, el carril, el último pase, la zona de remate, si hubo revisión en el monitor, los jugadores dentro del área cuando se ven y una nota. Está todo en <a href="../../analisis/real-zaragoza/datos/entrada/video/goles_video.csv">goles_video.csv</a>.</li>
+      <li>El carril es siempre el del equipo que ataca. Las posiciones del mapa son una estimación a ojo, con un error de varios metros, y solo las relleno cuando la jugada se ve bien.</li>
+      <li>Cada gol lleva su confianza (alta, media o baja). El 4-2 de Torremolinos no aparece en ningún resumen, y en tres goles más el plano no deja ver bien el carril o la zona de remate.</li>
+      <li>Los resúmenes solo enseñan unos segundos de cada jugada y desde una cámara. Con 26 goles, cualquier patrón es una pista para mirar, no una conclusión.</li>
+      <li>El xG y el resto de estadísticas son los de Sofascore (<a href="../../analisis/real-zaragoza/datos/entrada/sofascore.csv">sofascore.csv</a>). Su modelo de xG no es público, así que lo uso para comparar partidos entre sí.</li>
+    </ul>
+    <div class="enlaces">
+      <a class="boton lleno" href="https://github.com/lineadepase/lineadepase.github.io/blob/main/analisis/real-zaragoza/codigo/goles_video.py" target="_blank" rel="noopener">Ver el código de los gráficos</a>
+      <a class="boton" href="index.html">Volver al seguimiento</a>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltorio">
+    <p>Análisis personal con datos públicos. Línea de pase no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
+    <p><a href="../../sobre-mi/index.html#contacto">Contacto</a> · <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a> · <a href="https://www.youtube.com/@lineadepasefutbol" rel="noopener" target="_blank">YouTube</a> · <a href="https://www.instagram.com/lineadepasefutbol/" rel="noopener" target="_blank">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a> · © 2026 Ángel Marqueta Alonso</p>
+  </div>
+</footer>
+</body>
+</html>

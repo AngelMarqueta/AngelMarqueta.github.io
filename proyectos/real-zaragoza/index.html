@@ -46,7 +46,7 @@
     </dl>
   </section>
 
-  <nav class="accesos-seccion" aria-label="Explorar el seguimiento del Real Zaragoza"><a href="#claves">Conclusiones</a><a href="#t-panel">Evolución</a><a href="#jornadas">Jornadas</a><a href="#t-min">Plantilla</a><a href="#fuentes-metodo">Fuentes y método</a><a href="informe-completo.html">Informe completo</a><a href="previa.html">Previa</a></nav>
+  <nav class="accesos-seccion" aria-label="Explorar el seguimiento del Real Zaragoza"><a href="#claves">Conclusiones</a><a href="#t-panel">Evolución</a><a href="#jornadas">Jornadas</a><a href="#t-min">Plantilla</a><a href="#fuentes-metodo">Fuentes y método</a><a href="goles-en-video.html">Goles en vídeo</a><a href="informe-completo.html">Informe completo</a><a href="previa.html">Previa</a></nav>
   <p class="corte-visible" data-corte>Datos del análisis hasta el 11/10/2026 · Jornada 7</p>
 
   <section class="seccion" id="claves" aria-labelledby="t-claves">
@@ -115,6 +115,14 @@
     </div>
   </section>
 
+  <section class="seccion lectura" aria-labelledby="t-video">
+    <p class="etiqueta">Nuevo · Análisis a partir de vídeo</p>
+    <h2 id="t-video">Los 26 goles, vistos uno a uno</h2>
+    <p>He visto los resúmenes de las siete jornadas y he apuntado cómo nace cada gol, por dónde llega, el último pase y desde dónde se remata. Lo he cruzado con los goles esperados (xG) de Sofascore: 16,1 a favor y 9,4 en contra, frente a 16–10 en goles.</p>
+    <figure class="figura"><img src="graficos/video/carriles.png" alt="Campo dividido en tres carriles con los goles a favor y en contra que llegan por cada uno" loading="lazy"><figcaption>Nueve de los catorce goles a favor con carril claro llegan por la derecha.</figcaption></figure>
+    <div class="enlaces"><a class="boton lleno" href="goles-en-video.html">Leer el análisis de los goles</a></div>
+  </section>
+
   <section class="seccion lectura">
     <p class="etiqueta">Más detalle</p>
     <h2>Informe completo</h2>
@@ -136,7 +144,7 @@
   <section class="seccion lectura" id="fuentes-metodo" aria-labelledby="t-fuentes-metodo">
     <p class="etiqueta">Cómo está hecho</p><h2 id="t-fuentes-metodo">Fuentes, método y límites</h2>
     <p>Recopilo resultados, alineaciones y estadísticas públicas, contrasto las discrepancias y calculo indicadores de rendimiento con Python. El proyecto incluye comprobaciones en R y este panel utiliza d3.js.</p>
-    <ul><li>Las fuentes de cada partido están en el <a href="../../analisis/real-zaragoza/datos/entrada/partidos.csv">registro de partidos</a>; las discrepancias y decisiones, en el <a href="../../analisis/real-zaragoza/datos/entrada/incidencias.csv">registro de incidencias</a>.</li><li>La liga y la Copa se tratan por separado. Los minutos de participación no incluyen el descuento.</li><li>Las asistencias tienen cobertura incompleta. La ausencia de información no equivale a cero.</li><li>La muestra es pequeña y faltan datos fiables de eventos con coordenadas, seguimiento de jugadores y presión. El volumen de tiros no mide por sí solo la calidad de las ocasiones.</li></ul>
+    <ul><li>Las fuentes de cada partido están en el <a href="../../analisis/real-zaragoza/datos/entrada/partidos.csv">registro de partidos</a>; las discrepancias y decisiones, en el <a href="../../analisis/real-zaragoza/datos/entrada/incidencias.csv">registro de incidencias</a>.</li><li>La liga y la Copa se tratan por separado. Los minutos de participación no incluyen el descuento.</li><li>Las asistencias tienen cobertura incompleta. La ausencia de información no equivale a cero.</li><li>Los goles esperados (xG) y las estadísticas avanzadas son las de Sofascore (<a href="../../analisis/real-zaragoza/datos/entrada/sofascore.csv">sofascore.csv</a>). Los datos de cada gol los apunto viendo los resúmenes en vídeo; el método está en <a href="goles-en-video.html#metodo-video">el análisis de los goles</a>.</li><li>La muestra es pequeña y faltan datos fiables de eventos con coordenadas, seguimiento de jugadores y presión. El volumen de tiros no mide por sí solo la calidad de las ocasiones.</li></ul>
     <div class="enlaces"><a class="boton" href="https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/real-zaragoza" target="_blank" rel="noopener">Consultar código y metodología</a><a class="boton" href="../xg/index.html">Entender la calidad de los tiros</a></div>
   </section>
 </main>

@@ -51,6 +51,9 @@ Las páginas y sus plantillas conservan el selector de tema, los gráficos ampli
 | `proximos.csv` | Próximos partidos |
 | `partidos_rivales.csv` | Resultados del próximo rival, para la previa |
 | `incidencias.csv` | Diferencias entre fuentes y qué dato me quedo |
+| `sofascore.csv` | Estadísticas de cada partido en Sofascore, xG incluido (una fila por métrica) |
+| `video/goles_video.csv` | Cada gol de liga apuntado viendo los resúmenes de YouTube: tipo de jugada, carril, último pase, zona de remate… |
+| `video/resumenes_youtube.csv` | Los vídeos que he usado para cada jornada |
 | `avanzadas_j4_provisional.csv` | xG y otras métricas de un solo partido, de una fuente poco fiable (no se usan) |
 
 Fuentes, por este orden: web oficial del club, FotMob, futboltotal y BeSoccer. Cuando dos fuentes no coinciden lo apunto en `incidencias.csv`. Si un dato no aparece en ninguna fuente fiable, se queda vacío: nunca lo relleno con un cero.
@@ -65,6 +68,10 @@ Fuentes, por este orden: web oficial del club, FotMob, futboltotal y BeSoccer. C
    Rscript analisis/real-zaragoza/codigo/comprobar.R
    ```
 3. Si alguna comprobación falla, el script para y no cambia nada de la web.
+   Para los goles en vídeo y el xG, después de apuntar los goles de la jornada en `video/goles_video.csv` y sus estadísticas en `sofascore.csv`:
+   ```
+   python analisis/real-zaragoza/codigo/goles_video.py
+   ```
 4. Revisar `textos/conclusiones.html` y los textos de la página del proyecto.
 5. Previa del siguiente partido: añadir los resultados del rival a `partidos_rivales.csv` y ejecutar `python analisis/real-zaragoza/codigo/previa.py <jornada>`.
 
@@ -75,5 +82,6 @@ Los partidos de copa van en los mismos archivos con su competición; no cuentan 
 - Los minutos no cuentan el descuento: un titular que juega todo el partido suma 90.
 - Las asistencias salen de una sola fuente y no están todas.
 - No hay datos públicos fiables de eventos con coordenadas, tracking ni presión.
+- Los datos de vídeo están apuntados a ojo a partir de resúmenes de pocos segundos. Las posiciones del mapa de remates son estimaciones con un error de varios metros y cada gol lleva su nivel de confianza.
 
 Análisis personal. Sin relación con el Real Zaragoza ni con ninguna competición.
