@@ -1,0 +1,134 @@
+﻿Tabla;Columna;Qué es;Tipo;Ejemplo
+partidos;partido_id;"Identificador del partido. En liga coincide con el número de jornada; en copa empieza en 101.";Número entero;1
+partidos;competicion;Competición: «Primera Federación» o «Copa del Rey».;Texto;Primera Federación
+partidos;jornada;Número de jornada de liga. Vacío en copa.;Número entero;1
+partidos;fecha;Fecha del partido (año-mes-día).;Texto;2026-08-30
+partidos;sede;«Casa» si el Zaragoza juega de local y «Fuera» si es visitante.;Texto;Fuera
+partidos;rival;Nombre del rival.;Texto;Gimnàstic de Tarragona
+partidos;goles_favor;Goles del Real Zaragoza.;Número entero;0
+partidos;goles_contra;Goles del rival.;Número entero;2
+partidos;gf_descanso;Goles del Zaragoza al descanso.;Número entero;0
+partidos;gc_descanso;Goles del rival al descanso.;Número entero;1
+partidos;fuente_url;Página de la que saqué el dato.;Texto;https://www.fotmob.com/es/matches/real-zaragoza-vs-gimnas…
+goles;partido_id;Partido al que pertenece el gol (ver tabla partidos).;Número entero;1
+goles;sentido;«Favor» si lo marca el Zaragoza y «Contra» si lo marca el rival.;Texto;Contra
+goles;jugador;Goleador. En los goles en propia puerta, el jugador que la mete.;Texto;Sinan Bakis
+goles;minuto;Minuto del gol sin el descuento (un gol en el 45+7 tiene 45 aquí).;Número entero;2
+goles;anadido;Minutos de descuento (el 7 del 45+7). 0 si no hay.;Número entero;0
+goles;parte;1 = primera parte, 2 = segunda parte.;Número entero;1
+goles;penalti;«si» si el gol es de penalti.;Texto;no
+goles;propia_puerta;«si» si es en propia puerta.;Texto;no
+goles;asistencia;Jugador que da el último pase. Vacío si no consta: no significa que no la haya.;Texto;Jaume Jardí
+goles;fuente_url;Página de la que saqué el dato.;Texto;https://www.fotmob.com/es/matches/real-zaragoza-vs-gimnas…
+alineaciones;partido_id;Partido (ver tabla partidos).;Número entero;1
+alineaciones;jugador;Titular, escrito como en la web del club.;Texto;Westerveld
+alineaciones;fuente_url;Página de la que saqué el dato.;Texto;https://www.realzaragoza.com/partidos/temporada-2026-2027…
+cambios;partido_id;Partido (ver tabla partidos).;Número entero;1
+cambios;minuto;Minuto del cambio.;Número entero;55
+cambios;entra;Jugador que entra.;Texto;Iker Vadillo
+cambios;sale;Jugador que sale.;Texto;Marcos Cuenca
+cambios;fuente_url;Página de la que saqué el dato.;Texto;https://www.realzaragoza.com/partidos/temporada-2026-2027…
+tarjetas;partido_id;Partido (ver tabla partidos).;Número entero;1
+tarjetas;jugador;Jugador amonestado o expulsado.;Texto;Lucas Terrer
+tarjetas;tarjeta;«Amarilla» o «Roja».;Texto;Amarilla
+tarjetas;fuente_url;Página de la que saqué el dato.;Texto;https://futboltotal.futbol/partido/gimnastic-vs-zaragoza-…
+tiros;partido_id;Partido (ver tabla partidos).;Número entero;1
+tiros;tiros_zaragoza;Tiros totales del Zaragoza.;Número entero;33
+tiros;tiros_rival;Tiros totales del rival.;Número entero;10
+tiros;a_puerta_zaragoza;Tiros a puerta del Zaragoza.;Número entero;9
+tiros;a_puerta_rival;Tiros a puerta del rival.;Número entero;4
+tiros;posesion_pct;Posesión del Zaragoza, en %.;Número entero;75
+tiros;completo;"«si» si a puerta + fuera + bloqueados suman el total; «no» si no cuadra.";Texto;no
+tiros;fuente;Fuente que me quedo para ese partido.;Texto;Web del club
+tiros;nota;Explicación de la comprobación de los tiros.;Texto;"9 a puerta y 16 fuera suman 25; no hay bloqueados publicados"
+tiros;fuente_url;Página de la que saqué el dato.;Texto;https://www.realzaragoza.com/partidos/temporada-2026-2027…
+estadisticas;partido_id;Partido (ver tabla partidos).;Número entero;2
+estadisticas;periodo;«Partido», «1.ª parte» o «2.ª parte».;Texto;Partido
+estadisticas;metrica;Nombre de la métrica (posesión, córners, faltas…).;Texto;posesion_pct
+estadisticas;zaragoza;Valor del Zaragoza.;Número entero;67
+estadisticas;valor_rival;Valor del rival.;Número entero;33
+estadisticas;calidad;"«ok» si lo he podido contrastar; otro valor si hay dudas.";Texto;ok
+estadisticas;fuente_url;Página de la que saqué el dato.;Texto;https://www.besoccer.com/match/real-zaragoza/antequera/20…
+sofascore;partido_id;Partido (ver tabla partidos).;Número entero;1
+sofascore;evento_sofascore;Identificador del partido en Sofascore.;Número entero;16599367
+sofascore;metrica;Métrica. Las que acaban en _ok son aciertos y las que acaban en _total, intentos.;Texto;posesion_pct
+sofascore;zaragoza;Valor del Zaragoza.;Número decimal;73.0
+sofascore;valor_rival;Valor del rival.;Número decimal;27.0
+sofascore;fuente_url;Dirección de la API de Sofascore de la que copié el dato.;Texto;https://www.sofascore.com/api/v1/event/16599367/statistics
+clasificacion;tras_jornada;Jornada después de la cual se toma la clasificación.;Número entero;6
+clasificacion;posicion;Puesto en la tabla.;Número entero;1
+clasificacion;equipo;Equipo.;Texto;Real Zaragoza
+clasificacion;pj;Partidos jugados.;Número entero;6
+clasificacion;g;Partidos ganados.;Número entero;5
+clasificacion;e;Partidos empatados.;Número entero;0
+clasificacion;p;Partidos perdidos.;Número entero;1
+clasificacion;gf;Goles a favor.;Número entero;12
+clasificacion;gc;Goles en contra.;Número entero;6
+clasificacion;puntos;Puntos.;Número entero;15
+clasificacion;fuente_url;Página de la que saqué el dato.;Texto;https://www.fotmob.com/es-419/teams/8394/overview
+proximos;jornada;Jornada.;Número entero;8
+proximos;competicion;Competición.;Texto;Primera Federación
+proximos;fecha;Fecha prevista (puede cambiar).;Texto;2026-10-18
+proximos;sede;«Casa» o «Fuera».;Texto;Fuera
+proximos;rival;Rival.;Texto;Real Murcia
+proximos;fuente_url;Página de la que saqué el dato.;Texto;https://www.fotmob.com/es-419/teams/8394/overview
+partidos_rivales;equipo;Equipo del que son los resultados.;Texto;Real Murcia
+partidos_rivales;jornada;Jornada.;Número entero;1
+partidos_rivales;fecha;Fecha.;Texto;2026-08-29
+partidos_rivales;local;Equipo local.;Texto;Hércules
+partidos_rivales;visitante;Equipo visitante.;Texto;Real Murcia
+partidos_rivales;goles_local;Goles del local.;Número entero;1
+partidos_rivales;goles_visitante;Goles del visitante.;Número entero;2
+partidos_rivales;fuente_url;Página de la que saqué el dato.;Texto;https://futbolme.com/resultados-directo/equipo/real-murci…
+incidencias;jornada;Jornada afectada (0 si afecta a todo el proyecto).;Número entero;0
+incidencias;campo;Dato o tabla afectada.;Texto;Cobertura
+incidencias;problema;Qué no cuadra.;Texto;No hay datos públicos fiables de coordenadas, tracking, d…
+incidencias;decision;Qué he hecho con ello.;Texto;No se estiman ni se rellenan
+goles_video;gol_id;Jornada y número de gol del partido (6-02 = segundo gol de la J6).;Texto;1-01
+goles_video;partido_id;Partido (ver tabla partidos).;Número entero;1
+goles_video;jornada;Jornada de liga.;Número entero;1
+goles_video;rival;Rival.;Texto;Gimnàstic de Tarragona
+goles_video;sede;«Casa» o «Fuera».;Texto;Fuera
+goles_video;sentido;«Favor» o «Contra».;Texto;Contra
+goles_video;minuto;Minuto en texto, con el descuento (45+7).;Texto;2
+goles_video;marcador;Resultado justo después del gol, siempre Zaragoza-rival.;Texto;0-1
+goles_video;goleador;Quién marca.;Texto;Sinan Bakis
+goles_video;asistencia;Quién da el último pase, si consta.;Texto;Jaume Jardí
+goles_video;inicio;Cómo empieza la jugada: ataque posicional, transición, balón parado, penalti o sin dato.;Texto;balon_parado
+goles_video;detalle_inicio;La misma idea en una frase corta.;Texto;falta lateral
+goles_video;carril;Izquierda, centro o derecha DEL EQUIPO QUE ATACA.;Texto;derecha
+goles_video;ultimo_pase;Tipo de último pase: centro lateral, pase atrás, pase raso por dentro, al espacio, rechace, córner, falta…;Texto;falta_lateral
+goles_video;zona_remate;Zona del último toque: área pequeña, área grande (centro o lateral), fuera del área o penalti.;Texto;area_pequena
+goles_video;remate;Con qué se remata: pie, cabeza o propia puerta.;Texto;sin_dato
+goles_video;revision_fvs;Si se ve una revisión en el monitor (FVS).;Texto;no_se_ve
+goles_video;defensores_area;Defensores dentro del área en el momento del último pase, solo si se ven todos.;Número entero;7
+goles_video;atacantes_area;Atacantes dentro del área en ese mismo momento.;Número entero;5
+goles_video;tiro_x;Posición estimada del remate, en metros hacia la portería rival (0 a 105).;Número entero;99
+goles_video;tiro_y;Posición estimada del remate, en metros desde la banda derecha del que ataca (0 a 68).;Número entero;30
+goles_video;pase_x;Posición estimada del último pase (x).;Número entero;78
+goles_video;pase_y;Posición estimada del último pase (y).;Número entero;8
+goles_video;segundos_video;Dónde está la jugada en el resumen, en segundos.;Texto;17-26
+goles_video;confianza;Alta, media o baja: lo bien que se ve la jugada.;Texto;media
+goles_video;nota;Lo que se ve en el vídeo, explicado en una o dos frases.;Texto;Falta desde la derecha del ataque del Nàstic. El balón ca…
+resumenes_youtube;partido_id;Partido (ver tabla partidos).;Número entero;1
+resumenes_youtube;jornada;Jornada.;Número entero;1
+resumenes_youtube;rival;Rival.;Texto;Gimnàstic de Tarragona
+resumenes_youtube;canal;Canal de YouTube que publica el resumen.;Texto;Real Federación Española Fútbol
+resumenes_youtube;titulo;Título del vídeo.;Texto;Resumen #PrimeraFederación | Gimnàstic 2-0 Real Zaragoza …
+resumenes_youtube;duracion;Duración (minutos:segundos).;Texto;4:03
+resumenes_youtube;url;Enlace al vídeo.;Texto;https://www.youtube.com/watch?v=psvkPAyTRhk
+jugadores;jugador;Jugador.;Texto;Jaume Jardí
+jugadores;partidos;Partidos jugados.;Número entero;7
+jugadores;titularidades;Partidos como titular.;Número entero;6
+jugadores;minutos;Minutos jugados, sin contar el descuento.;Número entero;554
+jugadores;goles;Goles.;Número entero;4
+jugadores;asistencias;Asistencias (solo las que constan).;Número entero;4
+jugadores;participaciones_con_minutos;Goles + asistencias.;Número entero;8
+jugadores;participaciones_por_90;Goles + asistencias por cada 90 minutos jugados.;Número decimal;1.3
+jugadores;minutos_por_participacion;Minutos que tarda de media en participar en un gol. Vacío si no ha participado en ninguno.;Número entero;69
+minutos_partido;partido_id;Partido (ver tabla partidos).;Número entero;1
+minutos_partido;jugador;Jugador.;Texto;Westerveld
+minutos_partido;rol;«Titular» o «Suplente».;Texto;Titular
+minutos_partido;entra;Minuto en el que entra (0 si es titular).;Número entero;0
+minutos_partido;sale;Minuto en el que sale (90 si acaba el partido).;Número entero;90
+minutos_partido;minutos;Minutos jugados.;Número entero;90

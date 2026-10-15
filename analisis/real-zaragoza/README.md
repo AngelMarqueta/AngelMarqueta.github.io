@@ -58,6 +58,10 @@ Las páginas y sus plantillas conservan el selector de tema, los gráficos ampli
 
 Fuentes, por este orden: web oficial del club, FotMob, futboltotal y BeSoccer. Cuando dos fuentes no coinciden lo apunto en `incidencias.csv`. Si un dato no aparece en ninguna fuente fiable, se queda vacío: nunca lo relleno con un cero.
 
+## Tablas para Excel y diccionario de datos
+
+En `datos/tablas/` están las mismas tablas listas para abrir con doble clic en un Excel en español: `datos_real_zaragoza.xlsx` (una hoja por tabla, con una hoja «Diccionario» que explica cada columna) y `csv_excel/` (UTF-8 con BOM, punto y coma y coma decimal, para que las tildes y la ñ salgan bien). El diccionario también está en [`datos/tablas/DICCIONARIO.md`](datos/tablas/DICCIONARIO.md). Todo lo genera `codigo/preparar_tablas.py`; los CSV originales de `datos/entrada` no se tocan.
+
 ## Cómo se actualiza
 
 1. Añadir el partido nuevo a los CSV de `datos/entrada` (y la clasificación de esa jornada).
@@ -68,6 +72,7 @@ Fuentes, por este orden: web oficial del club, FotMob, futboltotal y BeSoccer. C
    Rscript analisis/real-zaragoza/codigo/comprobar.R
    ```
 3. Si alguna comprobación falla, el script para y no cambia nada de la web.
+   `actualizar.py` también regenera las pestañas «Jornada a jornada» (una página por partido, `paginas_partidos.py`) y «Último partido», y las tablas para Excel con su diccionario (`preparar_tablas.py`, en `datos/tablas/`).
    Para los goles en vídeo y el xG, después de apuntar los goles de la jornada en `video/goles_video.csv` y sus estadísticas en `sofascore.csv`:
    ```
    python analisis/real-zaragoza/codigo/goles_video.py
