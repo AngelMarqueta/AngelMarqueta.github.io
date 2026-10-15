@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../../assets/tema.js"></script>
-<link rel="stylesheet" href="../../assets/estilo.css?v=20261015a">
-<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261014e">
+<link rel="stylesheet" href="../../assets/estilo.css?v=20261015b">
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261015b">
 <script src="../../assets/mejoras.js?v=20261014c" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
@@ -32,6 +32,9 @@
 
 <main class="envoltorio">
   <p class="migas"><a href="../index.html">Proyectos</a> / Seguimiento semanal</p>
+  <nav class="pestanas" aria-label="Secciones del seguimiento"><a href="index.html" aria-current="page">Temporada</a><a href="jornadas.html">Jornada a jornada</a><a href="ultimo-partido.html">Último partido</a></nav>
+  <!-- Degradado azul y blanco para los círculos del Zaragoza en los gráficos de d3 -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="zgz-mitad"><stop offset="0" stop-color="#213e96"/><stop offset=".5" stop-color="#213e96"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#fff"/></linearGradient></defs></svg>
   <section class="cab-proyecto">
     <img class="escudo-seccion" src="../../assets/real-zaragoza-escudo.png" alt="Escudo del Real Zaragoza" width="52" height="52">
     <p class="etiqueta">Seguimiento semanal · Primera Federación, grupo 2</p>
@@ -46,7 +49,7 @@
     </dl>
   </section>
 
-  <nav class="accesos-seccion" aria-label="Explorar el seguimiento del Real Zaragoza"><a href="#claves">Conclusiones</a><a href="#t-panel">Evolución</a><a href="#jornadas">Jornadas</a><a href="#t-min">Plantilla</a><a href="#fuentes-metodo">Fuentes y método</a><a href="goles-en-video.html">Goles en vídeo</a><a href="informe-completo.html">Informe completo</a><a href="previa.html">Previa</a></nav>
+  <nav class="accesos-seccion" aria-label="Explorar el seguimiento del Real Zaragoza"><a href="#claves">Conclusiones</a><a href="#t-panel">Evolución</a><a href="jornadas.html">Jornadas</a><a href="#t-min">Plantilla</a><a href="#fuentes-metodo">Fuentes y método</a><a href="goles-en-video.html">Goles en vídeo</a><a href="informe-completo.html">Informe completo</a><a href="previa.html">Previa</a></nav>
   <p class="corte-visible" data-corte>Datos del análisis hasta el 11/10/2026 · Jornada 7</p>
 
   <section class="seccion" id="claves" aria-labelledby="t-claves">
@@ -87,12 +90,6 @@
     </div>
   </section>
 
-  <section class="seccion" id="jornadas" aria-labelledby="t-jornadas">
-    <p class="etiqueta">Archivo de temporada</p><h2 id="t-jornadas">Todas las jornadas de liga</h2>
-    <p class="nota">Marcador desde el punto de vista del Real Zaragoza: goles a favor–goles en contra. Los puntos son acumulados.</p>
-    <div class="tarjeta tabla" tabindex="0" role="region" aria-label="Resultados por jornada, tabla desplazable"><table><caption class="visualmente-oculto">Resultados del Real Zaragoza por jornada de liga</caption><thead><tr><th scope="col">Jornada</th><th scope="col">Fecha</th><th scope="col">Rival</th><th scope="col">Sede</th><th scope="col">Marcador</th><th scope="col">Puntos</th></tr></thead><tbody id="historial-jornadas"><tr><th scope="row">J7</th><td>11/10/2026</td><td>Atlético Madrileño</td><td>Fuera</td><td>4–4</td><td>16</td></tr><tr><th scope="row">J6</th><td>04/10/2026</td><td>CD Teruel</td><td>Casa</td><td>4–1</td><td>15</td></tr><tr><th scope="row">J5</th><td>25/09/2026</td><td>UD Ibiza</td><td>Fuera</td><td>2–0</td><td>12</td></tr><tr><th scope="row">J4</th><td>20/09/2026</td><td>FC Cartagena</td><td>Casa</td><td>1–0</td><td>9</td></tr><tr><th scope="row">J3</th><td>13/09/2026</td><td>Juventud Torremolinos CF</td><td>Fuera</td><td>4–3</td><td>6</td></tr><tr><th scope="row">J2</th><td>05/09/2026</td><td>Antequera CF</td><td>Casa</td><td>1–0</td><td>3</td></tr><tr><th scope="row">J1</th><td>30/08/2026</td><td>Gimnàstic de Tarragona</td><td>Fuera</td><td>0–2</td><td>0</td></tr></tbody></table></div>
-    <p class="nota">El panel, el archivo de jornadas y la clasificación utilizan el mismo conjunto de datos. <a href="../../analisis/real-zaragoza/datos/salida/partidos_liga.csv" download>Descargar los partidos de liga (CSV)</a>.</p>
-  </section>
 
   <section class="seccion" aria-labelledby="t-min">
     <p class="etiqueta">Plantilla</p>
@@ -167,17 +164,6 @@
   fetch('../../datos/zaragoza.json').then(r => r.json()).then(d => {
     datos = d;
     document.getElementById('corte').textContent = `jornada ${d.jornada} (${fecha(d.corte)}/${d.corte.slice(0, 4)})`;
-    const historial = document.getElementById('historial-jornadas');
-    historial.replaceChildren();
-    [...d.partidos].sort((a,b) => b.jornada-a.jornada).forEach(p => {
-      const fila = document.createElement('tr');
-      ['J'+p.jornada, new Date(p.fecha+'T12:00:00').toLocaleDateString('es-ES'), p.rival, p.sede, p.goles_favor+'–'+p.goles_contra, p.puntos_acumulados].forEach((valor,i) => {
-        const celda = document.createElement(i===0?'th':'td');
-        if(i===0) celda.scope='row';
-        celda.textContent=valor;fila.append(celda);
-      });
-      historial.append(fila);
-    });
     tablas();
     pintar();
     document.querySelectorAll('.filtro button').forEach(b => b.addEventListener('click', () => {
@@ -255,7 +241,7 @@
     f.g.append('path').datum(serie).attr('fill', 'none').attr('stroke', css('--cesped')).attr('stroke-width', 2.5)
       .attr('d', d3.line().x(d => x(d.j)).y(d => y(d.v)));
     f.g.selectAll('circle').data(serie).join('circle').attr('cx', d => x(d.j)).attr('cy', d => y(d.v)).attr('r', 5)
-      .attr('fill', d => d.p.puntos ? css('--cesped') : css('--senal')).attr('stroke', css('--panel')).attr('stroke-width', 2)
+      .attr('fill', d => d.p.puntos ? 'url(#zgz-mitad)' : css('--senal')).attr('stroke', d => d.p.puntos ? '#213e96' : css('--panel')).attr('stroke-width', 2)
       .attr('tabindex', 0).attr('role', 'img').attr('aria-label', d => `${d.j} · ${d.p.rival}: ${d.v} puntos acumulados`)
       .on('pointerdown mousemove', (ev, d) => f.mostrar(ev, `${d.j} · ${d.p.rival} (${d.p.goles_favor}-${d.p.goles_contra}): ${d.v} pts`)).on('mouseleave blur', f.ocultar)
       .on('focus', (ev,d) => { const r=ev.target.getBoundingClientRect(); f.mostrar({clientX:r.x,clientY:r.y}, `${d.j} · ${d.p.rival}: ${d.v} pts`); });

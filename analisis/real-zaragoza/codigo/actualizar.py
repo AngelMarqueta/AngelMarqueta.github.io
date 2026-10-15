@@ -24,6 +24,8 @@ import calculos
 import comprobaciones
 import graficos
 import informe
+import paginas_partidos
+import preparar_tablas
 from cargar_datos import CARPETA_SALIDA, LIGA, RAIZ_WEB, cargar_todo
 
 # Dónde escribe en la web
@@ -166,6 +168,13 @@ def main():
 
     informe.generar(CARPETA_PROYECTO_WEB / "informe-completo.html", liga, goles_liga, jugadores,
                     clasificacion, sede, datos["incidencias"], fuentes)
+
+    # 6. Pestañas «Jornada a jornada» y «Último partido»: una página por partido de liga.
+    #    Van después del JSON porque copian la cabecera de index.html, que ya está al día.
+    paginas_partidos.main()
+
+    # 7. Copias de las tablas para Excel (UTF-8 con BOM y «;») y el diccionario de datos
+    preparar_tablas.main()
 
     # Resumen por pantalla
     zgz = clasificacion[clasificacion["equipo"] == "Real Zaragoza"].iloc[0]
