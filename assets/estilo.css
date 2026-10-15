@@ -81,7 +81,7 @@ img{max-width:100%;height:auto}
 .minutos .eje{stroke:var(--cal);stroke-width:2}
 .minutos .marca-min{stroke:var(--cal);stroke-opacity:.45}
 .minutos .rotulo{fill:var(--cal);fill-opacity:.7;font-family:var(--f-texto);font-size:12px}
-.minutos .favor{fill:var(--cal)}
+.minutos .favor{fill:url(#zgz-mitad);stroke:#fff;stroke-width:1.2}
 .minutos .contra{fill:var(--senal)}
 .minutos .leyenda-min{display:flex;gap:1.2rem;font-size:.85rem;margin-top:.6rem;color:var(--cal);opacity:.85}
 .minutos .leyenda-min i{display:inline-block;width:.65rem;height:.65rem;border-radius:50%;margin-right:.4rem;vertical-align:0}
@@ -513,3 +513,9 @@ main.envoltorio{width:100%;min-width:0}
 /* Portada: bloque de proyectos a dos columnas (los vídeos van en su propio bloque) */
 .destacados.dos{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:760px){.destacados.dos{grid-template-columns:1fr}}
+
+/* ---------- Colores del Real Zaragoza: azul y blanco ---------- */
+/* Círculo partido por la mitad (leyendas) y botón que lleva a los análisis del Zaragoza */
+.zgz-mitad{background:linear-gradient(90deg,#213e96 50%,#fff 50%)!important;box-shadow:0 0 0 1px #fff}
+.boton.boton-zgz,.cesped .boton.boton-zgz{background:#213e96;border-color:#fff;color:#fff}
+.boton.boton-zgz:hover,.cesped .boton.boton-zgz:hover{background:#fff;border-color:#fff;color:#213e96}

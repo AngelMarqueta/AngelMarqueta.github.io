@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="assets/tema.js"></script>
-<link rel="stylesheet" href="assets/estilo.css?v=20261015a">
+<link rel="stylesheet" href="assets/estilo.css?v=20261015b">
 <script src="assets/mejoras.js?v=20261014c" defer></script>
 <link rel="icon" href="assets/icono.svg" type="image/svg+xml">
 </head>
@@ -40,7 +40,7 @@
         <p class="sub">Entender el fútbol con datos: análisis, visualizaciones y vídeos con fuentes a la vista.</p>
         <p class="autor-portada">Por Ángel Marqueta Alonso</p>
         <div class="botones">
-          <a class="boton lleno" href="proyectos/index.html">Explorar análisis</a>
+          <a class="boton lleno boton-zgz" href="proyectos/index.html">Explorar análisis</a>
           <a class="boton" href="sobre-mi/index.html">Sobre mí</a>
         </div>
       </div>
@@ -48,7 +48,7 @@
         <h2 id="t-minutos">Real Zaragoza 2026/27, minuto a minuto</h2>
         <p id="minutos-texto">Cada punto es un gol de los partidos de liga del Real Zaragoza, colocado en el minuto en que llegó.</p>
         <svg id="minutos-svg" viewBox="0 0 1000 136" preserveAspectRatio="xMinYMid meet" role="img" aria-label="Goles a favor y en contra del Real Zaragoza por minuto"></svg>
-        <div class="leyenda-min"><span><i style="background:var(--cal)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div>
+        <div class="leyenda-min"><span><i class="zgz-mitad"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div>
       </figure>
     </div>
   </section>
@@ -122,6 +122,11 @@
     ultimos = [goles, jornada];
     const svg = document.getElementById('minutos-svg');
     svg.replaceChildren();
+    // Degradado con corte seco: mitad azul y mitad blanca, los colores del Zaragoza.
+    // Lo vuelvo a crear en cada dibujo porque replaceChildren() borra también los <defs>.
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    defs.innerHTML = '<linearGradient id="zgz-mitad"><stop offset="0" stop-color="#213e96"/><stop offset=".5" stop-color="#213e96"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#fff"/></linearGradient>';
+    svg.appendChild(defs);
     // Dibujo en píxeles reales del contenedor para que los textos no se encojan en el móvil
     const ancho = Math.max(300, Math.round(svg.getBoundingClientRect().width));
     svg.setAttribute('viewBox', `0 0 ${ancho} 136`);
