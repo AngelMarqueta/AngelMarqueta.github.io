@@ -21,3 +21,5 @@ code{overflow-wrap:anywhere}
 @media (max-width:700px){
   .pareja-figuras{grid-template-columns:1fr}
 }
+
+.foto-cabecera img{width:100%;max-height:520px;object-fit:cover}

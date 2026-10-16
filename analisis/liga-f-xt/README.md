@@ -60,4 +60,8 @@ La primera ejecución descarga unos 600 MB de eventos y alineaciones. Esa carpet
 - Datos: [StatsBomb Open Data](https://github.com/hudl/open-data), commit `4b73468`. Su [acuerdo de uso](https://github.com/hudl/open-data/blob/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/LICENSE.pdf) permite publicar análisis, prohíbe redistribuir los datos y su uso comercial, y pide el logotipo en lo publicado.
 - Método: [Karun Singh, *Introducing Expected Threat*](https://karun.in/blog/expected-threat.html). Implementación propia.
 
+## Imagen
+
+La portada del carrusel y la cabecera de la página usan una foto de Caroline Graham Hansen con el FC Barcelona (Brann-Barcelona, marzo de 2024), de MichaelEmilio en [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Brann_-_Bar%C3%A7a_Femen%C3%AD_CG3A7081_(cropped).jpg), con licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Está recortada y reducida. Por esa licencia, la portada del carrusel, que la incluye, se comparte también con CC BY-SA 4.0. Datos completos en `recursos/foto.json`.
+
 Análisis personal. Sin relación con ningún club ni competición.

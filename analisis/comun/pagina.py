@@ -76,3 +76,21 @@ def escribir_pagina_zaragoza(archivo, titulo, descripcion, migas, cuerpo, fuente
     destino = RAIZ_WEB / "proyectos" / "real-zaragoza" / archivo
     destino.write_text(pagina, encoding="utf-8")
     return destino
+
+
+def figura_foto(src, meta):
+    """
+    Foto de cabecera de una investigación con su crédito completo: autor,
+    licencia enlazada, procedencia y cambios hechos, como piden las licencias
+    Creative Commons.
+    """
+    return (f'  <figure class="figura foto-cabecera"><img src="{src}" alt="{meta["descripcion"]}" loading="lazy">'
+            f'<figcaption>{meta["descripcion"]}. Foto: {meta["autor"]}, '
+            f'<a href="{meta["licencia_url"]}">{meta["licencia"]}</a>, '
+            f'<a href="{meta["pagina"]}">Wikimedia Commons</a> ({meta["cambios"]}).</figcaption></figure>')
+
+
+def credito_corto(meta):
+    """Crédito breve para escribir sobre la foto en las imágenes de redes."""
+    licencia = "CC0" if meta["licencia"].startswith("CC0") else meta["licencia"]
+    return f'Foto: {meta["autor"]} ({meta["lugar_fecha"]}) · {licencia} · Wikimedia Commons'

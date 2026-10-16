@@ -21,6 +21,7 @@ from matplotlib.colors import LinearSegmentedColormap, PowerNorm
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "comun"))
 from estilo import cierre, colores, estilo_ejes, guardar, lienzo, portada  # noqa: E402
+from pagina import credito_corto  # noqa: E402
 
 PIE = "Liga F 2023/24 · Fuente: StatsBomb Open Data\nModelo propio de xT (12 × 8 zonas) · Mínimo 900 minutos · Sin tracking"
 ETIQUETA = "Investigación 01 · Liga F"
@@ -145,17 +146,20 @@ def crear_figuras(ranking, modelo, puntos, logo, carpeta):
 
 def crear_carrusel(ranking, carpeta_graficos, carpeta):
     """Carrusel de Instagram: portada, tres gráficas y cierre con los límites."""
+    import json
     import shutil
 
     carpeta = Path(carpeta)
     carpeta.mkdir(parents=True, exist_ok=True)
     lider = ranking[ranking.elegible_900].iloc[0]
     cifra = f"{lider.xt_neto_90:.2f}".replace(".", ",")
-    fig = portada("El peligro\nempieza antes\ndel último pase",
-                  "240 partidos de la Liga F 2023/24.\n¿Quién acerca el balón a las zonas de gol?",
+    recursos = Path(__file__).resolve().parents[1] / "recursos"
+    foto = json.loads((recursos / "foto.json").read_text(encoding="utf-8"))
+    fig = portada("Quién crea más peligro\ncon el balón en la Liga F",
                   cifra=cifra,
-                  cifra_texto=f"xT neto por 90 minutos de {lider.jugadora},\nla más alta de la liga (mínimo 900 minutos)",
-                  etiqueta=ETIQUETA)
+                  cifra_texto=f"xT neto por 90 minutos de\n{lider.jugadora}, la más alta\n(mínimo 900 minutos)",
+                  etiqueta=ETIQUETA, antetitulo="Liga F 2023/24 · Amenaza esperada (xT)",
+                  foto=recursos / "foto.jpg", credito=credito_corto(foto), foco=(0.5, 0.35))
     guardar(fig, carpeta, "01_portada")
     for origen, destino in [("02_superficie_xt_instagram", "02_como_funciona"),
                             ("01_creadoras_xt_instagram", "03_resultados"),

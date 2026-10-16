@@ -17,7 +17,7 @@ import pandas as pd
 
 ESTUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ESTUDIO.parent / "comun"))
-from pagina import RAIZ_WEB, escribir_pagina, numero  # noqa: E402
+from pagina import RAIZ_WEB, escribir_pagina, figura_foto, numero  # noqa: E402
 
 CARPETA_WEB = RAIZ_WEB / "proyectos" / "liga-f-xt"
 CODIGO_GITHUB = "https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/liga-f-xt"
@@ -31,6 +31,7 @@ def copiar_recursos():
         shutil.copy(ESTUDIO / "graficos" / f"{nombre}.png", graficos / f"{nombre}.png")
     shutil.copy(ESTUDIO / "graficos" / "04_creadoras_xt_facebook.png", graficos / "compartir.png")
     shutil.copy(ESTUDIO / "recursos" / "statsbomb.png", graficos / "statsbomb.png")
+    shutil.copy(ESTUDIO / "recursos" / "foto.jpg", graficos / "foto.jpg")
     shutil.copy(ESTUDIO / "datos" / "salida" / "jugadoras_xt.csv", CARPETA_WEB / "jugadoras_xt.csv")
 
 
@@ -60,6 +61,7 @@ def main():
     acciones_txt = numero(validacion["acciones"], 0)
 
     copiar_recursos()
+    foto = json.loads((ESTUDIO / "recursos" / "foto.json").read_text(encoding="utf-8"))
     cuerpo = f"""  <section class="cab-proyecto">
     <aside class="aviso-historico" aria-label="Periodo del análisis"><strong>ANÁLISIS HISTÓRICO · 2023/24</strong><span>Datos de la Liga F 2023/24, temporada terminada en 2024. No describe la temporada actual.</span></aside>
     <p class="etiqueta">Investigación · Fútbol femenino · Liga F 2023/24</p>
@@ -71,6 +73,8 @@ def main():
       <div><dt>Herramientas</dt><dd>Python (pandas, NumPy, Matplotlib) · modelo propio de xT · <a href="{CODIGO_GITHUB}">código y datos</a></dd></div>
     </dl>
   </section>
+
+{figura_foto("graficos/foto.jpg", foto)}
 
   <nav class="accesos-seccion" aria-label="Secciones del artículo"><a href="#resultado">Resultados</a><a href="#metodo">Cómo se calcula</a><a href="#limites">Límites</a><a href="#fuentes">Fuentes y código</a></nav>
 
