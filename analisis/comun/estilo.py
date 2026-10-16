@@ -26,6 +26,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib import font_manager
 from matplotlib.patches import Rectangle
 from PIL import Image
@@ -247,27 +248,100 @@ def _fondo_cesped(fig, c):
     return ax
 
 
-def portada(titulo, entradilla, cifra="", cifra_texto="", etiqueta="", paleta="web"):
-    """Primera diapositiva: titular grande sobre césped y, si hay, la cifra clave."""
+def _foto_recortada(ruta, ancho, alto, foco=(0.5, 0.5)):
+    """
+    Recorta la foto a la proporción ancho × alto sin deformarla.
+    «foco» indica qué punto de la foto (en fracción) debe quedar centrado.
+    """
+    imagen = Image.open(ruta).convert("RGB")
+    proporcion = ancho / alto
+    if imagen.width / imagen.height > proporcion:
+        nuevo_ancho = int(imagen.height * proporcion)
+        izquierda = int(min(max(foco[0] * imagen.width - nuevo_ancho / 2, 0), imagen.width - nuevo_ancho))
+        imagen = imagen.crop((izquierda, 0, izquierda + nuevo_ancho, imagen.height))
+    else:
+        nuevo_alto = int(imagen.width / proporcion)
+        arriba = int(min(max(foco[1] * imagen.height - nuevo_alto / 2, 0), imagen.height - nuevo_alto))
+        imagen = imagen.crop((0, arriba, imagen.width, arriba + nuevo_alto))
+    return imagen.resize((ancho, alto), Image.LANCZOS)
+
+
+def portada(titulo, entradilla="", cifra="", cifra_texto="", etiqueta="", paleta="web",
+            antetitulo="", foto=None, credito="", foco=(0.5, 0.5)):
+    """
+    Primera diapositiva del carrusel.
+
+    Sin foto: titular grande sobre césped. Con foto: la foto ocupa la mitad
+    superior y se funde con el césped; debajo van el antetítulo (de qué trata
+    el estudio), el titular y la cifra clave. El crédito de la foto se escribe
+    sobre ella, como exigen sus licencias.
+    """
     c = preparar(paleta)
     fig = plt.figure(figsize=(10.8, 13.5), dpi=100, facecolor=c["noche"])
     ax = _fondo_cesped(fig, c)
-    ax.text(0.06, 0.94, "Línea de pase", fontfamily=TITULAR, fontweight=800, fontsize=30,
-            color=c["cal"], va="top")
+    color_cifra = c["acento"] if paleta == "web" else c["cal"]
+
+    if foto:
+        alto_foto = 0.47
+        imagen = _foto_recortada(foto, 1080, int(1350 * alto_foto), foco).convert("RGBA")
+        # La parte baja de la foto se vuelve transparente poco a poco y deja ver
+        # el césped de debajo: foto y fondo quedan fundidos, sin corte.
+        alfa = np.full((imagen.height, imagen.width), 255, dtype=np.uint8)
+        inicio = int(imagen.height * 0.55)
+        alfa[inicio:] = (255 * (1 - np.linspace(0, 1, imagen.height - inicio) ** 1.3))[:, None]
+        imagen.putalpha(Image.fromarray(alfa))
+        ax_foto = fig.add_axes([0, 1 - alto_foto, 1, alto_foto], zorder=1)
+        ax_foto.imshow(imagen)
+        # Sombra arriba para que la marca se lea sobre cualquier foto.
+        sombra = np.zeros((256, 1, 4))
+        sombra[:, 0, 3] = np.linspace(0.55, 0, 256)
+        ax_foto.imshow(sombra, extent=[0, imagen.width, imagen.height * 0.22, 0], aspect="auto", zorder=2)
+        ax_foto.set_xlim(0, imagen.width)
+        ax_foto.set_ylim(imagen.height, 0)
+        ax_foto.axis("off")
+        if credito:
+            ax_foto.text(imagen.width * 0.94, imagen.height * 0.97, credito, fontsize=10, color=c["cal"],
+                         alpha=0.85, ha="right", va="bottom", zorder=5)
+        y = 1 - alto_foto - 0.02
+        lineas = titulo.count("\n") + 1
+        tam_titulo = 62 if lineas <= 2 else 54
+    else:
+        y = 0.80
+        tam_titulo = 78
+
+    ax.set_zorder(3)
+    ax.patch.set_alpha(0)
+    if foto:
+        # El césped (ejes «ax») se dibuja debajo de la foto: se pasa a un eje de fondo.
+        for artista in list(ax.patches):
+            artista.remove()
+        fondo = fig.add_axes([0, 0, 1, 1], zorder=0)
+        fondo.axis("off")
+        fondo.set_xlim(0, 1)
+        fondo.set_ylim(0, 1)
+        fondo.add_patch(Rectangle((0, 0), 1, 1, color=c["noche"]))
+        for inicio in [i * 0.15 for i in range(7)]:
+            fondo.add_patch(Rectangle((inicio, 0), 0.075, 1, color=c["franja"]))
+
+    ax.text(0.06, 0.955, "Línea de pase", fontfamily=TITULAR, fontweight=800, fontsize=30,
+            color=c["cal"], va="top", zorder=6)
     if etiqueta:
-        ax.text(0.94, 0.935, etiqueta.upper(), fontsize=13, fontweight=600, color=c["cal"],
-                alpha=0.85, va="top", ha="right")
-    ax.text(0.06, 0.80, titulo, fontfamily=TITULAR, fontweight=800, fontsize=78,
+        ax.text(0.94, 0.95, etiqueta.upper(), fontsize=13, fontweight=600, color=c["cal"],
+                alpha=0.9, va="top", ha="right", zorder=6)
+    if antetitulo:
+        ax.text(0.06, y, antetitulo.upper(), fontsize=15, fontweight=700, color=color_cifra, va="top")
+        y -= 0.035
+    ax.text(0.06, y, titulo, fontfamily=TITULAR, fontweight=800, fontsize=tam_titulo,
             color=c["cal"], va="top", linespacing=0.92)
-    lineas = titulo.count("\n") + 1
-    y = 0.80 - lineas * 78 * PX * 1.08 / 1350 - 0.045
-    ax.text(0.06, y, entradilla, fontsize=21, color=c["cal"], alpha=0.92, va="top",
-            linespacing=1.45)
+    y -= (titulo.count("\n") + 1) * tam_titulo * PX * 1.08 / 1350 + 0.03
+    if entradilla:
+        ax.text(0.06, y, entradilla, fontsize=19 if foto else 21, color=c["cal"], alpha=0.92, va="top",
+                linespacing=1.45)
     if cifra:
-        # En la paleta del Zaragoza el acento es el mismo azul del fondo: la cifra va en blanco.
-        ax.text(0.06, 0.22, cifra, fontfamily=TITULAR, fontweight=800, fontsize=120,
-                color=c["acento"] if paleta == "web" else c["cal"], va="bottom")
-        ax.text(0.06, 0.20, cifra_texto, fontsize=18, color=c["cal"], va="top", linespacing=1.45)
+        ax.text(0.06, 0.135 if foto else 0.22, cifra, fontfamily=TITULAR, fontweight=800,
+                fontsize=96 if foto else 120, color=color_cifra, va="bottom")
+        ax.text(0.30 if foto else 0.06, 0.15 if foto else 0.20, cifra_texto, fontsize=17 if foto else 18,
+                color=c["cal"], va="center" if foto else "top", linespacing=1.4)
     ax.text(0.06, 0.04, "Desliza →", fontsize=16, fontweight=600, color=c["cal"], alpha=0.8)
     return fig
 

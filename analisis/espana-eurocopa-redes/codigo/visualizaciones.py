@@ -20,6 +20,7 @@ from mplsoccer import VerticalPitch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "comun"))
 from estilo import TITULAR, cierre, colores, estilo_ejes, guardar, lienzo, portada  # noqa: E402
+from pagina import credito_corto  # noqa: E402
 
 PIE = ("Eurocopa femenina 2025 · Fuente: StatsBomb Open Data\n"
        "Pases completados en juego hasta el primer cambio de España · Elaboración propia")
@@ -219,12 +220,14 @@ def crear_carrusel(resumen, central_final, carpeta_graficos, carpeta):
     carpeta = Path(carpeta)
     carpeta.mkdir(parents=True, exist_ok=True)
     final = resumen[resumen.fase == "Final"].iloc[0]
-    fig = portada("Por dónde\npasaba el juego\nde España",
-                  "Las redes de pases de la selección en sus seis\npartidos de la Eurocopa femenina 2025.",
+    import json
+    recursos = Path(__file__).resolve().parents[1] / "recursos"
+    foto = json.loads((recursos / "foto.json").read_text(encoding="utf-8"))
+    fig = portada("Las redes de pases\nde España en la Eurocopa",
                   cifra=f"{final.pases_red}",
-                  cifra_texto=f"pases completados en la final antes del primer cambio,\n"
-                              f"con {nombre_completo(central_final)} como eje de la red",
-                  etiqueta=ETIQUETA)
+                  cifra_texto=f"pases completados en la final antes\ndel primer cambio, con {nombre_completo(central_final)}\ncomo eje de la red",
+                  etiqueta=ETIQUETA, antetitulo="Eurocopa femenina 2025 · Selección española",
+                  foto=recursos / "foto.jpg", credito=credito_corto(foto), foco=(0.45, 0.42))
     guardar(fig, carpeta, "01_portada")
     for origen, destino in [("01_red_final_instagram", "02_final"), ("02_seis_redes_instagram", "03_seis_redes"),
                             ("03_intermediacion_instagram", "04_quien_unia"),

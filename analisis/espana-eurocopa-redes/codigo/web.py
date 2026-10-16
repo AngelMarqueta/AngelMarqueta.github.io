@@ -7,6 +7,7 @@ artículo. Las cifras salen de los archivos.
 Uso, desde la carpeta del estudio y después de ejecutar.py:
     python codigo/web.py
 """
+import json
 import shutil
 import sys
 from pathlib import Path
@@ -15,7 +16,7 @@ import pandas as pd
 
 ESTUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ESTUDIO.parent / "comun"))
-from pagina import RAIZ_WEB, escribir_pagina, numero  # noqa: E402
+from pagina import RAIZ_WEB, escribir_pagina, figura_foto, numero  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from visualizaciones import FASE, RIVAL, nombre_completo  # noqa: E402
@@ -33,6 +34,7 @@ def copiar_recursos():
         shutil.copy(ESTUDIO / "graficos" / f"{nombre}.png", destino / f"{nombre}.png")
     shutil.copy(ESTUDIO / "graficos" / "05_seis_redes_facebook.png", destino / "compartir.png")
     shutil.copy(ESTUDIO / "recursos" / "statsbomb.png", destino / "statsbomb.png")
+    shutil.copy(ESTUDIO / "recursos" / "foto.jpg", destino / "foto.jpg")
     shutil.copy(ESTUDIO / "datos" / "salida" / "jugadoras_torneo.csv", destino.parent / "jugadoras_torneo.csv")
     shutil.copy(ESTUDIO / "datos" / "salida" / "partidos.csv", destino.parent / "partidos.csv")
 
@@ -62,6 +64,7 @@ def main():
     eliminatorias = resumen[resumen.fase != "Group Stage"].pases_por_minuto
     repartida = resumen.loc[resumen.centralizacion.idxmin()]
     copiar_recursos()
+    foto = json.loads((ESTUDIO / "recursos" / "foto.json").read_text(encoding="utf-8"))
 
     cuerpo = f"""  <section class="cab-proyecto">
     <p class="etiqueta">Investigación · Fútbol femenino · Eurocopa 2025</p>
@@ -73,6 +76,8 @@ def main():
       <div><dt>Herramientas</dt><dd>Python (pandas, NetworkX, mplsoccer) · <a href="{CODIGO_GITHUB}">código y datos</a></dd></div>
     </dl>
   </section>
+
+{figura_foto("graficos/foto.jpg", foto)}
 
   <nav class="accesos-seccion" aria-label="Secciones del artículo"><a href="#resultado">Resultados</a><a href="#partidos">Partido a partido</a><a href="#metodo">Cómo se calcula</a><a href="#fuentes">Fuentes y código</a></nav>
 

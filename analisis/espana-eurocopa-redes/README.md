@@ -60,4 +60,8 @@ python -m pytest pruebas
 - Datos: [StatsBomb Open Data](https://github.com/hudl/open-data), commit `4b73468`, Eurocopa femenina 2025 (competición 53, temporada 315). Su [acuerdo de uso](https://github.com/hudl/open-data/blob/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/LICENSE.pdf) permite publicar análisis, prohíbe redistribuir los datos y su uso comercial, y pide el logotipo en lo publicado. Los eventos se guardan en una caché privada que no se sube.
 - Centralización: L. C. Freeman (1978), *Centrality in social networks: conceptual clarification*, Social Networks 1(3).
 
+## Imagen
+
+La portada del carrusel y la cabecera de la página usan una foto de la selección española antes del España-Bélgica de clasificación para la Eurocopa 2025 (Riazor, julio de 2024), de Estevoaei en [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Partido_Espa%C3%B1a_-_B%C3%A9lxica_en_Riazor,_clasificatorio_Eurocopa_2025_10.jpg), con licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Está recortada y reducida. No es una foto del torneo: no encontré fotos con licencia libre de sus partidos. Por esa licencia, la portada del carrusel se comparte también con CC BY-SA 4.0. Datos completos en `recursos/foto.json`.
+
 Análisis personal. Sin relación con ninguna federación ni competición.
