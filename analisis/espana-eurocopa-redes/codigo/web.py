@@ -83,9 +83,9 @@ def main():
     <p>Las cuatro jugadoras con más intermediación media fueron {cuatro[0]}, {cuatro[1]}, {cuatro[2]} y {cuatro[3]}: centrales y mediocentro. España ordenaba el juego desde atrás y dejaba a las atacantes para terminarlo.</p>
   </section>
 
-  <figure class="figura"><img src="graficos/01_red_final_instagram.png" width="1080" height="1350" alt="Red de pases de España en la final ante Inglaterra hasta el primer cambio. {nombre_completo(final.jugadora_mas_central)}, en naranja, es la jugadora con más intermediación." style="max-width:560px;margin-inline:auto"><figcaption>La final: {final.pases_red} pases completados hasta el minuto {numero(final.minuto_corte, 0)}, cuando España hizo su primer cambio.</figcaption></figure>
+  <figure class="figura"><img src="graficos/01_red_final_instagram.png" width="1080" height="1350" alt="Red de pases de España en la final ante Inglaterra hasta el primer cambio. {nombre_completo(final.jugadora_mas_central)}, en naranja, es la jugadora con más intermediación." style="max-width:min(560px,100%);margin-inline:auto"><figcaption>La final: {final.pases_red} pases completados hasta el minuto {numero(final.minuto_corte, 0)}, cuando España hizo su primer cambio.</figcaption></figure>
 
-  <figure class="figura"><img loading="lazy" src="graficos/03_intermediacion_instagram.png" width="1080" height="1350" alt="Intermediación de cada jugadora en cada partido y su media del torneo. Destacan {cuatro[0]} y {cuatro[1]}." style="max-width:560px;margin-inline:auto"><figcaption>Cada punto es un partido; la barra, la media del torneo. Solo jugadoras con tres redes o más.</figcaption></figure>
+  <figure class="figura"><img loading="lazy" src="graficos/03_intermediacion_instagram.png" width="1080" height="1350" alt="Intermediación de cada jugadora en cada partido y su media del torneo. Destacan {cuatro[0]} y {cuatro[1]}." style="max-width:min(560px,100%);margin-inline:auto"><figcaption>Cada punto es un partido; la barra, la media del torneo. Solo jugadoras con tres redes o más.</figcaption></figure>
 
   <section class="seccion lectura" id="partidos">
     <p class="etiqueta">Partido a partido</p>
@@ -98,7 +98,7 @@ def main():
 
   {tabla_partidos(resumen)}
 
-  <figure class="figura"><img loading="lazy" src="graficos/04_ritmo_concentracion_instagram.png" width="1080" height="1350" alt="Pases por minuto y concentración del juego en cada partido de España." style="max-width:560px;margin-inline:auto"></figure>
+  <figure class="figura"><img loading="lazy" src="graficos/04_ritmo_concentracion_instagram.png" width="1080" height="1350" alt="Pases por minuto y concentración del juego en cada partido de España." style="max-width:min(560px,100%);margin-inline:auto"></figure>
 
   <section class="seccion lectura" id="metodo">
     <p class="etiqueta">Cómo lo hice</p>
