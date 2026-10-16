@@ -133,7 +133,7 @@ def generar(ruta, partidos, goles, jugadores, clasificacion, sede, incidencias, 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../../assets/tema.js"></script>
 <link rel="stylesheet" href="../../assets/estilo.css?v=20261015b">
-<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261015b">
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261016a">
 <script src="../../assets/mejoras.js?v=20261014c" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>

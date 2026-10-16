@@ -54,7 +54,7 @@
 .campo-mini .lineas *{fill:none;stroke:#fff;stroke-width:.35;stroke-opacity:.85}
 .campo-mini .pase{stroke:#fff;stroke-width:.4;stroke-dasharray:1 .8;opacity:.85}
 .campo-mini .favor{fill:url(#zgz-mitad);stroke:#fff;stroke-width:.35}
-.campo-mini .contra{fill:var(--senal);stroke:#fff;stroke-width:.35}
+.campo-mini .contra{fill:#ff6a2b;stroke:#fff;stroke-width:.35}
 .notas-goles{margin:0;padding-left:1.1rem;display:grid;gap:.5rem;font-size:.95rem}
 .video-resumen{position:relative;aspect-ratio:16/9;margin-top:1.2rem;border-radius:var(--radio);overflow:hidden;background:#000}
 .video-resumen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -74,3 +74,33 @@
 .tema-real-zaragoza .zgz-mitad{box-shadow:0 0 0 1px #213e96;border-radius:50%}
 /* En el móvil las tres pestañas se reparten el ancho para que se vean enteras */
 @media(max-width:560px){.pestanas{gap:.15rem}.pestanas a{flex:1 1 0;padding:.6rem .3rem;font-size:.86rem;text-align:center;line-height:1.2}}
+
+/* ---------- Pestaña «Último partido» ---------- */
+.linea-goles{display:block;width:100%;height:auto;margin:1.2rem 0 .3rem;overflow:visible}
+.linea-goles .eje{stroke:var(--tinta-suave);stroke-width:2}
+.linea-goles .marca{stroke:var(--tinta-suave);stroke-opacity:.5}
+.linea-goles text{fill:var(--tinta-suave);font-family:var(--f-texto);font-size:15px}
+.linea-goles text.marcador{fill:var(--tinta);font-weight:700}
+.linea-goles .favor{fill:url(#zgz-mitad);stroke:#213e96;stroke-width:2}
+.linea-goles .contra{fill:#ff6a2b;stroke:#fff;stroke-width:2}
+.kpi small{display:block;font-size:.85rem;color:var(--tinta-suave);margin-top:.2rem}
+.racha-ultimos{display:flex;gap:.35rem;margin-top:.5rem;flex-wrap:wrap}
+.racha-ultimos span{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:7px;font-weight:800;background:var(--muted);color:var(--tinta)}
+.racha-ultimos .racha-victoria{background:#213e96;color:#fff}
+.racha-ultimos .racha-derrota{background:var(--senal-texto);color:#fff}
+.sube{color:#213e96;font-weight:700}
+.baja{color:var(--senal-texto);font-weight:700}
+.proximo{font-size:1.15rem}
+
+/* Goles del rival: siempre en naranja, el mismo color que en los gráficos de Python */
+.rival-naranja{background:#ff6a2b!important;border-radius:50%!important}
+.sin-corte{white-space:nowrap}
+/* Lista de goles para el móvil (en pantallas anchas se ve la línea de tiempo) */
+.goles-movil{display:none;list-style:none;margin:1rem 0 .4rem;padding:0;gap:.45rem}
+.goles-movil li{display:flex;align-items:baseline;gap:.4rem;padding-left:.7rem;border-left:4px solid #ff6a2b}
+.goles-movil li.favor{border-left-color:#213e96}
+.goles-movil b{margin-left:auto;font-family:var(--f-display);font-size:1.15rem}
+@media(max-width:640px){.linea-goles{display:none}.goles-movil{display:grid}}
+/* Aire entre los bloques de una misma tarjeta (Goles / Tarjetas, Once / Cambios) */
+.tarjeta h3+ul,.tarjeta h3+p{margin-top:.4rem}
+.tarjeta ul+h3,.tarjeta p+h3{margin-top:1.3rem}
