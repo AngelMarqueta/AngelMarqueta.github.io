@@ -1,0 +1,15 @@
+Con 7 jornadas, la clasificación dice menos de lo que parece. Lo he medido.
+
+He montado una simulación Monte Carlo del grupo 2 de Primera Federación en Python:
+
+· Modelo de Poisson con ataque, defensa y ventaja local (Maher, 1982), ajustado solo con resultados oficiales.
+· Penalización de las fuerzas hacia la media, elegida con validación cruzada dejando fuera una jornada cada vez. Con 7 jornadas, la mejor opción es una penalización fuerte: el modelo con fuerzas de equipo apenas predice mejor que uno en el que todos son iguales.
+· 10.000 temporadas, con incertidumbre en los parámetros y desempates según el reglamento de la RFEF (puntos y diferencia particular entre empatados, diferencia general, goles a favor).
+· Comprobación previa: los resultados tienen que reproducir la clasificación publicada, o el programa se detiene.
+
+Tras la jornada 7, el Real Zaragoza asciende directamente en el 20 % de las simulaciones y acaba entre los cinco primeros en el 63 %.
+
+La simulación se actualiza cada jornada:
+https://lineadepase.github.io/proyectos/real-zaragoza/simulacion.html
+
+#AnaliticaDeportiva #Python #MonteCarlo #Estadistica #RealZaragoza

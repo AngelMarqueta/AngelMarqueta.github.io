@@ -1,0 +1,36 @@
+{
+  "tras_jornada": 7,
+  "partidos_jugados": 70,
+  "partidos_pendientes": 310,
+  "clasificacion_reproducida": true,
+  "simulaciones": 10000,
+  "penalizacion": 32,
+  "validacion_cruzada_log_verosimilitud": {
+    "0.5": -3.196090563214967,
+    "1": -3.151572146188805,
+    "2": -3.0936485199652055,
+    "4": -3.0337334580948077,
+    "8": -2.9879457546830976,
+    "16": -2.9653796180966014,
+    "32": -2.9618346451010313,
+    "64": -2.9666513359157087
+  },
+  "referencia_sin_fuerzas_de_equipo": -2.981250739019558,
+  "mejora_sobre_referencia": 0.019416093918526833,
+  "ventaja_local_multiplicativa": 1.4282521205541245,
+  "suma_probabilidades_por_puesto": 1.0,
+  "error_muestreo_maximo_pp": 0.98,
+  "zaragoza": {
+    "ascenso_directo": 0.2026,
+    "playoff": 0.4269,
+    "descenso": 0.0241,
+    "puntos_medios": 63.3486
+  },
+  "python": "3.13.16",
+  "dependencias": {
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}
