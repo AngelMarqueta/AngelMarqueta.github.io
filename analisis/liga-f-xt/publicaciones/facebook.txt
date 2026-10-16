@@ -1,0 +1,10 @@
+¿Quién crea peligro antes del último pase?
+
+Un pase sencillo puede llevar el balón a una zona mucho más valiosa. Para medirlo, analicé los 240 partidos de la Liga F 2023/24 con un modelo propio de amenaza esperada (xT).
+
+Caroline Graham Hansen destaca con 0,593 xT neto por 90 minutos, más del doble que la siguiente. Eso no dice quién es mejor: ocho de las diez primeras juegan en el Barcelona, y el equipo también cuenta.
+
+En el artículo explico cómo funciona el modelo, los resultados con su margen de error y lo que el estudio no puede decir, con el código en abierto:
+https://lineadepase.github.io/proyectos/liga-f-xt/
+
+Datos: StatsBomb Open Data. Temporada 2023/24.

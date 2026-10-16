@@ -1,0 +1,17 @@
+Una clasificación de xT también tiene que explicar lo que deja fuera.
+
+He publicado en Línea de pase un estudio sobre la progresión con balón en la Liga F 2023/24: 240 partidos, 835.429 eventos revisados y 168.296 acciones de juego abierto.
+
+Cómo está hecho:
+· Campo dividido en 12 × 8 zonas; el valor de cada zona se obtiene resolviendo por iteración la probabilidad de tirar, marcar y mover el balón a otra zona.
+· Cada pase o conducción completados suman el valor del destino menos el del origen.
+· Cada partido se valora con un modelo ajustado en los demás (cinco grupos por partido), para no puntuar con lo que el modelo ya ha visto.
+· Minutos reconstruidos con alineaciones, cambios y expulsiones; mínimo de 900 minutos; intervalos con 1.000 remuestras por partidos.
+
+Resultado: Caroline Graham Hansen registra 0,593 xT neto por 90, con ocho jugadoras del Barcelona entre las diez primeras. Cambiar la cuadrícula apenas mueve el orden (correlaciones de rangos de 0,956 y 0,973), pero penalizar los pases fallidos lo cambia bastante (0,46). La conclusión es sobre el valor de las acciones completadas, no una nota global de calidad.
+
+El código en Python, el cuaderno y siete pruebas automáticas están en abierto. Los datos de StatsBomb no se redistribuyen, como pide su acuerdo.
+
+https://lineadepase.github.io/proyectos/liga-f-xt/
+
+#AnaliticaDeportiva #Python #FutbolFemenino #CienciaDeDatos

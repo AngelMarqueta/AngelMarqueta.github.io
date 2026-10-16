@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El peligro empieza antes del último pase · Línea de pase</title>
+<meta name="description" content="Quién acerca el balón a las zonas de gol en la Liga F 2023/24: un modelo propio de xT con los 240 partidos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="../../assets/tema.js"></script>
+<link rel="stylesheet" href="../../assets/estilo.css?v=20261015b">
+<script src="../../assets/mejoras.js?v=20261014c" defer></script>
+<link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
+<meta property="og:title" content="El peligro empieza antes del último pase">
+<meta property="og:description" content="Quién acerca el balón a las zonas de gol en la Liga F 2023/24: un modelo propio de xT con los 240 partidos.">
+<meta property="og:image" content="https://lineadepase.github.io/proyectos/liga-f-xt/graficos/compartir.png">
+<link rel="stylesheet" href="../../assets/investigacion.css?v=20261016">
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltorio">
+    <a class="marca" href="../../index.html" aria-label="Línea de pase, inicio">
+      <svg viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="lp-cesped" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6b45"/><stop offset="1" stop-color="#3f8f5c"/></linearGradient><clipPath id="lp-campo"><rect x="2" y="2" width="60" height="44" rx="8"/></clipPath></defs><rect x="2" y="2" width="60" height="44" rx="8" fill="url(#lp-cesped)" stroke="#f4f7f1" stroke-opacity=".55" stroke-width="2"/><g clip-path="url(#lp-campo)" fill="#fff" fill-opacity=".08"><rect x="2" y="0" width="7.5" height="48"/><rect x="17" y="0" width="7.5" height="48"/><rect x="32" y="0" width="7.5" height="48"/><rect x="47" y="0" width="7.5" height="48"/></g><g fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.8"><rect x="6" y="6" width="52" height="36" rx="2"/><path d="M32 6v36"/><circle cx="32" cy="24" r="6"/><path d="M58 15h-8v18h8"/></g><path d="M13 34C23 20 35 18 47 23" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 5.6"/><circle cx="12" cy="35" r="3.8" fill="#14261d" stroke="#fff" stroke-width="1.4"/><circle cx="50" cy="24" r="4.6" fill="#ff7a2f" stroke="#fff" stroke-width="1.4"/></svg>
+      Línea de pase
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../../index.html">Inicio</a>
+      <a href="../index.html" aria-current="page">Proyectos</a>
+      <a href="../../videos/index.html">Vídeos</a>
+      <a href="../../sobre-mi/index.html">Sobre mí</a>
+    </nav>
+  </div>
+</header>
+
+<main class="envoltorio">
+  <p class="migas"><a href="../index.html">Proyectos</a> / Investigación</p>
+  <section class="cab-proyecto">
+    <aside class="aviso-historico" aria-label="Periodo del análisis"><strong>ANÁLISIS HISTÓRICO · 2023/24</strong><span>Datos de la Liga F 2023/24, temporada terminada en 2024. No describe la temporada actual.</span></aside>
+    <p class="etiqueta">Investigación · Fútbol femenino · Liga F 2023/24</p>
+    <h1>El peligro empieza antes del último pase</h1>
+    <p class="entradilla">Los goles y las asistencias solo cuentan el final de la jugada. Con los 240 partidos de la Liga F 2023/24 medí quién acerca el balón a las zonas desde las que se marca, con pases y conducciones.</p>
+    <dl class="ficha-tecnica">
+      <div><dt>Pregunta</dt><dd>¿Qué jugadoras hacen avanzar el peligro antes del tiro?</dd></div>
+      <div><dt>Datos</dt><dd>StatsBomb Open Data · 16 equipos · 168.296 acciones de juego abierto</dd></div>
+      <div><dt>Herramientas</dt><dd>Python (pandas, NumPy, Matplotlib) · modelo propio de xT · <a href="https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/liga-f-xt">código y datos</a></dd></div>
+    </dl>
+  </section>
+
+  <nav class="accesos-seccion" aria-label="Secciones del artículo"><a href="#resultado">Resultados</a><a href="#metodo">Cómo se calcula</a><a href="#limites">Límites</a><a href="#fuentes">Fuentes y código</a></nav>
+
+  <section class="seccion lectura" id="resultado">
+    <p class="etiqueta">Lo que encontré</p>
+    <h2>¿Quién hace avanzar el peligro?</h2>
+    <p>Antes del último pase, alguien ha llevado el balón desde una zona de poco valor hasta otra desde la que es más fácil acabar en gol. La amenaza esperada (<em>expected threat</em>, xT) sirve para medir esa parte de la construcción.</p>
+    <p><strong>Caroline Graham Hansen suma 0,593 xT neto por 90 minutos</strong>, más del doble que la siguiente. Detrás aparecen Mariona Caldentey (0,251) y Patri Guijarro (0,231). Solo cuentan las jugadoras con al menos 900 minutos.</p>
+    <p>Su intervalo va de 0,488 a 0,714: refleja cuánto varía entre sus partidos. No recoge toda la incertidumbre del modelo, así que el orden de las demás no debe leerse como una clasificación exacta.</p>
+  </section>
+
+  <figure class="figura"><img src="graficos/04_creadoras_xt_web.png" width="1600" height="900" alt="Las seis primeras jugadoras por xT neto por 90 minutos. Caroline Graham Hansen encabeza con 0,593; las líneas son intervalos del 95 %."><figcaption>xT neto por 90 minutos de pases y conducciones completados. Mínimo de 900 minutos.</figcaption></figure>
+
+  <section class="seccion lectura">
+    <h2>El equipo también está dentro del número</h2>
+    <p>8 de las diez primeras juegan en el Barcelona. Tener más balón, jugar más cerca del área rival y estar en un equipo dominante da más ocasiones de sumar valor. Dividir por 90 minutos corrige el tiempo jugado, pero <strong>no iguala los contextos</strong>: el estudio no ajusta por puesto, rival, posesión ni marcador.</p>
+  </section>
+
+  <div class="tabla-editorial" role="region" aria-label="Diez primeras jugadoras, tabla desplazable" tabindex="0"><table><caption>Diez primeras por xT neto por 90 minutos · mínimo 900 minutos</caption><thead><tr><th scope="col">Jugadora</th><th scope="col">Equipo en 2023/24</th><th scope="col" class="num">Minutos</th><th scope="col" class="num">xT/90</th><th scope="col" class="num">Intervalo 95 %</th></tr></thead><tbody><tr class="destacada"><th scope="row">Caroline Graham Hansen</th><td>Barcelona WFC</td><td class="num">1.673</td><td class="num"><strong>0,593</strong></td><td class="num">0,488–0,714</td></tr><tr><th scope="row">Mariona Caldentey</th><td>Barcelona WFC</td><td class="num">1.505</td><td class="num"><strong>0,251</strong></td><td class="num">0,167–0,346</td></tr><tr><th scope="row">Patri Guijarro</th><td>Barcelona WFC</td><td class="num">1.721</td><td class="num"><strong>0,231</strong></td><td class="num">0,170–0,301</td></tr><tr><th scope="row">Irene Paredes</th><td>Barcelona WFC</td><td class="num">1.306</td><td class="num"><strong>0,210</strong></td><td class="num">0,136–0,307</td></tr><tr><th scope="row">Aitana Bonmati</th><td>Barcelona WFC</td><td class="num">1.634</td><td class="num"><strong>0,205</strong></td><td class="num">0,115–0,284</td></tr><tr><th scope="row">Esmee Brugts</th><td>Barcelona WFC</td><td class="num">1.529</td><td class="num"><strong>0,198</strong></td><td class="num">0,112–0,298</td></tr><tr><th scope="row">Lucy Bronze</th><td>Barcelona WFC</td><td class="num">1.401</td><td class="num"><strong>0,189</strong></td><td class="num">0,104–0,277</td></tr><tr><th scope="row">Ona Batlle</th><td>Barcelona WFC</td><td class="num">1.675</td><td class="num"><strong>0,188</strong></td><td class="num">0,117–0,272</td></tr><tr><th scope="row">Racheal Kundananji</th><td>Madrid CFF</td><td class="num">1.082</td><td class="num"><strong>0,181</strong></td><td class="num">0,102–0,265</td></tr><tr><th scope="row">Olga Carmona</th><td>Real Madrid CF W</td><td class="num">1.979</td><td class="num"><strong>0,174</strong></td><td class="num">0,124–0,221</td></tr></tbody></table></div>
+
+  <section class="seccion lectura" id="metodo">
+    <p class="etiqueta">Cómo lo hice</p>
+    <h2>Valor del destino menos valor del origen</h2>
+    <p>Dividí el campo en 96 zonas, 12 a lo largo y 8 a lo ancho. Para cada zona calculé la probabilidad de tirar y marcar desde ella y la de mover el balón con éxito a cada una de las demás. Resolviendo ese sistema por iteración, cada zona recibe un valor: la probabilidad de que la jugada acabe en gol si el balón está ahí.</p>
+    <p>Un pase o una conducción completados suman el valor de la zona de destino menos el de la de origen. Ir hacia una zona más valiosa suma; volver atrás resta.</p>
+    <p>Para no valorar un partido con un modelo que ya lo ha visto, separé los partidos en cinco grupos y valoré cada grupo con un modelo ajustado con los otros cuatro. Los minutos de cada jugadora los reconstruí con las alineaciones, los cambios y las expulsiones.</p>
+  </section>
+
+  <div class="pareja-figuras">
+    <figure class="figura"><img loading="lazy" src="graficos/02_superficie_xt_instagram.png" width="1080" height="1350" alt="Mapa del campo con el valor de cada zona: el valor se concentra junto a la portería rival, a la derecha."><figcaption>Valor de cada zona, ajustado con toda la temporada para explicar el método.</figcaption></figure>
+    <figure class="figura"><img loading="lazy" src="graficos/03_volumen_eficiencia_instagram.png" width="1080" height="1350" alt="Nube de puntos: acciones intentadas por 90 minutos frente a xT neto por 90. Más volumen no garantiza más valor."><figcaption>Volumen y valor por 90 minutos, sin ajustar por puesto ni equipo.</figcaption></figure>
+  </div>
+
+  <section class="seccion lectura" id="limites">
+    <p class="etiqueta">La comprobación que cambia la lectura</p>
+    <h2>Crear peligro y arriesgar no son lo mismo</h2>
+    <p>El orden apenas cambia si uso una cuadrícula más gruesa o más fina: la correlación de rangos es 0,956 con 8 × 6 zonas y 0,973 con 16 × 12. En cambio, si los pases fallidos restan el valor de la zona donde se pierden, la correlación baja a <strong>0,46</strong>.</p>
+    <p>Por eso el titular tiene que ser preciso: la medida principal habla del valor que añaden las acciones completadas. Una medida que castigue las pérdidas responde a otra pregunta.</p>
+    <h2>Hasta dónde llega este análisis</h2>
+    <ul>
+      <li>No ve las carreras sin balón ni dónde estaban las defensoras.</li>
+      <li>No demuestra quién es mejor ni quién está infravalorada.</li>
+      <li>Solo cuenta el juego abierto: deja fuera las jugadas que nacen de un saque.</li>
+      <li>Son datos de 2023/24: no describen el rendimiento ni el club actual de las jugadoras.</li>
+    </ul>
+  </section>
+
+  <section class="seccion lectura" id="fuentes">
+    <p class="etiqueta">Trabajo verificable</p>
+    <h2>Datos, código y comprobaciones</h2>
+    <p>Revisé 835.429 eventos de los 240 partidos, sin identificadores duplicados ni coordenadas fuera del campo. El código pasa siete pruebas automáticas y el cuaderno explica cada paso.</p>
+    <p><a class="boton" href="https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/liga-f-xt">Ver el código y el cuaderno</a></p>
+    <p><a href="jugadoras_xt.csv" download>Descargar los resultados por jugadora (CSV)</a>. Incluye a las jugadoras con menos de 900 minutos, marcadas como no elegibles.</p>
+    <p>Fuente: <a href="https://github.com/hudl/open-data">StatsBomb Open Data</a>. Los eventos originales no se redistribuyen, como pide su <a href="https://github.com/hudl/open-data/blob/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/LICENSE.pdf">acuerdo de uso</a>. Método basado en <a href="https://karun.in/blog/expected-threat.html">Karun Singh</a>, con implementación propia.</p>
+    <img class="logo-fuente" src="graficos/statsbomb.png" width="180" alt="StatsBomb, proveedor de los datos">
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltorio">
+    <p>Fuente: StatsBomb Open Data, Liga F 2023/24. Modelo propio de xT.</p>
+    <p><a href="../../sobre-mi/index.html#contacto">Contacto</a> · <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a> · <a href="https://www.youtube.com/@lineadepasefutbol" rel="noopener" target="_blank">YouTube</a> · <a href="https://www.instagram.com/lineadepasefutbol/" rel="noopener" target="_blank">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a> · © 2026 Ángel Marqueta Alonso</p>
+  </div>
+</footer>
+</body>
+</html>

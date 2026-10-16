@@ -1,0 +1,15 @@
+El peligro no empieza en el último pase.
+
+Analicé los 240 partidos de la Liga F 2023/24 con un modelo propio de amenaza esperada (xT): cuánto valor gana el balón cuando una jugadora lo lleva, con un pase o en conducción, a una zona desde la que se marca más.
+
+Caroline Graham Hansen suma 0,593 xT neto por 90 minutos, más del doble que la siguiente (mínimo de 900 minutos). Pero hay contexto: ocho de las diez primeras juegan en el Barcelona.
+
+Y un matiz importante: si los pases fallidos restan, el orden cambia bastante. Crear peligro y arriesgar no son lo mismo.
+
+Desliza para ver cómo funciona el modelo, los resultados y lo que el estudio no dice.
+
+Estudio completo, código y método: enlace en la bio.
+
+Datos: StatsBomb Open Data. Temporada 2023/24; no describe el rendimiento actual.
+
+#LigaF #FutbolFemenino #AnaliticaDeportiva #xT #Python #LineaDePase
