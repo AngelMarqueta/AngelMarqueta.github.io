@@ -40,45 +40,43 @@ def main():
 
     (carpeta / "instagram.txt").write_text(f"""¿Y si el grupo 2 se jugara 10.000 veces?
 
-Simulé el resto de la temporada de Primera Federación con un modelo de goles ajustado a los resultados, tras la jornada {j}.
+Línea de pase ha simulado el resto de la temporada de Primera Federación con un modelo de goles ajustado a los resultados de las {j} primeras jornadas.
 
 El Real Zaragoza acaba primero en el {pct(z.ascenso_directo)} de las simulaciones y entre los cinco primeros en el {pct(z.ascenso_o_playoff)}. {lectura}: le siguen {rivales.iloc[0].equipo} ({pct(rivales.iloc[0].ascenso_o_playoff)}) y {rivales.iloc[1].equipo} ({pct(rivales.iloc[1].ascenso_o_playoff)}).
 
-En la jornada {int(inicio.jornada)}, esa probabilidad era del {pct(inicio.ascenso_o_playoff)}.
+Tras la jornada {int(inicio.jornada)}, esa probabilidad era del {pct(inicio.ascenso_o_playoff)}.
 
 Desliza para ver cada puesto posible, el grupo entero y cómo ha cambiado.
 
-La simulación se actualiza cada jornada. Método y código: enlace en la bio.
+La simulación se actualiza después de cada jornada. Método y código: enlace en la bio.
 
 #RealZaragoza #PrimeraFederacion #AnaliticaDeportiva #Python #LineaDePase
 """, encoding="utf-8")
 
     (carpeta / "facebook.txt").write_text(f"""¿Qué opciones tiene de verdad el Real Zaragoza de subir?
 
-Simulé 10.000 veces lo que queda de temporada en el grupo 2 de Primera Federación, con un modelo de goles ajustado a los resultados de las {j} primeras jornadas.
+Línea de pase ha simulado 10.000 veces lo que queda de temporada en el grupo 2 de Primera Federación, con un modelo de goles ajustado a los resultados de las {j} primeras jornadas.
 
 · Primero (ascenso directo): {pct(z.ascenso_directo)}
 · Del segundo al quinto (playoff): {pct(z.playoff)}
 · Descenso: {pct(z.descenso)}
 
-{lectura_fb} en una de cada {round(1 / (1 - z.ascenso_o_playoff))} temporadas simuladas se queda fuera de los cinco primeros. Quedan {38 - j} jornadas.
+{lectura_fb} en el {pct(1 - z.ascenso_o_playoff)} de las temporadas simuladas se queda fuera de los cinco primeros. Quedan {38 - j} jornadas.
 
 Todos los equipos, el método y el código:
 {ENLACE}
 """, encoding="utf-8")
 
-    (carpeta / "linkedin.txt").write_text(f"""Con {j} jornadas, la clasificación dice menos de lo que parece. Lo he medido.
+    (carpeta / "linkedin.txt").write_text(f"""Con {j} jornadas jugadas, la clasificación dice menos de lo que parece. Línea de pase lo ha medido con una simulación Monte Carlo del grupo 2 de Primera Federación, programada en Python:
 
-He montado una simulación Monte Carlo del grupo 2 de Primera Federación en Python:
-
-· Modelo de Poisson con ataque, defensa y ventaja local (Maher, 1982), ajustado solo con resultados oficiales.
+· Modelo de Poisson con ataque, defensa y ventaja local (Maher, 1982), ajustado solo con los resultados de los partidos.
 · Penalización de las fuerzas hacia la media, elegida con validación cruzada dejando fuera una jornada cada vez. {leccion}
 · 10.000 temporadas, con incertidumbre en los parámetros y desempates según el reglamento de la RFEF (puntos y diferencia particular entre empatados, diferencia general, goles a favor).
 · Comprobación previa: los resultados tienen que reproducir la clasificación publicada, o el programa se detiene.
 
 Tras la jornada {j}, el Real Zaragoza asciende directamente en el {pct(z.ascenso_directo)} de las simulaciones y acaba entre los cinco primeros en el {pct(z.ascenso_o_playoff)}.
 
-La simulación se actualiza cada jornada:
+La simulación se actualiza después de cada jornada:
 {ENLACE}
 
 #AnaliticaDeportiva #Python #MonteCarlo #Estadistica #RealZaragoza

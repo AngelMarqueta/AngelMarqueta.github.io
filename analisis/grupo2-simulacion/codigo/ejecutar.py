@@ -75,18 +75,23 @@ def main():
     propios = propios.assign(goles_local_esperados=a, goles_visitante_esperados=b,
                              victoria_local=p1, empate=px, victoria_visitante=p2)
 
-    # Evolución: misma simulación con los datos de cada jornada.
+    # Evolución: misma simulación con los datos de cada jornada anterior. La última
+    # jornada es la simulación principal, para que la gráfica y las cifras coincidan.
+    def fila_evolucion(corte, resumen):
+        fila = resumen[resumen.equipo == EQUIPO].iloc[0]
+        return {"jornada": corte, "ascenso_directo": fila.ascenso_directo,
+                "ascenso_o_playoff": fila.ascenso_o_playoff, "descenso": fila.descenso,
+                "puntos_medios": fila.puntos_medios}
+
     evolucion = []
-    for corte in range(3, jornada + 1):
+    for corte in range(3, jornada):
         hasta = partidos[partidos.jornada <= corte]
         _, pend = partidos_pendientes(hasta)
         m = ajustar(hasta, equipos, penalizacion)
         pu, pt = simular(m, matriz_goles(hasta, equipos), pend, n=4_000, semilla=corte)
         t, _ = resumir(pu, pt, equipos)
-        fila = t[t.equipo == EQUIPO].iloc[0]
-        evolucion.append({"jornada": corte, "ascenso_directo": fila.ascenso_directo,
-                          "ascenso_o_playoff": fila.ascenso_o_playoff, "descenso": fila.descenso,
-                          "puntos_medios": fila.puntos_medios})
+        evolucion.append(fila_evolucion(corte, t))
+    evolucion.append(fila_evolucion(jornada, tabla))
     evolucion = pd.DataFrame(evolucion)
 
     tabla.round(4).to_csv(salida / "probabilidades.csv", index=False)

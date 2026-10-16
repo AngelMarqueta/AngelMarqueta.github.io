@@ -24,7 +24,7 @@ EQUIPO = "Real Zaragoza"
 
 def _pie(jornada, n):
     simulaciones = f"{n:,}".replace(",", ".")
-    return (f"Primera Federación 2026/27, grupo 2 · Tras la jornada {jornada} · Resultados oficiales\n"
+    return (f"Primera Federación 2026/27, grupo 2 · Tras la jornada {jornada} · Resultados: Sofascore y BeSoccer\n"
             f"Modelo de Poisson con ataque, defensa y ventaja local · {simulaciones} simulaciones")
 
 

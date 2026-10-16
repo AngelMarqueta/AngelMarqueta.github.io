@@ -58,7 +58,7 @@ Tarda menos de un minuto.
 
 ## Fuentes
 
-- Resultados oficiales de Primera Federación 2026/27, grupo 2, contrastados con la clasificación de BeSoccer y FotMob.
+- Resultados de Primera Federación 2026/27, grupo 2, tomados de Sofascore y contrastados con la clasificación de BeSoccer.
 - [Normas de competición de Primera Federación 2026/27](https://rfef.es/sites/default/files/2026-06/2._CNL_Primera_Federacion_FINAL.pdf), RFEF.
 - M. J. Maher (1982), *Modelling association football scores*, Statistica Neerlandica 36(3). M. J. Dixon y S. G. Coles (1997), *Modelling association football scores and inefficiencies in the football betting market*, Applied Statistics 46(2).
 

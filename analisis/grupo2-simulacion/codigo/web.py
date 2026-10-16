@@ -21,6 +21,8 @@ EQUIPO = "Real Zaragoza"
 
 
 def pct(valor):
+    if 0 < valor < 0.005:
+        return "<1 %"
     return f"{valor * 100:.0f} %"
 
 
@@ -52,6 +54,7 @@ def main():
     salida = ESTUDIO / "datos" / "salida"
     tabla = pd.read_csv(salida / "probabilidades.csv")
     evolucion = pd.read_csv(salida / "evolucion_zaragoza.csv")
+    distribucion = pd.read_csv(salida / "distribucion_puestos.csv", index_col=0)
     validacion = json.loads((ESTUDIO / "documentacion" / "validacion.json").read_text(encoding="utf-8"))
     jornada = validacion["tras_jornada"]
     z = tabla[tabla.equipo == EQUIPO].iloc[0]
@@ -59,16 +62,22 @@ def main():
     favorito = z.ascenso_o_playoff >= tabla.ascenso_o_playoff.max()
     titular = "Favorito, pero lejos de estar decidido" if favorito else "Todo por decidir"
     frase = "Es el equipo con más opciones del grupo, pero" if favorito else "Aun así,"
+    puesto_probable = int(distribucion.loc[EQUIPO].idxmax())
+    p_puesto = distribucion.loc[EQUIPO].max()
+    if validacion["penalizacion"] >= 16:
+        lectura_penalizacion = "La respuesta fue acercarlas mucho: a estas alturas, los resultados dicen poco de la fuerza real de cada equipo."
+    else:
+        lectura_penalizacion = "Con las jornadas jugadas, los resultados ya permiten separar a los equipos con cierta confianza."
     copiar_recursos()
     foto = json.loads((ESTUDIO / "recursos" / "foto.json").read_text(encoding="utf-8"))
 
     cuerpo = f"""  <section class="cab-proyecto">
     <p class="etiqueta">Investigación · Simulación Monte Carlo</p>
     <h1>¿Y si el grupo 2 se jugara 10.000 veces?</h1>
-    <p class="entradilla">Simulé el resto de la temporada de Primera Federación con un modelo de goles ajustado a los resultados. Tras la jornada {jornada}, el Real Zaragoza acaba entre los cinco primeros en el {pct(z.ascenso_o_playoff)} de las simulaciones.</p>
+    <p class="entradilla">Este estudio simula 10.000 veces el resto de la temporada de Primera Federación con un modelo de goles ajustado a los resultados. Tras la jornada {jornada}, el Real Zaragoza acaba entre los cinco primeros en el {pct(z.ascenso_o_playoff)} de las simulaciones.</p>
     <dl class="ficha-tecnica">
       <div><dt>Pregunta</dt><dd>¿Qué probabilidad tiene cada equipo de ascender, jugar el playoff o descender?</dd></div>
-      <div><dt>Datos</dt><dd>Resultados oficiales de los {validacion['partidos_jugados']} partidos jugados · {validacion['partidos_pendientes']} partidos pendientes</dd></div>
+      <div><dt>Datos</dt><dd>Resultados de los {validacion['partidos_jugados']} partidos jugados · {validacion['partidos_pendientes']} partidos pendientes</dd></div>
       <div><dt>Herramientas</dt><dd>Python (pandas, NumPy, SciPy) · <a href="{CODIGO_GITHUB}">código y datos</a></dd></div>
     </dl>
   </section>
@@ -76,13 +85,13 @@ def main():
 {figura_foto("graficos/simulacion/foto.jpg", foto)}
 
   <section class="seccion lectura">
-    <p class="etiqueta">Lo que sale</p>
+    <p class="etiqueta">Resultados</p>
     <h2>{titular}</h2>
     <p>El Zaragoza termina primero en el <strong>{pct(z.ascenso_directo)}</strong> de las simulaciones y entre el segundo y el quinto en el <strong>{pct(z.playoff)}</strong>. {frase} en el {pct(1 - z.ascenso_o_playoff)} de las temporadas simuladas se queda fuera de los cinco primeros. El riesgo de descenso es del {pct(z.descenso)}.</p>
     <p>En 8 de cada 10 simulaciones acaba con entre {z.puntos_p10:.0f} y {z.puntos_p90:.0f} puntos. Quedan {38 - jornada} jornadas: la tabla de hoy cuenta, pero todavía queda casi toda la temporada.</p>
   </section>
 
-  <figure class="figura"><img src="graficos/simulacion/05_puesto_zaragoza_web.png" width="1600" height="900" alt="Probabilidad de cada puesto final del Real Zaragoza. El más probable es el primero, con un {pct(z.ascenso_directo)}."><figcaption>Probabilidad de cada puesto final del Real Zaragoza.</figcaption></figure>
+  <figure class="figura"><img src="graficos/simulacion/05_puesto_zaragoza_web.png" width="1600" height="900" alt="Probabilidad de cada puesto final del Real Zaragoza. El más probable es el {puesto_probable}.º, con un {pct(p_puesto)}."><figcaption>Probabilidad de cada puesto final del Real Zaragoza.</figcaption></figure>
 
   <section class="seccion lectura">
     <h2>Cómo ha cambiado</h2>
@@ -96,11 +105,11 @@ def main():
   {tabla_html(tabla)}
 
   <section class="seccion lectura">
-    <p class="etiqueta">Cómo lo hice</p>
+    <p class="etiqueta">Método</p>
     <h2>Un modelo de goles y 10.000 temporadas</h2>
     <p>Cada equipo tiene una fuerza de ataque y otra de defensa, y el local juega con ventaja. Los goles de cada equipo en un partido siguen una distribución de Poisson cuya media depende de su ataque, de la defensa del rival y de quién juega en casa. Es el modelo clásico de Maher, el punto de partida de casi todos los modelos de resultados.</p>
-    <p>Con {jornada} jornadas cada equipo ha jugado {jornada} partidos, y una racha corta puede engañar. Por eso las fuerzas se acercan a la media del grupo salvo que los resultados lo justifiquen. Cuánto se acercan lo decidí con validación cruzada: ajusté el modelo dejando fuera una jornada cada vez y me quedé con la opción que mejor predecía la jornada que faltaba. La respuesta fue acercarlas mucho: a estas alturas, los resultados dicen poco de la fuerza real.</p>
-    <p>En cada simulación saco unas fuerzas dentro de su margen de incertidumbre, juego los {validacion['partidos_pendientes']} partidos pendientes y ordeno la tabla con el reglamento de la competición: puntos, puntos y diferencia de goles entre los empatados, diferencia general y goles a favor. Antes de simular, compruebo que los resultados reproducen exactamente la clasificación publicada tras la jornada {jornada}.</p>
+    <p>Con {jornada} jornadas cada equipo ha jugado {jornada} partidos, y una racha corta puede engañar. Por eso las fuerzas se acercan a la media del grupo salvo que los resultados lo justifiquen. Cuánto se acercan se decide con validación cruzada: el modelo se ajusta dejando fuera una jornada cada vez y se elige la opción que mejor predice la jornada que falta. {lectura_penalizacion}</p>
+    <p>En cada simulación se sortean unas fuerzas dentro de su margen de incertidumbre, se juegan los {validacion['partidos_pendientes']} partidos pendientes y la tabla se ordena con el reglamento de la competición: puntos, puntos y diferencia de goles entre los empatados, diferencia general y goles a favor. Antes de simular, el programa comprueba que los resultados reproducen exactamente la clasificación publicada tras la jornada {jornada}; si no, se detiene.</p>
     <h2>Lo que la simulación no sabe</h2>
     <ul>
       <li>No sabe de lesiones, fichajes, sanciones ni cambios de entrenador.</li>
@@ -116,7 +125,7 @@ def main():
     <h2>Datos, código y comprobaciones</h2>
     <p>Siete pruebas automáticas verifican el cálculo de la clasificación, los desempates a dos y a tres, las probabilidades de cada resultado y que el modelo distingue a un equipo fuerte en una liga inventada.</p>
     <p><a class="boton" href="{CODIGO_GITHUB}">Ver el código</a> · <a href="graficos/simulacion/probabilidades.csv" download>Descargar las probabilidades (CSV)</a></p>
-    <p>Resultados: actas oficiales de Primera Federación, contrastados con la clasificación publicada. Reglamento: <a href="https://rfef.es/sites/default/files/2026-06/2._CNL_Primera_Federacion_FINAL.pdf">normas de competición de Primera Federación 2026/27</a> (ascenso del primero, playoff del segundo al quinto y descenso del 16.º al 20.º).</p>
+    <p>Resultados: Sofascore, contrastados con la clasificación de BeSoccer tras cada jornada. Reglamento: <a href="https://rfef.es/sites/default/files/2026-06/2._CNL_Primera_Federacion_FINAL.pdf">normas de competición de Primera Federación 2026/27</a> (ascenso del primero, playoff del segundo al quinto y descenso del 16.º al 20.º).</p>
   </section>"""
     destino = escribir_pagina_zaragoza(
         "simulacion.html",
