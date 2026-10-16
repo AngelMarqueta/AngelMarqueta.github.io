@@ -264,8 +264,9 @@ def portada(titulo, entradilla, cifra="", cifra_texto="", etiqueta="", paleta="w
     ax.text(0.06, y, entradilla, fontsize=21, color=c["cal"], alpha=0.92, va="top",
             linespacing=1.45)
     if cifra:
+        # En la paleta del Zaragoza el acento es el mismo azul del fondo: la cifra va en blanco.
         ax.text(0.06, 0.22, cifra, fontfamily=TITULAR, fontweight=800, fontsize=120,
-                color=c["acento"], va="bottom")
+                color=c["acento"] if paleta == "web" else c["cal"], va="bottom")
         ax.text(0.06, 0.20, cifra_texto, fontsize=18, color=c["cal"], va="top", linespacing=1.45)
     ax.text(0.06, 0.04, "Desliza →", fontsize=16, fontweight=600, color=c["cal"], alpha=0.8)
     return fig

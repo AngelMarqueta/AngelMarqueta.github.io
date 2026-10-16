@@ -49,3 +49,30 @@ def numero(valor, decimales=3):
     """Número con coma decimal y punto de miles, como se escribe en español."""
     texto = f"{valor:,.{decimales}f}"
     return texto.replace(",", " ").replace(".", ",").replace(" ", ".")
+
+
+def escribir_pagina_zaragoza(archivo, titulo, descripcion, migas, cuerpo, fuentes_pie):
+    """
+    Página dentro de la sección del Real Zaragoza (tema azul y blanco, con sus
+    pestañas). Copia cabecera, pestañas y pie de proyectos/real-zaragoza/grupo-2.html,
+    que es la pestaña de la que cuelga.
+    """
+    plantilla = (RAIZ_WEB / "proyectos" / "real-zaragoza" / "grupo-2.html").read_text(encoding="utf-8")
+    cabeza = plantilla.split("</head>", 1)[0]
+    cabeza = re.sub(r"<title>.*?</title>", f"<title>{titulo} · Línea de pase</title>", cabeza)
+    cabeza = re.sub(r'<meta name="description" content=".*?">',
+                    f'<meta name="description" content="{descripcion}">', cabeza)
+    cabeza += (f'<meta property="og:title" content="{titulo}">\n'
+               f'<meta property="og:description" content="{descripcion}">\n'
+               f'<meta property="og:image" content="https://lineadepase.github.io/proyectos/real-zaragoza/graficos/simulacion/compartir.png">\n'
+               '<link rel="stylesheet" href="../../assets/investigacion.css?v=20261016">\n')
+    menu = re.search(r'<header class="cabecera">.*?</header>', plantilla, re.S).group(0)
+    pestanas = re.search(r'<nav class="pestanas".*?</nav>', plantilla, re.S).group(0)
+    pie = re.search(r'<footer class="pie">.*?</footer>', plantilla, re.S).group(0)
+    pie = re.sub(r"<p>Fuentes?:.*?</p>", f"<p>{fuentes_pie}</p>", pie, count=1, flags=re.S)
+    pagina = (f"{cabeza}</head>\n<body>\n{menu}\n\n<main class=\"envoltorio\">\n"
+              f"  <p class=\"migas\"><a href=\"../index.html\">Proyectos</a> / <a href=\"index.html\">Real Zaragoza 2026/27</a> / {migas}</p>\n"
+              f"  {pestanas}\n{cuerpo}\n</main>\n\n{pie}\n</body>\n</html>\n")
+    destino = RAIZ_WEB / "proyectos" / "real-zaragoza" / archivo
+    destino.write_text(pagina, encoding="utf-8")
+    return destino
