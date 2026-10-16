@@ -153,7 +153,7 @@ def generar(jornada):
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../../assets/tema.js"></script>
 <link rel="stylesheet" href="../../assets/estilo.css?v=20261015b">
-<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261016a">
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261016b">
 <script src="../../assets/mejoras.js?v=20261014c" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
@@ -230,6 +230,8 @@ def generar(jornada):
 </html>
 """
     ruta = RAIZ_WEB / "proyectos" / "real-zaragoza" / "previa.html"
+    from presentacion_web import enriquecer
+    html = enriquecer(html, "previa.html", jornada=jornada)
     ruta.write_text(html, encoding="utf-8")
     print(f"Previa generada: {local} – {visitante} (jornada {jornada}).")
 

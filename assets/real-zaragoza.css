@@ -104,3 +104,21 @@
 /* Aire entre los bloques de una misma tarjeta (Goles / Tarjetas, Once / Cambios) */
 .tarjeta h3+ul,.tarjeta h3+p{margin-top:.4rem}
 .tarjeta ul+h3,.tarjeta p+h3{margin-top:1.3rem}
+
+/* Entradas breves y navegación del seguimiento. */
+.pestanas{flex-wrap:wrap;overflow:visible;gap:.35rem;border:0;padding:.5rem 0}
+.pestanas a{flex:0 1 auto;margin:0;border:1px solid var(--linea);border-radius:8px;padding:.65rem .8rem;font-size:.9rem}
+.pestanas a:focus-visible,.mapa-secciones a:focus-visible,summary:focus-visible{outline:3px solid var(--senal);outline-offset:4px}
+.mapa-secciones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.mapa-secciones>a{display:flex;flex-direction:column;align-items:flex-start;border:1px solid var(--linea);background:var(--panel);border-radius:var(--radio);padding:1.3rem;text-decoration:none;color:var(--tinta)}
+.mapa-secciones h3{margin:0 0 .5rem}.mapa-secciones p{color:var(--tinta-suave);margin:0 0 1rem}.mapa-secciones span{font-weight:700;margin-top:auto}
+.mapa-secciones>a:hover{border-color:#4465bc;box-shadow:0 4px 16px #213e9614}
+.previa-destacada{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:center;gap:2rem;padding:clamp(1.2rem,4vw,2.2rem);margin:1.5rem 0;background:var(--panel);border:1px solid var(--linea);border-left:6px solid #4465bc;border-radius:var(--radio)}
+.previa-destacada h2{font-family:var(--f-display);font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:.25rem 0 1rem}
+.fecha-partido{font-weight:600;line-height:1.7}.previa-duelo{display:flex;justify-content:center;align-items:center;gap:1.2rem;text-align:center}
+.previa-duelo>span{display:flex;flex-direction:column;align-items:center;gap:.35rem;font-weight:700}.previa-duelo strong{font-size:2.8rem;line-height:1.2}.previa-duelo small{font-size:.8rem;font-weight:400;color:var(--tinta-suave)}
+.lectura-grafico{font-size:.95rem;line-height:1.7;border-top:1px solid var(--linea);padding-top:1rem;margin-top:1rem;color:var(--tinta)}
+.desplegable{border:1px solid var(--linea);border-radius:var(--radio);padding:1rem;margin:1rem 0;background:var(--panel)}
+.desplegable summary{cursor:pointer;font-weight:700;padding:.35rem}.desplegable[open]>summary{margin-bottom:1rem}.desplegable .figura{margin:1rem 0}
+.guia-grafico h3{margin-top:1.7rem}.guia-grafico p{line-height:1.75}
+@media(max-width:700px){.previa-destacada{grid-template-columns:1fr;gap:1rem}.previa-duelo{border-top:1px solid var(--linea);padding-top:1rem}.previa-duelo strong{font-size:2rem}.mapa-secciones{grid-template-columns:1fr}.pestanas a{flex:0 1 auto;text-align:left;padding:.65rem .75rem;font-size:.86rem}.graficos{grid-template-columns:1fr}}

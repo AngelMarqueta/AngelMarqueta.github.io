@@ -131,20 +131,13 @@ def pagina(titulo, descripcion, cuerpo):
     cabecera = re.sub(r"<title>.*?</title>", f"<title>{e(titulo)} · Línea de pase</title>", cabecera, count=1)
     cabecera = re.sub(r'<meta name="description" content="[^"]*">',
                       f'<meta name="description" content="{e(descripcion)}">', cabecera, count=1)
-    return f"{cabecera}{cuerpo}\n{pie}\n</body>\n</html>\n"
+    from presentacion_web import enriquecer
+    return enriquecer(f"{cabecera}{cuerpo}\n{pie}\n</body>\n</html>\n")
 
 
 def pestanas(activa):
-    """Barra de pestañas del seguimiento. `activa` es la clave de la que se está viendo.
-    Uso aria-current="page" para que un lector de pantalla también sepa dónde está."""
-    enlaces = [("temporada", "index.html", "Temporada"),
-               ("jornadas", "jornadas.html", "Jornada a jornada"),
-               ("ultimo", "ultimo-partido.html", "Último partido"),
-               ("grupo", "grupo-2.html", "Grupo 2")]
-    items = "".join(
-        f'<a href="{url}"{" aria-current=\"page\"" if clave == activa else ""}>{texto}</a>'
-        for clave, url, texto in enlaces)
-    return f'<nav class="pestanas" aria-label="Secciones del seguimiento">{items}</nav>'
+    from presentacion_web import navegacion
+    return navegacion(activa)
 
 
 def subpestanas(liga, actual=None):

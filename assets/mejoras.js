@@ -71,3 +71,13 @@
     corte.textContent='Datos del análisis hasta el '+new Date(d.corte+'T12:00:00').toLocaleDateString('es-ES')+' · Jornada '+d.jornada;
   }).catch(()=>{});
 })();
+
+// La previa mantiene su enlace como archivo después de la hora del encuentro.
+document.querySelectorAll('[data-previa-hasta]').forEach(card=>{
+  const inicio=Date.parse(card.dataset.previaHasta);
+  if(Number.isFinite(inicio)&&Date.now()>=inicio){
+    card.querySelector('.etiqueta').textContent='La previa · Jornada 8';
+    document.querySelectorAll('[data-link-previa]').forEach(a=>a.textContent='Previa: Murcia – Zaragoza');
+    const link=card.querySelector('a');if(link)link.textContent='Leer el análisis previo →';
+  }
+});

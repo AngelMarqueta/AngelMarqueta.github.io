@@ -1,0 +1,58 @@
+{
+  "dominio.png": [
+    "Qué equipos generan más de lo que conceden",
+    "Cada punto es un equipo. Hacia la derecha crea más ocasiones; hacia arriba concede menos, porque ese eje está invertido. Primero busco al Zaragoza y después lo comparo con los equipos que tiene cerca. Estar arriba a la derecha describe un buen equilibrio entre ataque y defensa, no garantiza ganar el siguiente partido."
+  ],
+  "puntos_esperados.png": [
+    "Qué distancia hay entre resultados y ocasiones",
+    "El punto lleno marca los puntos reales y el hueco, los que calcula el modelo a partir del xG de cada partido. Me fijo en la distancia entre ambos: una separación grande invita a revisar los partidos. No significa que un equipo deba devolver puntos ni que el modelo diga quién mereció ganar."
+  ],
+  "eficacia.png": [
+    "Qué pasa al comparar goles y xG",
+    "A la izquierda comparo los goles marcados con el xG a favor. A la derecha, el xG en contra con los goles encajados. Una barra positiva significa más goles de los esperados arriba o menos goles recibidos atrás. Con este gráfico no puedo separar el trabajo del portero, el acierto de los rematadores y la variación propia de pocos partidos."
+  ],
+  "evolucion_xg.png": [
+    "Cómo se construye la diferencia de ocasiones",
+    "La línea suma, jornada a jornada, el xG a favor menos el xG en contra. Si sube, el equipo ha generado más de lo que ha concedido; si baja, ha ocurrido lo contrario. Miro si la ventaja se construye de forma continuada o depende de un partido. El resto de equipos queda en gris para poder seguir a los destacados."
+  ],
+  "tiros_calidad.png": [
+    "Tirar mucho y tirar bien son dos cosas distintas",
+    "Hacia la derecha hay más remates por partido; hacia arriba, mayor xG medio por tiro. Así puedo distinguir un equipo que acumula tiros de otro que llega menos, pero remata desde mejores situaciones según el modelo. El promedio puede ocultar diferencias grandes entre partidos."
+  ],
+  "posesion_peligro.png": [
+    "Cuánto se convierte el balón en peligro",
+    "Cruzo la posesión media con el xG a favor por partido. Me interesa ver si tener más balón viene acompañado de mejores ocasiones. La línea muestra la tendencia del grupo; no demuestra que aumentar la posesión vaya a producir más goles."
+  ],
+  "resumen.png": [
+    "Cómo leo el resumen",
+    "Empiezo por los marcadores y la línea de puntos para situar los resultados. Después miro cuándo llegan los goles y quién aparece en ellos. Son cuatro perspectivas de la misma temporada: las uso juntas para hacerme preguntas, sin convertir siete partidos en una conclusión definitiva."
+  ],
+  "tiros.png": [
+    "Qué me cuentan los remates",
+    "Comparo los tiros de ambos equipos en cada jornada. Es una medida de volumen: un disparo lejano y un remate a un metro de la portería cuentan igual aquí. Las barras más claras avisan de discrepancias entre fuentes en J1 y J3."
+  ],
+  "contexto.png": [
+    "La clasificación y el papel del banquillo",
+    "La clasificación sitúa los puntos del Zaragoza frente al resto. La otra gráfica separa los goles de titulares y de jugadores que entraron después. Esto me ayuda a ver de dónde vienen los goles, pero no mide por sí solo si los cambios mejoraron el juego."
+  ],
+  "equipos_minutos.png": [
+    "El equipo en su liga y sus jugadores",
+    "A la izquierda comparo goles a favor y en contra de los equipos. A la derecha veo quién acumula minutos en el Zaragoza; solo aparecen quienes llegan a 180. Una barra larga habla de continuidad, no de la calidad de su rendimiento."
+  ],
+  "tipo_por_sentido.png": [
+    "Por qué también lo miro en porcentaje",
+    "Los porcentajes permiten comparar los tipos de jugada aunque haya dieciséis goles a favor y diez en contra. Una porción más grande significa que esa jugada pesa más en ese grupo de goles, no que el equipo sea más eficaz cada vez que la intenta."
+  ],
+  "zona_remate.png": [
+    "Dónde termina la jugada",
+    "Agrupo el último toque por zona del campo. Así se ve de un vistazo desde dónde llegan los goles que he podido revisar. Aquí no aparecen todos los tiros fallados: no sirve para calcular qué zona es más eficaz."
+  ],
+  "tiros_area.png": [
+    "Desde dónde se remata",
+    "El color más fuerte señala los tiros desde dentro del área y el más claro, desde fuera. Lo miro junto al xG por tiro: acercarse suele ayudar, pero un remate dentro del área tampoco es siempre una ocasión clara."
+  ],
+  "juego.png": [
+    "Cómo acompaño los datos de ocasiones",
+    "Posesión, centros, duelos y entradas en el último tercio me ayudan a poner contexto al ataque. Los leo por separado, porque sus unidades son distintas. Las entradas en el último tercio solo están disponibles desde J6; lo que falta antes no es un cero."
+  ]
+}

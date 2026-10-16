@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
 <script src="../../assets/tema.js"></script>
 <link rel="stylesheet" href="../../assets/estilo.css?v=20261015b">
-<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261016a">
-<script src="../../assets/mejoras.js?v=20261014c" defer></script>
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261016b">
+<script src="../../assets/mejoras.js?v=20261016b" defer></script>
 <link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
 </head>
 <body>
@@ -32,7 +32,7 @@
 
 <main class="envoltorio">
   <p class="migas"><a href="../index.html">Proyectos</a> / <a href="index.html">Real Zaragoza 2026/27</a> / Goles en vídeo</p>
-  <nav class="pestanas" aria-label="Secciones del seguimiento"><a href="index.html">Temporada</a><a href="jornadas.html">Jornada a jornada</a><a href="ultimo-partido.html">Último partido</a><a href="grupo-2.html">Grupo 2</a></nav>
+  <nav class="pestanas" aria-label="Secciones del seguimiento"><a href="index.html">Resumen</a><a href="previa.html">Previa</a><a href="evolucion.html">Evolución</a><a href="plantilla.html">Plantilla</a><a href="jornadas.html">Jornadas</a><a href="grupo-2.html">Primera Federación · Grupo 2</a></nav>
   <section class="cab-proyecto">
     <img class="escudo-seccion" src="../../assets/real-zaragoza-escudo.png" alt="Escudo del Real Zaragoza" width="52" height="52">
     <p class="etiqueta">Análisis a partir de vídeo · Jornadas 1 a 7</p>
@@ -65,7 +65,7 @@
     <figure class="figura"><img src="graficos/video/inicio.png" alt="Goles a favor y en contra según cómo empieza la jugada: ataque posicional, transición rápida, balón parado y penalti" loading="lazy"><figcaption>Tipo de jugada de cada gol. A la derecha, los goles del Zaragoza; a la izquierda, los que encaja.</figcaption></figure>
     <p>Siete de los dieciséis goles del Zaragoza llegan con el balón controlado en campo rival: combinaciones por dentro, llegadas a línea de fondo o centros. Otros cinco salen de transiciones, casi siempre tras robar en el centro del campo con el rival ya abierto. El balón parado suma tres más (un córner, una falta directa y una falta lateral) y hay un penalti.</p>
     <p>Lo que encaja tiene otro perfil. Solo dos goles en contra nacen de un ataque posicional. El resto son transiciones (tres), balón parado (dos), penaltis (dos) y uno que no se ve en el resumen. Dicho de otra forma: al Zaragoza le cuesta poco tener el balón, pero cuando lo pierde o concede una falta cerca del área es cuando sufre.</p>
-    <figure class="figura"><img src="graficos/video/tipo_por_sentido.png" alt="Porcentaje de goles a favor y en contra de cada tipo de jugada" loading="lazy"><figcaption>El mismo dato en porcentaje, para comparar las dos barras aunque el total sea distinto (16 a favor y 10 en contra).</figcaption></figure>
+    <div class="guia-grafico" data-guia="lectura"><h3>Por qué también lo miro en porcentaje</h3><figure class="figura"><img src="graficos/video/tipo_por_sentido.png" alt="Porcentaje de goles a favor y en contra de cada tipo de jugada" loading="lazy"><figcaption>El mismo dato en porcentaje, para comparar las dos barras aunque el total sea distinto (16 a favor y 10 en contra).</figcaption></figure><p>Los porcentajes permiten comparar los tipos de jugada aunque haya dieciséis goles a favor y diez en contra. Una porción más grande significa que esa jugada pesa más en ese grupo de goles, no que el equipo sea más eficaz cada vez que la intenta.</p></div>
   </section>
 
   <section class="seccion lectura" aria-labelledby="t-donde">
@@ -84,7 +84,7 @@
     <figure class="figura"><img src="graficos/video/ultimo_pase.png" alt="Tipo de último pase en los goles a favor y en contra" loading="lazy"><figcaption>Cómo le llega el balón al goleador.</figcaption></figure>
     <p>El pase que más se repite en los goles a favor es el raso por dentro (cuatro), por delante del centro lateral (tres). Es interesante porque el Zaragoza centra mucho: según Sofascore, 144 centros en siete partidos y solo 37 buenos. El centro le da volumen, pero los goles le llegan más por abajo.</p>
     <p>En contra, el dato que más me preocupa son los rechaces y los balones parados laterales. En el 4-3 de Torremolinos el portero para el primer tiro y el rechace entra con tres defensores alrededor. En Tarragona y en Madrid, dos faltas laterales acaban en gol con siete jugadores del Zaragoza dentro del área: no es falta de gente, es falta de marca.</p>
-    <figure class="figura"><img src="graficos/video/zona_remate.png" alt="Zona del campo desde la que se remata cada gol, a favor y en contra" loading="lazy"><figcaption>Zona del último toque antes del gol.</figcaption></figure>
+    <div class="guia-grafico" data-guia="lectura"><h3>Dónde termina la jugada</h3><figure class="figura"><img src="graficos/video/zona_remate.png" alt="Zona del campo desde la que se remata cada gol, a favor y en contra" loading="lazy"><figcaption>Zona del último toque antes del gol.</figcaption></figure><p>Agrupo el último toque por zona del campo. Así se ve de un vistazo desde dónde llegan los goles que he podido revisar. Aquí no aparecen todos los tiros fallados: no sirve para calcular qué zona es más eficaz.</p></div>
   </section>
 
   <section class="seccion lectura" aria-labelledby="t-cuando">
@@ -109,8 +109,8 @@
     <p>En el total, el Zaragoza lleva 16,1 goles esperados a favor y 9,4 en contra, y en el marcador 16 y 10. Marca lo que genera. Lo que cambia es el reparto: en Tarragona (2,3 de xG y ninguno) y contra el Antequera (2,4 y uno) se quedó corto, y en Torremolinos e Ibiza marcó bastante más de lo esperado. Contra el Teruel fue el partido más dominante, con 3,5 de xG frente a 1,2.</p>
     <figure class="figura"><img src="graficos/video/xg_por_tiro.png" alt="xG medio por tiro del Zaragoza y de sus rivales en cada jornada" loading="lazy"><figcaption>xG dividido entre tiros: cuanto más alto, mejores ocasiones de media.</figcaption></figure>
     <p>Este gráfico me parece el más interesante. Durante las cinco primeras jornadas el Zaragoza tiraba mucho, pero con una calidad media baja (entre 0,07 y 0,13 de xG por tiro). En las dos últimas sube a 0,20–0,21: tira menos desde lejos y llega más dentro del área. En contra, los rivales tiran poco, pero en Torremolinos y ante el Teruel sus disparos fueron de mucha calidad, lo que cuadra con los penaltis y los goles desde el área pequeña.</p>
-    <figure class="figura"><img src="graficos/video/tiros_area.png" alt="Tiros dentro y fuera del área de cada equipo por partido" loading="lazy"><figcaption>Tiros desde dentro del área (color fuerte) y desde fuera (color claro).</figcaption></figure>
-    <figure class="figura"><img src="graficos/video/juego.png" alt="Posesión, centros, duelos ganados y entradas en el último tercio del Zaragoza por partido" loading="lazy"><figcaption>Cómo juega cada partido. Las entradas en el último tercio solo las da Sofascore desde la jornada 6.</figcaption></figure>
+    <div class="guia-grafico" data-guia="lectura"><h3>Desde dónde se remata</h3><figure class="figura"><img src="graficos/video/tiros_area.png" alt="Tiros dentro y fuera del área de cada equipo por partido" loading="lazy"><figcaption>Tiros desde dentro del área (color fuerte) y desde fuera (color claro).</figcaption></figure><p>El color más fuerte señala los tiros desde dentro del área y el más claro, desde fuera. Lo miro junto al xG por tiro: acercarse suele ayudar, pero un remate dentro del área tampoco es siempre una ocasión clara.</p></div>
+    <div class="guia-grafico" data-guia="lectura"><h3>Cómo acompaño los datos de ocasiones</h3><figure class="figura"><img src="graficos/video/juego.png" alt="Posesión, centros, duelos ganados y entradas en el último tercio del Zaragoza por partido" loading="lazy"><figcaption>Cómo juega cada partido. Las entradas en el último tercio solo las da Sofascore desde la jornada 6.</figcaption></figure><p>Posesión, centros, duelos y entradas en el último tercio me ayudan a poner contexto al ataque. Los leo por separado, porque sus unidades son distintas. Las entradas en el último tercio solo están disponibles desde J6; lo que falta antes no es un cero.</p></div>
     <p>El resto de indicadores confirma el estilo: más posesión que el rival en los siete partidos (por encima del 55 % en seis; en Torremolinos, un 51 %). Los duelos son menos claros: gana más de los que pierde en cinco partidos, pero ante el Cartagena (45 %) y el Teruel (40 %) perdió la mayoría. El Atlético Madrileño es el único rival que le tiró casi tanto como recibió: 15 tiros y 3,0 de xG, el peor partido defensivo de la temporada.</p>
   </section>
 

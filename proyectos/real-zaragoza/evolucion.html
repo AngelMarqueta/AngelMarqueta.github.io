@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es" class="tema-real-zaragoza">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cómo evoluciona el Zaragoza · Línea de pase</title>
+<meta name="description" content="Puntos, marcadores, momentos de los goles y tiros. Debajo de cada gráfica cuento cómo la leo y qué no se puede deducir de ella.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+<script src="../../assets/tema.js"></script>
+<link rel="stylesheet" href="../../assets/estilo.css?v=20261015b">
+<link rel="stylesheet" href="../../assets/real-zaragoza.css?v=20261016b">
+<script src="../../assets/mejoras.js?v=20261016b" defer></script>
+<link rel="icon" href="../../assets/icono.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltorio">
+    <a class="marca" href="../../index.html" aria-label="Línea de pase, inicio">
+      <svg viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="lp-cesped" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6b45"/><stop offset="1" stop-color="#3f8f5c"/></linearGradient><clipPath id="lp-campo"><rect x="2" y="2" width="60" height="44" rx="8"/></clipPath></defs><rect x="2" y="2" width="60" height="44" rx="8" fill="url(#lp-cesped)" stroke="#f4f7f1" stroke-opacity=".55" stroke-width="2"/><g clip-path="url(#lp-campo)" fill="#fff" fill-opacity=".08"><rect x="2" y="0" width="7.5" height="48"/><rect x="17" y="0" width="7.5" height="48"/><rect x="32" y="0" width="7.5" height="48"/><rect x="47" y="0" width="7.5" height="48"/></g><g fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.8"><rect x="6" y="6" width="52" height="36" rx="2"/><path d="M32 6v36"/><circle cx="32" cy="24" r="6"/><path d="M58 15h-8v18h8"/></g><path d="M13 34C23 20 35 18 47 23" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 5.6"/><circle cx="12" cy="35" r="3.8" fill="#14261d" stroke="#fff" stroke-width="1.4"/><circle cx="50" cy="24" r="4.6" fill="#ff7a2f" stroke="#fff" stroke-width="1.4"/></svg>
+      Línea de pase
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../../index.html">Inicio</a>
+      <a href="../index.html" aria-current="page">Proyectos</a>
+      <a href="../../videos/index.html">Vídeos</a>
+      <a href="../../sobre-mi/index.html">Sobre mí</a>
+    </nav>
+  </div>
+</header>
+
+<main class="envoltorio">
+<p class="migas"><a href="../index.html">Proyectos</a> / <a href="index.html">Real Zaragoza 2026/27</a></p><nav class="pestanas" aria-label="Secciones del seguimiento"><a href="index.html">Resumen</a><a href="previa.html">Previa</a><a href="evolucion.html" aria-current="page">Evolución</a><a href="plantilla.html">Plantilla</a><a href="jornadas.html">Jornadas</a><a href="grupo-2.html">Primera Federación · Grupo 2</a></nav><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="zgz-mitad"><stop offset="0" stop-color="#213e96"/><stop offset=".5" stop-color="#213e96"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#fff"/></linearGradient></defs></svg><section class="seccion primera"><p class="etiqueta">Real Zaragoza · 2026/27</p><h1>Cómo evoluciona el Zaragoza</h1><p class="entradilla">Puntos, marcadores, momentos de los goles y tiros. Debajo de cada gráfica cuento cómo la leo y qué no se puede deducir de ella.</p><p class="corte-visible" id="corte">Datos de liga hasta la jornada 7 · 11/10/2026</p><p id="estado-datos" role="status"></p></section>
+<section class="seccion" aria-labelledby="t-panel">
+    <p class="etiqueta">Panel</p>
+    <h2 id="t-panel">Partido a partido</h2>
+    <p class="grupo-intro">El filtro cambia las cifras y las cuatro gráficas de esta página. Puedes ampliar cada gráfico; en las tablas del móvil, desliza horizontalmente para consultar todas las columnas.</p>
+    <div class="filtro" role="group" aria-label="Filtrar por sede">
+      <button type="button" data-sede="Todos" aria-pressed="true">Todos</button>
+      <button type="button" data-sede="Casa" aria-pressed="false">En casa</button>
+      <button type="button" data-sede="Fuera" aria-pressed="false">Fuera</button>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="graficos">
+      <div class="tarjeta"><h3>Puntos acumulados</h3><p class="nota">Liga, jornada a jornada</p><div class="grafico" id="g-puntos"></div><p class="lectura-grafico">Aquí voy sumando los puntos de cada jornada: una victoria añade tres, un empate uno y una derrota deja la línea igual. Si elijo casa o fuera, la cuenta empieza de cero y suma solo esos partidos; no es la clasificación general.</p></div>
+      <div class="tarjeta"><h3>Marcadores</h3><p class="nota">Goles a favor y en contra por partido</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div><div class="grafico" id="g-goles"></div><p class="lectura-grafico">Comparo los goles que marca el Zaragoza con los que recibe en cada partido. Me sirve para ver si gana con margen o necesita marcar mucho para compensar lo que encaja. Una victoria por un gol y un 4-4 cuentan historias distintas.</p></div>
+      <div class="tarjeta"><h3>¿Cuándo llegan los goles?</h3><p class="nota">Por tramo de 15 minutos</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>A favor</span><span><i style="background:var(--senal)"></i>En contra</span></div><div class="grafico" id="g-tramos"></div><p class="lectura-grafico">Agrupo los goles en tramos de quince minutos para ver cuándo llegan. Los descuentos de cada parte van en el último tramo. Lo uso para hacerme preguntas sobre los finales de partido; con siete jornadas todavía no diría que haya un patrón fijo.</p></div>
+      <div class="tarjeta"><h3>Tiros</h3><p class="nota">Más claros: partidos en los que el desglose de tiros no cuadra (J1 y J3)</p><div class="leyenda"><span><i style="background:var(--cesped)"></i>Real Zaragoza</span><span><i style="background:var(--muted)"></i>Rival</span></div><div class="grafico" id="g-tiros"></div><p class="lectura-grafico">Aquí cuento remates, no ocasiones claras. Tirar más no significa haber creado más peligro: también importa desde dónde y cómo se tira. Las barras más claras señalan J1 y J3, donde las fuentes no cuadran en el desglose; conviene leerlas con esa reserva.</p></div>
+    </div>
+  </section><section class="seccion" aria-labelledby="t-calendario"><h2 id="t-calendario">Próximos partidos</h2><div class="tarjeta tabla"><table id="t-proximos"><thead><tr><th>J.</th><th>Fecha</th><th>Rival</th><th>Sede</th><th class="n">Pos. rival</th></tr></thead><tbody></tbody></table></div><p class="nota" id="nota-calendario">Posición del rival al cierre de los datos. Las fechas pasadas se ocultan automáticamente.</p><a href="previa.html">Leer la previa del próximo partido →</a></section></main>
+<footer class="pie">
+  <div class="envoltorio">
+    <p>Análisis personal con datos públicos. Línea de pase no tiene relación con el Real Zaragoza ni con ningún otro club o competición.</p>
+    <p><a href="../../sobre-mi/index.html#contacto">Contacto</a> · <a href="https://www.linkedin.com/in/angel-marqueta-alonso-a8831164" rel="noopener" target="_blank">LinkedIn</a> · <a href="https://www.youtube.com/@lineadepasefutbol" rel="noopener" target="_blank">YouTube</a> · <a href="https://www.instagram.com/lineadepasefutbol/" rel="noopener" target="_blank">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61594945036383" rel="noopener" target="_blank">Facebook</a> · © 2026 Ángel Marqueta Alonso</p>
+  </div>
+</footer>
+
+<script src="../../assets/d3.v7.8.5.min.js"></script>
+<script src="../../assets/zaragoza-panel.js?v=20261016b" defer></script>
+</body></html>
