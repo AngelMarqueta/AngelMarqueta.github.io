@@ -18,7 +18,14 @@ real-zaragoza/
 │   ├── informe.py         página del informe completo
 │   ├── previa.py          previa del próximo partido
 │   ├── tarjeta_dato.py    imagen de «El dato de la jornada» para LinkedIn
-│   └── comprobar.R        repite los cálculos en R y los compara
+│   ├── comprobar.R        repite los cálculos en R y los compara (ejecuta las piezas de R/)
+│   └── R/
+│       ├── utilidades.R   leer CSV en UTF-8 y comparar una tabla de R con la de Python
+│       ├── datos.R        carga entrada y salida y se queda con la liga
+│       ├── sede.R         comprobación de puntos, goles y porterías a cero por sede
+│       ├── minutos.R      comprobación de minutos por jugador
+│       ├── goles.R        comprobación de goles, asistencias y goles desde el banquillo
+│       └── resumen.R      resumen que se imprime cuando todo cuadra
 ├── textos/
 │   ├── conclusiones.html  conclusiones del informe, escritas a mano
 │   └── dato_jornada.json  texto de la tarjeta de la semana
