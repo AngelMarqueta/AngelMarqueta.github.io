@@ -66,7 +66,7 @@ def main():
     <aside class="aviso-historico" aria-label="Periodo del análisis"><strong>ANÁLISIS HISTÓRICO · 2023/24</strong><span>Datos de la Liga F 2023/24, temporada terminada en 2024. No describe la temporada actual.</span></aside>
     <p class="etiqueta">Investigación · Fútbol femenino · Liga F 2023/24</p>
     <h1>El peligro empieza antes del último pase</h1>
-    <p class="entradilla">Los goles y las asistencias solo cuentan el final de la jugada. Con los 240 partidos de la Liga F 2023/24 medí quién acerca el balón a las zonas desde las que se marca, con pases y conducciones.</p>
+    <p class="entradilla">Los goles y las asistencias solo cuentan el final de la jugada. Este estudio usa los 240 partidos de la Liga F 2023/24 para medir quién acerca el balón, con pases y conducciones, a las zonas desde las que se marca.</p>
     <dl class="ficha-tecnica">
       <div><dt>Pregunta</dt><dd>¿Qué jugadoras hacen avanzar el peligro antes del tiro?</dd></div>
       <div><dt>Datos</dt><dd>StatsBomb Open Data · {len(ranking.groupby('equipo'))} equipos · {acciones_txt} acciones de juego abierto</dd></div>
@@ -79,7 +79,7 @@ def main():
   <nav class="accesos-seccion" aria-label="Secciones del artículo"><a href="#resultado">Resultados</a><a href="#metodo">Cómo se calcula</a><a href="#limites">Límites</a><a href="#fuentes">Fuentes y código</a></nav>
 
   <section class="seccion lectura" id="resultado">
-    <p class="etiqueta">Lo que encontré</p>
+    <p class="etiqueta">Resultados</p>
     <h2>¿Quién hace avanzar el peligro?</h2>
     <p>Antes del último pase, alguien ha llevado el balón desde una zona de poco valor hasta otra desde la que es más fácil acabar en gol. La amenaza esperada (<em>expected threat</em>, xT) sirve para medir esa parte de la construcción.</p>
     <p><strong>{l1.jugadora} suma {numero(l1.xt_neto_90)} xT neto por 90 minutos</strong>, más del doble que la siguiente. Detrás aparecen {l2.jugadora} ({numero(l2.xt_neto_90)}) y {l3.jugadora} ({numero(l3.xt_neto_90)}). Solo cuentan las jugadoras con al menos 900 minutos.</p>
@@ -96,11 +96,11 @@ def main():
   {tabla_html(top)}
 
   <section class="seccion lectura" id="metodo">
-    <p class="etiqueta">Cómo lo hice</p>
+    <p class="etiqueta">Método</p>
     <h2>Valor del destino menos valor del origen</h2>
-    <p>Dividí el campo en 96 zonas, 12 a lo largo y 8 a lo ancho. Para cada zona calculé la probabilidad de tirar y marcar desde ella y la de mover el balón con éxito a cada una de las demás. Resolviendo ese sistema por iteración, cada zona recibe un valor: la probabilidad de que la jugada acabe en gol si el balón está ahí.</p>
+    <p>El campo se divide en 96 zonas, 12 a lo largo y 8 a lo ancho. Para cada zona se calcula la probabilidad de tirar y marcar desde ella y la de mover el balón con éxito a cada una de las demás. Resolviendo ese sistema por iteración, cada zona recibe un valor: la probabilidad de que la jugada acabe en gol si el balón está ahí.</p>
     <p>Un pase o una conducción completados suman el valor de la zona de destino menos el de la de origen. Ir hacia una zona más valiosa suma; volver atrás resta.</p>
-    <p>Para no valorar un partido con un modelo que ya lo ha visto, separé los partidos en cinco grupos y valoré cada grupo con un modelo ajustado con los otros cuatro. Los minutos de cada jugadora los reconstruí con las alineaciones, los cambios y las expulsiones.</p>
+    <p>Para no valorar un partido con un modelo que ya lo ha visto, los partidos se separan en cinco grupos y cada grupo se valora con un modelo ajustado con los otros cuatro. Los minutos de cada jugadora se reconstruyen con las alineaciones, los cambios y las expulsiones.</p>
   </section>
 
   <div class="pareja-figuras">
@@ -111,7 +111,7 @@ def main():
   <section class="seccion lectura" id="limites">
     <p class="etiqueta">La comprobación que cambia la lectura</p>
     <h2>Crear peligro y arriesgar no son lo mismo</h2>
-    <p>El orden apenas cambia si uso una cuadrícula más gruesa o más fina: la correlación de rangos es {numero(sens.get('8x6', 0))} con 8 × 6 zonas y {numero(sens.get('16x12', 0))} con 16 × 12. En cambio, si los pases fallidos restan el valor de la zona donde se pierden, la correlación baja a <strong>{numero(sens.get('penalizacion de pases fallidos', 0), 2)}</strong>.</p>
+    <p>El orden apenas cambia con una cuadrícula más gruesa o más fina: la correlación de rangos es {numero(sens.get('8x6', 0))} con 8 × 6 zonas y {numero(sens.get('16x12', 0))} con 16 × 12. En cambio, si los pases fallidos restan el valor de la zona donde se pierden, la correlación baja a <strong>{numero(sens.get('penalizacion de pases fallidos', 0), 2)}</strong>.</p>
     <p>Por eso el titular tiene que ser preciso: la medida principal habla del valor que añaden las acciones completadas. Una medida que castigue las pérdidas responde a otra pregunta.</p>
     <h2>Hasta dónde llega este análisis</h2>
     <ul>
@@ -125,7 +125,7 @@ def main():
   <section class="seccion lectura" id="fuentes">
     <p class="etiqueta">Trabajo verificable</p>
     <h2>Datos, código y comprobaciones</h2>
-    <p>Revisé {numero(validacion['eventos'], 0)} eventos de los 240 partidos, sin identificadores duplicados ni coordenadas fuera del campo. El código pasa siete pruebas automáticas y el cuaderno explica cada paso.</p>
+    <p>Se revisaron {numero(validacion['eventos'], 0)} eventos de los 240 partidos, sin identificadores duplicados ni coordenadas fuera del campo. El código pasa siete pruebas automáticas y el cuaderno explica cada paso.</p>
     <p><a class="boton" href="{CODIGO_GITHUB}">Ver el código y el cuaderno</a></p>
     <p><a href="jugadoras_xt.csv" download>Descargar los resultados por jugadora (CSV)</a>. Incluye a las jugadoras con menos de 900 minutos, marcadas como no elegibles.</p>
     <p>Fuente: <a href="https://github.com/hudl/open-data">StatsBomb Open Data</a>. Los eventos originales no se redistribuyen, como pide su <a href="{LICENCIA}">acuerdo de uso</a>. Método basado en <a href="https://karun.in/blog/expected-threat.html">Karun Singh</a>, con implementación propia.</p>

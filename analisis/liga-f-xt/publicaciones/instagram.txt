@@ -1,6 +1,6 @@
 El peligro no empieza en el último pase.
 
-Analicé los 240 partidos de la Liga F 2023/24 con un modelo propio de amenaza esperada (xT): cuánto valor gana el balón cuando una jugadora lo lleva, con un pase o en conducción, a una zona desde la que se marca más.
+Línea de pase ha analizado los 240 partidos de la Liga F 2023/24 con un modelo propio de amenaza esperada (xT): cuánto valor gana el balón cuando una jugadora lo lleva, con un pase o en conducción, a una zona desde la que se marca más.
 
 Caroline Graham Hansen suma 0,593 xT neto por 90 minutos, más del doble que la siguiente (mínimo de 900 minutos). Pero hay contexto: ocho de las diez primeras juegan en el Barcelona.
 

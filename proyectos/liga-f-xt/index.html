@@ -39,7 +39,7 @@
     <aside class="aviso-historico" aria-label="Periodo del análisis"><strong>ANÁLISIS HISTÓRICO · 2023/24</strong><span>Datos de la Liga F 2023/24, temporada terminada en 2024. No describe la temporada actual.</span></aside>
     <p class="etiqueta">Investigación · Fútbol femenino · Liga F 2023/24</p>
     <h1>El peligro empieza antes del último pase</h1>
-    <p class="entradilla">Los goles y las asistencias solo cuentan el final de la jugada. Con los 240 partidos de la Liga F 2023/24 medí quién acerca el balón a las zonas desde las que se marca, con pases y conducciones.</p>
+    <p class="entradilla">Los goles y las asistencias solo cuentan el final de la jugada. Este estudio usa los 240 partidos de la Liga F 2023/24 para medir quién acerca el balón, con pases y conducciones, a las zonas desde las que se marca.</p>
     <dl class="ficha-tecnica">
       <div><dt>Pregunta</dt><dd>¿Qué jugadoras hacen avanzar el peligro antes del tiro?</dd></div>
       <div><dt>Datos</dt><dd>StatsBomb Open Data · 16 equipos · 168.296 acciones de juego abierto</dd></div>
@@ -52,7 +52,7 @@
   <nav class="accesos-seccion" aria-label="Secciones del artículo"><a href="#resultado">Resultados</a><a href="#metodo">Cómo se calcula</a><a href="#limites">Límites</a><a href="#fuentes">Fuentes y código</a></nav>
 
   <section class="seccion lectura" id="resultado">
-    <p class="etiqueta">Lo que encontré</p>
+    <p class="etiqueta">Resultados</p>
     <h2>¿Quién hace avanzar el peligro?</h2>
     <p>Antes del último pase, alguien ha llevado el balón desde una zona de poco valor hasta otra desde la que es más fácil acabar en gol. La amenaza esperada (<em>expected threat</em>, xT) sirve para medir esa parte de la construcción.</p>
     <p><strong>Caroline Graham Hansen suma 0,593 xT neto por 90 minutos</strong>, más del doble que la siguiente. Detrás aparecen Mariona Caldentey (0,251) y Patri Guijarro (0,231). Solo cuentan las jugadoras con al menos 900 minutos.</p>
@@ -69,11 +69,11 @@
   <div class="tabla-editorial" role="region" aria-label="Diez primeras jugadoras, tabla desplazable" tabindex="0"><table><caption>Diez primeras por xT neto por 90 minutos · mínimo 900 minutos</caption><thead><tr><th scope="col">Jugadora</th><th scope="col">Equipo en 2023/24</th><th scope="col" class="num">Minutos</th><th scope="col" class="num">xT/90</th><th scope="col" class="num">Intervalo 95 %</th></tr></thead><tbody><tr class="destacada"><th scope="row">Caroline Graham Hansen</th><td>Barcelona WFC</td><td class="num">1.673</td><td class="num"><strong>0,593</strong></td><td class="num">0,488–0,714</td></tr><tr><th scope="row">Mariona Caldentey</th><td>Barcelona WFC</td><td class="num">1.505</td><td class="num"><strong>0,251</strong></td><td class="num">0,167–0,346</td></tr><tr><th scope="row">Patri Guijarro</th><td>Barcelona WFC</td><td class="num">1.721</td><td class="num"><strong>0,231</strong></td><td class="num">0,170–0,301</td></tr><tr><th scope="row">Irene Paredes</th><td>Barcelona WFC</td><td class="num">1.306</td><td class="num"><strong>0,210</strong></td><td class="num">0,136–0,307</td></tr><tr><th scope="row">Aitana Bonmati</th><td>Barcelona WFC</td><td class="num">1.634</td><td class="num"><strong>0,205</strong></td><td class="num">0,115–0,284</td></tr><tr><th scope="row">Esmee Brugts</th><td>Barcelona WFC</td><td class="num">1.529</td><td class="num"><strong>0,198</strong></td><td class="num">0,112–0,298</td></tr><tr><th scope="row">Lucy Bronze</th><td>Barcelona WFC</td><td class="num">1.401</td><td class="num"><strong>0,189</strong></td><td class="num">0,104–0,277</td></tr><tr><th scope="row">Ona Batlle</th><td>Barcelona WFC</td><td class="num">1.675</td><td class="num"><strong>0,188</strong></td><td class="num">0,117–0,272</td></tr><tr><th scope="row">Racheal Kundananji</th><td>Madrid CFF</td><td class="num">1.082</td><td class="num"><strong>0,181</strong></td><td class="num">0,102–0,265</td></tr><tr><th scope="row">Olga Carmona</th><td>Real Madrid CF W</td><td class="num">1.979</td><td class="num"><strong>0,174</strong></td><td class="num">0,124–0,221</td></tr></tbody></table></div>
 
   <section class="seccion lectura" id="metodo">
-    <p class="etiqueta">Cómo lo hice</p>
+    <p class="etiqueta">Método</p>
     <h2>Valor del destino menos valor del origen</h2>
-    <p>Dividí el campo en 96 zonas, 12 a lo largo y 8 a lo ancho. Para cada zona calculé la probabilidad de tirar y marcar desde ella y la de mover el balón con éxito a cada una de las demás. Resolviendo ese sistema por iteración, cada zona recibe un valor: la probabilidad de que la jugada acabe en gol si el balón está ahí.</p>
+    <p>El campo se divide en 96 zonas, 12 a lo largo y 8 a lo ancho. Para cada zona se calcula la probabilidad de tirar y marcar desde ella y la de mover el balón con éxito a cada una de las demás. Resolviendo ese sistema por iteración, cada zona recibe un valor: la probabilidad de que la jugada acabe en gol si el balón está ahí.</p>
     <p>Un pase o una conducción completados suman el valor de la zona de destino menos el de la de origen. Ir hacia una zona más valiosa suma; volver atrás resta.</p>
-    <p>Para no valorar un partido con un modelo que ya lo ha visto, separé los partidos en cinco grupos y valoré cada grupo con un modelo ajustado con los otros cuatro. Los minutos de cada jugadora los reconstruí con las alineaciones, los cambios y las expulsiones.</p>
+    <p>Para no valorar un partido con un modelo que ya lo ha visto, los partidos se separan en cinco grupos y cada grupo se valora con un modelo ajustado con los otros cuatro. Los minutos de cada jugadora se reconstruyen con las alineaciones, los cambios y las expulsiones.</p>
   </section>
 
   <div class="pareja-figuras">
@@ -84,7 +84,7 @@
   <section class="seccion lectura" id="limites">
     <p class="etiqueta">La comprobación que cambia la lectura</p>
     <h2>Crear peligro y arriesgar no son lo mismo</h2>
-    <p>El orden apenas cambia si uso una cuadrícula más gruesa o más fina: la correlación de rangos es 0,956 con 8 × 6 zonas y 0,973 con 16 × 12. En cambio, si los pases fallidos restan el valor de la zona donde se pierden, la correlación baja a <strong>0,46</strong>.</p>
+    <p>El orden apenas cambia con una cuadrícula más gruesa o más fina: la correlación de rangos es 0,956 con 8 × 6 zonas y 0,973 con 16 × 12. En cambio, si los pases fallidos restan el valor de la zona donde se pierden, la correlación baja a <strong>0,46</strong>.</p>
     <p>Por eso el titular tiene que ser preciso: la medida principal habla del valor que añaden las acciones completadas. Una medida que castigue las pérdidas responde a otra pregunta.</p>
     <h2>Hasta dónde llega este análisis</h2>
     <ul>
@@ -98,7 +98,7 @@
   <section class="seccion lectura" id="fuentes">
     <p class="etiqueta">Trabajo verificable</p>
     <h2>Datos, código y comprobaciones</h2>
-    <p>Revisé 835.429 eventos de los 240 partidos, sin identificadores duplicados ni coordenadas fuera del campo. El código pasa siete pruebas automáticas y el cuaderno explica cada paso.</p>
+    <p>Se revisaron 835.429 eventos de los 240 partidos, sin identificadores duplicados ni coordenadas fuera del campo. El código pasa siete pruebas automáticas y el cuaderno explica cada paso.</p>
     <p><a class="boton" href="https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/liga-f-xt">Ver el código y el cuaderno</a></p>
     <p><a href="jugadoras_xt.csv" download>Descargar los resultados por jugadora (CSV)</a>. Incluye a las jugadoras con menos de 900 minutos, marcadas como no elegibles.</p>
     <p>Fuente: <a href="https://github.com/hudl/open-data">StatsBomb Open Data</a>. Los eventos originales no se redistribuyen, como pide su <a href="https://github.com/hudl/open-data/blob/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/LICENSE.pdf">acuerdo de uso</a>. Método basado en <a href="https://karun.in/blog/expected-threat.html">Karun Singh</a>, con implementación propia.</p>
