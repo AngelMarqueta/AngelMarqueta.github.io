@@ -1,0 +1,67 @@
+jugadora,pases_red,intermediacion,pagerank,x,y,toques,partido_id,rival,fase
+Laia Aleixandri,98,0.3889,0.148,59.8561,23.4071,98,3998839,Portugal,Group Stage
+Mariona Caldentey,76,0.2222,0.1097,77.7447,64.0487,76,3998839,Portugal,Group Stage
+Olga Carmona,72,0.0944,0.1188,78.6569,7.3861,72,3998839,Portugal,Group Stage
+Alexia Putellas,68,0.0278,0.1165,78.55,22.8647,68,3998839,Portugal,Group Stage
+Ona Batlle,63,0.0667,0.0975,75.1317,64.173,63,3998839,Portugal,Group Stage
+Vicky López,60,0.0444,0.1036,82.3583,44.6817,60,3998839,Portugal,Group Stage
+María Méndez,54,0.2111,0.0794,51.6722,52.3148,54,3998839,Portugal,Group Stage
+Claudia Pina,53,0.0,0.1027,86.7962,17.8887,53,3998839,Portugal,Group Stage
+Patri Guijarro,40,0.0,0.0579,66.1375,53.6525,40,3998839,Portugal,Group Stage
+Adriana Nanclares,18,0.0,0.0355,20.5167,38.3,18,3998839,Portugal,Group Stage
+Esther Gonzalez,10,0.0,0.0304,101.43,48.28,10,3998839,Portugal,Group Stage
+Patri Guijarro,111,0.3333,0.1361,71.0775,39.0459,111,3998847,Belgium,Group Stage
+Laia Aleixandri,108,0.2778,0.123,50.1194,23.7324,108,3998847,Belgium,Group Stage
+Mariona Caldentey,87,0.1944,0.1301,79.2069,51.0839,87,3998847,Belgium,Group Stage
+Irene Paredes,82,0.1444,0.0933,51.3024,50.7354,82,3998847,Belgium,Group Stage
+Ona Batlle,73,0.1333,0.0991,77.7301,65.8068,73,3998847,Belgium,Group Stage
+Alexia Putellas,72,0.0333,0.1089,75.9819,31.9569,72,3998847,Belgium,Group Stage
+Olga Carmona,61,0.0,0.0834,73.2623,9.4984,61,3998847,Belgium,Group Stage
+Claudia Pina,55,0.0,0.087,79.0309,34.3255,55,3998847,Belgium,Group Stage
+Vicky López,48,0.0,0.075,81.0,48.9771,48,3998847,Belgium,Group Stage
+Adriana Nanclares,21,0.0,0.0298,19.6905,44.2333,21,3998847,Belgium,Group Stage
+Esther Gonzalez,16,0.0,0.0345,97.8188,39.7875,16,3998847,Belgium,Group Stage
+Patri Guijarro,142,0.2111,0.1326,65.1803,38.3958,142,3998855,Italy,Group Stage
+María Méndez,131,0.3222,0.1111,54.2496,21.1794,131,3998855,Italy,Group Stage
+Jana Fernandez,122,0.1556,0.1185,56.7557,67.6754,122,3998855,Italy,Group Stage
+Irene Paredes,114,0.1556,0.0987,49.8009,46.8079,114,3998855,Italy,Group Stage
+Leila Ouahabi,95,0.0,0.1022,77.6579,6.0389,95,3998855,Italy,Group Stage
+Aitana Bonmati,91,0.0444,0.1039,71.0934,56.778,91,3998855,Italy,Group Stage
+Alexia Putellas,87,0.2,0.1008,77.8218,24.7782,87,3998855,Italy,Group Stage
+Mariona Caldentey,85,0.1667,0.0929,80.4647,15.6071,85,3998855,Italy,Group Stage
+Athenea del Castillo,58,0.0,0.0686,77.7983,69.9207,58,3998855,Italy,Group Stage
+Adriana Nanclares,33,0.0,0.0376,16.9818,36.7606,33,3998855,Italy,Group Stage
+Salma Paralluelo,18,0.0,0.0329,88.8611,32.15,18,3998855,Italy,Group Stage
+Olga Carmona,96,0.2,0.1135,73.1792,11.4469,96,4018356,Switzerland,Quarter-finals
+Aitana Bonmati,95,0.0556,0.1221,83.4284,58.4958,95,4018356,Switzerland,Quarter-finals
+Mariona Caldentey,92,0.1444,0.1213,86.0772,44.8228,92,4018356,Switzerland,Quarter-finals
+Ona Batlle,84,0.0778,0.1041,73.9167,63.2369,84,4018356,Switzerland,Quarter-finals
+Irene Paredes,82,0.15,0.0881,43.5793,51.189,82,4018356,Switzerland,Quarter-finals
+Laia Aleixandri,80,0.1167,0.0878,53.62,26.4337,80,4018356,Switzerland,Quarter-finals
+Alexia Putellas,73,0.0556,0.0978,76.0247,21.5438,73,4018356,Switzerland,Quarter-finals
+Patri Guijarro,73,0.0556,0.0825,71.6014,45.0877,73,4018356,Switzerland,Quarter-finals
+Claudia Pina,69,0.0556,0.0978,85.1609,43.6638,69,4018356,Switzerland,Quarter-finals
+Cata Coll,29,0.0,0.0393,17.8414,41.6966,29,4018356,Switzerland,Quarter-finals
+Esther Gonzalez,23,0.0,0.0456,94.313,40.8522,23,4018356,Switzerland,Quarter-finals
+Patri Guijarro,126,0.3667,0.1499,59.2619,42.2667,126,4020077,Germany,Semi-finals
+Irene Paredes,117,0.3222,0.1255,45.2521,45.7667,117,4020077,Germany,Semi-finals
+Aitana Bonmati,92,0.0778,0.1154,65.0489,58.1043,92,4020077,Germany,Semi-finals
+Mariona Caldentey,85,0.0667,0.117,69.9365,70.2635,85,4020077,Germany,Semi-finals
+María Méndez,84,0.1278,0.0974,51.5083,20.3536,84,4020077,Germany,Semi-finals
+Ona Batlle,71,0.0,0.0836,66.9817,68.5197,71,4020077,Germany,Semi-finals
+Alexia Putellas,55,0.0,0.0807,69.9945,29.8891,55,4020077,Germany,Semi-finals
+Claudia Pina,53,0.0056,0.0845,74.2415,13.9151,53,4020077,Germany,Semi-finals
+Olga Carmona,52,0.0222,0.0835,70.3923,11.3212,52,4020077,Germany,Semi-finals
+Cata Coll,21,0.0,0.029,21.2905,41.7952,21,4020077,Germany,Semi-finals
+Esther Gonzalez,18,0.0,0.0336,79.9667,36.9944,18,4020077,Germany,Semi-finals
+Laia Aleixandri,123,0.4111,0.137,55.1366,22.4545,123,4020846,England,Final
+Ona Batlle,95,0.2111,0.1147,68.2063,66.3737,95,4020846,England,Final
+Irene Paredes,93,0.3222,0.0977,49.4892,47.7602,93,4020846,England,Final
+Aitana Bonmati,91,0.1278,0.1154,73.4198,54.6473,91,4020846,England,Final
+Mariona Caldentey,82,0.0667,0.1141,78.661,12.4061,82,4020846,England,Final
+Alexia Putellas,78,0.0278,0.1062,73.1603,27.0256,78,4020846,England,Final
+Olga Carmona,72,0.1389,0.1013,66.5278,8.9569,72,4020846,England,Final
+Patri Guijarro,70,0.0,0.0901,60.4243,37.1586,70,4020846,England,Final
+Athenea del Castillo,37,0.0,0.0576,88.0892,50.5676,37,4020846,England,Final
+Cata Coll,26,0.0,0.0343,11.75,36.4846,26,4020846,England,Final
+Esther Gonzalez,15,0.0,0.0317,80.86,30.84,15,4020846,England,Final

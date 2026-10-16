@@ -1,0 +1,7 @@
+partido_id,fecha,fase,rival,resultado,parte_corte,minuto_corte,minutos_red,pases_red,pases_por_minuto,jugadoras,conexiones,densidad,centralizacion,pareja_principal,pases_pareja_principal,jugadora_mas_central
+3998839,2025-07-03,Group Stage,Portugal,5-0,2,45.0,48.0,306,6.37,11,75,0.682,0.476,Laia Aleixandri → Olga Carmona,19,Laia Aleixandri
+3998847,2025-07-07,Group Stage,Belgium,6-2,2,45.0,46.2,367,7.95,11,83,0.755,0.439,Laia Aleixandri → Irene Paredes,17,Patri Guijarro
+3998855,2025-07-11,Group Stage,Italy,3-1,2,57.4,61.4,488,7.94,11,83,0.755,0.413,Irene Paredes → María Méndez,25,María Méndez
+4018356,2025-07-18,Quarter-finals,Switzerland,2-0,2,61.7,63.7,398,6.24,11,91,0.827,0.271,Olga Carmona → Alexia Putellas,18,Olga Carmona
+4020077,2025-07-23,Semi-finals,Germany,1-0,2,67.1,68.4,387,5.66,11,80,0.727,0.486,Aitana Bonmati → Mariona Caldentey,20,Patri Guijarro
+4020846,2025-07-27,Final,England,1-1,2,70.3,71.6,391,5.46,11,79,0.718,0.464,Irene Paredes → Laia Aleixandri,21,Laia Aleixandri

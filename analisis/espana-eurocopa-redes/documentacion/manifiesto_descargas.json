@@ -1,0 +1,103 @@
+{
+  "commit": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "archivos": [
+    {
+      "ruta": "data/matches/53/315.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/53/315.json",
+      "sha256": "e3cb69837963e9c87ac705eb74f995920e36a69a8a7775caa85f5f8ae3da03a8",
+      "bytes": 58200,
+      "fecha_descarga_utc": "2026-10-16T13:13:52+00:00"
+    },
+    {
+      "ruta": "data/events/3998839.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3998839.json",
+      "sha256": "bc790eabbe12623ea13a511c4e0f0d9d3405c01bea7fc939762cf19597ca0b47",
+      "bytes": 3064968,
+      "fecha_descarga_utc": "2026-10-16T13:13:53+00:00"
+    },
+    {
+      "ruta": "data/lineups/3998839.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3998839.json",
+      "sha256": "0c3fbb9efec58b94869e6f3f96e0e7932a645048c393da8a73ec3cf794e312c4",
+      "bytes": 23002,
+      "fecha_descarga_utc": "2026-10-16T13:13:53+00:00"
+    },
+    {
+      "ruta": "data/events/3998847.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3998847.json",
+      "sha256": "2f50a5dbd97526ad2d90398825b5ece5f243ba405422fb229627e466d455ad7a",
+      "bytes": 3176158,
+      "fecha_descarga_utc": "2026-10-16T13:13:53+00:00"
+    },
+    {
+      "ruta": "data/lineups/3998847.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3998847.json",
+      "sha256": "5494bbd6149c72a5acebb1bd52fd7f19b60044511e708d95169759893fb7b4e1",
+      "bytes": 23232,
+      "fecha_descarga_utc": "2026-10-16T13:13:53+00:00"
+    },
+    {
+      "ruta": "data/events/3998855.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3998855.json",
+      "sha256": "5867e0282db9e77b90117c5a7feb569afd10894511f77fe34d007471b1c847a5",
+      "bytes": 3312480,
+      "fecha_descarga_utc": "2026-10-16T13:13:54+00:00"
+    },
+    {
+      "ruta": "data/lineups/3998855.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3998855.json",
+      "sha256": "d2b0b87b6efd96ae32248e61f807bc4f06b41cde17e03e5fa9b5b7c82f667603",
+      "bytes": 19616,
+      "fecha_descarga_utc": "2026-10-16T13:13:54+00:00"
+    },
+    {
+      "ruta": "data/events/4018356.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/4018356.json",
+      "sha256": "76e36e16141a7b15bdde9c52cc0fa870a3ac4480473fd4b39b54fc4f92d31029",
+      "bytes": 3196759,
+      "fecha_descarga_utc": "2026-10-16T13:13:54+00:00"
+    },
+    {
+      "ruta": "data/lineups/4018356.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/4018356.json",
+      "sha256": "af3086161400be15cdea048f1d361245a712f49aad40b6bc3ba7efccb3552686",
+      "bytes": 26093,
+      "fecha_descarga_utc": "2026-10-16T13:13:55+00:00"
+    },
+    {
+      "ruta": "data/events/4020077.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/4020077.json",
+      "sha256": "daecd2a565496937a8151754d7bd4095083e432a9b6fde51ddd7b4570e4f6049",
+      "bytes": 3799803,
+      "fecha_descarga_utc": "2026-10-16T13:13:55+00:00"
+    },
+    {
+      "ruta": "data/lineups/4020077.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/4020077.json",
+      "sha256": "9fd5a568ca2597fbe2737951336e950475ba839228bc5935ba7a97d4d888736f",
+      "bytes": 21325,
+      "fecha_descarga_utc": "2026-10-16T13:13:55+00:00"
+    },
+    {
+      "ruta": "data/events/4020846.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/4020846.json",
+      "sha256": "6e108f40ffe4d1cb99ced7600ab3bd85b38b58e642cb643c264b28515319b976",
+      "bytes": 4151382,
+      "fecha_descarga_utc": "2026-10-16T13:13:56+00:00"
+    },
+    {
+      "ruta": "data/lineups/4020846.json",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/4020846.json",
+      "sha256": "fd5f9001e8f2f0e5bb6869ce25087d73bb5a11370dbf90779e53f3701e5a770b",
+      "bytes": 21219,
+      "fecha_descarga_utc": "2026-10-16T13:13:56+00:00"
+    },
+    {
+      "ruta": "LICENSE.pdf",
+      "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/LICENSE.pdf",
+      "sha256": "a5462e69aeb71a39268b760b110c5c2190a2e0cee3015ba976f66bd71f6c2bb4",
+      "bytes": 165130,
+      "fecha_descarga_utc": "2026-10-16T13:06:48+00:00"
+    }
+  ]
+}

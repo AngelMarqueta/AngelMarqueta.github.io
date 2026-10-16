@@ -1,0 +1,10 @@
+pandas>=2.0
+numpy>=1.24
+networkx>=3.0
+matplotlib>=3.7
+mplsoccer>=1.2
+Pillow>=10.0
+pytest>=7.0
+nbformat>=5.9
+nbclient>=0.8
+ipykernel>=6.0

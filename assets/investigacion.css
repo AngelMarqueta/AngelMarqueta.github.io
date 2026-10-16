@@ -1,0 +1,23 @@
+/* Piezas de las páginas de investigación (xT Liga F, redes de pases, simulación del grupo 2).
+   Usa las variables de estilo.css; no define colores nuevos. */
+
+.aviso-historico{display:grid;gap:.35rem;padding:1rem 1.2rem;margin:0 0 1.5rem;border:1px solid var(--linea);border-left:6px solid var(--cesped);background:var(--panel);font-size:1rem;line-height:1.5}
+.aviso-historico strong{font-size:.95rem;letter-spacing:.06em;color:var(--cesped)}
+
+.tabla-editorial{overflow-x:auto;margin:2rem 0}
+.tabla-editorial table{border-collapse:collapse;width:100%;font-size:.95rem}
+.tabla-editorial th,.tabla-editorial td{padding:.7rem .8rem;text-align:left;border-bottom:1px solid var(--linea);white-space:nowrap}
+.tabla-editorial td.num,.tabla-editorial th.num{text-align:right}
+.tabla-editorial caption{text-align:left;font-weight:700;margin-bottom:.8rem}
+.tabla-editorial tr.destacada th,.tabla-editorial tr.destacada td{background:var(--senal-suave)}
+
+.pareja-figuras{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0}
+.figura img{max-width:100%;height:auto;display:block;border-radius:var(--radio)}
+.figura figcaption{font-size:.92rem;color:var(--tinta-suave);margin-top:.6rem}
+
+.logo-fuente{max-width:180px;height:auto;background:#fff;padding:10px;border-radius:8px}
+code{overflow-wrap:anywhere}
+
+@media (max-width:700px){
+  .pareja-figuras{grid-template-columns:1fr}
+}

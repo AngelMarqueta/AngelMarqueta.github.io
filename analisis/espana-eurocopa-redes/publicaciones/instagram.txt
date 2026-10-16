@@ -1,0 +1,15 @@
+¿Por dónde pasaba el juego de España en la Eurocopa?
+
+Dibujé la red de pases de la selección en sus seis partidos del torneo: un círculo por jugadora en su posición media y una línea más gruesa cuantos más pases se dan dos compañeras.
+
+Lo que más me interesaba no era quién toca más el balón, sino por quién pasan los caminos entre las demás. Las que más unían el juego: Laia Aleixandri, María Méndez, Irene Paredes y Patri Guijarro. España ordenaba desde atrás.
+
+Otra pista: en la fase de grupos completó entre 6,4 y 8 pases por minuto; en las eliminatorias, entre 5,5 y 6,2.
+
+Desliza para ver la red de la final, las seis redes y quién unía el juego.
+
+Estudio completo, código y método: enlace en la bio.
+
+Datos: StatsBomb Open Data. Pases completados hasta el primer cambio de España.
+
+#SeleccionEspañola #FutbolFemenino #WEURO2025 #AnaliticaDeportiva #Python #LineaDePase

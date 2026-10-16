@@ -1,0 +1,17 @@
+Las redes de pases son una de las gráficas más conocidas del análisis de fútbol. Lo útil no es el dibujo, sino lo que se mide sobre él.
+
+He publicado en Línea de pase las redes de España en sus seis partidos de la Eurocopa femenina 2025, con los eventos de StatsBomb Open Data:
+
+· Pases completados en juego, sin saques, hasta el primer cambio de España (entre 46 y 72 minutos por partido, 2.337 pases en total).
+· Grafo dirigido con NetworkX: grado ponderado, intermediación (distancia = 1 / pases) y PageRank por jugadora; centralización de Freeman por partido.
+· Comprobaciones automáticas en cada partido (solo titulares antes del primer cambio, coordenadas válidas, grados que cuadran con los pases) y siete pruebas con partidos inventados.
+
+Un detalle técnico que conviene conocer: StatsBomb sigue contando el descuento de la primera parte (minuto 46, 47…) y la segunda empieza otra vez en el 45. Cortar solo por minuto hace perder pases cuando el primer cambio llega en el descanso.
+
+Resultado: Laia Aleixandri, María Méndez, Irene Paredes y Patri Guijarro concentran la intermediación. Y el ritmo bajó en las eliminatorias: de 6,4–8 pases por minuto en los grupos a 5,5–6,2.
+
+Límites: sin conducciones ni pérdidas, el final de cada partido queda fuera y seis partidos describen un torneo, no un estilo.
+
+https://lineadepase.github.io/proyectos/espana-eurocopa-redes/
+
+#AnaliticaDeportiva #Python #NetworkX #FutbolFemenino #CienciaDeDatos

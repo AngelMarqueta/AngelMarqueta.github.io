@@ -1,0 +1,10 @@
+¿Quién unía el juego de España en la Eurocopa femenina 2025?
+
+Dibujé la red de pases de la selección en sus seis partidos: cada jugadora en su posición media y una línea más gruesa cuantos más pases se dan dos compañeras.
+
+Las que más caminos unían entre sus compañeras fueron Laia Aleixandri, María Méndez, Irene Paredes y Patri Guijarro: el juego se ordenaba desde atrás. Y en las eliminatorias, con rivales más fuertes, España pasó menos: de entre 6,4 y 8 pases por minuto en los grupos a entre 5,5 y 6,2.
+
+Las seis redes, la final pase a pase y el método, aquí:
+https://lineadepase.github.io/proyectos/espana-eurocopa-redes/
+
+Datos: StatsBomb Open Data.

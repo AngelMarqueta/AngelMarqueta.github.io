@@ -1,0 +1,74 @@
+{
+  "partidos_torneo": 31,
+  "partidos_espana": 6,
+  "por_partido": [
+    {
+      "rival": "Portugal",
+      "eventos": 3492,
+      "eventos_duplicados": 0,
+      "pases_red": 306,
+      "jugadoras_en_red": 11,
+      "todas_titulares": true,
+      "coordenadas_fuera": 0,
+      "suma_grado_igual_doble_pases": true
+    },
+    {
+      "rival": "Belgium",
+      "eventos": 3592,
+      "eventos_duplicados": 0,
+      "pases_red": 367,
+      "jugadoras_en_red": 11,
+      "todas_titulares": true,
+      "coordenadas_fuera": 0,
+      "suma_grado_igual_doble_pases": true
+    },
+    {
+      "rival": "Italy",
+      "eventos": 3769,
+      "eventos_duplicados": 0,
+      "pases_red": 488,
+      "jugadoras_en_red": 11,
+      "todas_titulares": true,
+      "coordenadas_fuera": 0,
+      "suma_grado_igual_doble_pases": true
+    },
+    {
+      "rival": "Switzerland",
+      "eventos": 3679,
+      "eventos_duplicados": 0,
+      "pases_red": 398,
+      "jugadoras_en_red": 11,
+      "todas_titulares": true,
+      "coordenadas_fuera": 0,
+      "suma_grado_igual_doble_pases": true
+    },
+    {
+      "rival": "Germany",
+      "eventos": 4366,
+      "eventos_duplicados": 0,
+      "pases_red": 387,
+      "jugadoras_en_red": 11,
+      "todas_titulares": true,
+      "coordenadas_fuera": 0,
+      "suma_grado_igual_doble_pases": true
+    },
+    {
+      "rival": "England",
+      "eventos": 4830,
+      "eventos_duplicados": 0,
+      "pases_red": 391,
+      "jugadoras_en_red": 11,
+      "todas_titulares": true,
+      "coordenadas_fuera": 0,
+      "suma_grado_igual_doble_pases": true
+    }
+  ],
+  "python": "3.13.16",
+  "dependencias": {
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "networkx": "3.6.1",
+    "matplotlib": "3.11.2",
+    "mplsoccer": "1.8.1"
+  }
+}
