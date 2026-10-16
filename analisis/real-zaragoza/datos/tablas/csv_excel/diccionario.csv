@@ -52,9 +52,50 @@ estadisticas;fuente_url;Página de la que saqué el dato.;Texto;https://www.beso
 sofascore;partido_id;Partido (ver tabla partidos).;Número entero;1
 sofascore;evento_sofascore;Identificador del partido en Sofascore.;Número entero;16599367
 sofascore;metrica;Métrica. Las que acaban en _ok son aciertos y las que acaban en _total, intentos.;Texto;posesion_pct
-sofascore;zaragoza;Valor del Zaragoza.;Número decimal;73.0
-sofascore;valor_rival;Valor del rival.;Número decimal;27.0
+sofascore;zaragoza;Valor del Zaragoza.;Número decimal;74.0
+sofascore;valor_rival;Valor del rival.;Número decimal;26.0
 sofascore;fuente_url;Dirección de la API de Sofascore de la que copié el dato.;Texto;https://www.sofascore.com/api/v1/event/16599367/statistics
+grupo2_partidos;jornada;Jornada de liga.;Número entero;1
+grupo2_partidos;evento_sofascore;Identificador del partido en Sofascore.;Número entero;16599360
+grupo2_partidos;fecha;Fecha del partido (AAAA-MM-DD).;Texto;2026-08-29
+grupo2_partidos;equipo;Equipo al que se refiere la fila (mismo nombre que en la clasificación).;Texto;Algeciras
+grupo2_partidos;rival;Rival en ese partido.;Texto;Cartagena
+grupo2_partidos;sede;Local o Visitante.;Texto;Casa
+grupo2_partidos;goles_favor;Goles del equipo.;Número entero;1
+grupo2_partidos;goles_contra;Goles del rival.;Número entero;3
+grupo2_partidos;xg;Goles esperados (xG) según Sofascore. Vacío si Sofascore no lo da.;Número decimal;1.36
+grupo2_partidos;xg_rival;Lo mismo, del rival.;Número decimal;1.48
+grupo2_partidos;ocasiones_claras;Ocasiones claras (big chances).;Número entero;7
+grupo2_partidos;ocasiones_claras_rival;Lo mismo, del rival.;Número entero;2
+grupo2_partidos;tiros;Tiros totales.;Número entero;21
+grupo2_partidos;tiros_rival;Lo mismo, del rival.;Número entero;10
+grupo2_partidos;tiros_a_puerta;Tiros entre los tres palos.;Número entero;7
+grupo2_partidos;tiros_a_puerta_rival;Lo mismo, del rival.;Número entero;3
+grupo2_partidos;tiros_dentro_area;Tiros desde dentro del área.;Número entero;15
+grupo2_partidos;tiros_dentro_area_rival;Lo mismo, del rival.;Número entero;8
+grupo2_partidos;posesion_pct;Posesión, en %.;Número entero;70
+grupo2_partidos;posesion_pct_rival;Lo mismo, del rival.;Número entero;30
+grupo2_partidos;pases;Pases intentados.;Número entero;524
+grupo2_partidos;pases_rival;Lo mismo, del rival.;Número entero;231
+grupo2_partidos;pases_buenos;Pases completados.;Número entero;459
+grupo2_partidos;pases_buenos_rival;Lo mismo, del rival.;Número entero;162
+grupo2_partidos;corners;Saques de esquina.;Número entero;8
+grupo2_partidos;corners_rival;Lo mismo, del rival.;Número entero;3
+grupo2_partidos;faltas;Faltas cometidas.;Número entero;15
+grupo2_partidos;faltas_rival;Lo mismo, del rival.;Número entero;15
+grupo2_partidos;amarillas;Tarjetas amarillas.;Número entero;2
+grupo2_partidos;amarillas_rival;Lo mismo, del rival.;Número entero;3
+grupo2_partidos;rojas;Tarjetas rojas.;Número entero;0
+grupo2_partidos;rojas_rival;Lo mismo, del rival.;Número entero;1
+grupo2_partidos;duelos_ganados_pct;Duelos ganados, en %.;Número entero;57
+grupo2_partidos;duelos_ganados_pct_rival;Lo mismo, del rival.;Número entero;43
+grupo2_partidos;entradas_ultimo_tercio;Entradas al último tercio del campo.;Número entero;74
+grupo2_partidos;entradas_ultimo_tercio_rival;Lo mismo, del rival.;Número entero;54
+grupo2_partidos;recuperaciones;Recuperaciones de balón.;Número entero;36
+grupo2_partidos;recuperaciones_rival;Lo mismo, del rival.;Número entero;38
+grupo2_partidos;paradas;Paradas del portero.;Número entero;1
+grupo2_partidos;paradas_rival;Lo mismo, del rival.;Número entero;6
+grupo2_partidos;fuente_url;Dirección de la API de Sofascore de la que copié el dato.;Texto;https://www.sofascore.com/api/v1/event/16599360/statistics
 clasificacion;tras_jornada;Jornada después de la cual se toma la clasificación.;Número entero;6
 clasificacion;posicion;Puesto en la tabla.;Número entero;1
 clasificacion;equipo;Equipo.;Texto;Real Zaragoza

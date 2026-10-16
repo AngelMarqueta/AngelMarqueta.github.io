@@ -178,7 +178,7 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}
 th{position:sticky;top:0;background:var(--panel);text-align:left;font-weight:600;color:var(--tinta-suave);padding:.45rem .5rem;border-bottom:2px solid var(--tinta);white-space:nowrap}
 td{padding:.45rem .5rem;border-bottom:1px solid var(--linea);white-space:nowrap}
 td.n,th.n{text-align:right}
-tr.propio td{font-weight:700;color:var(--senal-texto)}
+tr.propio td,tr.propio th{font-weight:700;color:var(--senal-texto)}
 .barra{display:inline-block;height:.5rem;border-radius:4px;vertical-align:middle;margin-right:.45rem}
 
 /* ---------- Pie ---------- */

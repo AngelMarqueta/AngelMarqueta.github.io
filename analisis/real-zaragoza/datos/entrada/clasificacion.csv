@@ -22,16 +22,16 @@ tras_jornada,posicion,equipo,pj,g,e,p,gf,gc,puntos,fuente_url
 7,1,Real Zaragoza,7,5,1,1,16,10,16,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
 7,2,Real Murcia,7,5,0,2,11,7,15,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
 7,3,Villarreal B,7,4,2,1,15,9,14,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
-7,4,Alcorcón,7,3,3,1,13,5,12,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
-7,5,Cartagena,7,3,3,1,10,5,12,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
-7,6,Real Jaén,7,3,3,1,11,8,12,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
-7,7,Antequera,7,2,4,1,11,9,10,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
-7,8,SD Huesca,7,2,4,1,9,9,10,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
-7,9,UD Ibiza,7,3,1,3,9,9,10,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
-7,10,Hércules,6,3,1,2,5,5,10,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
+7,4,Hércules,7,4,1,2,6,5,13,https://www.sofascore.com/api/v1/unique-tournament/17073/season/97382/events/round/7
+7,5,Alcorcón,7,3,3,1,13,5,12,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
+7,6,Cartagena,7,3,3,1,10,5,12,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
+7,7,Real Jaén,7,3,3,1,11,8,12,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
+7,8,Antequera,7,2,4,1,11,9,10,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
+7,9,SD Huesca,7,2,4,1,9,9,10,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
+7,10,UD Ibiza,7,3,1,3,9,9,10,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
 7,11,Atlético Madrileño,7,2,3,2,15,12,9,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
 7,12,Real Madrid Castilla,7,2,3,2,8,7,9,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
-7,13,Sant Andreu,6,2,2,2,7,7,8,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
+7,13,Sant Andreu,7,2,2,3,7,8,8,https://www.sofascore.com/api/v1/unique-tournament/17073/season/97382/events/round/7
 7,14,Gimnàstic,7,2,2,3,9,11,8,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
 7,15,Algeciras,7,2,1,4,9,13,7,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2
 7,16,CE Europa,7,2,1,4,6,11,7,https://es.besoccer.com/competicion/clasificacion/primera_division_rfef/2027/grupo2

@@ -10,9 +10,12 @@ Pasos:
     3. Calcula las tablas y las guarda en datos/salida.
     4. Dibuja los gráficos.
     5. Genera el JSON del panel de la web y el informe completo.
+    6. Escribe las pestañas «Jornada a jornada» y «Último partido».
+    7. Escribe la pestaña «Grupo 2» (grupo2.py).
+    8. Prepara las tablas para Excel y el diccionario de datos.
 
 Después de cada partido solo hay que añadir filas a los CSV de entrada,
-revisar textos/conclusiones.html y volver a ejecutar este archivo.
+revisar textos/conclusiones.html y textos/grupo2.html y volver a ejecutar este archivo.
 """
 
 import json
@@ -23,6 +26,7 @@ import pandas as pd
 import calculos
 import comprobaciones
 import graficos
+import grupo2
 import informe
 import paginas_partidos
 import preparar_tablas
@@ -173,7 +177,10 @@ def main():
     #    Van después del JSON porque copian la cabecera de index.html, que ya está al día.
     paginas_partidos.main()
 
-    # 7. Copias de las tablas para Excel (UTF-8 con BOM y «;») y el diccionario de datos
+    # 7. Pestaña «Grupo 2»: los 20 equipos con xG, puntos esperados y gráficos
+    grupo2.main()
+
+    # 8. Copias de las tablas para Excel (UTF-8 con BOM y «;») y el diccionario de datos
     preparar_tablas.main()
 
     # Resumen por pantalla

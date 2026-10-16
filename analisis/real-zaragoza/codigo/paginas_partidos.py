@@ -139,7 +139,8 @@ def pestanas(activa):
     Uso aria-current="page" para que un lector de pantalla también sepa dónde está."""
     enlaces = [("temporada", "index.html", "Temporada"),
                ("jornadas", "jornadas.html", "Jornada a jornada"),
-               ("ultimo", "ultimo-partido.html", "Último partido")]
+               ("ultimo", "ultimo-partido.html", "Último partido"),
+               ("grupo", "grupo-2.html", "Grupo 2")]
     items = "".join(
         f'<a href="{url}"{" aria-current=\"page\"" if clave == activa else ""}>{texto}</a>'
         for clave, url, texto in enlaces)

@@ -31,7 +31,7 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 3,
-   "posicion_rival": 7,
+   "posicion_rival": 8,
    "tiros_zaragoza": 19,
    "tiros_rival": 10,
    "posesion_pct": 67.0,
@@ -65,7 +65,7 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 9,
-   "posicion_rival": 5,
+   "posicion_rival": 6,
    "tiros_zaragoza": 17,
    "tiros_rival": 8,
    "posesion_pct": 62.0,
@@ -82,7 +82,7 @@
    "resultado": "Victoria",
    "puntos": 3,
    "puntos_acumulados": 12,
-   "posicion_rival": 9,
+   "posicion_rival": 10,
    "tiros_zaragoza": 8,
    "tiros_rival": 8,
    "posesion_pct": 56.0,
@@ -701,6 +701,17 @@
   },
   {
    "posicion": 4,
+   "equipo": "Hércules",
+   "pj": 7,
+   "g": 4,
+   "e": 1,
+   "p": 2,
+   "gf": 6,
+   "gc": 5,
+   "puntos": 13
+  },
+  {
+   "posicion": 5,
    "equipo": "Alcorcón",
    "pj": 7,
    "g": 3,
@@ -711,7 +722,7 @@
    "puntos": 12
   },
   {
-   "posicion": 5,
+   "posicion": 6,
    "equipo": "Cartagena",
    "pj": 7,
    "g": 3,
@@ -722,7 +733,7 @@
    "puntos": 12
   },
   {
-   "posicion": 6,
+   "posicion": 7,
    "equipo": "Real Jaén",
    "pj": 7,
    "g": 3,
@@ -733,7 +744,7 @@
    "puntos": 12
   },
   {
-   "posicion": 7,
+   "posicion": 8,
    "equipo": "Antequera",
    "pj": 7,
    "g": 2,
@@ -744,7 +755,7 @@
    "puntos": 10
   },
   {
-   "posicion": 8,
+   "posicion": 9,
    "equipo": "SD Huesca",
    "pj": 7,
    "g": 2,
@@ -755,7 +766,7 @@
    "puntos": 10
   },
   {
-   "posicion": 9,
+   "posicion": 10,
    "equipo": "UD Ibiza",
    "pj": 7,
    "g": 3,
@@ -763,17 +774,6 @@
    "p": 3,
    "gf": 9,
    "gc": 9,
-   "puntos": 10
-  },
-  {
-   "posicion": 10,
-   "equipo": "Hércules",
-   "pj": 6,
-   "g": 3,
-   "e": 1,
-   "p": 2,
-   "gf": 5,
-   "gc": 5,
    "puntos": 10
   },
   {
@@ -801,12 +801,12 @@
   {
    "posicion": 13,
    "equipo": "Sant Andreu",
-   "pj": 6,
+   "pj": 7,
    "g": 2,
    "e": 2,
-   "p": 2,
+   "p": 3,
    "gf": 7,
-   "gc": 7,
+   "gc": 8,
    "puntos": 8
   },
   {
@@ -918,7 +918,7 @@
    "fecha": "2026-11-08",
    "sede": "Casa",
    "rival": "SD Huesca",
-   "posicion_rival": 8
+   "posicion_rival": 9
   }
  ],
  "fichas": [

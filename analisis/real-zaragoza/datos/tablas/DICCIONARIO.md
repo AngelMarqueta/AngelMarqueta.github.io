@@ -103,16 +103,64 @@ Otras estadísticas de partido de fuentes públicas, en formato largo (una métr
 
 ## sofascore
 
-Estadísticas de Sofascore de cada partido, xG incluido, en formato largo (una métrica por fila). Archivo: `datos/entrada/sofascore.csv` (248 filas).
+Estadísticas de Sofascore de cada partido, xG incluido, en formato largo (una métrica por fila). Archivo: `datos/entrada/sofascore.csv` (262 filas).
 
 | Columna | Qué es | Tipo | Ejemplo |
 |---|---|---|---|
 | `partido_id` | Partido (ver tabla partidos). | Número entero | 1 |
 | `evento_sofascore` | Identificador del partido en Sofascore. | Número entero | 16599367 |
 | `metrica` | Métrica. Las que acaban en _ok son aciertos y las que acaban en _total, intentos. | Texto | posesion_pct |
-| `zaragoza` | Valor del Zaragoza. | Número decimal | 73.0 |
-| `valor_rival` | Valor del rival. | Número decimal | 27.0 |
+| `zaragoza` | Valor del Zaragoza. | Número decimal | 74.0 |
+| `valor_rival` | Valor del rival. | Número decimal | 26.0 |
 | `fuente_url` | Dirección de la API de Sofascore de la que copié el dato. | Texto | https://www.sofascore.com/api/v1/event/16599367/statistics |
+
+## grupo2_partidos
+
+Todos los partidos del grupo 2 con estadísticas de Sofascore. Una fila por equipo y partido: cada partido aparece dos veces, una desde cada lado. Archivo: `datos/entrada/grupo2_partidos.csv` (140 filas).
+
+| Columna | Qué es | Tipo | Ejemplo |
+|---|---|---|---|
+| `jornada` | Jornada de liga. | Número entero | 1 |
+| `evento_sofascore` | Identificador del partido en Sofascore. | Número entero | 16599360 |
+| `fecha` | Fecha del partido (AAAA-MM-DD). | Texto | 2026-08-29 |
+| `equipo` | Equipo al que se refiere la fila (mismo nombre que en la clasificación). | Texto | Algeciras |
+| `rival` | Rival en ese partido. | Texto | Cartagena |
+| `sede` | Local o Visitante. | Texto | Casa |
+| `goles_favor` | Goles del equipo. | Número entero | 1 |
+| `goles_contra` | Goles del rival. | Número entero | 3 |
+| `xg` | Goles esperados (xG) según Sofascore. Vacío si Sofascore no lo da. | Número decimal | 1.36 |
+| `xg_rival` | Lo mismo, del rival. | Número decimal | 1.48 |
+| `ocasiones_claras` | Ocasiones claras (big chances). | Número entero | 7 |
+| `ocasiones_claras_rival` | Lo mismo, del rival. | Número entero | 2 |
+| `tiros` | Tiros totales. | Número entero | 21 |
+| `tiros_rival` | Lo mismo, del rival. | Número entero | 10 |
+| `tiros_a_puerta` | Tiros entre los tres palos. | Número entero | 7 |
+| `tiros_a_puerta_rival` | Lo mismo, del rival. | Número entero | 3 |
+| `tiros_dentro_area` | Tiros desde dentro del área. | Número entero | 15 |
+| `tiros_dentro_area_rival` | Lo mismo, del rival. | Número entero | 8 |
+| `posesion_pct` | Posesión, en %. | Número entero | 70 |
+| `posesion_pct_rival` | Lo mismo, del rival. | Número entero | 30 |
+| `pases` | Pases intentados. | Número entero | 524 |
+| `pases_rival` | Lo mismo, del rival. | Número entero | 231 |
+| `pases_buenos` | Pases completados. | Número entero | 459 |
+| `pases_buenos_rival` | Lo mismo, del rival. | Número entero | 162 |
+| `corners` | Saques de esquina. | Número entero | 8 |
+| `corners_rival` | Lo mismo, del rival. | Número entero | 3 |
+| `faltas` | Faltas cometidas. | Número entero | 15 |
+| `faltas_rival` | Lo mismo, del rival. | Número entero | 15 |
+| `amarillas` | Tarjetas amarillas. | Número entero | 2 |
+| `amarillas_rival` | Lo mismo, del rival. | Número entero | 3 |
+| `rojas` | Tarjetas rojas. | Número entero | 0 |
+| `rojas_rival` | Lo mismo, del rival. | Número entero | 1 |
+| `duelos_ganados_pct` | Duelos ganados, en %. | Número entero | 57 |
+| `duelos_ganados_pct_rival` | Lo mismo, del rival. | Número entero | 43 |
+| `entradas_ultimo_tercio` | Entradas al último tercio del campo. | Número entero | 74 |
+| `entradas_ultimo_tercio_rival` | Lo mismo, del rival. | Número entero | 54 |
+| `recuperaciones` | Recuperaciones de balón. | Número entero | 36 |
+| `recuperaciones_rival` | Lo mismo, del rival. | Número entero | 38 |
+| `paradas` | Paradas del portero. | Número entero | 1 |
+| `paradas_rival` | Lo mismo, del rival. | Número entero | 6 |
+| `fuente_url` | Dirección de la API de Sofascore de la que copié el dato. | Texto | https://www.sofascore.com/api/v1/event/16599360/statistics |
 
 ## clasificacion
 
@@ -162,7 +210,7 @@ Resultados del próximo rival esta temporada, para la previa. Archivo: `datos/en
 
 ## incidencias
 
-Diferencias entre fuentes y qué dato me quedo. Es el registro de decisiones del proyecto. Archivo: `datos/entrada/incidencias.csv` (36 filas).
+Diferencias entre fuentes y qué dato me quedo. Es el registro de decisiones del proyecto. Archivo: `datos/entrada/incidencias.csv` (39 filas).
 
 | Columna | Qué es | Tipo | Ejemplo |
 |---|---|---|---|
