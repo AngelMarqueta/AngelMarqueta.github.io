@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-16T15:25:51.349262</dc:date>
+    <dc:date>2026-10-16T15:36:48.394301</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,7 +35,7 @@ L 777.6 972
 L 777.6 0 
 L 0 0 
 z
-" clip-path="url(#p7897fd145d)" style="fill: #142e7c; stroke: #142e7c; stroke-linejoin: miter"/>
+" clip-path="url(#p0b9ff298a3)" style="fill: #142e7c; stroke: #142e7c; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 0 972 
@@ -43,7 +43,7 @@ L 58.32 972
 L 58.32 0 
 L 0 0 
 z
-" clip-path="url(#p7897fd145d)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
+" clip-path="url(#p0b9ff298a3)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 116.64 972 
@@ -51,7 +51,7 @@ L 174.96 972
 L 174.96 0 
 L 116.64 0 
 z
-" clip-path="url(#p7897fd145d)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
+" clip-path="url(#p0b9ff298a3)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 233.28 972 
@@ -59,7 +59,7 @@ L 291.6 972
 L 291.6 0 
 L 233.28 0 
 z
-" clip-path="url(#p7897fd145d)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
+" clip-path="url(#p0b9ff298a3)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 349.92 972 
@@ -67,7 +67,7 @@ L 408.24 972
 L 408.24 0 
 L 349.92 0 
 z
-" clip-path="url(#p7897fd145d)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
+" clip-path="url(#p0b9ff298a3)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 466.56 972 
@@ -75,7 +75,7 @@ L 524.88 972
 L 524.88 0 
 L 466.56 0 
 z
-" clip-path="url(#p7897fd145d)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
+" clip-path="url(#p0b9ff298a3)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
     <path d="M 583.2 972 
@@ -83,7 +83,7 @@ L 641.52 972
 L 641.52 0 
 L 583.2 0 
 z
-" clip-path="url(#p7897fd145d)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
+" clip-path="url(#p0b9ff298a3)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
     <path d="M 699.84 972 
@@ -91,7 +91,7 @@ L 758.16 972
 L 758.16 0 
 L 699.84 0 
 z
-" clip-path="url(#p7897fd145d)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
+" clip-path="url(#p0b9ff298a3)" style="fill: #1b3788; stroke: #1b3788; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- Línea de pase -->
@@ -1308,7 +1308,7 @@ z
    </g>
    <g id="text_4">
     <!-- Simulé el resto de la temporada del grupo 2 -->
-    <g style="fill: #ffffff; opacity: 0.92" transform="translate(46.656 479.804644) scale(0.21 -0.21)">
+    <g style="fill: #ffffff; opacity: 0.92" transform="translate(46.656 513.104644) scale(0.21 -0.21)">
      <defs>
       <path id="Archivo-SemiBold-129" d="M 442 4000 
 L 442 4627 
@@ -1847,7 +1847,7 @@ z
      <use xlink:href="#Archivo-SemiBold-1d4" transform="translate(1841.859375 0)"/>
     </g>
     <!-- tras la jornada 7. -->
-    <g style="fill: #ffffff; opacity: 0.92" transform="translate(46.656 512.934244) scale(0.21 -0.21)">
+    <g style="fill: #ffffff; opacity: 0.92" transform="translate(46.656 546.234244) scale(0.21 -0.21)">
      <defs>
       <path id="Archivo-SemiBold-13a" d="M 442 4000 
 L 442 4627 
@@ -2505,7 +2505,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p7897fd145d">
+  <clipPath id="p0b9ff298a3">
    <rect x="0" y="0" width="777.6" height="972"/>
   </clipPath>
  </defs>

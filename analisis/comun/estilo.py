@@ -260,7 +260,7 @@ def portada(titulo, entradilla, cifra="", cifra_texto="", etiqueta="", paleta="w
     ax.text(0.06, 0.80, titulo, fontfamily=TITULAR, fontweight=800, fontsize=78,
             color=c["cal"], va="top", linespacing=0.92)
     lineas = titulo.count("\n") + 1
-    y = 0.80 - lineas * 78 * PX * 1.0 / 1350 - 0.03
+    y = 0.80 - lineas * 78 * PX * 1.08 / 1350 - 0.045
     ax.text(0.06, y, entradilla, fontsize=21, color=c["cal"], alpha=0.92, va="top",
             linespacing=1.45)
     if cifra:
