@@ -85,7 +85,7 @@ def main():
     <p>Con los datos de la jornada {int(inicio.jornada)}, la probabilidad de acabar entre los cinco primeros era del {pct(inicio.ascenso_o_playoff)}. Los resultados desde entonces la han llevado al {pct(z.ascenso_o_playoff)}.</p>
   </section>
 
-  <figure class="figura"><img loading="lazy" src="graficos/simulacion/03_evolucion_zaragoza_instagram.png" width="1080" height="1350" alt="Evolución jornada a jornada de la probabilidad del Real Zaragoza de ascender directamente y de acabar entre los cinco primeros." style="max-width:560px;margin-inline:auto"></figure>
+  <figure class="figura"><img loading="lazy" src="graficos/simulacion/03_evolucion_zaragoza_instagram.png" width="1080" height="1350" alt="Evolución jornada a jornada de la probabilidad del Real Zaragoza de ascender directamente y de acabar entre los cinco primeros." style="max-width:min(560px,100%);margin-inline:auto"></figure>
 
   <figure class="figura"><img loading="lazy" src="graficos/simulacion/04_veinte_equipos_web.png" width="1600" height="900" alt="Probabilidades de ascenso directo, playoff, zona media y descenso de los 20 equipos del grupo 2."><figcaption>Los 20 equipos, ordenados por los puntos medios al final de la temporada.</figcaption></figure>
 
