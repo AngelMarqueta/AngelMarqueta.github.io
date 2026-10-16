@@ -62,4 +62,8 @@ Tarda menos de un minuto.
 - [Normas de competición de Primera Federación 2026/27](https://rfef.es/sites/default/files/2026-06/2._CNL_Primera_Federacion_FINAL.pdf), RFEF.
 - M. J. Maher (1982), *Modelling association football scores*, Statistica Neerlandica 36(3). M. J. Dixon y S. G. Coles (1997), *Modelling association football scores and inefficiencies in the football betting market*, Applied Statistics 46(2).
 
+## Imagen
+
+La portada del carrusel y la cabecera de la página usan una foto del Real Zaragoza-SD Huesca de la temporada 2024/25 en La Romareda, de WikiUsuario46 en [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Partido_Real_Zaragoza-SD_Huesca,_temporada_24-25_en_la_Romareda.jpg), en dominio público (CC0). Datos completos en `recursos/foto.json`.
+
 Análisis personal. Sin relación con el Real Zaragoza ni con ninguna competición.

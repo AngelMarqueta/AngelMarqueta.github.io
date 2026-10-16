@@ -6,6 +6,7 @@ Gráficas de la simulación, con la adaptación azul y blanca del Real Zaragoza.
     03 · cómo ha cambiado la previsión del Zaragoza jornada a jornada
     04 · los 20 equipos en formato horizontal (Facebook, LinkedIn y web)
 """
+import json
 import shutil
 import sys
 from pathlib import Path
@@ -15,6 +16,7 @@ from matplotlib.patches import Rectangle
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "comun"))
 from estilo import cierre, colores, estilo_ejes, guardar, lienzo, portada  # noqa: E402
+from pagina import credito_corto  # noqa: E402
 
 PALETA = "zaragoza"
 EQUIPO = "Real Zaragoza"
@@ -143,11 +145,14 @@ def crear_carrusel(tabla, jornada, carpeta_graficos, carpeta):
     carpeta = Path(carpeta)
     carpeta.mkdir(parents=True, exist_ok=True)
     fila = tabla[tabla.equipo == EQUIPO].iloc[0]
-    fig = portada("¿Y si se\njugara 10.000\nveces?",
-                  f"Simulé el resto de la temporada del grupo 2\ntras la jornada {jornada}.",
+    recursos = Path(__file__).resolve().parents[1] / "recursos"
+    foto = json.loads((recursos / "foto.json").read_text(encoding="utf-8"))
+    fig = portada("Probabilidades de ascenso\ndel grupo 2 de\nPrimera Federación",
                   cifra=_pct(fila.ascenso_o_playoff),
-                  cifra_texto="de probabilidad de que el Real Zaragoza acabe\nentre los cinco primeros (ascenso o playoff)",
-                  etiqueta="Investigación 03 · Grupo 2", paleta=PALETA)
+                  cifra_texto=f"de que el Real Zaragoza acabe entre\nlos cinco primeros, tras la jornada {jornada}",
+                  etiqueta="Investigación 03 · Grupo 2", paleta=PALETA,
+                  antetitulo="Real Zaragoza · 10.000 simulaciones",
+                  foto=recursos / "foto.jpg", credito=credito_corto(foto), foco=(0.5, 0.6))
     guardar(fig, carpeta, "01_portada")
     for origen, destino in (("01_puesto_zaragoza_instagram", "02_puesto"), ("02_veinte_equipos_instagram", "03_grupo"),
                             ("03_evolucion_zaragoza_instagram", "04_evolucion")):

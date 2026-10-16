@@ -14,7 +14,7 @@ import pandas as pd
 
 ESTUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ESTUDIO.parent / "comun"))
-from pagina import RAIZ_WEB, escribir_pagina_zaragoza, numero  # noqa: E402
+from pagina import RAIZ_WEB, escribir_pagina_zaragoza, figura_foto, numero  # noqa: E402
 
 CODIGO_GITHUB = "https://github.com/lineadepase/lineadepase.github.io/tree/main/analisis/grupo2-simulacion"
 EQUIPO = "Real Zaragoza"
@@ -31,6 +31,7 @@ def copiar_recursos():
         shutil.copy(ESTUDIO / "graficos" / f"{nombre}.png", destino / f"{nombre}.png")
     shutil.copy(ESTUDIO / "graficos" / "05_puesto_zaragoza_facebook.png", destino / "compartir.png")
     shutil.copy(ESTUDIO / "datos" / "salida" / "probabilidades.csv", destino / "probabilidades.csv")
+    shutil.copy(ESTUDIO / "recursos" / "foto.jpg", destino / "foto.jpg")
 
 
 def tabla_html(tabla):
@@ -59,6 +60,7 @@ def main():
     titular = "Favorito, pero lejos de estar decidido" if favorito else "Todo por decidir"
     frase = "Es el equipo con más opciones del grupo, pero" if favorito else "Aun así,"
     copiar_recursos()
+    foto = json.loads((ESTUDIO / "recursos" / "foto.json").read_text(encoding="utf-8"))
 
     cuerpo = f"""  <section class="cab-proyecto">
     <p class="etiqueta">Investigación · Simulación Monte Carlo</p>
@@ -70,6 +72,8 @@ def main():
       <div><dt>Herramientas</dt><dd>Python (pandas, NumPy, SciPy) · <a href="{CODIGO_GITHUB}">código y datos</a></dd></div>
     </dl>
   </section>
+
+{figura_foto("graficos/simulacion/foto.jpg", foto)}
 
   <section class="seccion lectura">
     <p class="etiqueta">Lo que sale</p>
