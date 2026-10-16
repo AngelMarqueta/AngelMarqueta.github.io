@@ -107,8 +107,8 @@ def crear_figuras(partidos_red, resumen, por_jugadora, logo, carpeta):
 
     # 01 · La red de la final ---------------------------------------------------
     fig, area = lienzo("instagram", "La final, pase a pase",
-                       f"España {partido['goles_espana']}-{partido['goles_rival']} Inglaterra · "
-                       f"{fila_final.pases_red} pases completados hasta el primer cambio (min. {fila_final.minuto_corte:.0f})\n"
+                       f"España {partido['goles_espana']}-{partido['goles_rival']} Inglaterra (1-3 en los penaltis) · "
+                       f"{fila_final.pases_red} pases hasta el primer cambio (min. {fila_final.minuto_corte:.0f})\n"
                        "Círculo: posición media y volumen de pases · Línea: 4 pases o más entre la pareja",
                        pie=PIE, etiqueta=ETIQUETA, logo_fuente=logo,
                        lectura=f"En naranja, la jugadora con más intermediación: por ella pasaban más caminos\n"

@@ -1,7 +1,8 @@
 Las redes de pases son una de las gráficas más conocidas del análisis de fútbol. Lo útil no es el dibujo, sino lo que se mide sobre él.
 
-He publicado en Línea de pase las redes de España en sus seis partidos de la Eurocopa femenina 2025, con los eventos de StatsBomb Open Data:
+Nuevo estudio en Línea de pase: las redes de España en sus seis partidos de la Eurocopa femenina 2025, con los eventos de StatsBomb Open Data.
 
+Cómo está hecho:
 · Pases completados en juego, sin saques, hasta el primer cambio de España (entre 46 y 72 minutos por partido, 2.337 pases en total).
 · Grafo dirigido con NetworkX: grado ponderado, intermediación (distancia = 1 / pases) y PageRank por jugadora; centralización de Freeman por partido.
 · Comprobaciones automáticas en cada partido (solo titulares antes del primer cambio, coordenadas válidas, grados que cuadran con los pases) y siete pruebas con partidos inventados.

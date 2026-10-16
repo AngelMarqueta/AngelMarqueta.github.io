@@ -27,7 +27,7 @@ espana-eurocopa-redes/
 
 ## Método
 
-1. Para cada partido me quedo con los pases completados en juego de España (sin saques) hasta su primer cambio, para que las once jugadoras estén en el campo todo el tramo.
+1. En cada partido se toman los pases completados en juego de España (sin saques) hasta su primer cambio, para que las once jugadoras estén en el campo todo el tramo.
 2. Cada jugadora es un nodo; cada pareja, una flecha con tantos pases como se dieron. La posición de cada jugadora es la media de los sitios donde dio y recibió pases.
 3. Por jugadora calculo el grado ponderado (pases dados y recibidos), la intermediación (con distancia 1 / pases, para que más pases signifique más cerca) y el PageRank. Por partido, la centralización de Freeman: de 0 (juego repartido) a 1 (todo por una jugadora).
 

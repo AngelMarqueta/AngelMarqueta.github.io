@@ -39,9 +39,13 @@ def copiar_recursos():
     shutil.copy(ESTUDIO / "datos" / "salida" / "partidos.csv", destino.parent / "partidos.csv")
 
 
+# La final terminó en empate y se decidió en la tanda de penaltis (Inglaterra ganó 3-1).
+PENALTIS = {"Final": " (pen. 1-3)"}
+
+
 def tabla_partidos(resumen):
     filas = "".join(
-        f'<tr><th scope="row">{FASE[r.fase]}</th><td>{RIVAL[r.rival]}</td><td class="num">{r.resultado}</td>'
+        f'<tr><th scope="row">{FASE[r.fase]}</th><td>{RIVAL[r.rival]}</td><td class="num">{r.resultado}{PENALTIS.get(r.fase, "")}</td>'
         f'<td class="num">{numero(r.minutos_red, 0)}</td><td class="num">{r.pases_red}</td>'
         f'<td class="num">{numero(r.pases_por_minuto, 1)}</td><td class="num">{numero(r.centralizacion, 2)}</td>'
         f'<td>{nombre_completo(r.jugadora_mas_central)}</td></tr>'
@@ -60,6 +64,7 @@ def main():
     habituales = torneo[torneo.redes >= 3].sort_values("intermediacion_media", ascending=False)
     cuatro = [nombre_completo(j) for j in habituales.jugadora.head(4)]
     final = resumen[resumen.fase == "Final"].iloc[0]
+    semi = resumen[resumen.fase == "Semi-finals"].iloc[0]
     grupos = resumen[resumen.fase == "Group Stage"].pases_por_minuto
     eliminatorias = resumen[resumen.fase != "Group Stage"].pases_por_minuto
     repartida = resumen.loc[resumen.centralizacion.idxmin()]
@@ -69,7 +74,7 @@ def main():
     cuerpo = f"""  <section class="cab-proyecto">
     <p class="etiqueta">Investigación · Fútbol femenino · Eurocopa 2025</p>
     <h1>Por dónde pasaba el juego de España</h1>
-    <p class="entradilla">Con las redes de pases de los seis partidos de la selección en la Eurocopa femenina 2025, busqué quién unía el juego y cómo cambió la circulación de la fase de grupos a la final.</p>
+    <p class="entradilla">Las redes de pases de los seis partidos de la selección en la Eurocopa femenina 2025 muestran quién unía el juego y cómo cambió la circulación de la fase de grupos a la final.</p>
     <dl class="ficha-tecnica">
       <div><dt>Pregunta</dt><dd>¿Quién conectaba el juego de España y cómo cambió durante el torneo?</dd></div>
       <div><dt>Datos</dt><dd>StatsBomb Open Data · 6 partidos · {resumen.pases_red.sum():,} pases completados en las redes</dd></div>
@@ -82,7 +87,7 @@ def main():
   <nav class="accesos-seccion" aria-label="Secciones del artículo"><a href="#resultado">Resultados</a><a href="#partidos">Partido a partido</a><a href="#metodo">Cómo se calcula</a><a href="#fuentes">Fuentes y código</a></nav>
 
   <section class="seccion lectura" id="resultado">
-    <p class="etiqueta">Lo que encontré</p>
+    <p class="etiqueta">Resultados</p>
     <h2>El juego se ordenaba desde atrás</h2>
     <p>Una red de pases dibuja cada partido como un mapa de conexiones: un círculo por jugadora, en su posición media, y una línea más gruesa cuantos más pases se dan dos compañeras. La pregunta interesante no es quién toca más el balón, sino <strong>por quién pasan los caminos</strong> entre las demás. Eso mide la intermediación.</p>
     <p>Las cuatro jugadoras con más intermediación media fueron {cuatro[0]}, {cuatro[1]}, {cuatro[2]} y {cuatro[3]}: centrales y mediocentro. España ordenaba el juego desde atrás y dejaba a las atacantes para terminarlo.</p>
@@ -95,8 +100,8 @@ def main():
   <section class="seccion lectura" id="partidos">
     <p class="etiqueta">Partido a partido</p>
     <h2>Menos pases cuando subió el nivel</h2>
-    <p>En la fase de grupos España completó entre {numero(grupos.min(), 1)} y {numero(grupos.max(), 1)} pases por minuto. En las eliminatorias bajó a entre {numero(eliminatorias.min(), 1)} y {numero(eliminatorias.max(), 1)}: los rivales eran mejores y los partidos, más cerrados.</p>
-    <p>La red más repartida fue la de {FASE[repartida.fase].lower()} ante {RIVAL[repartida.rival]} (concentración {numero(repartida.centralizacion, 2)}). En la semifinal y la final el juego volvió a concentrarse en pocas jugadoras.</p>
+    <p>En la fase de grupos España completó entre {numero(grupos.min(), 1)} y {numero(grupos.max(), 1)} pases por minuto. En las eliminatorias bajó a entre {numero(eliminatorias.min(), 1)} y {numero(eliminatorias.max(), 1)}, ante rivales de más nivel y en partidos más cerrados. Con seis partidos no se puede separar qué parte se debe al rival y qué parte a la propia España.</p>
+    <p>La red más repartida fue la de {FASE[repartida.fase].lower()} ante {RIVAL[repartida.rival]} (concentración {numero(repartida.centralizacion, 2)}). En la semifinal y la final el juego volvió a concentrarse más ({numero(semi.centralizacion, 2)} y {numero(final.centralizacion, 2)}).</p>
   </section>
 
   <figure class="figura"><img loading="lazy" src="graficos/05_seis_redes_web.png" width="1600" height="900" alt="Las seis redes de pases de España en la Eurocopa 2025, una por partido."><figcaption>Las seis redes, hasta el primer cambio de cada partido. En naranja, la jugadora con más intermediación.</figcaption></figure>
@@ -106,9 +111,9 @@ def main():
   <figure class="figura"><img loading="lazy" src="graficos/04_ritmo_concentracion_instagram.png" width="1080" height="1350" alt="Pases por minuto y concentración del juego en cada partido de España." style="max-width:min(560px,100%);margin-inline:auto"></figure>
 
   <section class="seccion lectura" id="metodo">
-    <p class="etiqueta">Cómo lo hice</p>
+    <p class="etiqueta">Método</p>
     <h2>De los eventos a la red</h2>
-    <p>Para cada partido me quedé con los pases completados en juego de España, sin saques de banda, esquina, puerta, falta ni centro, y solo hasta su primer cambio: así las once jugadoras están en el campo todo el tramo y la red se puede comparar entre ellas. La posición de cada una es la media de los sitios donde dio y recibió pases.</p>
+    <p>En cada partido se cuentan los pases completados en juego de España, sin saques de banda, esquina, puerta, falta ni centro, y solo hasta su primer cambio: así las once jugadoras están en el campo todo el tramo y la red se puede comparar entre ellas. La posición de cada una es la media de los sitios donde dio y recibió pases.</p>
     <p>La intermediación cuenta qué parte de los caminos más cortos entre compañeras pasa por cada jugadora. Para que «más pases» signifique «más cerca», la distancia entre dos jugadoras es uno dividido por los pases que se dieron. La concentración del equipo es la centralización de Freeman sobre los pases dados y recibidos: 0 si todas están igual de conectadas y 1 si todo pasa por una.</p>
     <h2>Hasta dónde llega este análisis</h2>
     <ul>
