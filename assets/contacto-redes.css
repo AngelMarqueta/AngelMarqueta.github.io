@@ -1,0 +1,5 @@
+.contacto .contacto-nombre{display:flex;align-items:center;gap:.75rem;margin:.45rem 0 .6rem;color:var(--tinta)}
+.contacto .contacto-logo{display:grid;place-items:center;flex:0 0 52px;width:52px;height:52px;background:#fff;border:1px solid #e3e7ed;border-radius:14px;box-shadow:0 2px 5px #14261d08}
+.contacto-logo img{display:block;width:32px;height:32px;object-fit:contain}
+.contacto .contacto-nombre b{font-size:1.85rem}
+.contacto:hover .contacto-logo{box-shadow:0 3px 10px #14261d15}
